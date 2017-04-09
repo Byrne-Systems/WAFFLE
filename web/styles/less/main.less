@@ -1,0 +1,54 @@
+/* LESS Variables */
+/* -------------------------------------------------------------------------- */
+@columns:              12;
+@gutter-width:         12px;
+@float-breakpoint:     768px;
+
+@images: "../../images";
+
+/* Color-Scheme */
+
+
+/* LESS Pre-Processing Styling Construct */
+/* -------------------------------------------------------------------------- */
+#Byrne-Systems {
+
+    header {
+        .make-row(); .container-fluid(); .make-lg-column(@columns; @gutter-width);
+
+        nav {
+            .navbar(); .navbar-default();
+
+            #brand {
+                img {
+                    .img-responsive();
+                    background: url("@{images}/bys_logo_sm.png");
+                    background-size: 345px 72px;
+                    background-repeat: no-repeat;
+                }
+            }
+
+            #menu {
+
+            }
+
+            #dropdown {
+
+            }
+
+        }
+    }
+
+    main {
+        .make-row();
+        .container-fixed(@gutter-width);
+        .make-lg-column(@columns; @gutter-width);
+    }
+
+    footer {
+        .make-row();
+        .container-fluid();
+        .make-lg-column(@columns; @gutter-width);
+    }
+
+}

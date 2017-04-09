@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for C:\xampp\htdocs\lib\_Framework</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/nv.d3.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.min.js"></script>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+ </head>
+ <body>
+  <header>
+   <div class="container">
+    <div class="row">
+     <div class="col-md-12">
+      <ol class="breadcrumb">
+        <li><a href="index.html">C:\xampp\htdocs\lib\_Framework</a></li>
+        <li class="active">(Dashboard)</li>
+
+      </ol>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="sql.class.php.html#21">SQL</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="session-manager.class.php.html#21">SessionManager</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="preload.class.php.html#26">Preload</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="tests/preload.pass.php.html#20">testPreload</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="collection.class.php.html#22">Collection</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="tests/bootstrap.test.php.html#18">testBootstrap</a></td><td class="text-right">3%</td></tr>
+       <tr><td><a href="tests/html.test.php.html#20">testHTML</a></td><td class="text-right">4%</td></tr>
+       <tr><td><a href="tests/file.test.php.html#20">testFile</a></td><td class="text-right">10%</td></tr>
+       <tr><td><a href="tests/validation.test.php.html#20">testValidation</a></td><td class="text-right">27%</td></tr>
+       <tr><td><a href="file.class.php.html#23">File</a></td><td class="text-right">41%</td></tr>
+       <tr><td><a href="validation.class.php.html#25">Validation</a></td><td class="text-right">61%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="sql.class.php.html#21">SQL</a></td><td class="text-right">1122</td></tr>
+       <tr><td><a href="collection.class.php.html#22">Collection</a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="file.class.php.html#23">File</a></td><td class="text-right">75</td></tr>
+       <tr><td><a href="session-manager.class.php.html#21">SessionManager</a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="preload.class.php.html#26">Preload</a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="validation.class.php.html#25">Validation</a></td><td class="text-right">9</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="tests/html.test.php.html#45"><abbr title="testHTML::anchor_provider">anchor_provider</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="tests/html.test.php.html#111"><abbr title="testHTML::favicon_provider">favicon_provider</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="tests/html.test.php.html#138"><abbr title="testHTML::link_provider">link_provider</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="tests/html.test.php.html#176"><abbr title="testHTML::mailto_provider">mailto_provider</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="tests/file.test.php.html#151"><abbr title="testFile::illegally_formatted_write_file_provider">illegally_formatted_write_file_provider</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="tests/file.test.php.html#49"><abbr title="testFile::legally_formatted_write_file_provider">legally_formatted_write_file_provider</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="tests/bootstrap.test.php.html#314"><abbr title="testBootstrap::container_provider">container_provider</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="tests/bootstrap.test.php.html#362"><abbr title="testBootstrap::row_provider">row_provider</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="tests/bootstrap.test.php.html#772"><abbr title="testBootstrap::panel_provider">panel_provider</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="tests/file.test.php.html#30"><abbr title="testFile::get_date">get_date</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="tests/html.test.php.html#331"><abbr title="testHTML::meta_provider">meta_provider</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="tests/html.test.php.html#396"><abbr title="testHTML::script_provider">script_provider</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="tests/preload.pass.php.html#119"><abbr title="testPreload::test_illegally_set_script">test_illegally_set_script</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="tests/validation.test.php.html#37"><abbr title="testValidation::illegally_formatted_email_provider">illegally_formatted_email_provider</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="tests/validation.test.php.html#81"><abbr title="testValidation::legally_formatted_email_provider">legally_formatted_email_provider</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="validation.class.php.html#32"><abbr title="Validation::check_file">check_file</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="tests/preload.pass.php.html#93"><abbr title="testPreload::illegally_set_script_provider">illegally_set_script_provider</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="tests/preload.pass.php.html#81"><abbr title="testPreload::test_set_script_method">test_set_script_method</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="tests/html.test.php.html#447"><abbr title="testHTML::tag_provider">tag_provider</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="tests/preload.pass.php.html#32"><abbr title="testPreload::invokeMethod">invokeMethod</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="tests/preload.pass.php.html#45"><abbr title="testPreload::setUp">setUp</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="tests/preload.pass.php.html#57"><abbr title="testPreload::set_script">set_script</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="collection.class.php.html#43"><abbr title="Collection::set">set</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="tests/bootstrap.test.php.html#38"><abbr title="testBootstrap::viewport_provider">viewport_provider</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="file.class.php.html#76"><abbr title="File::download">download</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="file.class.php.html#99"><abbr title="File::read">read</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="preload.class.php.html#46"><abbr title="Preload::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="preload.class.php.html#61"><abbr title="Preload::set_script">set_script</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="file.class.php.html#36"><abbr title="File::find_file">find_file</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="collection.class.php.html#123"><abbr title="Collection::key_exists">key_exists</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="collection.class.php.html#66"><abbr title="Collection::del">del</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="collection.class.php.html#83"><abbr title="Collection::get">get</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="collection.class.php.html#100"><abbr title="Collection::get_keys">get_keys</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="collection.class.php.html#112"><abbr title="Collection::length">length</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="session-manager.class.php.html#28"><abbr title="SessionManager::sec_session_start">sec_session_start</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="session-manager.class.php.html#53"><abbr title="SessionManager::session_timeout">session_timeout</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="sql.class.php.html#166"><abbr title="SQL::insert">insert</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="sql.class.php.html#208"><abbr title="SQL::update">update</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="sql.class.php.html#257"><abbr title="SQL::delete">delete</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="sql.class.php.html#301"><abbr title="SQL::verifyRequiredParams">verifyRequiredParams</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="sql.class.php.html#328"><abbr title="SQL::query">query</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="sql.class.php.html#118"><abbr title="SQL::select">select</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="sql.class.php.html#45"><abbr title="SQL::cxn_result">cxn_result</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="sql.class.php.html#102"><abbr title="SQL::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="sql.class.php.html#69"><abbr title="SQL::qry_result">qry_result</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="sql.class.php.html#90"><abbr title="SQL::get_date">get_date</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="tests/bootstrap.test.php.html#389"><abbr title="testBootstrap::column_provider">column_provider</abbr></a></td><td class="text-right">0%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="file.class.php.html#36"><abbr title="File::find_file">find_file</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="sql.class.php.html#301"><abbr title="SQL::verifyRequiredParams">verifyRequiredParams</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="sql.class.php.html#208"><abbr title="SQL::update">update</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="sql.class.php.html#257"><abbr title="SQL::delete">delete</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="sql.class.php.html#118"><abbr title="SQL::select">select</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="sql.class.php.html#69"><abbr title="SQL::qry_result">qry_result</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="sql.class.php.html#166"><abbr title="SQL::insert">insert</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="collection.class.php.html#43"><abbr title="Collection::set">set</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="sql.class.php.html#45"><abbr title="SQL::cxn_result">cxn_result</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="preload.class.php.html#61"><abbr title="Preload::set_script">set_script</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="session-manager.class.php.html#53"><abbr title="SessionManager::session_timeout">session_timeout</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="collection.class.php.html#66"><abbr title="Collection::del">del</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="sql.class.php.html#328"><abbr title="SQL::query">query</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="validation.class.php.html#32"><abbr title="Validation::check_file">check_file</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="collection.class.php.html#83"><abbr title="Collection::get">get</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="file.class.php.html#99"><abbr title="File::read">read</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="session-manager.class.php.html#28"><abbr title="SessionManager::sec_session_start">sec_session_start</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="sql.class.php.html#102"><abbr title="SQL::__construct">__construct</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="file.class.php.html#76"><abbr title="File::download">download</abbr></a></td><td class="text-right">6</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="http://github.com/sebastianbergmann/php-code-coverage" target="_top">PHP_CodeCoverage 3.3.3</a> using <a href="https://secure.php.net/" target="_top">PHP 5.6.15</a> and <a href="https://phpunit.de/">PHPUnit 5.0.10</a> at Sun Jun 5 17:45:26 PDT 2016.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="js/jquery.min.js" type="text/javascript"></script>
+  <script src="js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="js/holder.min.js" type="text/javascript"></script>
+  <script src="js/d3.min.js" type="text/javascript"></script>
+  <script src="js/nv.d3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([5,2,1,1,0,1,0,1,0,0,0,7], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([46,1,0,0,0,0,0,0,0,0,1,49], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(key, y, e, graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[100,18,"<a href=\"bootstrap.class.php.html#24\">Bootstrap<\/a>"],[100,0,"<a href=\"cipher.class.php.html#21\">Cipher<\/a>"],[0,10,"<a href=\"collection.class.php.html#22\">Collection<\/a>"],[100,2,"<a href=\"error.class.php.html#25\">Error<\/a>"],[41.379310344828,17,"<a href=\"file.class.php.html#23\">File<\/a>"],[100,43,"<a href=\"html.class.php.html#26\">HTML<\/a>"],[100,1,"<a href=\"log.class.php.html#20\">Log<\/a>"],[0,4,"<a href=\"preload.class.php.html#26\">Preload<\/a>"],[0,5,"<a href=\"session-manager.class.php.html#21\">SessionManager<\/a>"],[0,33,"<a href=\"sql.class.php.html#21\">SQL<\/a>"],[100,8,"<a href=\"template.class.php.html#26\">Template<\/a>"],[3.9447731755424,11,"<a href=\"tests\/bootstrap.test.php.html#18\">testBootstrap<\/a>"],[10.169491525424,6,"<a href=\"tests\/file.test.php.html#20\">testFile<\/a>"],[4.8076923076923,15,"<a href=\"tests\/html.test.php.html#20\">testHTML<\/a>"],[0,6,"<a href=\"tests\/preload.pass.php.html#20\">testPreload<\/a>"],[100,6,"<a href=\"tests\/template.test.php.html#20\">testTemplate<\/a>"],[27.272727272727,5,"<a href=\"tests\/validation.test.php.html#20\">testValidation<\/a>"],[61.538461538462,7,"<a href=\"validation.class.php.html#25\">Validation<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(key, y, e, graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[100,3,"<a href=\"bootstrap.class.php.html#35\">Bootstrap::container<\/a>"],[100,1,"<a href=\"bootstrap.class.php.html#59\">Bootstrap::row<\/a>"],[100,4,"<a href=\"bootstrap.class.php.html#73\">Bootstrap::column<\/a>"],[100,6,"<a href=\"bootstrap.class.php.html#100\">Bootstrap::panel<\/a>"],[100,4,"<a href=\"bootstrap.class.php.html#142\">Bootstrap::viewport<\/a>"],[0,3,"<a href=\"collection.class.php.html#43\">Collection::set<\/a>"],[0,2,"<a href=\"collection.class.php.html#66\">Collection::del<\/a>"],[0,2,"<a href=\"collection.class.php.html#83\">Collection::get<\/a>"],[0,1,"<a href=\"collection.class.php.html#100\">Collection::get_keys<\/a>"],[0,1,"<a href=\"collection.class.php.html#112\">Collection::length<\/a>"],[0,1,"<a href=\"collection.class.php.html#123\">Collection::key_exists<\/a>"],[100,1,"<a href=\"error.class.php.html#33\">Error::get_date<\/a>"],[100,1,"<a href=\"error.class.php.html#56\">Error::error<\/a>"],[0,6,"<a href=\"file.class.php.html#36\">File::find_file<\/a>"],[0,2,"<a href=\"file.class.php.html#76\">File::download<\/a>"],[0,2,"<a href=\"file.class.php.html#99\">File::read<\/a>"],[92.307692307692,7,"<a href=\"file.class.php.html#116\">File::write<\/a>"],[100,1,"<a href=\"html.class.php.html#34\">HTML::get_domain<\/a>"],[100,2,"<a href=\"html.class.php.html#45\">HTML::meta_type<\/a>"],[100,6,"<a href=\"html.class.php.html#61\">HTML::parse_id_type<\/a>"],[100,3,"<a href=\"html.class.php.html#101\">HTML::parse_mailto_addresses<\/a>"],[100,3,"<a href=\"html.class.php.html#129\">HTML::anchor<\/a>"],[100,1,"<a href=\"html.class.php.html#157\">HTML::div<\/a>"],[100,2,"<a href=\"html.class.php.html#167\">HTML::favicon<\/a>"],[100,4,"<a href=\"html.class.php.html#188\">HTML::link<\/a>"],[100,11,"<a href=\"html.class.php.html#214\">HTML::mailto<\/a>"],[100,5,"<a href=\"html.class.php.html#267\">HTML::meta<\/a>"],[100,4,"<a href=\"html.class.php.html#297\">HTML::script<\/a>"],[100,1,"<a href=\"html.class.php.html#320\">HTML::tag<\/a>"],[100,1,"<a href=\"log.class.php.html#26\">Log::log<\/a>"],[0,1,"<a href=\"preload.class.php.html#46\">Preload::__construct<\/a>"],[0,3,"<a href=\"preload.class.php.html#61\">Preload::set_script<\/a>"],[0,2,"<a href=\"session-manager.class.php.html#28\">SessionManager::sec_session_start<\/a>"],[0,3,"<a href=\"session-manager.class.php.html#53\">SessionManager::session_timeout<\/a>"],[0,3,"<a href=\"sql.class.php.html#45\">SQL::cxn_result<\/a>"],[0,3,"<a href=\"sql.class.php.html#69\">SQL::qry_result<\/a>"],[0,1,"<a href=\"sql.class.php.html#90\">SQL::get_date<\/a>"],[0,2,"<a href=\"sql.class.php.html#102\">SQL::__construct<\/a>"],[0,4,"<a href=\"sql.class.php.html#118\">SQL::select<\/a>"],[0,3,"<a href=\"sql.class.php.html#166\">SQL::insert<\/a>"],[0,5,"<a href=\"sql.class.php.html#208\">SQL::update<\/a>"],[0,5,"<a href=\"sql.class.php.html#257\">SQL::delete<\/a>"],[0,5,"<a href=\"sql.class.php.html#301\">SQL::verifyRequiredParams<\/a>"],[0,2,"<a href=\"sql.class.php.html#328\">SQL::query<\/a>"],[100,1,"<a href=\"template.class.php.html#54\">Template::__construct<\/a>"],[100,1,"<a href=\"template.class.php.html#67\">Template::set<\/a>"],[100,3,"<a href=\"template.class.php.html#80\">Template::output<\/a>"],[100,3,"<a href=\"template.class.php.html#105\">Template::merge<\/a>"],[100,1,"<a href=\"tests\/bootstrap.test.php.html#25\">testBootstrap::setUp<\/a>"],[0,1,"<a href=\"tests\/bootstrap.test.php.html#38\">testBootstrap::viewport_provider<\/a>"],[100,1,"<a href=\"tests\/bootstrap.test.php.html#302\">testBootstrap::test_viewport<\/a>"],[0,1,"<a href=\"tests\/bootstrap.test.php.html#314\">testBootstrap::container_provider<\/a>"],[100,1,"<a href=\"tests\/bootstrap.test.php.html#350\">testBootstrap::test_container<\/a>"],[0,1,"<a href=\"tests\/bootstrap.test.php.html#362\">testBootstrap::row_provider<\/a>"],[100,1,"<a href=\"tests\/bootstrap.test.php.html#377\">testBootstrap::test_row<\/a>"],[0.38910505836576,1,"<a href=\"tests\/bootstrap.test.php.html#389\">testBootstrap::column_provider<\/a>"],[100,1,"<a href=\"tests\/bootstrap.test.php.html#760\">testBootstrap::test_column<\/a>"],[0,1,"<a href=\"tests\/bootstrap.test.php.html#772\">testBootstrap::panel_provider<\/a>"],[100,1,"<a href=\"tests\/bootstrap.test.php.html#821\">testBootstrap::test_panel<\/a>"],[0,1,"<a href=\"tests\/file.test.php.html#30\">testFile::get_date<\/a>"],[100,1,"<a href=\"tests\/file.test.php.html#38\">testFile::setUp<\/a>"],[0,1,"<a href=\"tests\/file.test.php.html#49\">testFile::legally_formatted_write_file_provider<\/a>"],[100,1,"<a href=\"tests\/file.test.php.html#140\">testFile::test_write_method_with_legal_values<\/a>"],[0,1,"<a href=\"tests\/file.test.php.html#151\">testFile::illegally_formatted_write_file_provider<\/a>"],[100,1,"<a href=\"tests\/file.test.php.html#168\">testFile::test_write_method_with_illegal_values<\/a>"],[100,1,"<a href=\"tests\/html.test.php.html#27\">testHTML::setUp<\/a>"],[0,1,"<a href=\"tests\/html.test.php.html#45\">testHTML::anchor_provider<\/a>"],[100,1,"<a href=\"tests\/html.test.php.html#99\">testHTML::test_anchor_method<\/a>"],[0,1,"<a href=\"tests\/html.test.php.html#111\">testHTML::favicon_provider<\/a>"],[100,1,"<a href=\"tests\/html.test.php.html#126\">testHTML::test_favicon<\/a>"],[0,1,"<a href=\"tests\/html.test.php.html#138\">testHTML::link_provider<\/a>"],[100,1,"<a href=\"tests\/html.test.php.html#164\">testHTML::test_link<\/a>"],[0,1,"<a href=\"tests\/html.test.php.html#176\">testHTML::mailto_provider<\/a>"],[100,1,"<a href=\"tests\/html.test.php.html#319\">testHTML::test_mailto_method<\/a>"],[0,1,"<a href=\"tests\/html.test.php.html#331\">testHTML::meta_provider<\/a>"],[100,1,"<a href=\"tests\/html.test.php.html#384\">testHTML::test_meta_method<\/a>"],[0,1,"<a href=\"tests\/html.test.php.html#396\">testHTML::script_provider<\/a>"],[100,1,"<a href=\"tests\/html.test.php.html#435\">testHTML::test_script_method<\/a>"],[0,1,"<a href=\"tests\/html.test.php.html#447\">testHTML::tag_provider<\/a>"],[100,1,"<a href=\"tests\/html.test.php.html#1004\">testHTML::test_tag_method<\/a>"],[0,1,"<a href=\"tests\/preload.pass.php.html#32\">testPreload::invokeMethod<\/a>"],[0,1,"<a href=\"tests\/preload.pass.php.html#45\">testPreload::setUp<\/a>"],[0,1,"<a href=\"tests\/preload.pass.php.html#57\">testPreload::set_script<\/a>"],[0,1,"<a href=\"tests\/preload.pass.php.html#81\">testPreload::test_set_script_method<\/a>"],[0,1,"<a href=\"tests\/preload.pass.php.html#93\">testPreload::illegally_set_script_provider<\/a>"],[0,1,"<a href=\"tests\/preload.pass.php.html#119\">testPreload::test_illegally_set_script<\/a>"],[100,1,"<a href=\"tests\/template.test.php.html#23\">testTemplate::setUp<\/a>"],[100,1,"<a href=\"tests\/template.test.php.html#34\">testTemplate::test_template_set_N_output_methods<\/a>"],[100,3,"<a href=\"tests\/template.test.php.html#43\">testTemplate::test_Merge_Templates<\/a>"],[100,1,"<a href=\"tests\/template.test.php.html#95\">testTemplate::test_Failure_Output<\/a>"],[100,1,"<a href=\"tests\/validation.test.php.html#26\">testValidation::setUp<\/a>"],[0,1,"<a href=\"tests\/validation.test.php.html#37\">testValidation::illegally_formatted_email_provider<\/a>"],[100,1,"<a href=\"tests\/validation.test.php.html#70\">testValidation::test_email_format_method_with_illegal_values<\/a>"],[0,1,"<a href=\"tests\/validation.test.php.html#81\">testValidation::legally_formatted_email_provider<\/a>"],[100,1,"<a href=\"tests\/validation.test.php.html#114\">testValidation::test_email_format_method_with_legal_values<\/a>"],[0,2,"<a href=\"validation.class.php.html#32\">Validation::check_file<\/a>"],[100,5,"<a href=\"validation.class.php.html#52\">Validation::email_format<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>

@@ -1,0 +1,14 @@
+<!-- Modernizr: automatically detect the availability of next-generation web technologies in user's browsers -->
+<!-- <script type="text/javascript" src="/lib/modernizr/modernizr.dev-v3.3.1.js"></script> -->
+
+<!-- jQuery: feature-rich JavaScript library -->
+<script type="text/javascript" src="/lib/jquery/jquery-1.12.3.min.js"></script>
+
+<!-- Bootstrap Functions -->
+<script type="text/javascript" src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<!-- -Prefix-Free: allows unprefixed CSS properties everywhere -->
+<!-- <script type="text/javascript" src="/lib/-prefix-free/prefixfree.jquery.js"></script> -->
+
+<!-- Developer: functions -->
+<script type="text/javascript" src="/web/js/functions.js"></script>

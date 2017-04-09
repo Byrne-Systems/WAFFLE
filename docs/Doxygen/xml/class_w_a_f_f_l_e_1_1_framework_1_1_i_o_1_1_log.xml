@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_log" kind="class" language="PHP" prot="public">
+    <compoundname>WAFFLE::Framework::IO::Log</compoundname>
+    <derivedcompoundref refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_error" prot="public" virt="non-virtual">Error</derivedcompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_log_1a3e3c415ada57f553ac4a39a40051c94f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>log</definition>
+        <argsstring>($msg)</argsstring>
+        <name>log</name>
+        <param>
+          <declname>$msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_log" kindref="compound">Log</ref>: error message in [data/logs/waffle.error.log] after shipping any HTML and/or PHP tags</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>String</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message to display on the browser and write to [waffle.error.log] </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="log.class.php" line="27" column="1" bodyfile="log.class.php" bodystart="27" bodyend="34"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_log" kindref="compound">Log</ref> IO</para><para>[Description] </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="33">
+        <label>Log</label>
+        <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_log"/>
+      </node>
+      <node id="34">
+        <label>Error</label>
+        <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_error"/>
+        <childnode refid="33" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>File</label>
+        <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_file"/>
+        <childnode refid="35" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>Validation</label>
+        <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_validation"/>
+        <childnode refid="34" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="log.class.php" line="21" column="1" bodyfile="log.class.php" bodystart="21" bodyend="35"/>
+    <listofallmembers>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_log_1a3e3c415ada57f553ac4a39a40051c94f" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::IO::Log</scope><name>log</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

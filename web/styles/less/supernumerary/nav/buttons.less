@@ -1,0 +1,104 @@
+/*
+ *  Set:    Button Functions
+ *  Notes:  Module that
+ */
+
+#BTN {
+    .minimal(@pry: @primary) {
+        min-width:      13.5em;
+        margin:         0 10%;
+        padding-bottom: 7px;
+
+        // Omit images & replace of buttons
+        img { display: none; }
+
+        ul {
+            width:   90%;
+            margin:  0 auto;
+            padding: 0;
+
+            #FNT > .akashi(1em, black);
+
+            li {
+                height:        2em;
+                padding-top:   0.25em;
+                margin-bottom: 0.475em;
+                text-align:    center;
+
+                .border(0.25em solid lighten(@pry, 20%));
+                .border-radius(0.275em);
+            }
+        }
+    }
+    .modern(@pry: @primary) {
+        min-width: 13.5em;
+        margin:    0 10%;
+
+        ul {
+            width:   90%;
+            margin:  0 auto;
+            padding: 0;
+
+            #FNT > .akashi(1em, lighten(@pry, 90%));
+
+            li {
+                height:           2em;
+                padding-top:      0.35em;
+                margin-bottom:    0.475em;
+                text-align:       center;
+                background-color: lighten(@pry, 20%);
+
+                .border(0.125em solid darken(@pry, 50%));
+                .border-radius(0.275em);
+
+                #SDW >  .box(0em 0.1em 0.125em 0.025em lighten(@gray, 07%));
+                #SDW > .text(0em 0.0875em 0.125em       darken(@gray, 07%));
+
+                a:hover {
+                    color: darken(@gray, 36%);
+                }
+
+                &:hover, &:focus {
+                    background-color: lighten(@pry, 10%);
+                }
+            }
+        }
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .link(@pry: rgb(73, 187, 204), @sec: rgb(48, 155, 169)) {
+        display: inline-block;
+        padding: 0.5em 0.875em;
+
+        .background-color(@pry);
+        .border(0.0625em, solid, darken(@gray, 36%));
+
+        #SDW > .box();
+
+        a {
+            #FNT > .arial(1em, rgb(255, 255, 255), bold);
+            #SDW >  .text(0em 0.0625em 0.125em black);
+        }
+    }
+    .clear() {
+        span { display: none; }
+
+        ul {
+            width:     inherit;
+            margin:    0 auto;
+            font-size: inherit;
+            color:     transparent;
+
+            li {
+                display:       inline;
+                width:         inherit;
+                height:        inherit;
+                margin:        0 auto;
+                padding:       0;
+                border:        none;
+                border-radius: inherit;
+            }
+        }
+    }
+}

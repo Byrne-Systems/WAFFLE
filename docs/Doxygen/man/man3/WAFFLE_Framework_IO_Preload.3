@@ -1,0 +1,67 @@
+.TH "Preload" 3 "Sun Apr 9 2017" "Version 0.35.0.0" "WAFFLE" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Preload
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBBootstrap\fP\&.
+.PP
+Inherited by \fBTemplate\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fB__construct\fP ()"
+.br
+.ti -1c
+.RI "\fBset_script\fP ($\fBscript\fP)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fB$File\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBPreload\fP IO
+.PP
+Pre-loads unique code prior to the HTML document (or application) being fully rendered\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "__construct ()"
+Accepts a directory that holds/stores code, modules, or libraries that can be embedded in the generated WAFFLE web-application or document\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$dir\fP Absolute path for the directory to search in for any ancillary code 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "set_script ( $script)"
+Locates the exact file passed through the first param of this method while writing it into WAFFLE's default script file [\&.\&./web/views/script\&.wad]
+.PP
+void set_script(String $script)
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$script\fP The filename of the code (or module) to set
+.RE
+.PP
+\fBTodo\fP
+.RS 4
+Develop file-version logic for method, so that developers can pass a simple filename in accompaniment with the version that they are attempting to set 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for WAFFLE from the source code\&.

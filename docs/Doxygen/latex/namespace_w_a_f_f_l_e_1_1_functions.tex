@@ -1,0 +1,161 @@
+\hypertarget{namespace_w_a_f_f_l_e_1_1_functions}{}\subsection{W\+A\+F\+F\+LE\textbackslash{}Functions Namespace Reference}
+\label{namespace_w_a_f_f_l_e_1_1_functions}\index{W\+A\+F\+F\+L\+E\textbackslash{}\+Functions@{W\+A\+F\+F\+L\+E\textbackslash{}\+Functions}}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespace_w_a_f_f_l_e_1_1_functions_a09d3696edbb60db132cbac829c0a96dd}{sec\+\_\+session\+\_\+start} ()
+\begin{DoxyCompactList}\small\item\em Custom secure method of initiating a P\+HP session; call at the top of each page that should access P\+HP session variable(s) \end{DoxyCompactList}\item 
+\hyperlink{namespace_w_a_f_f_l_e_1_1_functions_a7573c72280bfa987322364343fd97eec}{login} (\$id, \$pass, \$mysqli)
+\begin{DoxyCompactList}\small\item\em Verifies the user\textquotesingle{}s identifier and password against the database\textquotesingle{}s credentials via the \textquotesingle{}password\+\_\+verify()\textquotesingle{} method, which prevents against timing attacks. \end{DoxyCompactList}\item 
+\hyperlink{namespace_w_a_f_f_l_e_1_1_functions_a0a6eed95810480a504f0334d3c23ccbc}{checkbrute} (\$emp\+\_\+id, \$mysqli)
+\begin{DoxyCompactList}\small\item\em Sends an email to the user with a reset link if there has been more than 5 failed login attempts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Function Documentation}
+\mbox{\Hypertarget{namespace_w_a_f_f_l_e_1_1_functions_a0a6eed95810480a504f0334d3c23ccbc}\label{namespace_w_a_f_f_l_e_1_1_functions_a0a6eed95810480a504f0334d3c23ccbc}} 
+\index{W\+A\+F\+F\+L\+E\+::\+Functions@{W\+A\+F\+F\+L\+E\+::\+Functions}!checkbrute@{checkbrute}}
+\index{checkbrute@{checkbrute}!W\+A\+F\+F\+L\+E\+::\+Functions@{W\+A\+F\+F\+L\+E\+::\+Functions}}
+\paragraph{\texorpdfstring{checkbrute()}{checkbrute()}}
+{\footnotesize\ttfamily W\+A\+F\+F\+L\+E\textbackslash{}\+Functions\textbackslash{}checkbrute (\begin{DoxyParamCaption}\item[{}]{\$emp\+\_\+id,  }\item[{}]{\$mysqli }\end{DoxyParamCaption})}
+
+
+
+Sends an email to the user with a reset link if there has been more than 5 failed login attempts. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+String & {\em \$emp\+\_\+id} & Employees identifier \\
+\hline
+Object & {\em \$mysqli} & My\+S\+Q\+Li connection object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Boolean Confirms whether a brute-\/force attack \textquotesingle{}may\textquotesingle{} have been attempted 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+99                                       \{
+100     $now            = time();                           # Get: time-stamp of current time
+101     $valid\_attempts = $now - (2 * 60 * 60);             # Count: all \hyperlink{namespace_w_a_f_f_l_e_1_1_functions_a7573c72280bfa987322364343fd97eec}{login} attempts within the past 2 
+      hours
+102 
+103     \textcolor{keywordflow}{if} ($stmt = \hyperlink{init_8php_a580989e8e3521433691a0351287f6315}{$mysqli}->prepare(\textcolor{stringliteral}{"SELECT time FROM login\_attempts WHERE id = ? AND time >
+       '$valid\_attempts'"})) \{
+104         $stmt->bind\_param(\textcolor{charliteral}{'i'}, $emp\_id);
+105 
+106         $stmt->execute();                               # Execute the prepared query
+107         $stmt->store\_result();
+108 
+109 \textcolor{preprocessor}{        # Check: whether there has been more than 5 failed logins}
+110         \textcolor{keywordflow}{if} ($stmt->num\_rows > 5) \{
+111             \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+112         \} \textcolor{keywordflow}{else} \{
+113             \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+114         \}
+115     \}
+116 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{namespace_w_a_f_f_l_e_1_1_functions_a7573c72280bfa987322364343fd97eec}\label{namespace_w_a_f_f_l_e_1_1_functions_a7573c72280bfa987322364343fd97eec}} 
+\index{W\+A\+F\+F\+L\+E\+::\+Functions@{W\+A\+F\+F\+L\+E\+::\+Functions}!login@{login}}
+\index{login@{login}!W\+A\+F\+F\+L\+E\+::\+Functions@{W\+A\+F\+F\+L\+E\+::\+Functions}}
+\paragraph{\texorpdfstring{login()}{login()}}
+{\footnotesize\ttfamily W\+A\+F\+F\+L\+E\textbackslash{}\+Functions\textbackslash{}login (\begin{DoxyParamCaption}\item[{}]{\$id,  }\item[{}]{\$pass,  }\item[{}]{\$mysqli }\end{DoxyParamCaption})}
+
+
+
+Verifies the user\textquotesingle{}s identifier and password against the database\textquotesingle{}s credentials via the \textquotesingle{}password\+\_\+verify()\textquotesingle{} method, which prevents against timing attacks. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+String & {\em \$id} & \mbox{[}description\mbox{]} \\
+\hline
+String & {\em \$pass} & \mbox{[}description\mbox{]} \\
+\hline
+Object & {\em \$mysqli} & \mbox{[}description\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Boolean \mbox{[}description\mbox{]} 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+50                                     \{
+51 \textcolor{preprocessor}{    # Using prepared statements means that SQL injection is not possible.}
+52     \textcolor{keywordflow}{if} ($stmt = \hyperlink{init_8php_a580989e8e3521433691a0351287f6315}{$mysqli}->prepare(\textcolor{stringliteral}{"SELECT id, password FROM credentials WHERE empID = ? LIMIT 1"})) \{
+53         $stmt->bind\_param(\textcolor{charliteral}{'s'}, $id);                    # Bind: \textcolor{stringliteral}{'$email'} to parameter
+54         $stmt->execute();                               # Execute: the prepared query
+55         $stmt->store\_result();
+56 
+57         $stmt->bind\_result($emp\_id, $password);         # Get: variables from result.
+58         $stmt->fetch();
+59 
+60 \textcolor{preprocessor}{        # Verify: whether user exists and check whether the account is locked from too many login attempts}
+61         \textcolor{keywordflow}{if} ($stmt->num\_rows == 1) \{
+62 
+63             \textcolor{keywordflow}{if} (\hyperlink{namespace_w_a_f_f_l_e_1_1_functions_a0a6eed95810480a504f0334d3c23ccbc}{checkbrute}($emp\_id, \hyperlink{init_8php_a580989e8e3521433691a0351287f6315}{$mysqli}) == \textcolor{keyword}{true}) \{
+64                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};                           # Account is locked; Send an email to user saying 
+      their account is locked
+65             \} \textcolor{keywordflow}{else} \{
+66 
+67 \textcolor{preprocessor}{                # Check if the password in the database matches the password the user submitted.}
+68                 \textcolor{keywordflow}{if} (password\_verify($password, $db\_password)) \{
+69 \textcolor{preprocessor}{                    # Password correct!}
+70 
+71                     $user\_browser = $\_SERVER[\textcolor{stringliteral}{'HTTP\_USER\_AGENT'}];        # Get: the user-agent \textcolor{keywordtype}{string} of the
+       user.
+72 
+73                     $\_SESSION[\textcolor{stringliteral}{'emp\_id'}]       = $emp\_id;
+74                     $\_SESSION[\textcolor{stringliteral}{'login\_string'}] = hash(\textcolor{stringliteral}{'sha512'}, $password . $user\_browser);
+75 
+76                     \textcolor{keywordflow}{return} \textcolor{keyword}{true};                        # Login successful
+77                 \} \textcolor{keywordflow}{else} \{
+78 \textcolor{preprocessor}{                    # Password not correct!}
+79 
+80                     $now = time();                      # Record: \textcolor{keyword}{this} attempt in the database
+81                     \hyperlink{init_8php_a580989e8e3521433691a0351287f6315}{$mysqli}->query(\textcolor{stringliteral}{"INSERT INTO login\_attempts(id, time) VALUES ('$emp\_id', '$now')"}
+      );
+82 
+83                     \textcolor{keywordflow}{return} \textcolor{keyword}{false};                       # Login unsuccessful
+84                 \}
+85             \}
+86         \} \textcolor{keywordflow}{else} \{
+87             \textcolor{keywordflow}{return} \textcolor{keyword}{false};                               # No user exists.
+88         \}
+89     \}
+90 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{namespace_w_a_f_f_l_e_1_1_functions_a09d3696edbb60db132cbac829c0a96dd}\label{namespace_w_a_f_f_l_e_1_1_functions_a09d3696edbb60db132cbac829c0a96dd}} 
+\index{W\+A\+F\+F\+L\+E\+::\+Functions@{W\+A\+F\+F\+L\+E\+::\+Functions}!sec\+\_\+session\+\_\+start@{sec\+\_\+session\+\_\+start}}
+\index{sec\+\_\+session\+\_\+start@{sec\+\_\+session\+\_\+start}!W\+A\+F\+F\+L\+E\+::\+Functions@{W\+A\+F\+F\+L\+E\+::\+Functions}}
+\paragraph{\texorpdfstring{sec\+\_\+session\+\_\+start()}{sec\_session\_start()}}
+{\footnotesize\ttfamily W\+A\+F\+F\+L\+E\textbackslash{}\+Functions\textbackslash{}sec\+\_\+session\+\_\+start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Custom secure method of initiating a P\+HP session; call at the top of each page that should access P\+HP session variable(s) 
+
+\begin{DoxyReturn}{Returns}
+N\+U\+LL Initiates a secure P\+HP session 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+23                              \{
+24     $session\_name = \textcolor{stringliteral}{'sec\_session\_id'};                   # Set: custom session name
+25     $secure       = \textcolor{keyword}{true};                               # Denies: JavaScript from being able to access the 
+      session \textcolor{keywordtype}{id}
+26     $httponly     = \textcolor{keyword}{true};                               # Forces sessions to only use cookies
+27 
+28     \textcolor{keywordflow}{if} (ini\_set(\textcolor{stringliteral}{'session.use\_only\_cookies'}, 1) === FALSE) \{
+29         header(\textcolor{stringliteral}{"Location: ../error.php?err=Could not initiate a safe session (ini\_set)"});
+30         exit();
+31     \}
+32 
+33     $cookieParams = session\_get\_cookie\_params();        # Get: current cookies params
+34     session\_set\_cookie\_params($cookieParams[\textcolor{stringliteral}{"lifetime"}], $cookieParams[\textcolor{stringliteral}{"path"}], $cookieParams[\textcolor{stringliteral}{"domain"}], 
+      $secure, $httponly);
+35 
+36     session\_name($session\_name);                        # Set: session name to the one \textcolor{keyword}{set} above
+37     session\_start();                                    # Start: PHP session
+38     session\_regenerate\_id(\textcolor{keyword}{true});                        # Regenerate: session; \textcolor{keyword}{delete} the old one
+39 \}
+\end{DoxyCode}

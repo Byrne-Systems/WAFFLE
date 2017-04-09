@@ -1,0 +1,39 @@
+/*
+ *  Set:    FX Module
+ *  Notes:  Module that
+ */
+
+/* Shadow */
+#SDW {
+    .box(@arg) {
+        /* Box-Shadow */
+        box-shadow: @arg;
+    }
+    .drop(@x: 0, @y: 0.0625em, @blur: 0.125em, @alpha: 0.1, @color: rgb(0, 0, 0)) {                 // 1/16, 2/16
+        @fade: fadeout(@color, 100 - (@alpha*100));
+
+        /* Box-Shadow */
+        box-shadow: @x @y @blur @fade;
+    }
+    .drop-inset(@x: 0, @y: 0.0625em, @blur: 0.125em, @alpha: 0.4, @color: rgb(0, 0, 0), @x-inset: 0, @y-inset: 0.0625em, @blur-inset: 0.125em, @alpha-inset: 0.4, @color-inset: rgb(0, 0, 0)) {     // 1/16, 2/16, 1/16, 2/16
+        @fade:          fadeout(@color, 100 - (@alpha*100));
+        @fade-inset:    fadeout(@color-inset, 100 - (@alpha*100));
+
+        /* Box-Shadow */
+        box-shadow: @x @y @blur @fade, inset @x-inset @y-inset @blur-inset @fade-inset;
+    }
+    .inset(@x: 0, @y: 0.0625em, @blur: 0.125em, @alpha: 0.4, @color: rgb(0, 0, 0)) {                // 1/16, 2/16
+        @fade: fadeout(@color, 100 - (@alpha*100));
+
+        /* Box-Shadow */
+        box-shadow: inset @x @y @blur @fade;
+    }
+    .text(@arg) {
+        /* Text-Shadow */
+        text-shadow: @arg;
+    }
+    .clear() {
+        /* Box-Shadow */
+        box-shadow: none;
+    }
+}

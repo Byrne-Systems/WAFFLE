@@ -1,0 +1,30 @@
+/*
+ *  Set:    Glyph Functions
+ *  Notes:  Module that
+ */
+
+/* Glyphs */
+#GPH {
+    .webfonts {
+        /* ~ VARIABLES ~ */
+        /* -------------------------------------------------------------------------------------- */
+        @webfont-icons: "\e830", "\e831", "\e834", "\e832", "\e833", "\e837";
+
+        /* ~ DEFINITIONS ~ */
+        /* -------------------------------------------------------------------------------------- */
+        display: inline-block;
+        padding-top: 0.625em;                                                                       // 10/16
+
+        /* Font */
+        #FNT > .webfont-icons(1.5em, @text-color);                                                // 24/16
+
+        a { padding: 0 3%; }
+        // Webfont-Icons
+        .github:before          { content: extract(@webfont-icons, 1); }
+        .google-plus:before     { content: extract(@webfont-icons, 2); }
+        .stack-overflow:before  { content: extract(@webfont-icons, 3); }
+        .html5:before           { content: extract(@webfont-icons, 4); }
+        .linux:before           { content: extract(@webfont-icons, 5); }
+        .wordpress:before       { content: extract(@webfont-icons, 6); }
+    }
+}

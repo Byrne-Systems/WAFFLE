@@ -1,0 +1,67 @@
+.TH "C:/xampp/htdocs/apps/WAFFLE/inc/controller.php" 3 "Thu Jan 19 2017" "Version 0.2.3-prerelease+build" "WAFFLE" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+C:/xampp/htdocs/apps/WAFFLE/inc/controller.php
+.SH SYNOPSIS
+.br
+.PP
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBControllers\fP"
+.br
+.ti -1c
+.RI " \fBWAFFLE\\Controller\fP"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fB$web\fP ['layout'] = rtrim(dirname(__FILE__), '/inc') \&. '/web/views/layout/'"
+.br
+.ti -1c
+.RI "\fB$web\fP ['head'] = rtrim(dirname(__FILE__), '/inc') \&. '/web/views/head/'"
+.br
+.ti -1c
+.RI "\fB$web\fP ['body'] = rtrim(dirname(__FILE__), '/inc') \&. '/web/views/body/'"
+.br
+.ti -1c
+.RI "\fB$web\fP ['app'] = rtrim(dirname(__FILE__), '/inc') \&. '/web/views/'"
+.br
+.ti -1c
+.RI "\fB$web\fP ['images'] = rtrim(dirname(__FILE__), '/inc') \&. '/web/images/'"
+.br
+.ti -1c
+.RI "\fB$notes\fP = new Template($web['head'] \&. 'notes\&.wad')"
+.br
+.ti -1c
+.RI "\fB$meta\fP = new Template($web['head'] \&. 'meta\&.wad')"
+.br
+.ti -1c
+.RI "\fB$styles\fP = new Template($web['head'] \&. 'style\-sheets\&.wad')"
+.br
+.ti -1c
+.RI "\fB$script\fP = new Template($web['head'] \&. 'script\&.wad')"
+.br
+.ti -1c
+.RI "\fB$layout\fP = new Template($web['layout'] \&. 'html5\&.wad')"
+.br
+.ti -1c
+.RI "\fB$header\fP = new Template($web['body'] \&. 'header\&.wad')"
+.br
+.ti -1c
+.RI "\fB$main\fP = new Template($web['body'] \&. 'main\&.wad')"
+.br
+.ti -1c
+.RI "\fB$footer\fP = new Template($web['body'] \&. 'footer\&.wad')"
+.br
+.ti -1c
+.RI "\fB$app\fP = new Template($web['app'] \&. 'app\&.wad')"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for WAFFLE from the source code\&.

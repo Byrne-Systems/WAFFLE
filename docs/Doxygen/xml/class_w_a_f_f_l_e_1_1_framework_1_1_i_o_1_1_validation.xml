@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_validation" kind="class" language="PHP" prot="public">
+    <compoundname>WAFFLE::Framework::IO::Validation</compoundname>
+    <basecompoundref refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_error" prot="public" virt="non-virtual">Error</basecompoundref>
+    <derivedcompoundref refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_file" prot="public" virt="non-virtual">File</derivedcompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_validation_1a4ff84cc981fb60ee42f19420441e8d7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>check_file</definition>
+        <argsstring>($file)</argsstring>
+        <name>check_file</name>
+        <param>
+          <declname>$file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>[description]</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>[type]</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>$file [description] </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>[type] [description] </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="validation.class.php" line="33" column="1" bodyfile="validation.class.php" bodystart="33" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_validation_1a93629f2b411f25d13fac77a36470fbae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>email_format</definition>
+        <argsstring>($email)</argsstring>
+        <name>email_format</name>
+        <param>
+          <declname>$email</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Validates whether the email passed is a properly formatted email address (i.e., <ulink url="mailto:email@server.net">email@server.net</ulink>)</para><para>Boolean email_format(String $email)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametername>$email</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>E-mail address to validate </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Boolean Result of validation test </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="validation.class.php" line="53" column="1" bodyfile="validation.class.php" bodystart="53" bodyend="65"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_validation" kindref="compound">Validation</ref> IO</para><para>Confirms that transmitted data meets specific criterion prior to allowing a transitional method to progress. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="59">
+        <label>Log</label>
+        <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_log"/>
+      </node>
+      <node id="58">
+        <label>Error</label>
+        <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_error"/>
+        <childnode refid="59" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="60">
+        <label>File</label>
+        <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_file"/>
+        <childnode refid="57" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="57">
+        <label>Validation</label>
+        <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_validation"/>
+        <childnode refid="58" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="63">
+        <label>Log</label>
+        <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_log"/>
+      </node>
+      <node id="62">
+        <label>Error</label>
+        <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_error"/>
+        <childnode refid="63" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="61">
+        <label>Validation</label>
+        <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_validation"/>
+        <childnode refid="62" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="validation.class.php" line="26" column="1" bodyfile="validation.class.php" bodystart="26" bodyend="66"/>
+    <listofallmembers>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_validation_1a4ff84cc981fb60ee42f19420441e8d7b" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::IO::Validation</scope><name>check_file</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_validation_1a93629f2b411f25d13fac77a36470fbae" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::IO::Validation</scope><name>email_format</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_error_1af721dfe2b0cca44a3c68c6fda1439165" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::IO::Validation</scope><name>error</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_log_1a3e3c415ada57f553ac4a39a40051c94f" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::IO::Validation</scope><name>log</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

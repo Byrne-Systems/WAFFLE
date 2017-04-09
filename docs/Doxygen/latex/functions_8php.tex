@@ -1,0 +1,18 @@
+\hypertarget{functions_8php}{}\subsection{C\+:/xampp/htdocs/apps/\+W\+A\+F\+F\+L\+E/inc/functions.php File Reference}
+\label{functions_8php}\index{C\+:/xampp/htdocs/apps/\+W\+A\+F\+F\+L\+E/inc/functions.\+php@{C\+:/xampp/htdocs/apps/\+W\+A\+F\+F\+L\+E/inc/functions.\+php}}
+\subsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespace_controllers}{Controllers}
+\begin{DoxyCompactList}\small\item\em Instantiates and sets new (secure) session(s) for transmitting data to/from the user\textquotesingle{}s UI (or front-\/end) with an application\textquotesingle{}s business logic (or back-\/end) \end{DoxyCompactList}\item 
+ \hyperlink{namespace_w_a_f_f_l_e_1_1_functions}{W\+A\+F\+F\+L\+E\textbackslash{}\+Functions}
+\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespace_w_a_f_f_l_e_1_1_functions_a09d3696edbb60db132cbac829c0a96dd}{sec\+\_\+session\+\_\+start} ()
+\begin{DoxyCompactList}\small\item\em Custom secure method of initiating a P\+HP session; call at the top of each page that should access P\+HP session variable(s) \end{DoxyCompactList}\item 
+\hyperlink{namespace_w_a_f_f_l_e_1_1_functions_a7573c72280bfa987322364343fd97eec}{login} (\$id, \$pass, \$mysqli)
+\begin{DoxyCompactList}\small\item\em Verifies the user\textquotesingle{}s identifier and password against the database\textquotesingle{}s credentials via the \textquotesingle{}password\+\_\+verify()\textquotesingle{} method, which prevents against timing attacks. \end{DoxyCompactList}\item 
+\hyperlink{namespace_w_a_f_f_l_e_1_1_functions_a0a6eed95810480a504f0334d3c23ccbc}{checkbrute} (\$emp\+\_\+id, \$mysqli)
+\begin{DoxyCompactList}\small\item\em Sends an email to the user with a reset link if there has been more than 5 failed login attempts. \end{DoxyCompactList}\end{DoxyCompactItemize}

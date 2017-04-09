@@ -1,0 +1,48 @@
+Meta Tags:
+====================================================================================================
+
+    Vocabularies, Keywords, and Extensions:
+    ------------------------------------------------------------------------------------------------
+        Apple:
+        Blog:
+        ClaimID:
+        DublinCore:
+        Geo:
+        Google:
+            GOOGLE
+              - Valid Content Values;
+                    nositelinkssearchbox                | When users search for your site, Google Search results sometimes display a search box specific to your site, along with other direct links to your site. This meta tag tells Google not to show the sitelinks search box. Learn more about sitelinks search box.
+            GOOGLEBOT
+             - Valid Content Values
+                    noindex                             | prevents the page from being included in the index.
+                    nofollow                            | prevents GoogleBot from following any links on the page. (Note that this is different from the link-level NOFOLLOW attribute, which prevents Googlebot from following an individual link.)
+                    noarchive                           | prevents a cached copy of this page from being available in the search results.
+                    nosnippet                           | prevents a description from appearing below the page in the search results, as well as prevents caching of the page.
+                    noodp                               | blocks the Open Directory Project description of the page from being used in the description that appears below the page in the search results.
+                    none                                | equivalent to "noindex, nofollow"
+                    noimageindex                        | lets you specify that you do not want your page to appear as the referring page for an image that appears in Google search results.
+                    unavailable_after:[date]            | lets you specify the exact time and date you want to stop crawling and indexing of this page
+            GOOGLE-SITE-VERIFICATION
+        HTML:
+            ROBOTS
+              - Valid Content Values;
+                    noindex                             | prevents the page from being included in the index.
+                    nofollow                            | prevents GoogleBot from following any links on the page. (Note that this is different from the link-level NOFOLLOW attribute, which prevents Googlebot from following an individual link.)
+                    noarchive                           | prevents a cached copy of this page from being available in the search results.
+                    nosnippet                           | prevents a description from appearing below the page in the search results, as well as prevents caching of the page.
+                    noodp                               | blocks the Open Directory Project description of the page from being used in the description that appears below the page in the search results.
+                    none                                | equivalent to "noindex, nofollow"
+                    unavailable_after:[date]            | lets you specify the exact time and date you want to stop crawling and indexing of this page
+            APPLICATION-NAME
+            AUTHOR
+            COPYRIGHT
+            DESCRIPTION
+            GENERATOR
+            KEYWORDS
+        IE:
+        Mobile:
+        OpenGraph:
+        Rails:
+        Twitter:
+        Win8:
+

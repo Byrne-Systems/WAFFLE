@@ -1,0 +1,60 @@
+/*
+ *  Set:    CSS Text Decorations
+ *  Notes:  Module that defines features relating to text decoration, underlines, text shadows, and
+ *          emphasis marks.
+ */
+
+/* Text-Decoration */
+// Used to set the text formatting to underline,
+// overline, line-through or blink.
+// - CSS1
+.text-decoration(@arg: none) {
+    text-decoration: @arg;
+    // > none^ | underline | overline | line-through | initial | inherit
+}
+
+/* Text-Decoration-Color */
+// Sets the color used when drawing underlines,
+// overlines, or strike-throughs specified by
+// text-decoration-line.
+// - CSS3
+.text-decoration-color(@arg: rgba(0,0,0,1)) {
+    text-decoration-color: @arg;
+    // > <color>^ | initial | inherit
+}
+
+/* Text-Decoration-Line */
+// Sets what kind of line decorations are added to an
+// element.
+// - CSS3
+.text-decoration-line(@arg: none) {
+    text-decoration-line: @arg;
+    // > none^ | underline | overline | line-through | initial | inherit
+}
+
+/* Text-Decoration-Style */
+// Defines the style of the lines specified by
+// text-decoration-line
+// - CSS3
+.text-decoration-style(@arg: solid) {
+    text-decoration-style: @arg;
+    // > solid^ | double | dotted | dashed | wavy | initial | inherit
+}
+
+/* Text-Shadow */
+// Adds shadows to text
+// - CSS3
+.text-shadow(@arg: none) {
+    text-shadow: @arg;
+    // > color | none | initial | inherit ~ (<h-shadow>, <v-shadow>, <blur-radius>)
+}
+
+/* Text-Underline-Position */
+// Specifies the position of the underline which is set
+// using the text-decoration property underline value.
+// - CSS3
+.text-underline-position(@arg: ) {
+    text-underline-position: @arg;
+    // > [W3C] auto | inherit | under | left | right
+    // > [MS]  auto | above | overline | below | under
+}

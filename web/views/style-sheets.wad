@@ -1,0 +1,8 @@
+<!-- Bootstrap CDN -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Font Awesome CDN -->
+<!-- <script src="https://use.fontawesome.com/565e2914de.js"></script> -->
+
+<!-- Local Adjustments -->
+<link rel="stylesheet" type="text/css" href="/web/styles/css/style.css">

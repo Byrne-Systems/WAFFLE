@@ -1,0 +1,94 @@
+\hypertarget{class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_file}{}\section{File Class Reference}
+\label{class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_file}\index{File@{File}}
+
+
+Inheritance diagram for File\+:
+% FIG 0
+
+
+Collaboration diagram for File\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_file_aafe286d7c8fb46b17af96b66734393c0}{download} (\$file)
+\item 
+\hyperlink{class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_file_abe1b4778c16b961777ab1aa25474995d}{read} (\$file, \$rtn\+\_\+tp, \$latchkey)
+\item 
+\hyperlink{class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_file_ad1346b1a0af3c4b9a5ced25b88e8f4ab}{write} (\$file, \$content, \$type=\textquotesingle{}script\textquotesingle{})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_file}{File} IO
+
+Class designed to handle various file read, write, and modify methods 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_file_aafe286d7c8fb46b17af96b66734393c0}\label{class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_file_aafe286d7c8fb46b17af96b66734393c0}} 
+\index{W\+A\+F\+F\+L\+E\+::\+Framework\+::\+I\+O\+::\+File@{W\+A\+F\+F\+L\+E\+::\+Framework\+::\+I\+O\+::\+File}!download@{download}}
+\index{download@{download}!W\+A\+F\+F\+L\+E\+::\+Framework\+::\+I\+O\+::\+File@{W\+A\+F\+F\+L\+E\+::\+Framework\+::\+I\+O\+::\+File}}
+\subsubsection{\texorpdfstring{download()}{download()}}
+{\footnotesize\ttfamily download (\begin{DoxyParamCaption}\item[{}]{\$file }\end{DoxyParamCaption})}
+
+Forces a download on the client-\/side using this server-\/side method
+
+Mixed download(String \$file)
+
+
+\begin{DoxyParams}[1]{Parameters}
+String & {\em \$file} & Filename (and/or directory) of the file to be returned/downloaded on the client\textquotesingle{}s system \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mixed The requested file 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_file_abe1b4778c16b961777ab1aa25474995d}\label{class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_file_abe1b4778c16b961777ab1aa25474995d}} 
+\index{W\+A\+F\+F\+L\+E\+::\+Framework\+::\+I\+O\+::\+File@{W\+A\+F\+F\+L\+E\+::\+Framework\+::\+I\+O\+::\+File}!read@{read}}
+\index{read@{read}!W\+A\+F\+F\+L\+E\+::\+Framework\+::\+I\+O\+::\+File@{W\+A\+F\+F\+L\+E\+::\+Framework\+::\+I\+O\+::\+File}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily read (\begin{DoxyParamCaption}\item[{}]{\$file,  }\item[{}]{\$rtn\+\_\+tp,  }\item[{}]{\$latchkey }\end{DoxyParamCaption})}
+
+Reads an assortment of flat file types to be returned to the originating method
+
+Mixed read(String \$file, Mixed \$return\+\_\+type, \$\+String \$key)
+
+
+\begin{DoxyParams}[1]{Parameters}
+String & {\em \$file} & Filename (and/or directory) of the file to be returned to the originating method \\
+\hline
+Mixed & {\em \$rtn\+\_\+tp} & Return type or the variable type to return the requested file \\
+\hline
+String & {\em \$latchkey} & Credential(s) to pass to decrypt file, if necessary \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mixed Contents of the requested file 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_file_ad1346b1a0af3c4b9a5ced25b88e8f4ab}\label{class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_file_ad1346b1a0af3c4b9a5ced25b88e8f4ab}} 
+\index{W\+A\+F\+F\+L\+E\+::\+Framework\+::\+I\+O\+::\+File@{W\+A\+F\+F\+L\+E\+::\+Framework\+::\+I\+O\+::\+File}!write@{write}}
+\index{write@{write}!W\+A\+F\+F\+L\+E\+::\+Framework\+::\+I\+O\+::\+File@{W\+A\+F\+F\+L\+E\+::\+Framework\+::\+I\+O\+::\+File}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily write (\begin{DoxyParamCaption}\item[{}]{\$file,  }\item[{}]{\$content,  }\item[{}]{\$type = {\ttfamily \textquotesingle{}script\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Writes passed content into the filename passed  appended after the filename\textquotesingle{}s last entry
+
+Boolean write(String \$file, String \$content, String \$type)
+
+
+\begin{DoxyParams}[1]{Parameters}
+String & {\em \$file} & description \\
+\hline
+String & {\em \$content} & description \\
+\hline
+String & {\em \$type} & description \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Boolean description 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+file.\+class.\+php\end{DoxyCompactItemize}

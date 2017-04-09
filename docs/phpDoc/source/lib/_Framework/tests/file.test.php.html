@@ -1,0 +1,216 @@
+<html>
+    <head>
+        <script
+            type="text/javascript"
+            src="../../../../js/jquery-1.4.2.min.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../../syntax_highlighter/scripts/shCore.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../../syntax_highlighter/scripts/shBrushJScript.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../../syntax_highlighter/scripts/shBrushPhp.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../../syntax_highlighter/scripts/shBrushXml.js">
+        </script>
+        <link
+            href="../../../../syntax_highlighter/styles/shCore.css" rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="../../../../syntax_highlighter/styles/shCoreEclipse.css"
+            rel="stylesheet" type="text/css"
+        />
+        <link
+            href="../../../../syntax_highlighter/styles/shThemeWordpress.css"
+            rel="stylesheet" type="text/css"
+        />
+    </head>
+    <body>
+        <pre class="brush: php">&lt;?php
+/**
+ * testFile : Unit Testing class for &quot;file.class.php&quot;
+ *
+ * @package     UnitTests\testFile
+ * @category    UnitTest
+ * @author      Justin D. Byrne &lt;justin@byrne-systems.com&gt;
+ */
+
+namespace UnitTests;
+
+use UnitTests\testFile;
+use WAFFLE\Framework\IO\File;
+
+require_once __DIR__ . '/../file.class.php';
+
+/**
+ * @author  Justin D. Byrne &lt;justin@byrne-systems.com&gt;
+ */
+class testFile extends \PHPUnit_Framework_TestCase {
+    protected $file;
+
+    /**
+     * Returns the current date for logging, indexing, or anything else requiring a timestamp
+     *
+     * @method String get_date()
+     *
+     * @return          String                          Return the current time; correctly formatted
+     */
+    private function get_date() {
+        date_default_timezone_set('America/Los_Angeles');
+        return &quot;[ &quot; . date('l jS \of F Y h:i:s A') . &quot; ] &quot;;
+    }
+
+    /**
+     * setUp : Instantiate '$file' object to run subsequently recurring tests
+     */
+    public function setUp()
+    {
+        $this-&gt;file = new File;                         // Instantiate: new file object to run a series of unit-tests
+    }
+
+    /**
+     * legally_formatted_write_file_provider : Returns an array that contains various combinations
+     * that a user can legally initiate through File::write
+     *
+     * @return Array    Array of various user combinations that can be legally initiated
+     */
+    public function legally_formatted_write_file_provider()
+    {
+
+        $json_array = array(
+            &quot;title&quot;   =&gt; &quot;Byrne-Systems&quot;,
+            &quot;author&quot;  =&gt; &quot;Justin D. Byrne&quot;,
+            &quot;e-mail&quot;  =&gt; &quot;just@byrne-systems.com&quot;,
+            &quot;website&quot; =&gt; &quot;http://www.byrne-systems.com&quot;,
+            &quot;time stamp&quot; =&gt; $this-&gt;get_date()
+        );
+
+        // $json_array = json_encode($json_array);
+
+        return array(
+            array(      # [0] CASE: file
+                'file',
+                'file created' . $this-&gt;get_date(),
+                'file'
+            ),
+            array(      # [1] CASE: data
+                'data',
+                'data log created' . $this-&gt;get_date(),
+                'log'
+            ),
+            array(      # [2] CASE: json (0) | RETURNS: [&quot;zero&quot;,&quot;one&quot;,&quot;two&quot;,&quot;three&quot;]
+                'json',
+                array(
+                    0 =&gt; 'zero',
+                    1 =&gt; 'one',
+                    2 =&gt; 'two',
+                    3 =&gt; 'three'
+                ),
+                'json'
+            ),
+            array(      # [3] CASE: json (1) | RETURNS: [&quot;zero&quot;,&quot;one&quot;,&quot;two&quot;,&quot;three&quot;]
+                'json',
+                array(
+                    0 =&gt; &quot;zero&quot;,
+                    1 =&gt; &quot;one&quot;,
+                    2 =&gt; &quot;two&quot;,
+                    3 =&gt; &quot;three&quot;
+                ),
+                'json'
+            ),
+            array(      # [4] CASE: json (2) | RETURNS: [&quot;zero&quot;,&quot;one&quot;,&quot;two&quot;,&quot;three&quot;]
+                'json',
+                array(
+                    &quot;0&quot; =&gt; &quot;zero&quot;,
+                    &quot;1&quot; =&gt; &quot;one&quot;,
+                    &quot;2&quot; =&gt; &quot;two&quot;,
+                    &quot;3&quot; =&gt; &quot;three&quot;
+                ),
+                'json'
+            ),
+            array(      # [5] CASE: json (3) | RETURNS: {&quot;zero&quot;:&quot;0&quot;,&quot;one&quot;:&quot;1&quot;,&quot;two&quot;:&quot;2&quot;,&quot;three&quot;:&quot;3&quot;}
+                'json',
+                array(
+                    &quot;zero&quot; =&gt; &quot;0&quot;,
+                    &quot;one&quot; =&gt; &quot;1&quot;,
+                    &quot;two&quot; =&gt; &quot;2&quot;,
+                    &quot;three&quot; =&gt; &quot;3&quot;
+                ),
+                'json'
+            ),
+            array(      # [6] CASE: json (4) | RETURNS: {&quot;header&quot;:{&quot;body&quot;:true,&quot;footer&quot;:&quot;bottom&quot;},&quot;extra stuff&quot;:false,&quot;tag&quot;:&quot;!&quot;,&quot;number&quot;:3}
+                'json',
+                array(
+                    &quot;header&quot; =&gt; array(
+                        &quot;body&quot; =&gt; true,
+                        &quot;footer&quot; =&gt; &quot;bottom&quot;
+                        ),
+                    &quot;extra stuff&quot; =&gt; false,
+                    &quot;tag&quot; =&gt; &quot;!&quot;,
+                    &quot;number&quot; =&gt; 3
+                ),
+                'json'
+            ),
+            array(      # [7] CASE: json (5) | RETURNS: {&quot;title&quot;:&quot;Byrne-Systems&quot;,&quot;author&quot;:&quot;Justin D. Byrne&quot;,&quot;e-mail&quot;:&quot;just@byrne-systems.com&quot;,&quot;website&quot;:&quot;http://www.byrne-systems.com&quot;,&quot;time stamp&quot;:&quot;[ Sunday 21st of February 2016 09:36:55 AM ] &quot;}
+                'json',
+                $json_array,
+                'json'
+            )
+        );
+    }
+
+    /**
+     * Tests File::write method, which writes passed content into the filename passed @params
+     * appended after the filename's
+     *
+     * @dataProvider legally_formatted_write_file_provider
+     */
+    public function test_write_method_with_legal_values($filename, $content, $type)
+    {
+        $this-&gt;assertTrue($this-&gt;file-&gt;write($filename, $content, $type));
+    }
+
+    /**
+     * illegally_formatted_write_file_provider : Returns an array that contains various combinations
+     * that a user can legally initiate through File::write
+     *
+     * @return Array    Array of various user combinations that can be legally initiated
+     */
+    public function illegally_formatted_write_file_provider()
+    {
+        return array(   # [0] CASE: file
+            array(
+                'file',
+                'file not created',
+                ''
+            )
+        );
+    }
+
+    /**
+     * Tests File::write method, which writes passed content into the filename passed @params
+     * appended after the filename's
+     *
+     * @dataProvider illegally_formatted_write_file_provider
+     */
+    public function test_write_method_with_illegal_values($filename, $content, $type)
+    {
+        $this-&gt;assertFalse($this-&gt;file-&gt;write($filename, $content, $type));
+    }
+}</pre>
+        <script type="text/javascript">
+             SyntaxHighlighter.all();
+             jQuery('.gutter div').each(function(key, data){
+                jQuery(data).prepend('<a name="L'+jQuery(data).text()+'"/>');
+             });
+        </script>
+    </body>
+</html>

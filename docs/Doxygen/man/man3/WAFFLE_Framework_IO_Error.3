@@ -1,0 +1,54 @@
+.TH "Error" 3 "Sun Apr 9 2017" "Version 0.35.0.0" "WAFFLE" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Error
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBLog\fP\&.
+.PP
+Inherited by \fBValidation\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBerror\fP ($msg, $class, $fn, $ln, $fl)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBError\fP IO
+.PP
+[Description] 
+.SH "Member Function Documentation"
+.PP 
+.SS "error ( $msg,  $class,  $fn,  $ln,  $fl)"
+Generates a valid error message specific to the Waffle framework, then logs the message in 'waffle\&.error\&.log' prior to exiting the framework while displaying the error message passed\&.
+.PP
+void error(String $time, String $msg, String $func, String $class)
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$msg\fP \fBError\fP message to log and print through std-out 
+.br
+\fI$class\fP Originating class from where the error propagated 
+.br
+\fI$fn\fP Originating function from where the error propagated 
+.br
+\fI$ln\fP Originating line number from where the error propagated 
+.br
+\fI$fl\fP Originating file from where the error propagated
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+String $error Compiled error message with time-stamp and constants parsed through this method's params 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for WAFFLE from the source code\&.

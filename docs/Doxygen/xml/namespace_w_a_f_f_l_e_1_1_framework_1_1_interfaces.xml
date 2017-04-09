@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespace_w_a_f_f_l_e_1_1_framework_1_1_interfaces" kind="namespace" language="PHP">
+    <compoundname>WAFFLE::Framework::Interfaces</compoundname>
+    <innerclass refid="interface_w_a_f_f_l_e_1_1_framework_1_1_interfaces_1_1i_h_t_m_l" prot="public">WAFFLE::Framework::Interfaces::iHTML</innerclass>
+    <innerclass refid="interface_w_a_f_f_l_e_1_1_framework_1_1_interfaces_1_1i_template" prot="public">WAFFLE::Framework::Interfaces::iTemplate</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="html.interface.php" line="10" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_w_a_f_f_l_e_1_1_framework_1_1_encryption_1_1_cipher" kind="class" language="PHP" prot="public">
+    <compoundname>WAFFLE::Framework::Encryption::Cipher</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_encryption_1_1_cipher" kindref="compound">Cipher</ref> Encryption</para><para>Short Description </para>    </detaileddescription>
+    <location file="cipher.class.php" line="22" column="1" bodyfile="cipher.class.php" bodystart="22" bodyend="24"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

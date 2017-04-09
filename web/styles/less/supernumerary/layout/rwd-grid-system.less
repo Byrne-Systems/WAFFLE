@@ -1,0 +1,117 @@
+/*
+ *  Set:    Responsive Web-Design Grid System
+ *  Notes:  Module that
+ */
+
+/* Common Semantic Markup */
+* { .box-sizing(border-box); }
+
+/**
+ * General Variables
+ * @var                                     {Percentage} margin-bottom              Bottom: margin for each row inside of the '.grid' {Class}
+ * @var                                     {Percentage} padding-top                Top: padding for each row inside of the '.grid' {Class}
+ * @var                                     {Percentage} gutter                     Gutter: to separate each in-line element
+ * @var                                     {Percentage} inner-padding              Padding: for the inside of the '.grid' {Class} | (Optional)
+ */
+@base-width:    960px;
+@main-width:    round(@base-width \ 1.618);
+@sidebar-width: round(@base-width * 0.382);
+
+@margin-bottom: 0.855218%;                                                                          // 10px | 0.625em
+@padding-top:   0.757575%;                                                                          // 9px  | 0.5625em
+@gutter:        1.010101%;                                                                          // 12px | 0.75em
+@inner-padding: 0.505050%;                                                                          // 6px  | 0.375em
+
+/**
+ * Media Query Breakpoints
+ * @var     {Media Query} box-full       Max: screen width is 100% of parent element
+ * @var     {Media Query} box-320        Max: screen width is 320 pixels of their parent element
+ * @var     {Media Query} box-640        Max: screen width is 640 pixels of their parent element
+ * @var     {Media Query} box-960        Max: screen width is 960 pixels of their parent element
+ * @var     {Media Query} box-1200       Max: screen width is 1200 pixels of their parent element
+ */
+@box-full: ~"only screen and (max-width: 100%)";                                                    // Full Screen
+@box-320:  ~"only screen and (max-width: 320px)";                                                   // (320x640)
+@box-640:  ~"only screen and (max-width: 640px)";                                                   // (640x320)
+@box-960:  ~"only screen and (max-width: 960px)";                                                   // (960x1200)
+@box-1200: ~"only screen and (max-width: 1200px)";                                                  // (1200x960)
+
+/**
+ * Column Sizes
+ * @var     {Percentage} col-1           Column: dimensions 88px   | 5.5em
+ * @var     {Percentage} col-2           Column: dimensions 188px  | 11.75em
+ * @var     {Percentage} col-3           Column: dimensions 288px  | 18em
+ * @var     {Percentage} col-4           Column: dimensions 388px  | 24.25em
+ * @var     {Percentage} col-5           Column: dimensions 488px  | 30.5em
+ * @var     {Percentage} col-6           Column: dimensions 588px  | 36.75em
+ * @var     {Percentage} col-7           Column: dimensions 688px  | 43em
+ * @var     {Percentage} col-8           Column: dimensions 788px  | 49.25em
+ * @var     {Percentage} col-9           Column: dimensions 889px  | 55.5625em
+ * @var     {Percentage} col-10          Column: dimensions 989px  | 61.8125em
+ * @var     {Percentage} col-11          Column: dimensions 1089px | 68.0625em
+ * @var     {Percentage} col-12          Column: dimensions 1188px | 74.25em
+ */
+@col-1_min:  7.3%;              @col-1_max: 15.824915%;
+@col-2_min:  15.824916%;        @col-2_max: 24.242423%;
+@col-3_min:  24.242424%;        @col-3_max: 32.659932%;
+@col-4_min:  32.659933%;        @col-4_max: 41.077440%;
+@col-5_min:  41.077441%;        @col-5_max: 49.494948%;
+@col-6_min:  49.494949;         @col-6_max: 57.912457%;
+@col-7_min:  57.912458%;        @col-7_max: 66.329965%;
+@col-8_min:  66.329966%;        @col-8_max: 74.831649%;
+@col-9_min:  74.831650%;        @col-9_max: 83.249157%;
+@col-10_min: 83.249158%;        @col-10_max: 91.666666%;
+@col-11_min: 91.666667%;        @col-11_max: 99.249999%;
+@col-12_min: 99.25%;            @col-12_max: 100%;
+
+@col-1:  7.407407%;
+@col-2:  15.824916%;
+@col-3:  24.242424%;
+@col-4:  32.659933%;
+@col-5:  41.077441%;
+@col-6:  49.494949%;
+@col-7:  57.912458%;
+@col-8:  66.329966%;
+@col-9:  74.831650%;
+@col-10: 83.249158%;
+@col-11: 91.666667%;
+@col-12: 99%;
+
+/***************/
+/*** Mixin's ***/
+/***************/
+.wrapper {
+
+}
+
+/**
+ * Grid Mixin
+ * @mixin                                   {Mixin}                                 Grid: container to hold each row, including each row's nested columns
+ */
+.grid {
+    margin: 0 auto;
+    width: 100%;
+}
+
+/**
+ * Rows
+ */
+.row {
+    margin: 0 ;
+    margin-bottom: 0 !important;
+    width: auto;
+}
+
+/**
+ * Breakpoint Mixins'
+ * @mixin   {Max-Width} range-full        Max: screen width is 100% of parent element
+ * @mixin   {Max-Width} range-320         Max: screen width is 320 pixels of their parent element
+ * @mixin   {Max-Width} range-640         Max: screen width is 640 pixels of their parent element
+ * @mixin   {Max-Width} range-960         Max: screen width is 960 pixels of their parent element
+ * @mixin   {Max-Width} range-1200        Max: screen width is 1200 pixels of their parent element
+ */
+.range-full { max-width: 100%;   }                                                                  // All
+.range-320  { max-width: 320px;  }                                                                  // iPhone
+.range-640  { max-width: 640px;  }                                                                  // iPad
+.range-960  { max-width: 960px;  }                                                                  // Tablet
+.range-1200 { max-width: 1200px; }                                                                  // PC

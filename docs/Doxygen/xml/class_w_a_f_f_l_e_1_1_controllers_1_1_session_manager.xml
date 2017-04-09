@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_w_a_f_f_l_e_1_1_controllers_1_1_session_manager" kind="class" language="PHP" prot="public">
+    <compoundname>WAFFLE::Controllers::SessionManager</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_controllers_1_1_session_manager_1a3d98fd81ca4375c8e121fa1a6dd20074" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sec_session_start</definition>
+        <argsstring>($session_name=&apos;sec_session_id&apos;)</argsstring>
+        <name>sec_session_start</name>
+        <param>
+          <declname>$session_name</declname>
+          <defval>&apos;sec_session_id&apos;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Custom secure method of initiating a PHP session; call at the top of each page that should access PHP session variable(s)</para><para><simplesect kind="return"><para>NULL Initiates a secure PHP session </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="session-manager.class.php" line="29" column="1" bodyfile="session-manager.class.php" bodystart="29" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_controllers_1_1_session_manager_1a0699e69686fe46ec84a3c0b680080414" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>session_timeout</definition>
+        <argsstring>($inactivity=600)</argsstring>
+        <name>session_timeout</name>
+        <param>
+          <declname>$inactivity</declname>
+          <defval>600</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>[session_timeout description]</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>Integer</parametertype>
+<parametername>$inactivity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[description] </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>NULL [description] </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="session-manager.class.php" line="54" column="1" bodyfile="session-manager.class.php" bodystart="54" bodyend="66"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Session Manager</para><para>Instantiates secure session(s) for transmitting data to/from back and front-end(s) </para>    </detaileddescription>
+    <location file="session-manager.class.php" line="22" column="1" bodyfile="session-manager.class.php" bodystart="22" bodyend="67"/>
+    <listofallmembers>
+      <member refid="class_w_a_f_f_l_e_1_1_controllers_1_1_session_manager_1a3d98fd81ca4375c8e121fa1a6dd20074" prot="public" virt="non-virtual"><scope>WAFFLE::Controllers::SessionManager</scope><name>sec_session_start</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_controllers_1_1_session_manager_1a0699e69686fe46ec84a3c0b680080414" prot="public" virt="non-virtual"><scope>WAFFLE::Controllers::SessionManager</scope><name>session_timeout</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

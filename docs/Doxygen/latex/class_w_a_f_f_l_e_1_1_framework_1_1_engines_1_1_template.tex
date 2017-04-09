@@ -1,0 +1,131 @@
+\hypertarget{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template}{}\section{Template Class Reference}
+\label{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template}\index{Template@{Template}}
+
+
+Inheritance diagram for Template\+:
+% FIG 0
+
+
+Collaboration diagram for Template\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template_a8ef77288a5f940c68ebc57fdf0102078}{\+\_\+\+\_\+construct} (\$file)
+\item 
+\hyperlink{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template_aab787bd83f84f4215dceb35f7c305eee}{set} (\$key, \$value)
+\item 
+\hyperlink{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template_a3939045b11b9aaefdf692feb963f0dfc}{output} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template_a35932dacc685dbaaf413695f6dd67f36}{merge} (\$templates, \$separator=\char`\"{}\textbackslash{})
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template_a823f9d8bf697d2dd19672687804d05b4}{\$file}
+\item 
+\hyperlink{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template_a46220846a73e3618f122b00d8c898308}{\$values} = array()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template}{Template} Engine
+
+Templating engine that generates \hyperlink{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l}{H\+T\+ML} files utilizing W\+A\+F\+F\+LE\textquotesingle{}s view\textquotesingle{}s, or \char`\"{}.\+wad\char`\"{} files 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template_a8ef77288a5f940c68ebc57fdf0102078}\label{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template_a8ef77288a5f940c68ebc57fdf0102078}} 
+\index{W\+A\+F\+F\+L\+E\+::\+Framework\+::\+Engines\+::\+Template@{W\+A\+F\+F\+L\+E\+::\+Framework\+::\+Engines\+::\+Template}!\+\_\+\+\_\+construct@{\+\_\+\+\_\+construct}}
+\index{\+\_\+\+\_\+construct@{\+\_\+\+\_\+construct}!W\+A\+F\+F\+L\+E\+::\+Framework\+::\+Engines\+::\+Template@{W\+A\+F\+F\+L\+E\+::\+Framework\+::\+Engines\+::\+Template}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$file }\end{DoxyParamCaption})}
+
+Constructor method used to instantiate a new \hyperlink{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template}{Template} object after passing its associate file.
+
+\+\_\+\+\_\+construct(String \$file)
+
+
+\begin{DoxyParams}[1]{Parameters}
+String & {\em \$file} & The filename of the template file to load \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template_a35932dacc685dbaaf413695f6dd67f36}\label{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template_a35932dacc685dbaaf413695f6dd67f36}} 
+\index{W\+A\+F\+F\+L\+E\+::\+Framework\+::\+Engines\+::\+Template@{W\+A\+F\+F\+L\+E\+::\+Framework\+::\+Engines\+::\+Template}!merge@{merge}}
+\index{merge@{merge}!W\+A\+F\+F\+L\+E\+::\+Framework\+::\+Engines\+::\+Template@{W\+A\+F\+F\+L\+E\+::\+Framework\+::\+Engines\+::\+Template}}
+\subsubsection{\texorpdfstring{merge()}{merge()}}
+{\footnotesize\ttfamily static merge (\begin{DoxyParamCaption}\item[{}]{\$templates,  }\item[{}]{\$separator = {\ttfamily \char`\"{}\textbackslash{}n\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Merge multiple templates together to output each template view passed as a single string.
+
+String merge(Array \$templates, String \$separator)
+
+
+\begin{DoxyParams}[1]{Parameters}
+Array & {\em \$templates} & An array of templates to be merged. \\
+\hline
+String & {\em \$separator} & Format each template merged with this separator. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String \$output Output all of the merged (or concatenated) content with the separator passed through. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template_a3939045b11b9aaefdf692feb963f0dfc}\label{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template_a3939045b11b9aaefdf692feb963f0dfc}} 
+\index{W\+A\+F\+F\+L\+E\+::\+Framework\+::\+Engines\+::\+Template@{W\+A\+F\+F\+L\+E\+::\+Framework\+::\+Engines\+::\+Template}!output@{output}}
+\index{output@{output}!W\+A\+F\+F\+L\+E\+::\+Framework\+::\+Engines\+::\+Template@{W\+A\+F\+F\+L\+E\+::\+Framework\+::\+Engines\+::\+Template}}
+\subsubsection{\texorpdfstring{output()}{output()}}
+{\footnotesize\ttfamily output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Output a correctly formatted \hyperlink{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l}{H\+T\+ML} (String), after supplementing each template tag identified through each assigned view ($\ast$.wad) file.
+
+String \hyperlink{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template_a3939045b11b9aaefdf692feb963f0dfc}{output()}
+
+\begin{DoxyReturn}{Returns}
+String \$output Correctly formatted \hyperlink{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l}{H\+T\+ML}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template_aab787bd83f84f4215dceb35f7c305eee}\label{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template_aab787bd83f84f4215dceb35f7c305eee}} 
+\index{W\+A\+F\+F\+L\+E\+::\+Framework\+::\+Engines\+::\+Template@{W\+A\+F\+F\+L\+E\+::\+Framework\+::\+Engines\+::\+Template}!set@{set}}
+\index{set@{set}!W\+A\+F\+F\+L\+E\+::\+Framework\+::\+Engines\+::\+Template@{W\+A\+F\+F\+L\+E\+::\+Framework\+::\+Engines\+::\+Template}}
+\subsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily set (\begin{DoxyParamCaption}\item[{}]{\$key,  }\item[{}]{\$value }\end{DoxyParamCaption})}
+
+Sets the value to replace the specific tag passed through this function.
+
+set(String \$key, String \$value)
+
+
+\begin{DoxyParams}[1]{Parameters}
+String & {\em \$key} & The key used to identify the template tag (e.\+g., \mbox{[}!temp\+\_\+tag\mbox{]}) to be set \\
+\hline
+String & {\em \$value} & The value parsed (or supplemented); in correspondence with its key \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template_a823f9d8bf697d2dd19672687804d05b4}\label{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template_a823f9d8bf697d2dd19672687804d05b4}} 
+\index{W\+A\+F\+F\+L\+E\+::\+Framework\+::\+Engines\+::\+Template@{W\+A\+F\+F\+L\+E\+::\+Framework\+::\+Engines\+::\+Template}!\$file@{\$file}}
+\index{\$file@{\$file}!W\+A\+F\+F\+L\+E\+::\+Framework\+::\+Engines\+::\+Template@{W\+A\+F\+F\+L\+E\+::\+Framework\+::\+Engines\+::\+Template}}
+\subsubsection{\texorpdfstring{\$file}{$file}}
+{\footnotesize\ttfamily String \$file\hspace{0.3cm}{\ttfamily [protected]}}
+
+\hyperlink{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template}{Template} filename to load, and eventually parse via this template engine
+
+protected \mbox{\Hypertarget{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template_a46220846a73e3618f122b00d8c898308}\label{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template_a46220846a73e3618f122b00d8c898308}} 
+\index{W\+A\+F\+F\+L\+E\+::\+Framework\+::\+Engines\+::\+Template@{W\+A\+F\+F\+L\+E\+::\+Framework\+::\+Engines\+::\+Template}!\$values@{\$values}}
+\index{\$values@{\$values}!W\+A\+F\+F\+L\+E\+::\+Framework\+::\+Engines\+::\+Template@{W\+A\+F\+F\+L\+E\+::\+Framework\+::\+Engines\+::\+Template}}
+\subsubsection{\texorpdfstring{\$values}{$values}}
+{\footnotesize\ttfamily Array \$values = array()\hspace{0.3cm}{\ttfamily [protected]}}
+
+The value of each template tag (e.\+g., \mbox{[}!tag\mbox{]}) authored throughout each template file (e.\+g., $\ast$.wad)
+
+protected 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+template.\+class.\+php\end{DoxyCompactItemize}

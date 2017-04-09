@@ -1,0 +1,115 @@
+/*
+ *  Set:    CSS Flexible Box Layout
+ *  Notes:  Module defining flexible multi-column layout, expressing how content flows between
+ *          columns and how gaps and rules are handled.
+ */
+
+/* Align-Content */
+// Aligns a flex container's lines within the flex
+// container when there is extra space on the cross-axis.
+// - CSS3
+.align-content(@arg: stretch) {
+    align-content: @arg;
+    // > stretch' | center | flex-start | flex-end | space-between | space-around | initial | inherit
+}
+
+/* Align-Items */
+// Aligns flex items of the current flex line the same
+// way as justify-content but in the perpendicular
+// direction.
+// - CSS3
+.align-items(@arg: stetch) {
+    align-items: @arg;
+    // > stretch' | center | flex-start | flex-end | baseline | initial | inherit
+}
+
+/* Align-Self */
+// Aligns flex items of the current flex line overriding
+// the align-items value.
+// - CSS3
+.align-self(@arg: auto) {
+    align-self: @arg;
+    // > auto' | stretch | center | flex-start | flex-end | baseline | initial | inherit
+}
+
+/* Flex */
+// Specifying the ability of a flex item to alter its
+// dimensions to fill available space.
+// - CSS3
+.flex(@arg: 0 1 auto) {
+    flex: @arg;
+    // <flex-grow>   = <number>
+    // <flex-shrink> = <number>
+    // <flex>        = auto | inherit | [<number> | % | px | em]
+    // > (<grow>, <shrink>, <flex>) | auto' | initial | none | inherit
+}
+
+/* Flex-Basis */
+// Specifies the flex basis which is the initial main
+// size of a flex item.
+// - CSS3
+.flex-basis(@arg: auto) {
+    flex-basis: @arg;
+    // > <number> | auto | initial | inherit
+}
+
+/* Flex-Direction */
+// Specifies how flex items are placed in the flex
+// container defining the main axis and the direction
+// (normal or reversed).
+// - CSS3
+.flex-direction(@arg: row) {
+    flex-direction: @arg;
+    // > row' | row-reverse | column | column-reverse | initial | inherit
+}
+
+/* Flex-Flow */
+// For flex-direction and flex-wrap individual
+// properties.
+// - CSS3
+.flex-flow(@arg: row nowrap) {
+    flex-flow: @arg;
+    // <flex-direction> = row' | row-reverse | column | column-referse | initial | inherit
+    // <flex-wrap> = nowrap' | wrap | wrap-reverse | initial | inherit
+    // > (<flex-direction>, <flex-wrap>) | initial | inherit
+}
+
+/* Flex-Grow */
+// Specifies the flex grow factor of a flex item. It specifies what amount of space inside the flex container the item should take up.
+// - CSS3
+.flex-grow(@arg: 0) {
+    flex-grow: @arg;
+    // > <number>' | initial | inherit
+}
+
+/* Flex-Shrink */
+// Specifies the flex shrink factor of a flex item.
+// - CSS3
+.flex-shrink(@arg: 1) {
+    flex-shrink: @arg;
+    // > <number>' | initial | inherit
+}
+
+/* Flex-Wrap */
+// Specifies whether flex items are forced into a single line or can be wrapped onto multiple lines.
+// - CSS3
+.flex-wrap(@arg: nowrap) {
+    flex-wrap: @arg;
+    // > nowrap' | wrap | wrap-reverse | initial | inherit
+}
+
+/* Justify-Content */
+// Defines how the browser distributes space between and around flex items along the main-axis of their container.
+// - CSS3
+.justify-content(@arg: flex-start) {
+    justify-content: @arg;
+    // > flex-start' | flex-end | center | space-between | space-around | initial | inherit
+}
+
+/* Order */
+// Specifies the order used to lay out flex items in their flex container.
+// - CSS3
+.order(@arg: 0) {
+    order: @arg;
+    // > <number>' | initial | inherit
+}

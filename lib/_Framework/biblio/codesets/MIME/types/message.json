@@ -1,0 +1,22 @@
+{
+  "message": {
+    "CPIM": "message/CPIM",
+    "delivery-status": "message/delivery-status",
+    "disposition-notification": "message/disposition-notification",
+    "example": "message/example",
+    "feedback-report": "message/feedback-report",
+    "global": "message/global",
+    "global-delivery-status": "message/global-delivery-status",
+    "global-disposition-notification": "message/global-disposition-notification",
+    "global-headers": "message/global-headers",
+    "http": "message/http",
+    "imdn+xml": "message/imdn+xml",
+    "news-OBSOLETEDbyRFC5537": "message/news",
+    "s-http": "message/s-http",
+    "sip": "message/sip",
+    "sipfrag": "message/sipfrag",
+    "tracking-status": "message/tracking-status",
+    "vnd.si.simp-OBSOLETEDbyrequest": "message/vnd.si.simp",
+    "vnd.wfa.wsc": "message/vnd.wfa.wsc"
+  }
+}

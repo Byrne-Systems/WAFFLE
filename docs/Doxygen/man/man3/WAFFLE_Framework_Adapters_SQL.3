@@ -1,0 +1,156 @@
+.TH "SQL" 3 "Sun Apr 9 2017" "Version 0.35.0.0" "WAFFLE" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SQL
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fB__construct\fP ()"
+.br
+.ti -1c
+.RI "\fBselect\fP ($table, $where)"
+.br
+.ti -1c
+.RI "\fBinsert\fP ($table, $columnsArray, $requiredColumnsArray)"
+.br
+.ti -1c
+.RI "\fBupdate\fP ($table, $columnsArray, $where, $requiredColumnsArray)"
+.br
+.ti -1c
+.RI "\fBdelete\fP ($table, $where)"
+.br
+.ti -1c
+.RI "\fBquery\fP ($statement)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fB$host\fP = '127\&.0\&.0\&.1'"
+.br
+.ti -1c
+.RI "\fB$user\fP = 'admin'"
+.br
+.ti -1c
+.RI "\fB$pass\fP = 'xNWLU3B69AhC2GBu'"
+.br
+.ti -1c
+.RI "\fB$db\fP = 'byrne\-systems'"
+.br
+.ti -1c
+.RI "\fB$cxn\fP"
+.br
+.ti -1c
+.RI "\fB$File\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBSQL\fP Adapter
+.PP
+Database class utilized for data access and manipulation 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "__construct ()"
+Instantiate the $File (Object) and $cxn (Array) 
+.SH "Member Function Documentation"
+.PP 
+.SS "delete ( $table,  $where)"
+Generates a DELETE statement to query against the database, while returning a response
+.PP
+String delete(String $table, String $where)
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$table\fP Name of the table to access 
+.br
+\fI$where\fP A WHERE clause for the query 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+String $response The response returned obtained through querying the database with the generated statement\&. 
+.RE
+.PP
+
+.SS "insert ( $table,  $columnsArray,  $requiredColumnsArray)"
+Generates an INSERT statement to query against the database, while returning a response\&.
+.PP
+String insert(String $table, Array $columnsArray, Array $requiredColumnsArray)
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$table\fP Name of the table to access 
+.br
+\fI$columnsArray\fP The name of the columns for the query executed 
+.br
+\fI$requiredColumnsArray\fP Required Columns 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+String $response The response returned obtained through querying the database with the generated statement\&. 
+.RE
+.PP
+
+.SS "query ( $statement)"
+[description]
+.PP
+String query(String $statement)
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$statement\fP The statement to be used to manipulate data in the database\&. 
+.RE
+.PP
+
+.SS "select ( $table,  $where)"
+Generates a SELECT statement to query against the database, while returning the selected data (or response)\&.
+.PP
+String select(String $table, String $where)
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$table\fP Name of the table to access 
+.br
+\fI$where\fP A WHERE clause for the query 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+String $response The returned data (or response) obtained through querying the database with the generated SELECT statement\&. 
+.RE
+.PP
+
+.SS "update ( $table,  $columnsArray,  $where,  $requiredColumnsArray)"
+Generates an UPDATE statement to query against the database, while returning a response\&.
+.PP
+String update(String $table, Array $columnsArray, String $where, Array $requiredColumnsArray)
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$table\fP Name of the table to access 
+.br
+\fI$columnsArray\fP The name of the columns for the query executed 
+.br
+\fI$where\fP A WHERE clause for the query 
+.br
+\fI$requiredColumnsArray\fP Required Columns 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+String $response The response returned obtained through querying the database with the generated statement\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for WAFFLE from the source code\&.

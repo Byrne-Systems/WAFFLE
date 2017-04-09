@@ -1,0 +1,49 @@
+/*
+ *  Set:    Miscellaneous Definitions & Properties
+ *  Notes:  Properties that are highly experimental or don't fit in other categories.
+ */
+
+/* All */
+// Resets all properties, apart from unicode-bidi and
+// direction, to their initial or inherited value.
+// - CSS3
+.all(@arg: initial) {
+    all: @arg;
+    // > initial' | inherit | unset
+}
+
+/* Clip */
+// Defines what portion of an element is visible.
+// - CSS2
+.clip(@arg: auto) {
+    clip: @arg;
+    // > auto' | shape | initial | inherit
+}
+
+/* Clip-Path */
+// Prevents a portion of an element from getting
+// displayed by defining a clipping region to be
+// displayed.
+// - CSS3
+.clip-path(@arg: auto) {
+    clip-path: @arg;
+    // > auto' | rect | polygon | circle | ellipse | inset | url
+}
+
+/* Display */
+// Specifies the type of rendering box used for an
+// element.
+// - CSS1
+.display(@arg: inline) {
+    display: @arg;
+    // > inline' | block | flex | inline-block | inline-flex | inline-table | list-item | run-in | table | table-caption | table-column-group | table-header-group | table-footer-group | table-row-group | table-cell | table-column | table-row | none | initial | inherit
+}
+
+/* IME-Mode */
+// Controls the state of the input method editor for
+// text fields.
+// - CSS3
+.ime-mode(@arg: auto) {
+    ime-mode: @arg;
+    // > auto' | normal | active | inactive | disabled
+}

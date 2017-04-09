@@ -1,0 +1,1053 @@
+<html>
+    <head>
+        <script
+            type="text/javascript"
+            src="../../../../js/jquery-1.4.2.min.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../../syntax_highlighter/scripts/shCore.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../../syntax_highlighter/scripts/shBrushJScript.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../../syntax_highlighter/scripts/shBrushPhp.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../../syntax_highlighter/scripts/shBrushXml.js">
+        </script>
+        <link
+            href="../../../../syntax_highlighter/styles/shCore.css" rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="../../../../syntax_highlighter/styles/shCoreEclipse.css"
+            rel="stylesheet" type="text/css"
+        />
+        <link
+            href="../../../../syntax_highlighter/styles/shThemeWordpress.css"
+            rel="stylesheet" type="text/css"
+        />
+    </head>
+    <body>
+        <pre class="brush: php">&lt;?php
+/**
+ * testHTML : Unit Testing class for &quot;html.class.php&quot;
+ *
+ * @package     UnitTests\testHTML
+ * @category    UnitTest
+ * @author      Justin D. Byrne &lt;justin@byrne-systems.com&gt;
+ */
+
+namespace UnitTests;
+
+use UnitTests\testHTML;
+use WAFFLE\Framework\Engines\Template;
+
+require_once __DIR__ . '/../template.class.php';
+
+/**
+ * @author  Justin D. Byrne &lt;justin@byrne-systems.com&gt;
+ */
+class testHTML extends \PHPUnit_Framework_TestCase {
+    protected $template;
+    protected $fav_dir;
+
+    /**
+     * setUp : Instantiate '$template' object to run subsequently recurring tests
+     */
+    public function setUp()
+    {
+        # Location: of vital assets for unit testing
+        $assets = 'C:/xampp/htdocs/lib/_Framework/tests/assets/';
+
+        # Location: of favicon(s)
+        $this-&gt;fav_dir = 'C:/xampp/htdocs/web/images/fav/';
+
+        # Instantiate: new template with a phony template file
+        $this-&gt;template = new Template($assets . 'testTemplate.wad');
+    }
+
+    /**
+     * anchor_provider : Returns an array that contains various combinations that a user can legally
+     * initiate through HTML::anchor
+     *
+     * @return Array    Array of various user combinations that can be legally initiated
+     */
+    public function anchor_provider()
+    {
+        return array(
+            array(
+                'test',
+                'home',
+                'HOME',
+                'homepage',
+                '#home',
+                '&lt;a href=&quot;http://www.byrne-systems.com/home&quot; title=&quot;homepage&quot; id=&quot;home&quot;&gt;HOME&lt;/a&gt;'
+            ),
+            array(
+                'test',
+                'home',
+                'HOME',
+                'homepage',
+                '.home',
+                '&lt;a href=&quot;http://www.byrne-systems.com/home&quot; title=&quot;homepage&quot; class=&quot;home&quot;&gt;HOME&lt;/a&gt;'
+            ),
+            array(
+                'test',
+                'home',
+                'HOME',
+                'homepage',
+                '_home',
+                '&lt;a href=&quot;http://www.byrne-systems.com/home&quot; title=&quot;homepage&quot; target=&quot;home&quot;&gt;HOME&lt;/a&gt;'
+            ),
+            array(
+                'test',
+                'home',
+                'HOME',
+                'homepage',
+                array(
+                    '.home',
+                    ',page'
+                ),
+                '&lt;a href=&quot;http://www.byrne-systems.com/home&quot; title=&quot;homepage&quot; class=&quot;home page&quot;&gt;HOME&lt;/a&gt;'
+            )
+        );
+    }
+
+    /**
+     * Tests HTML::anchor method, which generates an internal or external HTML hypertext link
+     *
+     * &amp;@method String anchor() anchor(String $dst, String $content, String $title, String $aux)
+     *
+     * @param           String $href                    Defines a URL to open when this element is clicked
+     * @param           String $content                 Content enclosed between the tags of the generated link (i.e., &lt;a&gt;content&lt;/a&gt;)
+     * @param           String $title                   Sets the title of the generated hypertext link
+     * @param           String $aux                     Sets a target (where to open linked document) or (either) an id or a class attribute for styling
+     * @return          String                          The generated hypertext link
+     *
+     * @dataProvider anchor_provider
+     */
+    public function test_anchor_method($tag, $dst, $content, $title, $aux, $expected)
+    {
+        $this-&gt;template-&gt;set($tag, $this-&gt;template-&gt;anchor($dst, $content, $title, $aux));
+        $this-&gt;assertEquals($expected, $this-&gt;template-&gt;output());
+    }
+
+    /**
+     * favicon_provider : Returns an array that contains various combinations that a user can legally
+     * initiate through HTML::favicon
+     *
+     * @return Array    Array of various user combinations that can be legally initiated
+     */
+    public function favicon_provider()
+    {
+        return array(
+            array(
+                'C:/xampp/htdocs/web/images/fav/cube.fav',
+                '&lt;link href=&quot;data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAUSxPgFEs35thON+bYThPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBRLC+AUSy/gFEs/4BRLP+bYTj/m2E4/5thOL+bYTgvAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgFEsD4BRLI+AUSz/gFEs/4NXMv+fiF7/tJdo/55nPv+bYTj/m2E4/5thOI+bYTgPAAAAAAAAAAAAAAAAgFEsb4BRLO+AUSz/gFEs/5d6Uf+2sYT/vr+R/83NmP/Gv4z/rYlc/5thOP+bYTj/m2E475thOG8AAAAAAAAAAIBRLP+AUSz/i2U+/66jd/++v5H/u7yL/6yoYv+/umn/y8qS/83NmP/AsoD/p3xQ/5thOP+bYTj/AAAAAAAAAACAUSz/gFEs/9TRqf++v5H/s7Bz/5+WPv+bkTP/sqc6/7WrRf/CvnT/zc2Y/97ctP+bYTj/m2E4/wAAAAAAAAAAgFEs/4BRLP/x6sr/1c6d/5uRM/+bkTP/m5Ez/7KnOv+ypzr/sqc6/9/Zqf/28Nr/m2E4/5thOP8AAAAAAAAAAIBRLP+AUSz/8erK/9vTpP+bkTP/m5Ez/5uRM/+ypzr/sqc6/7KnOv/l3bL/9vDa/5thOP+bYTj/AAAAAAAAAACAUSz/gFEs//Hqyv/b06T/m5Ez/56TNP+1pzv/wbI+/7OoOv+ypzr/5d2y//bw2v+bYTj/m2E4/wAAAAAAAAAAgFEs/4BRLP/x6sr/29Ok/66hOf/Mu0L/0L5D/9C+Q//OvEL/va89/+Xdsv/28Nr/m2E4/5thOP8AAAAAAAAAAIBRLP+AUSz/9vHe//v47//q4q7/0sFN/9C+Q//QvkP/0sJO/+vmuP/8/v//+ffu/5thOP+bYTj/AAAAAAAAAACDUi3/nF41/7+DXv/o1ML/+/jv//j05P/l25n/49qV//n68//8/v//6djO/7+EYf+nZTr/nGE4/wAAAAAAAAAAq2Y6f7JpPe+yaT3/smk9/8iVdP/x5tj/+/jv//v8+//y6+b/yZd5/7JpPf+yaT3/smk9769oPH8AAAAAAAAAAAAAAACyaT0Psmk9n7JpPf+yaT3/tnFI/9awlv/Wspv/tnJJ/7JpPf+yaT3/smk9n7JpPQ8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACyaT0vsmk9v7JpPf+yaT3/smk9/7JpPf+yaT2/smk9LwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACyaT1Psmk937JpPd+yaT1PAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/n8AAPgfAADgBwAAwAMAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAwAMAAOAHAAD4HwAA/n8AAA==&quot; type=&quot;image/x-icon&quot; rel=&quot;favicon&quot; /&gt;'
+            )
+        );
+    }
+
+    /**
+     * Tests HTML::favicon method, which [Description]
+     *
+     * @dataProvider favicon_provider
+     */
+    public function test_favicon($file, $expected)
+    {
+        $this-&gt;template-&gt;set('test', $this-&gt;template-&gt;favicon($file));
+        $this-&gt;assertEquals($expected, $this-&gt;template-&gt;output());
+    }
+
+    /**
+     * link_provider : Returns an array that contains various combinations that a user can legally
+     * initiate through HTML::link
+     *
+     * @return Array    Array of various user combinations that can be legally initiated
+     */
+    public function link_provider()
+    {
+        return array(
+            array(
+                'fancy.css',
+                'alternate stylesheet',
+                NULL,
+                false,
+                '&lt;link href=&quot;fancy.css&quot; rel=&quot;alternate stylesheet&quot; /&gt;'
+            ),
+            array(
+                'base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAUSxPgFEs35thON+bYThPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBRLC+AUSy/gFEs/4BRLP+bYTj/m2E4/5thOL+bYTgvAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgFEsD4BRLI+AUSz/gFEs/4NXMv+fiF7/tJdo/55nPv+bYTj/m2E4/5thOI+bYTgPAAAAAAAAAAAAAAAAgFEsb4BRLO+AUSz/gFEs/5d6Uf+2sYT/vr+R/83NmP/Gv4z/rYlc/5thOP+bYTj/m2E475thOG8AAAAAAAAAAIBRLP+AUSz/i2U+/66jd/++v5H/u7yL/6yoYv+/umn/y8qS/83NmP/AsoD/p3xQ/5thOP+bYTj/AAAAAAAAAACAUSz/gFEs/9TRqf++v5H/s7Bz/5+WPv+bkTP/sqc6/7WrRf/CvnT/zc2Y/97ctP+bYTj/m2E4/wAAAAAAAAAAgFEs/4BRLP/x6sr/1c6d/5uRM/+bkTP/m5Ez/7KnOv+ypzr/sqc6/9/Zqf/28Nr/m2E4/5thOP8AAAAAAAAAAIBRLP+AUSz/8erK/9vTpP+bkTP/m5Ez/5uRM/+ypzr/sqc6/7KnOv/l3bL/9vDa/5thOP+bYTj/AAAAAAAAAACAUSz/gFEs//Hqyv/b06T/m5Ez/56TNP+1pzv/wbI+/7OoOv+ypzr/5d2y//bw2v+bYTj/m2E4/wAAAAAAAAAAgFEs/4BRLP/x6sr/29Ok/66hOf/Mu0L/0L5D/9C+Q//OvEL/va89/+Xdsv/28Nr/m2E4/5thOP8AAAAAAAAAAIBRLP+AUSz/9vHe//v47//q4q7/0sFN/9C+Q//QvkP/0sJO/+vmuP/8/v//+ffu/5thOP+bYTj/AAAAAAAAAACDUi3/nF41/7+DXv/o1ML/+/jv//j05P/l25n/49qV//n68//8/v//6djO/7+EYf+nZTr/nGE4/wAAAAAAAAAAq2Y6f7JpPe+yaT3/smk9/8iVdP/x5tj/+/jv//v8+//y6+b/yZd5/7JpPf+yaT3/smk9769oPH8AAAAAAAAAAAAAAACyaT0Psmk9n7JpPf+yaT3/tnFI/9awlv/Wspv/tnJJ/7JpPf+yaT3/smk9n7JpPQ8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACyaT0vsmk9v7JpPf+yaT3/smk9/7JpPf+yaT2/smk9LwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACyaT1Psmk937JpPd+yaT1PAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/n8AAPgfAADgBwAAwAMAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAwAMAAOAHAAD4HwAA/n8AAA==',
+                'icon',
+                'image/x-icon',
+                false,
+                '&lt;link href=&quot;data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAUSxPgFEs35thON+bYThPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBRLC+AUSy/gFEs/4BRLP+bYTj/m2E4/5thOL+bYTgvAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgFEsD4BRLI+AUSz/gFEs/4NXMv+fiF7/tJdo/55nPv+bYTj/m2E4/5thOI+bYTgPAAAAAAAAAAAAAAAAgFEsb4BRLO+AUSz/gFEs/5d6Uf+2sYT/vr+R/83NmP/Gv4z/rYlc/5thOP+bYTj/m2E475thOG8AAAAAAAAAAIBRLP+AUSz/i2U+/66jd/++v5H/u7yL/6yoYv+/umn/y8qS/83NmP/AsoD/p3xQ/5thOP+bYTj/AAAAAAAAAACAUSz/gFEs/9TRqf++v5H/s7Bz/5+WPv+bkTP/sqc6/7WrRf/CvnT/zc2Y/97ctP+bYTj/m2E4/wAAAAAAAAAAgFEs/4BRLP/x6sr/1c6d/5uRM/+bkTP/m5Ez/7KnOv+ypzr/sqc6/9/Zqf/28Nr/m2E4/5thOP8AAAAAAAAAAIBRLP+AUSz/8erK/9vTpP+bkTP/m5Ez/5uRM/+ypzr/sqc6/7KnOv/l3bL/9vDa/5thOP+bYTj/AAAAAAAAAACAUSz/gFEs//Hqyv/b06T/m5Ez/56TNP+1pzv/wbI+/7OoOv+ypzr/5d2y//bw2v+bYTj/m2E4/wAAAAAAAAAAgFEs/4BRLP/x6sr/29Ok/66hOf/Mu0L/0L5D/9C+Q//OvEL/va89/+Xdsv/28Nr/m2E4/5thOP8AAAAAAAAAAIBRLP+AUSz/9vHe//v47//q4q7/0sFN/9C+Q//QvkP/0sJO/+vmuP/8/v//+ffu/5thOP+bYTj/AAAAAAAAAACDUi3/nF41/7+DXv/o1ML/+/jv//j05P/l25n/49qV//n68//8/v//6djO/7+EYf+nZTr/nGE4/wAAAAAAAAAAq2Y6f7JpPe+yaT3/smk9/8iVdP/x5tj/+/jv//v8+//y6+b/yZd5/7JpPf+yaT3/smk9769oPH8AAAAAAAAAAAAAAACyaT0Psmk9n7JpPf+yaT3/tnFI/9awlv/Wspv/tnJJ/7JpPf+yaT3/smk9n7JpPQ8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACyaT0vsmk9v7JpPf+yaT3/smk9/7JpPf+yaT2/smk9LwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACyaT1Psmk937JpPd+yaT1PAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/n8AAPgfAADgBwAAwAMAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAwAMAAOAHAAD4HwAA/n8AAA==&quot; type=&quot;image/x-icon&quot; rel=&quot;icon&quot; /&gt;'
+            )
+        );
+    }
+
+    /**
+     * Tests HTML::link method, which generates a link element that specifies the relationship(s)
+     * between the current document and an external resource
+     *
+     * @dataProvider link_provider
+     */
+    public function test_link($href, $rel, $media, $download, $expected)
+    {
+        $this-&gt;template-&gt;set('test', $this-&gt;template-&gt;link($href, $rel, $media, $download));
+        $this-&gt;assertEquals($expected, $this-&gt;template-&gt;output());
+    }
+
+    /**
+     * mailto_provider : Returns an array that contains various combinations that a user can legally
+     * initiate through HTML::mailto
+     *
+     * @return Array    Array of various user combinations that can be legally initiated
+     */
+    public function mailto_provider()
+    {
+        return array(
+            array(      // Submit all three email types
+                'mail@server.com',
+                'mailcc@server.com',
+                'mailbcc@server.com',
+                'subject',
+                'body',
+                'content',
+                '&lt;a href=&quot;mailto:mail@server.com?cc=mailcc@server.com&amp;amp;bcc=mailbcc@server.com&amp;amp;subject=subject&amp;amp;body=body&quot;&gt;content&lt;/a&gt;'
+            ),
+            array(      // Submit multiple primary emails, and cc &amp; bcc too
+                array(
+                    'mail01@server.com',
+                    'mail02@server.com',
+                    'mail03@server.com'
+                ),
+                'mailcc@server.com',
+                'mailbcc@server.com',
+                'subject',
+                'body',
+                'content',
+                '&lt;a href=&quot;mailto:mail01@server.com,mail02@server.com,mail03@server.com?cc=mailcc@server.com&amp;amp;bcc=mailbcc@server.com&amp;amp;subject=subject&amp;amp;body=body&quot;&gt;content&lt;/a&gt;'
+            ),
+            array(      // Submit multiple carbon copy emails, and primary and bcc too
+                'mail@server.com',
+                array(
+                    'mailcc01@server.com',
+                    'mailcc02@server.com',
+                    'mailcc03@server.com'
+                ),
+                'mailbcc@server.com',
+                'subject',
+                'body',
+                'content',
+                '&lt;a href=&quot;mailto:mail@server.com?cc=mailcc01@server.com,mailcc02@server.com,mailcc03@server.com&amp;amp;bcc=mailbcc@server.com&amp;amp;subject=subject&amp;amp;body=body&quot;&gt;content&lt;/a&gt;'
+            ),
+            array(      // Submit multiple blind carbon copy emails, and primary and cc too
+                'mail@server.com',
+                'mailcc@server.com',
+                array(
+                    'mailbcc01@server.com',
+                    'mailbcc02@server.com',
+                    'mailbcc03@server.com'
+                ),
+                'subject',
+                'body',
+                'content',
+                '&lt;a href=&quot;mailto:mail@server.com?cc=mailcc@server.com&amp;amp;bcc=mailbcc01@server.com,mailbcc02@server.com,mailbcc03@server.com&amp;amp;subject=subject&amp;amp;body=body&quot;&gt;content&lt;/a&gt;'
+            ),
+            array(      // Submit multiples of each email type(s)
+                array('mail01@server.com','mail02@server.com','mail03@server.com'),
+                array('mailcc01@server.com','mailcc02@server.com','mailcc03@server.com'),
+                array('mailbcc01@server.com', 'mailbcc02@server.com', 'mailbcc03@server.com'),
+                'subject',
+                'body',
+                'content',
+                '&lt;a href=&quot;mailto:mail01@server.com,mail02@server.com,mail03@server.com?cc=mailcc01@server.com,mailcc02@server.com,mailcc03@server.com&amp;amp;bcc=mailbcc01@server.com,mailbcc02@server.com,mailbcc03@server.com&amp;amp;subject=subject&amp;amp;body=body&quot;&gt;content&lt;/a&gt;'
+            ),
+            array(      // Submit 'only' primary email
+                'mail@server.com',
+                '',
+                '',
+                'subject',
+                'body',
+                'content',
+                '&lt;a href=&quot;mailto:mail@server.com?subject=subject&amp;amp;body=body&quot;&gt;content&lt;/a&gt;'
+            ),
+            array(      // Submit primary and cc emails only
+                'mail@server.com',
+                'mailcc@server.com',
+                '',
+                'subject',
+                'body',
+                'content',
+                '&lt;a href=&quot;mailto:mail@server.com?cc=mailcc@server.com&amp;amp;subject=subject&amp;amp;body=body&quot;&gt;content&lt;/a&gt;'
+            ),
+            array(      // Submit primary and bcc emails only
+                'mail@server.com',
+                '',
+                'mailbcc@server.com',
+                'subject',
+                'body',
+                'content',
+                '&lt;a href=&quot;mailto:mail@server.com?bcc=mailbcc@server.com&amp;amp;subject=subject&amp;amp;body=body&quot;&gt;content&lt;/a&gt;'
+            ),
+            array(      // Submit primary email with some additional subject info to test the subject line
+                'mail@server.com',
+                '',
+                '',
+                'subject of the email',
+                'body',
+                'content',
+                '&lt;a href=&quot;mailto:mail@server.com?subject=subject%20of%20the%20email&amp;amp;body=body&quot;&gt;content&lt;/a&gt;'
+            ),
+            array(      // Submit primary email with some additional body content to test the body line
+                'mail@server.com',
+                '',
+                '',
+                'subject',
+                'body of email',
+                'content',
+                '&lt;a href=&quot;mailto:mail@server.com?subject=subject&amp;amp;body=body%20of%20email&quot;&gt;content&lt;/a&gt;'
+            ),
+            array(      // [ERROR] Primary email address not found
+                '',
+                '',
+                '',
+                'subject',
+                'body of email',
+                'content',
+                ''
+            )
+            // ),
+            // array(
+            //     'emailaddress',
+            //     '',
+            //     '',
+            //     'subject',
+            //     'body of email',
+            //     'content',
+            //     ''
+            // )
+        );
+    }
+
+    /**
+     * Tests HTML::mailto method, which generates a mailto hypertext link to mail content to a
+     * single (or several) an email address(es)
+     *
+     * &amp;@method String mailto() mailto(String $email, String $content, String $title, String aux)
+     *
+     * @param           String|Array $mailto            Recipient's e-mail address(es)
+     * @param           String|Array $cc                Carbon copy e-mail address(es)
+     * @param           String|Array $bcc               Blind carbon copy e-mail address(es)
+     * @param           String $sub                     Subject corresponding to the e-mail(s) prepped for this link
+     * @param           String $body                    Body (or content) for the e-mail(s) being prepped for this link
+     * @param           String $content                 Content enclosed between the tags of this generated link
+     * @return          String                          Generated mailto link
+     *
+     * @dataProvider mailto_provider
+     */
+    public function test_mailto_method($mailto, $mailcc, $mailbcc, $subject, $body, $content, $expected)
+    {
+        $this-&gt;template-&gt;set('test', $this-&gt;template-&gt;mailto($mailto, $mailcc, $mailbcc, $subject, $body, $content));
+        $this-&gt;assertEquals($expected, $this-&gt;template-&gt;output());
+    }
+
+    /**
+     * meta_provider : Returns an array that contains various combinations that a user can legally
+     * initiate through HTML::meta
+     *
+     * @return Array    Array of various user combinations that can be legally initiated
+     */
+    public function meta_provider()
+    {
+        return array(
+            array(
+                '!Content-Type',
+                'text/html; charset=UTF-8',
+                '&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;'
+            ),
+            array(
+                '!window-target',
+                '_top',
+                '&lt;meta http-equiv=&quot;window-target&quot; content=&quot;_top&quot;&gt;'
+            ),
+            array(
+                '!default-style',
+                'css/style.css',
+                '&lt;meta http-equiv=&quot;default-style&quot; content=&quot;css/style.css&quot;&gt;'
+            ),
+            array(
+                'generator',
+                'Sublime Text 3',
+                '&lt;meta name=&quot;generator&quot; content=&quot;Sublime Text 3&quot;&gt;'
+            ),
+            array(
+                'robots',
+                'index, follow',
+                '&lt;meta name=&quot;robots&quot; content=&quot;index, follow&quot;&gt;'
+            ),
+            array(
+                'copyright',
+                'Byrne-Systems',
+                '&lt;meta name=&quot;copyright&quot; content=&quot;Byrne-Systems&quot;&gt;'
+            ),
+            array(
+                '',
+                'Byrne-Systems',
+                ''
+            )
+        );
+    }
+
+    /**
+     * Tests HTML::meta method, which generates a Meta tag that provides metadata about the HTML
+     * document generated and served
+     *
+     * &amp;@method String meta(String $name, String $content)
+     *
+     * @param           String $name                    They key set here is either a 'http-equiv' header for the info/value pair, or a 'name' part of the name/value pair.
+     * @param           String $content                 The content which gives the value associated with the 'http-equiv' or 'name' attribute.
+     * @return          String                          Generated &lt;meta&gt; tag.
+     *
+     * @dataProvider meta_provider
+     */
+    public function test_meta_method($name, $content, $expected)
+    {
+        $this-&gt;template-&gt;set('test', $this-&gt;template-&gt;meta($name, $content));
+        $this-&gt;assertEquals($expected, $this-&gt;template-&gt;output());
+    }
+
+    /**
+     * script_provider : Returns an array that contains various combinations that a user can legally
+     * initiate through HTML::script
+     *
+     * @return Array    Array of various user combinations that can be legally initiated
+     */
+    public function script_provider()
+    {
+        return array(
+            array(
+                '/lib/modernizr/modernizr.dev-v2.8.3.js',
+                false,
+                false,
+                false,
+                '&lt;script src=&quot;/lib/modernizr/modernizr.dev-v2.8.3.js&quot;&gt;&lt;/script&gt;'
+            ),
+            array(
+                '/lib/modernizr/modernizr.dev-v2.8.3.js',
+                'text/javascript',
+                false,
+                false,
+                '&lt;script type=&quot;text/javascript&quot; src=&quot;/lib/modernizr/modernizr.dev-v2.8.3.js&quot;&gt;&lt;/script&gt;'
+            ),
+            array(
+                '/lib/modernizr/modernizr.dev-v2.8.3.js',
+                'text/javascript',
+                true,
+                false,
+                '&lt;script type=&quot;text/javascript&quot; src=&quot;/lib/modernizr/modernizr.dev-v2.8.3.js&quot; defer&gt;&lt;/script&gt;'
+            ),
+            array(
+                '/lib/modernizr/modernizr.dev-v2.8.3.js',
+                'text/javascript',
+                true,
+                'UTF-8',
+                '&lt;script type=&quot;text/javascript&quot; src=&quot;/lib/modernizr/modernizr.dev-v2.8.3.js&quot; charset=&quot;UTF-8&quot; defer&gt;&lt;/script&gt;'
+            )
+        );
+    }
+
+    /**
+     * Tests HTML::script method, which [Description]
+     *
+     * @dataProvider script_provider
+     */
+    public function test_script_method($src, $type = 'text/javascript', $deter, $charset, $expected)
+    {
+        $this-&gt;template-&gt;set('test', $this-&gt;template-&gt;script($src, $type, $deter, $charset));
+        $this-&gt;assertEquals($expected, $this-&gt;template-&gt;output());
+    }
+
+    /**
+     * tag_provider : Returns an array that contains various combinations that a user can legally
+     * initiate through HTML::tag
+     *
+     * @return Array    Array of various user combinations that can be legally initiated
+     */
+    public function tag_provider()
+    {
+        return array(
+            array(
+                'content',
+                'a',
+                '&lt;a&gt;content&lt;/a&gt;'
+            ),
+            array(
+                'content',
+                'abbr',
+                '&lt;abbr&gt;content&lt;/abbr&gt;'
+            ),
+            array(
+                'content',
+                'address',
+                '&lt;address&gt;content&lt;/address&gt;'
+            ),
+            array(
+                'content',
+                'area',
+                '&lt;area&gt;content&lt;/area&gt;'
+            ),
+            array(
+                'content',
+                'article',
+                '&lt;article&gt;content&lt;/article&gt;'
+            ),
+            array(
+                'content',
+                'aside',
+                '&lt;aside&gt;content&lt;/aside&gt;'
+            ),
+            array(
+                'content',
+                'audio',
+                '&lt;audio&gt;content&lt;/audio&gt;'
+            ),
+            array(
+                'content',
+                'b',
+                '&lt;b&gt;content&lt;/b&gt;'
+            ),
+            array(
+                'content',
+                'base',
+                '&lt;base&gt;content&lt;/base&gt;'
+            ),
+            array(
+                'content',
+                'bdi',
+                '&lt;bdi&gt;content&lt;/bdi&gt;'
+            ),
+            array(
+                'content',
+                'bdo',
+                '&lt;bdo&gt;content&lt;/bdo&gt;'
+            ),
+            array(
+                'content',
+                'blockquote',
+                '&lt;blockquote&gt;content&lt;/blockquote&gt;'
+            ),
+            array(
+                'content',
+                'body',
+                '&lt;body&gt;content&lt;/body&gt;'
+            ),
+            array(
+                'content',
+                'br',
+                '&lt;br&gt;content&lt;/br&gt;'
+            ),
+            array(
+                'content',
+                'button',
+                '&lt;button&gt;content&lt;/button&gt;'
+            ),
+            array(
+                'content',
+                'canvas',
+                '&lt;canvas&gt;content&lt;/canvas&gt;'
+            ),
+            array(
+                'content',
+                'caption',
+                '&lt;caption&gt;content&lt;/caption&gt;'
+            ),
+            array(
+                'content',
+                'cite',
+                '&lt;cite&gt;content&lt;/cite&gt;'
+            ),
+            array(
+                'content',
+                'code',
+                '&lt;code&gt;content&lt;/code&gt;'
+            ),
+            array(
+                'content',
+                'col',
+                '&lt;col&gt;content&lt;/col&gt;'
+            ),
+            array(
+                'content',
+                'colgroup',
+                '&lt;colgroup&gt;content&lt;/colgroup&gt;'
+            ),
+            array(
+                'content',
+                'datalist',
+                '&lt;datalist&gt;content&lt;/datalist&gt;'
+            ),
+            array(
+                'content',
+                'dd',
+                '&lt;dd&gt;content&lt;/dd&gt;'
+            ),
+            array(
+                'content',
+                'del',
+                '&lt;del&gt;content&lt;/del&gt;'
+            ),
+            array(
+                'content',
+                'details',
+                '&lt;details&gt;content&lt;/details&gt;'
+            ),
+            array(
+                'content',
+                'dfn',
+                '&lt;dfn&gt;content&lt;/dfn&gt;'
+            ),
+            array(
+                'content',
+                'dialog',
+                '&lt;dialog&gt;content&lt;/dialog&gt;'
+            ),
+            array(
+                'content',
+                'div',
+                '&lt;div&gt;content&lt;/div&gt;'
+            ),
+            array(
+                'content',
+                'dl',
+                '&lt;dl&gt;content&lt;/dl&gt;'
+            ),
+            array(
+                'content',
+                'dt',
+                '&lt;dt&gt;content&lt;/dt&gt;'
+            ),
+            array(
+                'content',
+                'em',
+                '&lt;em&gt;content&lt;/em&gt;'
+            ),
+            array(
+                'content',
+                'embed',
+                '&lt;embed&gt;content&lt;/embed&gt;'
+            ),
+            array(
+                'content',
+                'fieldset',
+                '&lt;fieldset&gt;content&lt;/fieldset&gt;'
+            ),
+            array(
+                'content',
+                'figcaption',
+                '&lt;figcaption&gt;content&lt;/figcaption&gt;'
+            ),
+            array(
+                'content',
+                'figure',
+                '&lt;figure&gt;content&lt;/figure&gt;'
+            ),
+            array(
+                'content',
+                'footer',
+                '&lt;footer&gt;content&lt;/footer&gt;'
+            ),
+            array(
+                'content',
+                'form',
+                '&lt;form&gt;content&lt;/form&gt;'
+            ),
+            array(
+                'content',
+                'h1',
+                '&lt;h1&gt;content&lt;/h1&gt;'
+            ),
+            array(
+                'content',
+                'h2',
+                '&lt;h2&gt;content&lt;/h2&gt;'
+            ),
+            array(
+                'content',
+                'h3',
+                '&lt;h3&gt;content&lt;/h3&gt;'
+            ),
+            array(
+                'content',
+                'h4',
+                '&lt;h4&gt;content&lt;/h4&gt;'
+            ),
+            array(
+                'content',
+                'h5',
+                '&lt;h5&gt;content&lt;/h5&gt;'
+            ),
+            array(
+                'content',
+                'h6',
+                '&lt;h6&gt;content&lt;/h6&gt;'
+            ),
+            array(
+                'content',
+                'head',
+                '&lt;head&gt;content&lt;/head&gt;'
+            ),
+            array(
+                'content',
+                'header',
+                '&lt;header&gt;content&lt;/header&gt;'
+            ),
+            array(
+                'content',
+                'hr',
+                '&lt;hr&gt;content&lt;/hr&gt;'
+            ),
+            array(
+                'content',
+                'html',
+                '&lt;html&gt;content&lt;/html&gt;'
+            ),
+            array(
+                'content',
+                'i',
+                '&lt;i&gt;content&lt;/i&gt;'
+            ),
+            array(
+                'content',
+                'iframe',
+                '&lt;iframe&gt;content&lt;/iframe&gt;'
+            ),
+            array(
+                'content',
+                'img',
+                '&lt;img&gt;content&lt;/img&gt;'
+            ),
+            array(
+                'content',
+                'input',
+                '&lt;input&gt;content&lt;/input&gt;'
+            ),
+            array(
+                'content',
+                'ins',
+                '&lt;ins&gt;content&lt;/ins&gt;'
+            ),
+            array(
+                'content',
+                'kbd',
+                '&lt;kbd&gt;content&lt;/kbd&gt;'
+            ),
+            array(
+                'content',
+                'keygen',
+                '&lt;keygen&gt;content&lt;/keygen&gt;'
+            ),
+            array(
+                'content',
+                'label',
+                '&lt;label&gt;content&lt;/label&gt;'
+            ),
+            array(
+                'content',
+                'legend',
+                '&lt;legend&gt;content&lt;/legend&gt;'
+            ),
+            array(
+                'content',
+                'li',
+                '&lt;li&gt;content&lt;/li&gt;'
+            ),
+            array(
+                'content',
+                'link',
+                '&lt;link&gt;content&lt;/link&gt;'
+            ),
+            array(
+                'content',
+                'main',
+                '&lt;main&gt;content&lt;/main&gt;'
+            ),
+            array(
+                'content',
+                'map',
+                '&lt;map&gt;content&lt;/map&gt;'
+            ),
+            array(
+                'content',
+                'mark',
+                '&lt;mark&gt;content&lt;/mark&gt;'
+            ),
+            array(
+                'content',
+                'menu',
+                '&lt;menu&gt;content&lt;/menu&gt;'
+            ),
+            array(
+                'content',
+                'menuitem',
+                '&lt;menuitem&gt;content&lt;/menuitem&gt;'
+            ),
+            array(
+                'content',
+                'meta',
+                '&lt;meta&gt;content&lt;/meta&gt;'
+            ),
+            array(
+                'content',
+                'meter',
+                '&lt;meter&gt;content&lt;/meter&gt;'
+            ),
+            array(
+                'content',
+                'nav',
+                '&lt;nav&gt;content&lt;/nav&gt;'
+            ),
+            array(
+                'content',
+                'noscript',
+                '&lt;noscript&gt;content&lt;/noscript&gt;'
+            ),
+            array(
+                'content',
+                'object',
+                '&lt;object&gt;content&lt;/object&gt;'
+            ),
+            array(
+                'content',
+                'ol',
+                '&lt;ol&gt;content&lt;/ol&gt;'
+            ),
+            array(
+                'content',
+                'optgroup',
+                '&lt;optgroup&gt;content&lt;/optgroup&gt;'
+            ),
+            array(
+                'content',
+                'option',
+                '&lt;option&gt;content&lt;/option&gt;'
+            ),
+            array(
+                'content',
+                'output',
+                '&lt;output&gt;content&lt;/output&gt;'
+            ),
+            array(
+                'content',
+                'p',
+                '&lt;p&gt;content&lt;/p&gt;'
+            ),
+            array(
+                'content',
+                'param',
+                '&lt;param&gt;content&lt;/param&gt;'
+            ),
+            array(
+                'content',
+                'pre',
+                '&lt;pre&gt;content&lt;/pre&gt;'
+            ),
+            array(
+                'content',
+                'progress',
+                '&lt;progress&gt;content&lt;/progress&gt;'
+            ),
+            array(
+                'content',
+                'q',
+                '&lt;q&gt;content&lt;/q&gt;'
+            ),
+            array(
+                'content',
+                'rp',
+                '&lt;rp&gt;content&lt;/rp&gt;'
+            ),
+            array(
+                'content',
+                'rt',
+                '&lt;rt&gt;content&lt;/rt&gt;'
+            ),
+            array(
+                'content',
+                'ruby',
+                '&lt;ruby&gt;content&lt;/ruby&gt;'
+            ),
+            array(
+                'content',
+                's',
+                '&lt;s&gt;content&lt;/s&gt;'
+            ),
+            array(
+                'content',
+                'samp',
+                '&lt;samp&gt;content&lt;/samp&gt;'
+            ),
+            array(
+                'content',
+                'script',
+                '&lt;script&gt;content&lt;/script&gt;'
+            ),
+            array(
+                'content',
+                'section',
+                '&lt;section&gt;content&lt;/section&gt;'
+            ),
+            array(
+                'content',
+                'select',
+                '&lt;select&gt;content&lt;/select&gt;'
+            ),
+            array(
+                'content',
+                'small',
+                '&lt;small&gt;content&lt;/small&gt;'
+            ),
+            array(
+                'content',
+                'source',
+                '&lt;source&gt;content&lt;/source&gt;'
+            ),
+            array(
+                'content',
+                'span',
+                '&lt;span&gt;content&lt;/span&gt;'
+            ),
+            array(
+                'content',
+                'strong',
+                '&lt;strong&gt;content&lt;/strong&gt;'
+            ),
+            array(
+                'content',
+                'style',
+                '&lt;style&gt;content&lt;/style&gt;'
+            ),
+            array(
+                'content',
+                'sub',
+                '&lt;sub&gt;content&lt;/sub&gt;'
+            ),
+            array(
+                'content',
+                'summary',
+                '&lt;summary&gt;content&lt;/summary&gt;'
+            ),
+            array(
+                'content',
+                'sup',
+                '&lt;sup&gt;content&lt;/sup&gt;'
+            ),
+            array(
+                'content',
+                'table',
+                '&lt;table&gt;content&lt;/table&gt;'
+            ),
+            array(
+                'content',
+                'tbody',
+                '&lt;tbody&gt;content&lt;/tbody&gt;'
+            ),
+            array(
+                'content',
+                'td',
+                '&lt;td&gt;content&lt;/td&gt;'
+            ),
+            array(
+                'content',
+                'textarea',
+                '&lt;textarea&gt;content&lt;/textarea&gt;'
+            ),
+            array(
+                'content',
+                'tfoot',
+                '&lt;tfoot&gt;content&lt;/tfoot&gt;'
+            ),
+            array(
+                'content',
+                'th',
+                '&lt;th&gt;content&lt;/th&gt;'
+            ),
+            array(
+                'content',
+                'thead',
+                '&lt;thead&gt;content&lt;/thead&gt;'
+            ),
+            array(
+                'content',
+                'time',
+                '&lt;time&gt;content&lt;/time&gt;'
+            ),
+            array(
+                'content',
+                'title',
+                '&lt;title&gt;content&lt;/title&gt;'
+            ),
+            array(
+                'content',
+                'tr',
+                '&lt;tr&gt;content&lt;/tr&gt;'
+            ),
+            array(
+                'content',
+                'track',
+                '&lt;track&gt;content&lt;/track&gt;'
+            ),
+            array(
+                'content',
+                'u',
+                '&lt;u&gt;content&lt;/u&gt;'
+            ),
+            array(
+                'content',
+                'ul',
+                '&lt;ul&gt;content&lt;/ul&gt;'
+            ),
+            array(
+                'content',
+                'var',
+                '&lt;var&gt;content&lt;/var&gt;'
+            ),
+            array(
+                'content',
+                'video',
+                '&lt;video&gt;content&lt;/video&gt;'
+            ),
+            array(
+                'content',
+                'wb',
+                '&lt;wb&gt;content&lt;/wb&gt;'
+            )
+        );
+    }
+
+    /**
+     * Tests CLASS::[methodName] method, which generates generic HTML tags passed via it's secondary
+     * parameter through using the content and tag data passed
+     *
+     * @dataProvider tag_provider
+     */
+    public function test_tag_method($content, $tag, $expected)
+    {
+        $this-&gt;template-&gt;set('test', $this-&gt;template-&gt;tag($content, $tag));
+        $this-&gt;assertEquals($expected, $this-&gt;template-&gt;output());
+    }
+}</pre>
+        <script type="text/javascript">
+             SyntaxHighlighter.all();
+             jQuery('.gutter div').each(function(key, data){
+                jQuery(data).prepend('<a name="L'+jQuery(data).text()+'"/>');
+             });
+        </script>
+    </body>
+</html>

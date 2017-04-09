@@ -1,0 +1,139 @@
+.TH "Bootstrap" 3 "Sun Apr 9 2017" "Version 0.35.0.0" "WAFFLE" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Bootstrap
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBHTML\fP\&.
+.PP
+Inherited by \fBPreload\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBcontainer\fP ($content, $type='fixed')"
+.br
+.ti -1c
+.RI "\fBrow\fP ($content)"
+.br
+.ti -1c
+.RI "\fBcolumn\fP ($amount=12, $size='sm', $content, $alt=NULL)"
+.br
+.ti -1c
+.RI "\fBpanel\fP ($type='header', $caption, $content, $alt=NULL)"
+.br
+.ti -1c
+.RI "\fBviewport\fP ($options=array('width'=> 'device\-width', 'height'=> NULL, 'initial\-scale'=> 1, 'minimum\-scale'=> NULL, 'maximum\-scale'=> NULL, 'user\-scalable'=> 'no'))"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBBootstrap\fP Component Markup Assembler
+.PP
+Parses native bootstrap component markup, containers, rows, columns, and other elements\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "column ( $amount = \fC12\fP,  $size = \fC'sm'\fP,  $content,  $alt = \fCNULL\fP)"
+Generates \fBBootstrap\fP column(s) while denoting its size as content is passed through
+.PP
+String column(Integer $amount, String $size, String $content)
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$amount\fP Amount of columns to attribute to the columns being set; (i\&.e\&., 1, 2, 3\&.\&.\&.12) 
+.br
+\fI$size\fP Size of the columns being set; (i\&.e\&., xs, sm, md, or lg) 
+.br
+\fI$content\fP Content to be wrapped by this function 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+String Returns a set of \fBBootstrap\fP columns in accordance with this method's set params
+.RE
+.PP
+\fBTodo\fP
+.RS 4
+write error handling! 
+.RE
+.PP
+
+.SS "container ( $content,  $type = \fC'fixed'\fP)"
+Generates a \fBBootstrap\fP container (fixed or fluid-width) to placed around the '$content' passed via this method's params
+.PP
+String container(String $content, String $type)
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$content\fP Content to be wrapped by this function 
+.br
+\fI$type\fP Defines the type of container; i\&.e\&., 'fluid' or 'fixed' 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+String Returns a fixed (or fluid) container around the content passed 
+.RE
+.PP
+
+.SS "panel ( $type = \fC'header'\fP,  $caption,  $content,  $alt = \fCNULL\fP)"
+Generates a \fBBootstrap\fP panel containing the content passed via this method's params
+.PP
+String panel(String $type, String $caption, String $content, Array|String $alt)
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$type\fP Type of panel to generate; either 'header' or 'footer' 
+.br
+\fI$caption\fP Caption to be placed inside of its corresponding header (or footer) 
+.br
+\fI$content\fP Content to be stored inside of the body of this \fBBootstrap\fP element 
+.br
+\fIArray/String\fP $alt Alternative (or Additional) classes to affix to this panel's body 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+String Returns a \fBBootstrap\fP panel containing the content passed via this method's params 
+.RE
+.PP
+
+.SS "row ( $content)"
+Generates \fBBootstrap\fP rows that are subsequently wrapped around the passed '$content' param;
+.PP
+String row(String $content)
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$content\fP Content to be wrapped by this function 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+String Returns a \fBBootstrap\fP row (container) around the passed content 
+.RE
+.PP
+
+.SS "viewport ( $options = \fCarray('width' => 'device\-width', 'height' => NULL, 'initial\-scale' => 1, 'minimum\-scale' => NULL, 'maximum\-scale' => NULL, 'user\-scalable' => 'no')\fP)"
+Generates and parses a viewport meta tag for \fBBootstrap\fP; or Responsive Web Design
+.PP
+String viewport(Array $options)
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$options\fP Array containing the various properties available throughout a viewport tag 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+String Returns a meta tag to set the viewport for a particular web-document, site, or application 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for WAFFLE from the source code\&.

@@ -1,0 +1,7 @@
+<!-- Pure Structure of Testing Pure.less -->
+
+
+<img class="pure-img" src="/images/img_1024.png">
+
+<a class="pure-button" href="#">A Pure Button</a>
+<button class="pure-button">A Pure Button</button>

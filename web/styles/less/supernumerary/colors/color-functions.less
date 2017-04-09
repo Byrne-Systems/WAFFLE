@@ -1,0 +1,43 @@
+/*
+ *  Set:    Color Functions
+ *  Notes:  Module that
+ */
+
+.fore-color(@color: transparent) {
+    color: @color;
+}
+
+.back-color(@color: transparent) {
+    background-color: @color;
+}
+
+#Color {
+    .Complement(@color) {
+        color: spin(@color, 180);
+    }
+    .Set(@color: #000) {
+        color: @color;
+    }
+    .Triadic-Secondary(@color) {
+        color: spin(@color, -(360 / 3));
+    }
+    .Triadic-Tertiary(@color) {
+        color: spin(@color,   (360 / 3));
+    }
+}
+
+#BgColor {
+    .Complement(@color) {
+        background-color: spin(@color, 180);
+    }
+    .Set(@color: #FFF) {
+        background-color: @color;
+    }
+    .Triadic-Secondary(@color) {
+        background-color: spin(@color, -(360 / 3));
+    }
+    .Triadic-Tertiary(@color) {
+        background-color: spin(@color,   (360 / 3));
+    }
+}
+

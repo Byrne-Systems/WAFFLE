@@ -1,0 +1,116 @@
+.TH "Template" 3 "Sun Apr 9 2017" "Version 0.35.0.0" "WAFFLE" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Template
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBPreload\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fB__construct\fP ($file)"
+.br
+.ti -1c
+.RI "\fBset\fP ($key, $value)"
+.br
+.ti -1c
+.RI "\fBoutput\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBmerge\fP ($templates, $separator='\\)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fB$file\fP"
+.br
+.ti -1c
+.RI "\fB$values\fP = array()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBTemplate\fP Engine
+.PP
+Templating engine that generates \fBHTML\fP files utilizing WAFFLE's view's, or '\&.wad' files 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "__construct ( $file)"
+Constructor method used to instantiate a new \fBTemplate\fP object after passing its associate file\&.
+.PP
+__construct(String $file)
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$file\fP The filename of the template file to load 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "static merge ( $templates,  $separator = \fC'\\n'\fP)\fC [static]\fP"
+Merge multiple templates together to output each template view passed as a single string\&.
+.PP
+String merge(Array $templates, String $separator)
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$templates\fP An array of templates to be merged\&. 
+.br
+\fI$separator\fP Format each template merged with this separator\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+String $output Output all of the merged (or concatenated) content with the separator passed through\&. 
+.RE
+.PP
+
+.SS "output ()"
+Output a correctly formatted \fBHTML\fP (String), after supplementing each template tag identified through each assigned view (*\&.wad) file\&.
+.PP
+String \fBoutput()\fP
+.PP
+\fBReturns:\fP
+.RS 4
+String $output Correctly formatted \fBHTML\fP\&. 
+.RE
+.PP
+
+.SS "set ( $key,  $value)"
+Sets the value to replace the specific tag passed through this function\&.
+.PP
+set(String $key, String $value)
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$key\fP The key used to identify the template tag (e\&.g\&., [!temp_tag]) to be set 
+.br
+\fI$value\fP The value parsed (or supplemented); in correspondence with its key 
+.RE
+.PP
+
+.SH "Field Documentation"
+.PP 
+.SS "String $file\fC [protected]\fP"
+\fBTemplate\fP filename to load, and eventually parse via this template engine
+.PP
+protected 
+.SS "Array $values = array()\fC [protected]\fP"
+The value of each template tag (e\&.g\&., [!tag]) authored throughout each template file (e\&.g\&., *\&.wad)
+.PP
+protected 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for WAFFLE from the source code\&.

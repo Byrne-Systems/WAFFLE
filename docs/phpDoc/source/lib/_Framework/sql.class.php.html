@@ -1,0 +1,376 @@
+<html>
+    <head>
+        <script
+            type="text/javascript"
+            src="../../../js/jquery-1.4.2.min.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shCore.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shBrushJScript.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shBrushPhp.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shBrushXml.js">
+        </script>
+        <link
+            href="../../../syntax_highlighter/styles/shCore.css" rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="../../../syntax_highlighter/styles/shCoreEclipse.css"
+            rel="stylesheet" type="text/css"
+        />
+        <link
+            href="../../../syntax_highlighter/styles/shThemeWordpress.css"
+            rel="stylesheet" type="text/css"
+        />
+    </head>
+    <body>
+        <pre class="brush: php">&lt;?php
+/**
+ * Includes various methods to establish a connection and communicate (or query) an SQL database.
+ *
+ * @package     Framework\IO\Adapters\SQL
+ * @category    Adapters
+ * @author      Justin D. Byrne &lt;justin@byrne-systems.com&gt;
+ * @version     $Id$
+ * @copyright   2010-2016 Byrne-Systems
+ */
+
+namespace WAFFLE\Framework\Adapters;
+
+use WAFFLE\Framework\IO\File;
+use WAFFLE\Framework\Adapters\SQL;
+
+/**
+ * SQL Adapter
+ *
+ * Database class utilized for data access and manipulation
+ */
+class SQL {
+    /**
+     * @var             String $host                    The host address name (or location) for the database
+     * @var             String $user                    The user-name to use while establishing a connection to the database
+     * @var             String $pass                    The password to use while establishing a connection to the database
+     * @var             String $db                      The name of the database to establish a connection with
+     * @var             String $cxn                     Reserved location for the database connection Object
+     */
+    protected $host = &quot;127.0.0.1&quot;;
+    protected $user = &quot;admin&quot;;
+    protected $pass = &quot;xNWLU3B69AhC2GBu&quot;;
+    protected $db   = &quot;byrne-systems&quot;;
+
+    protected $cxn;                                     # Reserved: storage space for the &quot;Database Connection&quot; Object
+    protected $File;                                    # Reserved: storage space for a 'File' Object
+
+    /**
+     * [description]
+     *
+     * @method void cxn_result(String $filename, Integer $r)
+     *
+     * @param           String  $filename               [description]
+     * @param           Integer $r                      [description]
+     */
+    private function cxn_result($filename, $r) {
+        switch ($r) {
+            case 0:
+                $content  = $this-&gt;get_date() . &quot;[error] unable to successfully connect to database.&quot; . PHP_EOL;
+                // $content .= $this-&gt;get_date() . &quot;[action] terminating database connection.&quot; . PHP_EOL;
+                break;
+            case 1:
+                $content  = $this-&gt;get_date() . &quot;[success] a proper database connection was established!&quot; . PHP_EOL;
+                $content .= $this-&gt;get_date() . &quot;Properly connected to &quot; . $this-&gt;db . &quot; database.&quot;  . PHP_EOL;
+                $content .= $this-&gt;get_date() . &quot;Host: &quot; . mysqli_get_host_info($this-&gt;cxn)          . PHP_EOL;     // mysqli -&gt; MySQL db only
+                break;
+        }
+
+        $this-&gt;File-&gt;write($filename, $content, 'log');
+    }
+
+    /**
+     * [description]
+     *
+     * @method void qry_result(String $filename, Integer $r)
+     *
+     * @param           String  $filename               [description]
+     * @param           Integer $r                      [description]
+     */
+    private function qry_result($filename, $r) {
+        switch ($r) {
+            case 0:
+                $content = $this-&gt;get_date() . &quot;[error] unable to successfully query database.&quot;   . PHP_EOL;
+                break;
+            case 1:
+                $content = $this-&gt;get_date() . &quot;[success] query executed successfully&quot; . PHP_EOL;
+                break;
+        }
+
+        $this-&gt;File-&gt;write($filename, $content, 'log');
+        $this-&gt;cxn-&gt;close();
+    }
+
+    /**
+     * Get the current date for logging, indexing, or anything else requiring a current timestamp.
+     *
+     * @method String get_date()
+     *
+     * @return          String                          A string containing the current date and time; correctly formatted.
+     */
+    private function get_date() {
+        date_default_timezone_set('America/Los_Angeles');
+        return &quot;[ &quot; . date('l jS \of F Y h:i:s A') . &quot;] &quot;;
+    }
+
+    ####################################################################
+    ###                          Public                              ###
+    ####################################################################
+
+    /**
+     * Instantiate the $File (Object) and $cxn (Array)
+     */
+    public function __construct() {
+        $this-&gt;File = new File;
+        $this-&gt;cxn  = mysqli_connect($this-&gt;host, $this-&gt;user, $this-&gt;pass, $this-&gt;db);
+        (!$this-&gt;cxn) ? $this-&gt;cxn_result(&quot;sql.db&quot;,0) : $this-&gt;cxn_result(&quot;sql_db&quot;,1);
+    }
+
+    /**
+     * Generates a SELECT statement to query against the database, while returning the selected data
+     * (or response).
+     *
+     * @method String select(String $table, String $where)
+     *
+     * @param           String $table                   Name of the table to access
+     * @param           String $where                   A WHERE clause for the query
+     * @return          String $response                The returned data (or response) obtained through querying the database with the generated SELECT statement.
+     */
+    public function select($table, $where) {
+        try {
+
+            $a = array();
+            $w = &quot;&quot;;
+
+            foreach ($where as $key =&gt; $value) {
+                $w .= &quot; and &quot; . $key . &quot; like :&quot; . $key;
+                $a[&quot;:&quot; . $key] = $value;
+            }
+
+            $stmt = $this-&gt;db-&gt;prepare(&quot;select * from &quot; . $table . &quot; where 1=1 &quot; . $w);
+
+            $stmt-&gt;execute($a);
+
+            $rows = $stmt-&gt;fetchAll(PDO::FETCH_ASSOC);
+
+            if (count($rows) &lt;= 0) {
+                $response[&quot;status&quot;]  = &quot;warning&quot;;
+                $response[&quot;message&quot;] = &quot;No data found.&quot;;
+            } else {
+                $response[&quot;status&quot;]  = &quot;success&quot;;
+                $response[&quot;message&quot;] = &quot;Data selected from database&quot;;
+            }
+
+            $response[&quot;data&quot;] = $rows;
+
+        } catch (PDOException $e) {
+
+            $response[&quot;status&quot;]  = &quot;error&quot;;
+            $response[&quot;message&quot;] = 'Select Failed: ' . $e-&gt;getMessage();
+            $response[&quot;data&quot;]    = null;
+
+        }
+
+        return $response;
+    }
+
+    /**
+     * Generates an INSERT statement to query against the database, while returning a response.
+     *
+     * @method String insert(String $table, Array $columnsArray, Array $requiredColumnsArray)
+     *
+     * @param           String $table                   Name of the table to access
+     * @param           Array  $columnsArray            The name of the columns for the query executed
+     * @param           Array  $requiredColumnsArray    Required Columns
+     * @return          String $response                The response returned obtained through querying the database with the generated statement.
+     */
+    public function insert($table, $columnsArray, $requiredColumnsArray) {
+        $this-&gt;verifyRequiredParams($columnsArray, $requiredColumnsArray);
+
+        try {
+            $a = array();
+            $c = &quot;&quot;;
+            $v = &quot;&quot;;
+
+            foreach ($columnsArray as $key =&gt; $value) {
+                $c .= $key . &quot;, &quot;;
+                $v .= &quot;:&quot; . $key . &quot;, &quot;;
+                $a[&quot;:&quot; . $key] = $value;
+            }
+
+            $c = rtrim($c, ', ');
+            $v = rtrim($v, ', ');
+
+            $stmt = $this-&gt;db-&gt;prepare(&quot;INSERT INTO $table($c) VALUES($v)&quot;);
+
+            $affected_rows = $stmt-&gt;rowCount();
+
+            $response[&quot;status&quot;]  = &quot;success&quot;;
+            $response[&quot;message&quot;] = $affected_rows . &quot; row inserted into database&quot;;
+        } catch (PDOException $e) {
+            $response[&quot;status&quot;] = &quot;error&quot;;
+            $response[&quot;message&quot;] = 'Insert Failed: ' . $e-&gt;getMessage();
+        }
+
+        return $response;
+    }
+
+    /**
+     * Generates an UPDATE statement to query against the database, while returning a response.
+     *
+     * @method String update(String $table, Array $columnsArray, String $where, Array $requiredColumnsArray)
+     *
+     * @param           String $table                   Name of the table to access
+     * @param           Array  $columnsArray            The name of the columns for the query executed
+     * @param           String $where                   A WHERE clause for the query
+     * @param           Array  $requiredColumnsArray    Required Columns
+     * @return          String $response                The response returned obtained through querying the database with the generated statement.
+     */
+    public function update($table, $columnsArray, $where, $requiredColumnsArray) {
+        $this-&gt;verifyRequiredParams($columnsArray, $requiredColumnsArray);
+
+        try {
+            $a = array();
+            $w = &quot;&quot;;
+            $c = &quot;&quot;;
+
+            foreach($where as $key =&gt; $value) {
+                $w .= &quot; and &quot; . $key . &quot; = :&quot; . $key;
+                $a[&quot;:&quot; . $key] = $value;
+            }
+
+            foreach ($columnsArray as $key =&gt; $value) {
+                $c .= $key . &quot; = :&quot; . $key . &quot;, &quot;;
+                $a[&quot;:&quot; . $key] = $value;
+            }
+
+            $c = rtrim($c, &quot;, &quot;);
+
+            $stmt = $this-&gt;db-&gt;prepare(&quot;UPDATE $table SET $c WHERE 1=1 &quot; . $w);
+            $stmt-&gt;execute($a);
+            $affected_rows = $stmt-&gt;rowCount();
+
+            if ($affected_rows&lt;=0) {
+                $response[&quot;status&quot;]  = &quot;warning&quot;;
+                $response[&quot;message&quot;] = &quot;No row updated&quot;;
+            } else {
+                $response[&quot;status&quot;]  = &quot;success&quot;;
+                $response[&quot;message&quot;] = $affected_rows . &quot; row(s) updated in database&quot;;
+            }
+
+        } catch (PDOException $e) {
+            $response[&quot;status&quot;]  = &quot;error&quot;;
+            $response[&quot;message&quot;] = &quot;Update Failed: &quot; . $e-&gt;getMessage();
+        }
+
+        return $response;
+    }
+
+    /**
+     * Generates a DELETE statement to query against the database, while returning a response
+     *
+     * @method String delete(String $table, String $where)
+     *
+     * @param           String $table                   Name of the table to access
+     * @param           String $where                   A WHERE clause for the query
+     * @return          String $response                The response returned obtained through querying the database with the generated statement.
+     */
+    public function delete($table, $where) {
+        if (count($where) &lt;= 0) {
+            $response[&quot;status&quot;]  = &quot;warning&quot;;
+            $response[&quot;message&quot;] = &quot;Delete Failed: At least one condition is required&quot;;
+        } else {
+            try {
+                $a = array();
+                $w = &quot;&quot;;
+
+                foreach ($where as $key =&gt; $value) {
+                    $w .= &quot; and &quot; . $key . &quot; = :&quot; . $key;
+                    $a[&quot;:&quot; . $key] = $value;
+                }
+
+                $stmt = $this-&gt;db-&gt;prepare(&quot;DELETE FROM $table WHERE 1=1 &quot; . $w);
+                $stmt-&gt;execute($a);
+                $affected_rows = $stmt-&gt;rowCount();
+
+                if ($affected_rows&lt;=0) {
+                    $response[&quot;status&quot;]  = &quot;warning&quot;;
+                    $response[&quot;message&quot;] = &quot;No row deleted&quot;;
+                } else {
+                    $response[&quot;status&quot;]  = &quot;success&quot;;
+                    $response[&quot;message&quot;] = $affected_rows . &quot; row(s) deleted from database.&quot;;
+                }
+
+            } catch (PDOException $e) {
+                $response[&quot;status&quot;]  = &quot;error&quot;;
+                $response[&quot;message&quot;] = 'Delete Failed: ' . $e-&gt;getMessage();
+            }
+        }
+
+        return $response;
+    }
+
+    /**
+     * Sanitize the data on the server-side to protect and validate the data for security.
+     *
+     * @method String verifyRequiredParams(Array $inArray, Array $requiredColumns)
+     *
+     * @param           Array  $inArray                 [description]
+     * @param           Array  $requiredColumns         [description]
+     * @return          String $response                [description]
+     */
+    private function verifyRequiredParams($inArray, $requiredColumns) {
+        $error = false;
+        $errorColumns = &quot;&quot;;
+
+        foreach ($requiredColumns as $field) {
+            if (!isset($inArray[$field]) || strlen(trim($inArray[$field])) &lt;= 0) {
+                $error = true;
+                $errorColumns .= $field . ', ';
+            }
+        }
+
+        if ($error) {
+            $response = array();
+            $response[&quot;status&quot;]  = &quot;error&quot;;
+            $response[&quot;message&quot;] = 'Requird field(s) ' . rtrim($errorColumns, ', ') . 'is missing or empty';
+            print_r($response);
+            exit;
+        }
+    }
+
+    /**
+     * [description]
+     *
+     * @method String query(String $statement)
+     *
+     * @param           String $statement               The statement to be used to manipulate data in the database.
+     */
+    public function query($statement) {
+        (!$this-&gt;cxn-&gt;query($statement)) ? $this-&gt;qry_result(&quot;sql_db&quot;,0) : $this-&gt;qry_result(&quot;sql_db&quot;,1);
+    }
+}</pre>
+        <script type="text/javascript">
+             SyntaxHighlighter.all();
+             jQuery('.gutter div').each(function(key, data){
+                jQuery(data).prepend('<a name="L'+jQuery(data).text()+'"/>');
+             });
+        </script>
+    </body>
+</html>

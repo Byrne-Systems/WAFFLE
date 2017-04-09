@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespace_w_a_f_f_l_e_1_1_framework_1_1_interfaces_1_1i_template" kind="namespace" language="PHP">
+    <compoundname>WAFFLE::Framework::Interfaces::iTemplate</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="template.interface.php" line="1" column="1"/>
+  </compounddef>
+</doxygen>

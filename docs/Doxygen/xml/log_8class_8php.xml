@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="log_8class_8php" kind="file" language="PHP">
+    <compoundname>log.class.php</compoundname>
+    <innerclass refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_log" prot="public">WAFFLE::Framework::IO::Log</innerclass>
+    <innernamespace refid="namespace_framework">Framework</innernamespace>
+    <innernamespace refid="namespace_w_a_f_f_l_e_1_1_framework_1_1_i_o">WAFFLE::Framework::IO</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="12"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_w_a_f_f_l_e_1_1_framework_1_1_i_o" kindref="compound">WAFFLE\Framework\IO</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">use<sp/><ref refid="namespace_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_log" kindref="compound">WAFFLE\Framework\IO\Log</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_log" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_log" kindref="compound">Log</ref><sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_log_1a3e3c415ada57f553ac4a39a40051c94f" kindref="member">log</ref>($msg)<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$dir<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;..\\..\\..\\data\\logs\\&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$msg<sp/><sp/>=<sp/>strip_tags($msg)<sp/>.<sp/>PHP_EOL;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Strip:<sp/>all<sp/>HTML<sp/>&amp;<sp/>PHP<sp/>tags</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$path<sp/>=<sp/>__DIR__<sp/>.<sp/>$dir<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;waffle.error.log&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>error_log($msg,<sp/>3,<sp/>$path);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="log.class.php"/>
+  </compounddef>
+</doxygen>

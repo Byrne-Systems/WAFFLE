@@ -1,0 +1,112 @@
+.TH "Collection" 3 "Sun Apr 9 2017" "Version 0.35.0.0" "WAFFLE" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Collection
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBset\fP ($obj, $key=null)"
+.br
+.ti -1c
+.RI "\fBdel\fP ($key)"
+.br
+.ti -1c
+.RI "\fBget\fP ($key)"
+.br
+.ti -1c
+.RI "\fBget_keys\fP ()"
+.br
+.ti -1c
+.RI "\fBlength\fP ()"
+.br
+.ti -1c
+.RI "\fBkey_exists\fP ($key)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBCollection\fP Assembly
+.PP
+\fBCollection\fP Assembly designed as an OOP wrapper to wrap around an Array of Arrays (AoA) while using lazy instantiation to create elements in this array 
+.SH "Member Function Documentation"
+.PP 
+.SS "del ( $key)"
+Deletes an entry (or item) stored inside of this collection
+.PP
+del(String $key)
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$key\fP The key used to identify the location of an entry inside of a collection's array 
+.RE
+.PP
+
+.SS "get ( $key)"
+Retrieves an entry (or item) stored inside of this collection
+.PP
+get(String $key)
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$key\fP The key used to identify the location of an entry inside of a collection's array 
+.RE
+.PP
+
+.SS "get_keys ()"
+Returns a list of keys existing throughout this collection
+.PP
+\fBget_keys()\fP
+.PP
+\fBReturns:\fP
+.RS 4
+Array List of keys that currently exist throughout this collection's array 
+.RE
+.PP
+
+.SS "key_exists ( $key)"
+key_exists description
+.PP
+\fBParameters:\fP
+.RS 4
+\fI[type]\fP $key [description] 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+[type] [description] 
+.RE
+.PP
+
+.SS "length ()"
+Returns the value (or amount) of entries that exist throughout this collection
+.PP
+\fBlength()\fP
+.PP
+\fBReturns:\fP
+.RS 4
+Integer Value representing the amount of entries that exist this collection 
+.RE
+.PP
+
+.SS "set ( $obj,  $key = \fCnull\fP)"
+Sets a new object in the $data collection using the $key to specify that location
+.PP
+set(Object $obj, String $key)
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$obj\fP An object to be included inside this collection's array 
+.br
+\fI$key\fP The key used to identify the location of an entry inside of a collection's array 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for WAFFLE from the source code\&.

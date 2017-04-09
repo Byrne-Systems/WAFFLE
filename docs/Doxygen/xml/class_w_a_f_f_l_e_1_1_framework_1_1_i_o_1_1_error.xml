@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_error" kind="class" language="PHP" prot="public">
+    <compoundname>WAFFLE::Framework::IO::Error</compoundname>
+    <basecompoundref refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_log" prot="public" virt="non-virtual">Log</basecompoundref>
+    <derivedcompoundref refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_validation" prot="public" virt="non-virtual">Validation</derivedcompoundref>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_error_1a848589b82df6900da2764018f69cd8c4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get_date</definition>
+        <argsstring>()</argsstring>
+        <name>get_date</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the current date for logging, indexing, or anything else requiring a timestamp</para><para>String get_date()</para><para><simplesect kind="return"><para>String Return the current time; correctly formatted </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="error.class.php" line="34" column="1" bodyfile="error.class.php" bodystart="34" bodyend="37"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_error_1af721dfe2b0cca44a3c68c6fda1439165" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>error</definition>
+        <argsstring>($msg, $class, $fn, $ln, $fl)</argsstring>
+        <name>error</name>
+        <param>
+          <declname>$msg</declname>
+        </param>
+        <param>
+          <declname>$class</declname>
+        </param>
+        <param>
+          <declname>$fn</declname>
+        </param>
+        <param>
+          <declname>$ln</declname>
+        </param>
+        <param>
+          <declname>$fl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Generates a valid error message specific to the Waffle framework, then logs the message in &quot;waffle.error.log&quot; prior to exiting the framework while displaying the error message passed.</para><para>void error(String $time, String $msg, String $func, String $class)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametername>$msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_error" kindref="compound">Error</ref> message to log and print through std-out </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>Constant</parametertype>
+<parametername>$class</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Originating class from where the error propagated </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>Constant</parametertype>
+<parametername>$fn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Originating function from where the error propagated </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>Constant</parametertype>
+<parametername>$ln</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Originating line number from where the error propagated </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>Constant</parametertype>
+<parametername>$fl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Originating file from where the error propagated</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>String $error Compiled error message with time-stamp and constants parsed through this method&apos;s params </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="error.class.php" line="57" column="1" bodyfile="error.class.php" bodystart="57" bodyend="67"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_error" kindref="compound">Error</ref> IO</para><para>[Description] </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="11">
+        <label>Log</label>
+        <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_log"/>
+      </node>
+      <node id="10">
+        <label>Error</label>
+        <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_error"/>
+        <childnode refid="11" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>File</label>
+        <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_file"/>
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>Validation</label>
+        <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_validation"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="15">
+        <label>Log</label>
+        <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_log"/>
+      </node>
+      <node id="14">
+        <label>Error</label>
+        <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_error"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="error.class.php" line="26" column="1" bodyfile="error.class.php" bodystart="26" bodyend="68"/>
+    <listofallmembers>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_error_1af721dfe2b0cca44a3c68c6fda1439165" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::IO::Error</scope><name>error</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_error_1a848589b82df6900da2764018f69cd8c4" prot="private" virt="non-virtual"><scope>WAFFLE::Framework::IO::Error</scope><name>get_date</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_log_1a3e3c415ada57f553ac4a39a40051c94f" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::IO::Error</scope><name>log</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

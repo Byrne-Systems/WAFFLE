@@ -1,0 +1,871 @@
+<html>
+    <head>
+        <script
+            type="text/javascript"
+            src="../../../../js/jquery-1.4.2.min.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../../syntax_highlighter/scripts/shCore.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../../syntax_highlighter/scripts/shBrushJScript.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../../syntax_highlighter/scripts/shBrushPhp.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../../syntax_highlighter/scripts/shBrushXml.js">
+        </script>
+        <link
+            href="../../../../syntax_highlighter/styles/shCore.css" rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="../../../../syntax_highlighter/styles/shCoreEclipse.css"
+            rel="stylesheet" type="text/css"
+        />
+        <link
+            href="../../../../syntax_highlighter/styles/shThemeWordpress.css"
+            rel="stylesheet" type="text/css"
+        />
+    </head>
+    <body>
+        <pre class="brush: php">&lt;?php
+/**
+ * testBootstrap : Unit Testing class for &quot;bootstrap.class.php&quot;
+ *
+ * @package     UnitTests\testBootstrap
+ * @category    UnitTest
+ * @author      Justin D. Byrne &lt;justin@byrne-systems.com&gt;
+ */
+
+namespace UnitTests;
+
+use UnitTests\testBootstrap;
+use WAFFLE\Framework\Engines\Template;
+
+/**
+ * @author  Justin D. Byrne &lt;justin@byrne-systems.com&gt;
+ */
+class testBootstrap extends \PHPUnit_Framework_TestCase {
+    protected $template;
+    protected $fav_dir;
+
+    /**
+     * setUp : Instantiate '$template' object to run subsequently recurring tests
+     */
+    public function setUp()
+    {
+        $assets         = 'C:/xampp/htdocs/lib/_Framework/tests/assets/';       # Location: of vital assets for unit testing
+        $this-&gt;fav_dir  = 'C:/xampp/htdocs/web/images/fav/';                    # Location: of favicon(s)
+        $this-&gt;template = new Template($assets . 'testTemplate.wad');           # Instantiate: new template with a phony template file
+    }
+
+    /**
+     * viewport_provider : Returns an array that contains various combinations that a user can legally
+     * initiate through Bootstrap::viewport
+     *
+     * @return Array    Array of various user combinations that can be legally initiated
+     */
+    public function viewport_provider()
+    {
+        return array(
+            array(  #1
+                array(
+                    'width'         =&gt; NULL,            # Width of the viewport in pixels                   | Default(980); Range(200, 10,000)
+                    'height'        =&gt; NULL,            # Height of the viewport in pixels                  | Range(223, 10,000)
+                    'initial-scale' =&gt; NULL,            # Initial scale of the viewport as a multiplier     | Range($min_scale, $max_scale)
+                    'minimum-scale' =&gt; NULL,            # Specifies the minimum scale value of the viewport | Default(0.25); Range(&gt;0, 10.0)
+                    'maximum-scale' =&gt; NULL,            # Specifies the maximum scale value of the viewport | Default(5.00); Range(&gt;0, 10.0)
+                    'user-scalable' =&gt; NULL,            # Determines whether the user can zoom in and out   | Default('yes'); Options('no', 'yes')
+                ),
+                'error'
+            ),
+            array(  #2
+                array(
+                    'width'         =&gt; 'device-width',
+                    'height'        =&gt; NULL,
+                    'initial-scale' =&gt; NULL,
+                    'minimum-scale' =&gt; NULL,
+                    'maximum-scale' =&gt; NULL,
+                    'user-scalable' =&gt; NULL,
+                ),
+                '&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;'
+            ),
+            array(  #3
+                array(
+                    'width'         =&gt; NULL,
+                    'height'        =&gt; 'device-height',
+                    'initial-scale' =&gt; NULL,
+                    'minimum-scale' =&gt; NULL,
+                    'maximum-scale' =&gt; NULL,
+                    'user-scalable' =&gt; NULL,
+                ),
+                '&lt;meta name=&quot;viewport&quot; content=&quot;height=device-height&quot;&gt;'
+            ),
+            array(  #4
+                array(
+                    'width'         =&gt; NULL,
+                    'height'        =&gt; NULL,
+                    'initial-scale' =&gt; 1,
+                    'minimum-scale' =&gt; NULL,
+                    'maximum-scale' =&gt; NULL,
+                    'user-scalable' =&gt; NULL,
+                ),
+                '&lt;meta name=&quot;viewport&quot; content=&quot;initial-scale=1&quot;&gt;'
+            ),
+            array(  #5
+                array(
+                    'width'         =&gt; NULL,
+                    'height'        =&gt; NULL,
+                    'initial-scale' =&gt; NULL,
+                    'minimum-scale' =&gt; 1,
+                    'maximum-scale' =&gt; NULL,
+                    'user-scalable' =&gt; NULL,
+                ),
+                '&lt;meta name=&quot;viewport&quot; content=&quot;minimum-scale=1&quot;&gt;'
+            ),
+            array(  #6
+                array(
+                    'width'         =&gt; NULL,
+                    'height'        =&gt; NULL,
+                    'initial-scale' =&gt; NULL,
+                    'minimum-scale' =&gt; NULL,
+                    'maximum-scale' =&gt; 1,
+                    'user-scalable' =&gt; NULL,
+                ),
+                '&lt;meta name=&quot;viewport&quot; content=&quot;maximum-scale=1&quot;&gt;'
+            ),
+            array(  #7
+                array(
+                    'width'         =&gt; NULL,
+                    'height'        =&gt; NULL,
+                    'initial-scale' =&gt; NULL,
+                    'minimum-scale' =&gt; NULL,
+                    'maximum-scale' =&gt; 2,
+                    'user-scalable' =&gt; NULL,
+                ),
+                '&lt;meta name=&quot;viewport&quot; content=&quot;maximum-scale=2&quot;&gt;'
+            ),
+            array(  #8
+                array(
+                    'width'         =&gt; NULL,
+                    'height'        =&gt; NULL,
+                    'initial-scale' =&gt; NULL,
+                    'minimum-scale' =&gt; NULL,
+                    'maximum-scale' =&gt; NULL,
+                    'user-scalable' =&gt; 'no',
+                ),
+                '&lt;meta name=&quot;viewport&quot; content=&quot;user-scalable=no&quot;&gt;'
+            ),
+            array(  #9
+                array(
+                    'width'         =&gt; NULL,
+                    'height'        =&gt; NULL,
+                    'initial-scale' =&gt; NULL,
+                    'minimum-scale' =&gt; NULL,
+                    'maximum-scale' =&gt; NULL,
+                    'user-scalable' =&gt; 'yes',
+                ),
+                '&lt;meta name=&quot;viewport&quot; content=&quot;user-scalable=yes&quot;&gt;'
+            ),
+            array(  #10
+                array(
+                    'width'         =&gt; 'device-width',
+                    'height'        =&gt; 'device-height',
+                    'initial-scale' =&gt; NULL,
+                    'minimum-scale' =&gt; NULL,
+                    'maximum-scale' =&gt; NULL,
+                    'user-scalable' =&gt; NULL,
+                ),
+                '&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, height=device-height&quot;&gt;'
+            ),
+            array(  #11
+                array(
+                    'width'         =&gt; 'device-width',
+                    'height'        =&gt; NULL,
+                    'initial-scale' =&gt; 1,
+                    'minimum-scale' =&gt; NULL,
+                    'maximum-scale' =&gt; NULL,
+                    'user-scalable' =&gt; NULL,
+                ),
+                '&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;'
+            ),
+            array(  #12
+                array(
+                    'width'         =&gt; 'device-width',
+                    'height'        =&gt; NULL,
+                    'initial-scale' =&gt; 1.5,
+                    'minimum-scale' =&gt; NULL,
+                    'maximum-scale' =&gt; NULL,
+                    'user-scalable' =&gt; NULL,
+                ),
+                '&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.5&quot;&gt;'
+            ),
+            array(  #13
+                array(
+                    'width'         =&gt; 'device-width',
+                    'height'        =&gt; NULL,
+                    'initial-scale' =&gt; 2,
+                    'minimum-scale' =&gt; NULL,
+                    'maximum-scale' =&gt; NULL,
+                    'user-scalable' =&gt; NULL,
+                ),
+                '&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=2&quot;&gt;'
+            ),
+            array(  #14
+                array(
+                    'width'         =&gt; 'device-width',
+                    'height'        =&gt; NULL,
+                    'initial-scale' =&gt; NULL,
+                    'minimum-scale' =&gt; 1,
+                    'maximum-scale' =&gt; NULL,
+                    'user-scalable' =&gt; NULL,
+                ),
+                '&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, minimum-scale=1&quot;&gt;'
+            ),
+            array(  #15
+                array(
+                    'width'         =&gt; 'device-width',
+                    'height'        =&gt; NULL,
+                    'initial-scale' =&gt; NULL,
+                    'minimum-scale' =&gt; 2,
+                    'maximum-scale' =&gt; NULL,
+                    'user-scalable' =&gt; NULL,
+                ),
+                '&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, minimum-scale=2&quot;&gt;'
+            ),
+            array(  #16
+                array(
+                    'width'         =&gt; 'device-width',
+                    'height'        =&gt; NULL,
+                    'initial-scale' =&gt; NULL,
+                    'minimum-scale' =&gt; 1,
+                    'maximum-scale' =&gt; 1,
+                    'user-scalable' =&gt; NULL,
+                ),
+                '&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, minimum-scale=1, maximum-scale=1&quot;&gt;'
+            ),
+            array(  #17
+                array(
+                    'width'         =&gt; 'device-width',
+                    'height'        =&gt; NULL,
+                    'initial-scale' =&gt; NULL,
+                    'minimum-scale' =&gt; 1,
+                    'maximum-scale' =&gt; 2,
+                    'user-scalable' =&gt; NULL,
+                ),
+                '&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, minimum-scale=1, maximum-scale=2&quot;&gt;'
+            ),
+            array(  #18
+                array(
+                    'width'         =&gt; 'device-width',
+                    'height'        =&gt; NULL,
+                    'initial-scale' =&gt; NULL,
+                    'minimum-scale' =&gt; 1,
+                    'maximum-scale' =&gt; 1,
+                    'user-scalable' =&gt; 'no',
+                ),
+                '&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no&quot;&gt;'
+            ),
+            array(  #19
+                array(
+                    'width'         =&gt; 'device-width',
+                    'height'        =&gt; NULL,
+                    'initial-scale' =&gt; NULL,
+                    'minimum-scale' =&gt; 1,
+                    'maximum-scale' =&gt; 1,
+                    'user-scalable' =&gt; 'yes',
+                ),
+                '&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=yes&quot;&gt;'
+            ),
+            array(  #20
+                array(
+                    'width'         =&gt; 'device-width',
+                    'height'        =&gt; NULL,
+                    'initial-scale' =&gt; NULL,
+                    'minimum-scale' =&gt; NULL,
+                    'maximum-scale' =&gt; 1,
+                    'user-scalable' =&gt; 'no',
+                ),
+                '&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, maximum-scale=1, user-scalable=no&quot;&gt;'
+            ),
+            array(  #21
+                array(
+                    'width'         =&gt; 'device-width',
+                    'height'        =&gt; NULL,
+                    'initial-scale' =&gt; NULL,
+                    'minimum-scale' =&gt; NULL,
+                    'maximum-scale' =&gt; 1,
+                    'user-scalable' =&gt; 'yes',
+                ),
+                '&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, maximum-scale=1, user-scalable=yes&quot;&gt;'
+            ),
+            array(  #22
+                array(
+                    'width'         =&gt; 'device-width',
+                    'height'        =&gt; NULL,
+                    'initial-scale' =&gt; NULL,
+                    'minimum-scale' =&gt; NULL,
+                    'maximum-scale' =&gt; NULL,
+                    'user-scalable' =&gt; 'no',
+                ),
+                '&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, user-scalable=no&quot;&gt;'
+            ),
+            array(  #23
+                array(
+                    'width'         =&gt; 'device-width',
+                    'height'        =&gt; NULL,
+                    'initial-scale' =&gt; NULL,
+                    'minimum-scale' =&gt; NULL,
+                    'maximum-scale' =&gt; NULL,
+                    'user-scalable' =&gt; 'yes',
+                ),
+                '&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, user-scalable=yes&quot;&gt;'
+            )
+        );
+    }
+
+    /**
+     * Tests Bootstrap::viewport method, which [Description]
+     *
+     * @dataProvider viewport_provider
+     */
+    public function test_viewport($options, $expected)
+    {
+        $this-&gt;template-&gt;set('test', $this-&gt;template-&gt;viewport($options));
+        $this-&gt;assertEquals($expected, $this-&gt;template-&gt;output());
+    }
+
+    /**
+     * container_provider : Returns an array that contains various combinations that a user can legally
+     * initiate through Bootstrap::container
+     *
+     * @return Array    Array of various user combinations that can be legally initiated
+     */
+    public function container_provider()
+    {
+        return array(
+            array(  #0
+                'content',
+                'fixed',
+                '&lt;div class=&quot;container&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(  #1
+                'content',
+                'fluid',
+                '&lt;div class=&quot;container-fluid&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(  #3
+                'content',
+                'fluid',
+                '&lt;div class=&quot;container-fluid&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(  #4
+                'content',
+                '',
+                'error'
+            ),
+            array(  #5
+                'content',
+                NULL,
+                'error'
+            )
+        );
+    }
+
+    /**
+     * Tests Bootstrap::container method, which [Description]
+     *
+     * @dataProvider container_provider
+     */
+    public function test_container($content, $type, $expected)
+    {
+        $this-&gt;template-&gt;set('test', $this-&gt;template-&gt;container($content, $type));
+        $this-&gt;assertEquals($expected, $this-&gt;template-&gt;output());
+    }
+
+    /**
+     * row_provider : Returns an array that contains various combinations that a user can legally
+     * initiate through Bootstrap::row
+     *
+     * @return Array    Array of various user combinations that can be legally initiated
+     */
+    public function row_provider()
+    {
+        return array(
+            array(
+                'content',
+                '&lt;div class=&quot;row&quot;&gt;content&lt;/div&gt;'
+            )
+        );
+    }
+
+    /**
+     * Tests Bootstrap::row method, which [Description]
+     *
+     * @dataProvider row_provider
+     */
+    public function test_row($content, $expected)
+    {
+        $this-&gt;template-&gt;set('test', $this-&gt;template-&gt;row($content));
+        $this-&gt;assertEquals($expected, $this-&gt;template-&gt;output());
+    }
+
+    /**
+     * column_provider : Returns an array that contains various combinations that a user can legally
+     * initiate through Bootstrap::column
+     *
+     * @return Array    Array of various user combinations that can be legally initiated
+     */
+    public function column_provider()
+    {
+        return array(
+            array(
+                1,
+                'xs',
+                'content',
+                NULL,
+                '&lt;div class=&quot;col-xs-1&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(
+                1,
+                'sm',
+                'content',
+                NULL,
+                '&lt;div class=&quot;col-sm-1&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(
+                1,
+                'md',
+                'content',
+                NULL,
+                '&lt;div class=&quot;col-md-1&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(
+                1,
+                'lg',
+                'content',
+                NULL,
+                '&lt;div class=&quot;col-lg-1&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(
+                1,
+                'xs',
+                'content',
+                NULL,
+                '&lt;div class=&quot;col-xs-1&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(
+                2,
+                'xs',
+                'content',
+                NULL,
+                '&lt;div class=&quot;col-xs-2&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(
+                3,
+                'xs',
+                'content',
+                NULL,
+                '&lt;div class=&quot;col-xs-3&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(
+                4,
+                'xs',
+                'content',
+                NULL,
+                '&lt;div class=&quot;col-xs-4&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(
+                5,
+                'xs',
+                'content',
+                NULL,
+                '&lt;div class=&quot;col-xs-5&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(
+                6,
+                'xs',
+                'content',
+                NULL,
+                '&lt;div class=&quot;col-xs-6&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(
+                7,
+                'xs',
+                'content',
+                NULL,
+                '&lt;div class=&quot;col-xs-7&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(
+                8,
+                'xs',
+                'content',
+                NULL,
+                '&lt;div class=&quot;col-xs-8&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(
+                9,
+                'xs',
+                'content',
+                NULL,
+                '&lt;div class=&quot;col-xs-9&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(
+                10,
+                'xs',
+                'content',
+                NULL,
+                '&lt;div class=&quot;col-xs-10&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(
+                11,
+                'xs',
+                'content',
+                NULL,
+                '&lt;div class=&quot;col-xs-11&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(
+                12,
+                'xs',
+                'content',
+                NULL,
+                '&lt;div class=&quot;col-xs-12&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(
+                2,
+                'sm',
+                'content',
+                NULL,
+                '&lt;div class=&quot;col-sm-2&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(
+                3,
+                'sm',
+                'content',
+                NULL,
+                '&lt;div class=&quot;col-sm-3&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(
+                4,
+                'sm',
+                'content',
+                NULL,
+                '&lt;div class=&quot;col-sm-4&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(
+                5,
+                'sm',
+                'content',
+                NULL,
+                '&lt;div class=&quot;col-sm-5&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(
+                6,
+                'sm',
+                'content',
+                NULL,
+                '&lt;div class=&quot;col-sm-6&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(
+                7,
+                'sm',
+                'content',
+                NULL,
+                '&lt;div class=&quot;col-sm-7&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(
+                8,
+                'sm',
+                'content',
+                NULL,
+                '&lt;div class=&quot;col-sm-8&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(
+                9,
+                'sm',
+                'content',
+                NULL,
+                '&lt;div class=&quot;col-sm-9&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(
+                10,
+                'sm',
+                'content',
+                NULL,
+                '&lt;div class=&quot;col-sm-10&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(
+                11,
+                'sm',
+                'content',
+                NULL,
+                '&lt;div class=&quot;col-sm-11&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(
+                12,
+                'sm',
+                'content',
+                NULL,
+                '&lt;div class=&quot;col-sm-12&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(
+                2,
+                'md',
+                'content',
+                NULL,
+                '&lt;div class=&quot;col-md-2&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(
+                3,
+                'md',
+                'content',
+                NULL,
+                '&lt;div class=&quot;col-md-3&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(
+                4,
+                'md',
+                'content',
+                NULL,
+                '&lt;div class=&quot;col-md-4&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(
+                5,
+                'md',
+                'content',
+                NULL,
+                '&lt;div class=&quot;col-md-5&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(
+                6,
+                'md',
+                'content',
+                NULL,
+                '&lt;div class=&quot;col-md-6&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(
+                7,
+                'md',
+                'content',
+                NULL,
+                '&lt;div class=&quot;col-md-7&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(
+                8,
+                'md',
+                'content',
+                NULL,
+                '&lt;div class=&quot;col-md-8&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(
+                9,
+                'md',
+                'content',
+                NULL,
+                '&lt;div class=&quot;col-md-9&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(
+                10,
+                'md',
+                'content',
+                NULL,
+                '&lt;div class=&quot;col-md-10&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(
+                11,
+                'md',
+                'content',
+                NULL,
+                '&lt;div class=&quot;col-md-11&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(
+                12,
+                'md',
+                'content',
+                NULL,
+                '&lt;div class=&quot;col-md-12&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(
+                2,
+                'lg',
+                'content',
+                NULL,
+                '&lt;div class=&quot;col-lg-2&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(
+                3,
+                'lg',
+                'content',
+                NULL,
+                '&lt;div class=&quot;col-lg-3&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(
+                4,
+                'lg',
+                'content',
+                NULL,
+                '&lt;div class=&quot;col-lg-4&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(
+                5,
+                'lg',
+                'content',
+                NULL,
+                '&lt;div class=&quot;col-lg-5&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(
+                6,
+                'lg',
+                'content',
+                NULL,
+                '&lt;div class=&quot;col-lg-6&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(
+                7,
+                'lg',
+                'content',
+                NULL,
+                '&lt;div class=&quot;col-lg-7&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(
+                8,
+                'lg',
+                'content',
+                NULL,
+                '&lt;div class=&quot;col-lg-8&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(
+                9,
+                'lg',
+                'content',
+                NULL,
+                '&lt;div class=&quot;col-lg-9&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(
+                10,
+                'lg',
+                'content',
+                NULL,
+                '&lt;div class=&quot;col-lg-10&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(
+                11,
+                'lg',
+                'content',
+                NULL,
+                '&lt;div class=&quot;col-lg-11&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(
+                12,
+                'lg',
+                'content',
+                NULL,
+                '&lt;div class=&quot;col-lg-12&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(
+                1,
+                'xs',
+                'content',
+                '.control-group',
+                '&lt;div class=&quot;col-xs-1 control-group&quot;&gt;content&lt;/div&gt;'
+            ),
+            array(
+                1,
+                'xs',
+                'content',
+                array(
+                    '.control-group',
+                    '.second'
+                ),
+                '&lt;div class=&quot;col-xs-1 control-group second&quot;&gt;content&lt;/div&gt;'
+            )
+        );
+    }
+
+    /**
+     * Tests Bootstrap::column method, which [Description]
+     *
+     * @dataProvider column_provider
+     */
+    public function test_column($amount, $size, $content, $alt, $expected)
+    {
+        $this-&gt;template-&gt;set('test', $this-&gt;template-&gt;column($amount, $size, $content, $alt));
+        $this-&gt;assertEquals($expected, $this-&gt;template-&gt;output());
+    }
+
+    /**
+     * panel_provider : Returns an array that contains various combinations that a user can legally
+     * initiate through Bootstrap::panel
+     *
+     * @return Array    Array of various user combinations that can be legally initiated
+     */
+    public function panel_provider()
+    {
+        return array(
+            array(
+                'header',
+                'Header of Panel',
+                'Body of Panel',
+                NULL,
+                '&lt;div class=&quot;panel panel-default&quot;&gt;&lt;div class=&quot;panel-heading&quot;&gt;Header of Panel&lt;/div&gt;&lt;div class=&quot;panel-body&quot;&gt;Body of Panel&lt;/div&gt;&lt;/div&gt;'
+            ),
+            array(
+                'header',
+                'Header of Panel',
+                'Body of Panel',
+                '.form-group',
+                '&lt;div class=&quot;panel panel-default&quot;&gt;&lt;div class=&quot;panel-heading&quot;&gt;Header of Panel&lt;/div&gt;&lt;div class=&quot;panel-body form-group&quot;&gt;Body of Panel&lt;/div&gt;&lt;/div&gt;'
+            ),
+            array(
+                'footer',
+                'Footer of Panel',
+                'Body of Panel',
+                NULL,
+                '&lt;div class=&quot;panel panel-default&quot;&gt;&lt;div class=&quot;panel-body&quot;&gt;Body of Panel&lt;/div&gt;&lt;div class=&quot;panel-footer&quot;&gt;Footer of Panel&lt;/div&gt;&lt;/div&gt;'
+            ),
+            array(
+                'footer',
+                'Footer of Panel',
+                'Body of Panel',
+                array(
+                    '.form-group',
+                    '.control'
+                ),
+                '&lt;div class=&quot;panel panel-default&quot;&gt;&lt;div class=&quot;panel-body form-group control&quot;&gt;Body of Panel&lt;/div&gt;&lt;div class=&quot;panel-footer&quot;&gt;Footer of Panel&lt;/div&gt;&lt;/div&gt;'
+            ),
+            array(
+                'foote',
+                'Footer of Panel',
+                'Body of Panel',
+                NULL,
+                'error'
+            )
+        );
+    }
+
+    /**
+     * Tests Bootstrap::panel method, which [Description]
+     *
+     * @dataProvider panel_provider
+     */
+    public function test_panel($type, $caption, $body, $alt, $expected)
+    {
+        $this-&gt;template-&gt;set('test', $this-&gt;template-&gt;panel($type, $caption, $body, $alt));
+        $this-&gt;assertEquals($expected, $this-&gt;template-&gt;output());
+    }
+}
+?&gt;</pre>
+        <script type="text/javascript">
+             SyntaxHighlighter.all();
+             jQuery('.gutter div').each(function(key, data){
+                jQuery(data).prepend('<a name="L'+jQuery(data).text()+'"/>');
+             });
+        </script>
+    </body>
+</html>

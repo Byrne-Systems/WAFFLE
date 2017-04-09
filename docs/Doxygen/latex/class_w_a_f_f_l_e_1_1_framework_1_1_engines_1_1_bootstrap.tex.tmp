@@ -1,0 +1,140 @@
+\hypertarget{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap}{}\section{Bootstrap Class Reference}
+\label{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap}\index{Bootstrap@{Bootstrap}}
+
+
+Inheritance diagram for Bootstrap\+:
+% FIG 0
+
+
+Collaboration diagram for Bootstrap\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap_a9ec86a4d6d518a85ed36db4f23ea2bfa}{container} (\$content, \$type=\textquotesingle{}fixed\textquotesingle{})
+\item 
+\hyperlink{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap_a65e72e655a53b204edaaef347ad39799}{row} (\$content)
+\item 
+\hyperlink{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap_a96d284570acb2b50b7e934af06d25c8e}{column} (\$amount=12, \$size=\textquotesingle{}sm\textquotesingle{}, \$content, \$alt=N\+U\+LL)
+\item 
+\hyperlink{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap_ac9f62997b8f02752fd592c9a831c55af}{panel} (\$type=\textquotesingle{}header\textquotesingle{}, \$caption, \$content, \$alt=N\+U\+LL)
+\item 
+\hyperlink{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap_a760d6816b7e769fe6915845ea3d77cdd}{viewport} (\$options=array(\textquotesingle{}width\textquotesingle{}=$>$ \textquotesingle{}device-\/width\textquotesingle{}, \textquotesingle{}height\textquotesingle{}=$>$ N\+U\+LL, \textquotesingle{}initial-\/scale\textquotesingle{}=$>$ 1, \textquotesingle{}minimum-\/scale\textquotesingle{}=$>$ N\+U\+LL, \textquotesingle{}maximum-\/scale\textquotesingle{}=$>$ N\+U\+LL, \textquotesingle{}user-\/scalable\textquotesingle{}=$>$ \textquotesingle{}no\textquotesingle{}))
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap}{Bootstrap} Component Markup Assembler
+
+Parses native bootstrap component markup, containers, rows, columns, and other elements. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap_a96d284570acb2b50b7e934af06d25c8e}\label{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap_a96d284570acb2b50b7e934af06d25c8e}} 
+\index{W\+A\+F\+F\+L\+E\+::\+Framework\+::\+Engines\+::\+Bootstrap@{W\+A\+F\+F\+L\+E\+::\+Framework\+::\+Engines\+::\+Bootstrap}!column@{column}}
+\index{column@{column}!W\+A\+F\+F\+L\+E\+::\+Framework\+::\+Engines\+::\+Bootstrap@{W\+A\+F\+F\+L\+E\+::\+Framework\+::\+Engines\+::\+Bootstrap}}
+\subsubsection{\texorpdfstring{column()}{column()}}
+{\footnotesize\ttfamily column (\begin{DoxyParamCaption}\item[{}]{\$amount = {\ttfamily 12},  }\item[{}]{\$size = {\ttfamily \textquotesingle{}sm\textquotesingle{}},  }\item[{}]{\$content,  }\item[{}]{\$alt = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+Generates \hyperlink{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap}{Bootstrap} column(s) while denoting its size as content is passed through
+
+String column(Integer \$amount, String \$size, String \$content)
+
+
+\begin{DoxyParams}[1]{Parameters}
+Integer & {\em \$amount} & Amount of columns to attribute to the columns being set; (i.\+e., 1, 2, 3...12) \\
+\hline
+String & {\em \$size} & Size of the columns being set; (i.\+e., xs, sm, md, or lg) \\
+\hline
+String & {\em \$content} & Content to be wrapped by this function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String Returns a set of \hyperlink{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap}{Bootstrap} columns in accordance with this method\textquotesingle{}s set params
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000001}{Todo}]write error handling! \end{DoxyRefDesc}
+\mbox{\Hypertarget{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap_a9ec86a4d6d518a85ed36db4f23ea2bfa}\label{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap_a9ec86a4d6d518a85ed36db4f23ea2bfa}} 
+\index{W\+A\+F\+F\+L\+E\+::\+Framework\+::\+Engines\+::\+Bootstrap@{W\+A\+F\+F\+L\+E\+::\+Framework\+::\+Engines\+::\+Bootstrap}!container@{container}}
+\index{container@{container}!W\+A\+F\+F\+L\+E\+::\+Framework\+::\+Engines\+::\+Bootstrap@{W\+A\+F\+F\+L\+E\+::\+Framework\+::\+Engines\+::\+Bootstrap}}
+\subsubsection{\texorpdfstring{container()}{container()}}
+{\footnotesize\ttfamily container (\begin{DoxyParamCaption}\item[{}]{\$content,  }\item[{}]{\$type = {\ttfamily \textquotesingle{}fixed\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Generates a \hyperlink{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap}{Bootstrap} container (fixed or fluid-\/width) to placed around the \textquotesingle{}\$content\textquotesingle{} passed via this method\textquotesingle{}s params
+
+String container(String \$content, String \$type)
+
+
+\begin{DoxyParams}[1]{Parameters}
+String & {\em \$content} & Content to be wrapped by this function \\
+\hline
+String & {\em \$type} & Defines the type of container; i.\+e., \textquotesingle{}fluid\textquotesingle{} or \textquotesingle{}fixed\textquotesingle{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String Returns a fixed (or fluid) container around the content passed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap_ac9f62997b8f02752fd592c9a831c55af}\label{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap_ac9f62997b8f02752fd592c9a831c55af}} 
+\index{W\+A\+F\+F\+L\+E\+::\+Framework\+::\+Engines\+::\+Bootstrap@{W\+A\+F\+F\+L\+E\+::\+Framework\+::\+Engines\+::\+Bootstrap}!panel@{panel}}
+\index{panel@{panel}!W\+A\+F\+F\+L\+E\+::\+Framework\+::\+Engines\+::\+Bootstrap@{W\+A\+F\+F\+L\+E\+::\+Framework\+::\+Engines\+::\+Bootstrap}}
+\subsubsection{\texorpdfstring{panel()}{panel()}}
+{\footnotesize\ttfamily panel (\begin{DoxyParamCaption}\item[{}]{\$type = {\ttfamily \textquotesingle{}header\textquotesingle{}},  }\item[{}]{\$caption,  }\item[{}]{\$content,  }\item[{}]{\$alt = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+Generates a \hyperlink{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap}{Bootstrap} panel containing the content passed via this method\textquotesingle{}s params
+
+String panel(String \$type, String \$caption, String \$content, Array$\vert$\+String \$alt)
+
+
+\begin{DoxyParams}[1]{Parameters}
+String & {\em \$type} & Type of panel to generate; either \textquotesingle{}header\textquotesingle{} or \textquotesingle{}footer\textquotesingle{} \\
+\hline
+String & {\em \$caption} & Caption to be placed inside of its corresponding header (or footer) \\
+\hline
+String & {\em \$content} & Content to be stored inside of the body of this \hyperlink{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap}{Bootstrap} element \\
+\hline
+ & {\em Array/\+String} & \$alt Alternative (or Additional) classes to affix to this panel\textquotesingle{}s body \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String Returns a \hyperlink{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap}{Bootstrap} panel containing the content passed via this method\textquotesingle{}s params 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap_a65e72e655a53b204edaaef347ad39799}\label{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap_a65e72e655a53b204edaaef347ad39799}} 
+\index{W\+A\+F\+F\+L\+E\+::\+Framework\+::\+Engines\+::\+Bootstrap@{W\+A\+F\+F\+L\+E\+::\+Framework\+::\+Engines\+::\+Bootstrap}!row@{row}}
+\index{row@{row}!W\+A\+F\+F\+L\+E\+::\+Framework\+::\+Engines\+::\+Bootstrap@{W\+A\+F\+F\+L\+E\+::\+Framework\+::\+Engines\+::\+Bootstrap}}
+\subsubsection{\texorpdfstring{row()}{row()}}
+{\footnotesize\ttfamily row (\begin{DoxyParamCaption}\item[{}]{\$content }\end{DoxyParamCaption})}
+
+Generates \hyperlink{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap}{Bootstrap} rows that are subsequently wrapped around the passed \textquotesingle{}\$content\textquotesingle{} param;
+
+String row(String \$content)
+
+
+\begin{DoxyParams}[1]{Parameters}
+String & {\em \$content} & Content to be wrapped by this function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String Returns a \hyperlink{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap}{Bootstrap} row (container) around the passed content 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap_a760d6816b7e769fe6915845ea3d77cdd}\label{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap_a760d6816b7e769fe6915845ea3d77cdd}} 
+\index{W\+A\+F\+F\+L\+E\+::\+Framework\+::\+Engines\+::\+Bootstrap@{W\+A\+F\+F\+L\+E\+::\+Framework\+::\+Engines\+::\+Bootstrap}!viewport@{viewport}}
+\index{viewport@{viewport}!W\+A\+F\+F\+L\+E\+::\+Framework\+::\+Engines\+::\+Bootstrap@{W\+A\+F\+F\+L\+E\+::\+Framework\+::\+Engines\+::\+Bootstrap}}
+\subsubsection{\texorpdfstring{viewport()}{viewport()}}
+{\footnotesize\ttfamily viewport (\begin{DoxyParamCaption}\item[{}]{\$options = {\ttfamily array(\textquotesingle{}width\textquotesingle{}~=$>$~\textquotesingle{}device-\/width\textquotesingle{},~\textquotesingle{}height\textquotesingle{}~=$>$~NULL,~\textquotesingle{}initial-\/scale\textquotesingle{}~=$>$~1,~\textquotesingle{}minimum-\/scale\textquotesingle{}~=$>$~NULL,~\textquotesingle{}maximum-\/scale\textquotesingle{}~=$>$~NULL,~\textquotesingle{}user-\/scalable\textquotesingle{}~=$>$~\textquotesingle{}no\textquotesingle{})} }\end{DoxyParamCaption})}
+
+Generates and parses a viewport meta tag for \hyperlink{class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap}{Bootstrap}; or Responsive Web Design
+
+String viewport(Array \$options)
+
+
+\begin{DoxyParams}[1]{Parameters}
+Array & {\em \$options} & Array containing the various properties available throughout a viewport tag \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String Returns a meta tag to set the viewport for a particular web-\/document, site, or application 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+bootstrap.\+class.\+php\end{DoxyCompactItemize}

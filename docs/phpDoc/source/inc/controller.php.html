@@ -1,0 +1,112 @@
+<html>
+    <head>
+        <script
+            type="text/javascript"
+            src="../../js/jquery-1.4.2.min.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../syntax_highlighter/scripts/shCore.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../syntax_highlighter/scripts/shBrushJScript.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../syntax_highlighter/scripts/shBrushPhp.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../syntax_highlighter/scripts/shBrushXml.js">
+        </script>
+        <link
+            href="../../syntax_highlighter/styles/shCore.css" rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="../../syntax_highlighter/styles/shCoreEclipse.css"
+            rel="stylesheet" type="text/css"
+        />
+        <link
+            href="../../syntax_highlighter/styles/shThemeWordpress.css"
+            rel="stylesheet" type="text/css"
+        />
+    </head>
+    <body>
+        <pre class="brush: php">&lt;?php
+/**
+ * WAFFLE DESCRIPTION!
+ *
+ * @package     Controllers\Controller
+ * @category    Controllers
+ * @author      Justin D. Byrne &lt;justin@byrne-systems.com&gt;
+ * @version     $Id$
+ */
+
+namespace WAFFLE\Controller;
+
+use WAFFLE\Controller;                                  # Primary: controller for index.php
+use WAFFLE\Framework\Engines\Template;                  # Template: engine developed to substitute special WAFFLE tags while publishing a clean HTML document
+
+require '/../lib/_Framework/template.class.php';
+
+# Set: Root Directory
+$root = rtrim(dirname(__FILE__), '/inc');
+
+session_start();                                        # Session: start
+
+# ------------------------------------ [ Header ] ------------------------------------ #
+
+# Load: ancillary (or contributory) views
+$notes  = new Template($root . '/web/views/' . 'notes.wad');
+$meta   = new Template($root . '/web/views/' . 'meta.wad');
+$styles = new Template($root . '/web/views/' . 'style-sheets.wad');
+$script = new Template($root . '/web/views/' . 'script.wad');
+
+####################################################################
+###                       Load Template(s)                       ###
+####################################################################
+
+# Load: layout 'bootstrap'
+$layout = new Template($root . '/web/views/layouts/'  . 'bootstrap.html5.wad');
+
+# Load: primary page elements
+$header = new Template($root . '/web/views/' . 'header.wad');
+$main   = new Template($root . '/web/views/' . 'main.wad');
+$footer = new Template($root . '/web/views/' . 'footer.wad');
+
+# Load: composite application template
+$app    = new Template($root . '/web/views/' . 'app.wad');
+
+# Load: project and/or application frame(s)
+// Cycle through various projects applications
+
+####################################################################
+###                       Build Master Page                      ###
+####################################################################
+
+# Set: tags inside layout 'bootstrap'
+$layout-&gt;set('file_notes',              $notes-&gt;output());
+$layout-&gt;set('title',                   'Byrne-Systems | Web-Application Design &amp; Development');
+$layout-&gt;set('meta_tags',               $meta-&gt;output());
+$layout-&gt;set('favicon',                 $header-&gt;favicon($root . '/web/images/fav/cube.fav'));
+$layout-&gt;set('styles',                  $styles-&gt;output());
+$layout-&gt;set('wrapper',                 'Byrne-Systems');
+
+$layout-&gt;set('header',                  $header-&gt;output());
+$layout-&gt;set('main',                    $main-&gt;output());
+$layout-&gt;set('footer',                  $footer-&gt;output());
+
+$layout-&gt;set('script',                  $script-&gt;output());
+
+# Compile: all pre-parsed views into a single application view 'app.wad' to echo (or print) to users' screen; or stdout
+$app-&gt;set('app',                            $layout-&gt;output());</pre>
+        <script type="text/javascript">
+             SyntaxHighlighter.all();
+             jQuery('.gutter div').each(function(key, data){
+                jQuery(data).prepend('<a name="L'+jQuery(data).text()+'"/>');
+             });
+        </script>
+    </body>
+</html>

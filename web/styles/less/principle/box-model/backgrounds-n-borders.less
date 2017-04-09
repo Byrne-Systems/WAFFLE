@@ -1,0 +1,375 @@
+/*
+ *  Set:    Backgrounds & Borders
+ *  Notes:  Module that defines how background and borders of elements are described.
+ */
+
+/* Background */
+// A shorthand for setting the individual background
+// values in a single place in the style sheet.
+// - CSS1
+.background(@arg: rgba(0,0,0,1)) {
+    background: @arg;
+    // <background-color>      = <color>' | transparent | initial | inherit
+    // <background-image>      = <url> | none | initial | inherit
+    // <background-position>   = <value> | x% y% | xpos ypos | initial | inherit
+    // <background-size>       = auto | length | cover | contain | initial | inherit
+    // <background-repeat>     = repeat | repeat-x | repeat-y | no-repeat | initial | inherit
+    // <background-origin>     = padding-box | border-box | content-box | initial | inherit
+    // <background-clip>       = border-box | padding-box | content-box | initial | inherit
+    // <background-attachment> = scroll | fixed | local | initial | inherit
+    // > <color>' | <image> | <position> | <size> | <repeat> | <origin> | <clip> | <attachment> || initial | inherit
+}
+
+/* Background-Attachment */
+// Determines whether that image's position is fixed
+// within the viewport, or scrolls along with its
+// containing block.
+// - CSS1
+.background-attachment(@arg: scroll) {
+    background-attachment: @arg;
+    // > scroll' | fixed | local | initial | inherit
+}
+
+/* Background-Clip */
+// Specifies whether an element's background, either the
+// color or image, extends underneath its border.
+// - CSS3
+.background-clip(@arg: border-box) {
+    background-clip: @arg;
+    // > border-box' | padding-box | content-box | initial | inherit
+}
+
+/* Background-Color */
+// Sets the background color of an element, either
+// through a color value or the keyword transparent.
+// - CSS1
+.background-color(@arg: transparent) {
+    background-color: @arg;
+    // > <color> | transparent' | initial | inherit
+}
+
+/* Background-Image */
+// Sets one or several background images for an element.
+// - CSS1
+.background-image(@arg: none) {
+    background-image: @arg;
+    // > <url> | none' | initial | inherit
+}
+
+/* Background-Origin */
+// Determines the background positioning area.
+// - CSS3
+.background-origin(@arg: padding-box) {
+    background-origin: @arg;
+    // > padding-box' | border-box | content-box | initial | inherit
+}
+
+/* Background-Position */
+// Sets the initial position, relative to the background
+// position layer defined by background-origin for each
+// defined background image.
+// - CSS1
+.background-position(@arg: 0% 0%) {
+    background-position: @arg;
+    // > <value> | x% y%' | xpos ypos | initial | inherit
+}
+
+/* Background-Repeat */
+// Defines how background images are repeated.
+// - CSS1
+.background-repeat(@arg: repeat) {
+    background-repeat: @arg;
+    // > repeat' | repeat-x | repeat-y | no-repeat | initial | inherit
+}
+
+/* Background-Size */
+// Specifies the size of the background images.
+// - CSS3
+.background-size(@arg: auto) {
+    background-size: @arg;
+    // > auto' | length | cover | contain | initial | inherit
+}
+
+/* Border */
+// Setting the individual border property values in a
+// single place in the style sheet.
+// - CSS1
+.border(@arg: medium none rgba(0,0,0,1)) {
+    border: @arg;
+    // > <color>' | initial | inherit ~ (border-width, border-style, border)
+}
+
+/* Border-Bottom */
+// Sets the values of border-bottom-color,
+// border-bottom-style, and border-bottom-width.
+// - CSS1
+.border-bottom(@arg: medium none rgba(0,0,0,1)) {
+    border-bottom: @arg;
+    // <border-bottom-width> = medium | thin | thick | length | initial | inherit
+    // <border-bottom-style> = none | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset | initial | inherit
+    // <border-bottom-color> = color | transparent | initial | inherit
+    // > (<width>, <style>, <color>) | initial | inherit
+}
+
+/* Border-Bottom-Color */
+// Sets the color of the bottom border of an element.
+// - CSS1
+.border-bottom-color(@arg: rgba(0,0,0,1)) {
+    border-bottom-color: @arg;
+    // > <color>' | transparent | initial | inherit
+}
+
+/* Border-Bottom-Left-Radius */
+// Sets the rounding of the bottom-left corner of the
+// element.
+// - CSS3
+.border-bottom-left-radius(@arg: 0) {
+    border-bottom-left-radius: @arg;
+    // > <length>' | [length|%] | initial | inherit
+}
+
+/* Border-Bottom-Right-Radius */
+// Sets the rounding of the bottom-right corner of the
+// element.
+// - CSS3
+.border-bottom-right-radius(@arg: 0) {
+    border-bottom-right-radius: @arg;
+    // > <length>' | [length|%] | initial | inherit
+}
+
+/* Border-Bottom-Style */
+// Sets the line style of the bottom border of a box.
+// - CSS1
+.border-bottom-style(@arg: none) {
+    border-bottom-style: @arg;
+    // > none' | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset | initial | inherit
+}
+
+/* Border-Bottom-Width */
+// Sets the width of the bottom border of a box.
+// - CSS1
+.border-bottom-width(@arg: medium) {
+    border-bottom-width: @arg;
+    // > medium' | thin | thick | length | initial | inherit
+}
+
+/* Border-Color */
+// Setting the color of the four sides of an element's
+// border: border-top-color, border-right-color,
+// border-bottom-color, border-left-color
+// - CSS1
+.border-color(@arg: rgba(0,0,0,1)) {
+    border-color: @arg;
+    // > <color>' | transparent | initial | inherit
+}
+
+/* Border-Image */
+// Allows drawing an image on the borders of elements.
+// - CSS3
+.border-image(@arg: none 100% 1 0 stretch) {
+    border-image: @arg;
+    // <border-image-source> = none | image | initial | inherit
+    // <border-image-slice>  = <number> | [number|%] | fill | initial | inherit
+    // <border-image-width>  = <number> | [number|%] | auto | initial | inherit
+    // <border-image-outset> = <length> | <number> | initial | inherit
+    // <border-image-repeat> = stretch | repeat | round | initial | inherit
+    // > (<source>, <slice>, <width>, <outset>, <repeat>)
+}
+
+/* Border-Image-Outset */
+// Describes by what amount the border image area
+// extends beyond the border box.
+// - CSS3
+.border-image-outset(@arg: 0) {
+    border-image-outset: @arg;
+    // > <length>' | <number> | initial | inherit
+}
+
+/* Border-Image-Repeat */
+// Defines how the middle part of a border image is
+// handled so that it can match the size of the border.
+// - CSS3
+.border-image-repeat(@arg: stretch) {
+    border-image-repeat: @arg;
+    // > stretch' | repeat | round | initial | inherit
+}
+
+/* Border-Image-Slice */
+// Divides the image specified by border-image-source in
+// nine regions: the four corners, the four edges and
+// the middle.
+// - CSS3
+.border-image-slice(@arg: 100%) {
+    border-image-slice: @arg;
+    // > <number> | [number|%'] | fill | initial | inherit
+}
+
+/* Border-Image-Source */
+// Defines the <image> to use instead of the style of
+// the border.
+// - CSS3
+.border-image-source(@arg: none) {
+    border-image-source: @arg;
+    // > none' | image | initial | inherit
+}
+
+/* Border-Image-Width */
+// Defines the width of the border image by defining
+// inward offsets from the border edges.
+// - CSS3
+.border-image-width(@arg: 1) {
+    border-image-width: @arg;
+    // > <number>' | % | auto | initial | inherit
+}
+
+/* Border-Left */
+// Sets the values of border-left-color,
+// border-left-style, and border-left-width.
+// - CSS1
+.border-left(@arg: medium none rgba(0,0,0,1)) {
+    border-left: @arg;
+    // <border-left-width> = medium | thin | thick | length | initial | inherit
+    // <border-left-style> = none | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset | initial | inherit
+    // <border-left-color> = color | transparent | initial | inherit
+    // > (<width>, <style>, <color>) | initial | inherit
+}
+
+/* Border-Left-Color */
+// Sets the color of the bottom border of an element.
+// - CSS1
+.border-left-color(@arg: rgba(0,0,0,1)) {
+    border-left-color: @arg;
+    // > <color>' | transparent | initial | inherit
+}
+
+/* Border-Left-Style */
+// Sets the line style of the left border of a box.
+// - CSS1
+.border-left-style(@arg: none) {
+    border-left-style: @arg;
+    // > none' | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset | initial | inherit
+}
+
+/* Border-Left-Width */
+// Sets the width of the left border of a box.
+// - CSS1
+.border-left-width(@arg: medium) {
+    border-left-width: @arg;
+    // > medium' | thin | thick | length | initial | inherit
+}
+
+/* Border-Radius */
+// Allows Web authors to define how rounded border
+// corners are.
+// - CSS3
+.border-radius(@arg: 0) {
+    border-radius: @arg;
+    // > <length>' | [length|%] | initial | inherit ~ (1-4, [length|%], / 1-4)
+}
+
+/* Border-Right */
+// Sets the values of border-right-color,
+// border-right-style, and border-right-width.
+// - CSS1
+.border-right(@arg: 1px solid rgba(0,0,0,1)) {
+    border-right: @arg;
+    // <border-right-width> = medium | thin | thick | length | initial | inherit
+    // <border-right-style> = none | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset | initial | inherit
+    // <border-right-color> = color | transparent | initial | inherit
+    // > (<width>, <style>, <color>) | initial | inherit
+}
+
+/* Border-Right-Color */
+// Sets the color of the right border of an element.
+// - CSS1
+.border-right-color(@arg: rgba(0,0,0,1)) {
+    border-right-color: @arg;
+    // > <color>' | transparent | initial | inherit
+}
+
+/* Border-Right-Style */
+// Sets the line style of the right border of a box.
+// - CSS1
+.border-right-style(@arg: none) {
+    border-right-style: @arg;
+    // > none' | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset | initial | inherit
+}
+
+/* Border-Right-Width */
+// Sets the width of the right border of a box.
+// - CSS1
+.border-right-width(@arg: medium) {
+    border-right-width: @arg;
+    // > medium' | thin | thick | length | initial | inherit
+}
+
+/* Border-style */
+// Setting the line style for all four sides of the
+// elements border.
+// - CSS1
+.border-style(@arg: none) {
+    border-style: @arg;
+    // > none' | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset | initial | inherit
+}
+
+/* Border-Top */
+// Sets the values of border-top-color,
+// border-top-style, and border-top-width.
+// - CSS1
+.border-top(@arg: medium none rgba(0,0,0,1)) {
+    border-top: @arg;
+    // <border-top-width> = medium | thin | thick | length | initial | inherit
+    // <border-top-style> = none | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset | initial | inherit
+    // <border-top-color> = color | transparent | initial | inherit
+    // > (<width>, <style>, <color>) | initial | inherit
+}
+
+/* Border-Top-Color */
+// Sets the color of the top border of an element.
+// - CSS1
+.border-top-color(@arg: rgba(0,0,0,1)) {
+    border-top-color: @arg;
+    // > <color>' | transparent | initial | inherit
+}
+
+/* Border-Top-Left-Radius */
+// Sets the rounding of the top-left corner of the
+// element.
+// - CSS3
+.border-top-left-radius(@arg: 0) {
+    border-top-left-radius: @arg;
+    // > <length>' | % [length] | initial | inherit
+}
+
+/* Border-Top-Right-Radius */
+// Sets the rounding of the top-right corner of the
+// element.
+// - CSS3
+.border-top-right-radius(@arg: 0) {
+    border-top-right-radius: @arg;
+    // > <length>' | % [length] | initial | inherit
+}
+
+/* Border-Top-Style */
+// Sets the line style of the top border of a box.
+// - CSS1
+.border-top-style(@arg: none) {
+    border-top-style: @arg;
+    // > none' | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset | initial | inherit
+}
+
+/* Border-Top-Width */
+// Sets the width of the top border of a box.
+// - CSS1
+.border-top-width(@arg: medium) {
+    border-top-width: @arg;
+    // > medium' | thin | thick | length | initial | inherit
+}
+
+/* Border-Width */
+// Sets the width of the border of a box.
+// - CSS1
+.border-width(@arg: medium) {
+    border-width: @arg;
+    // > medium' | thin | thick | length | initial | inherit
+}

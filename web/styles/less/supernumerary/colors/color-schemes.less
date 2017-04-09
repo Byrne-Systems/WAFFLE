@@ -1,0 +1,49 @@
+/*
+ *  Set:    Color Schemes
+ *  Notes:  Module that prepares various color schemes to be utilized throughout a project
+ */
+
+#Color-Schemes {
+    .monochromatic(@primary-color) {
+
+    }
+}
+
+/* Color Functions */
+#Color(@color: @PC) {
+    .Complement() {
+        color: spin(@color, 180);
+    }
+    .Set() {
+        color: @color;
+    }
+    .Triadic-Secondary() {
+        color: spin(@color, -(360 / 3));
+    }
+    .Triadic-Tertiary() {
+        color: spin(@color,   (360 / 3));
+    }
+}
+
+.fore-color(@color: transparent) {
+    color: @color;
+}
+
+#BgColor {
+    .Complement(@color) {
+        background-color: spin(@color, 180);
+    }
+    .Set(@color: #FFF) {
+        background-color: @color;
+    }
+    .Triadic-Secondary(@color) {
+        background-color: spin(@color, -(360 / 3));
+    }
+    .Triadic-Tertiary(@color) {
+        background-color: spin(@color,   (360 / 3));
+    }
+}
+
+.back-color(@color: transparent) {
+    background-color: @color;
+}

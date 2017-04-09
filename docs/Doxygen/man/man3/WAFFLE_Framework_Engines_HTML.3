@@ -1,0 +1,219 @@
+.TH "HTML" 3 "Sun Apr 9 2017" "Version 0.35.0.0" "WAFFLE" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+HTML
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fBBootstrap\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBanchor\fP ($href, $content, $title=NULL, $aux)"
+.br
+.ti -1c
+.RI "\fBdiv\fP ($content, $descriptor)"
+.br
+.ti -1c
+.RI "\fBfavicon\fP ($file)"
+.br
+.ti -1c
+.RI "\fBlink\fP ($href, $rel, $media=NULL, $download=false)"
+.br
+.ti -1c
+.RI "\fBmailto\fP ($mailto, $cc, $bcc, $sub, $body, $content)"
+.br
+.ti -1c
+.RI "\fBmeta\fP ($name, $content)"
+.br
+.ti -1c
+.RI "\fBscript\fP ($src, $type=false, $defer=false, $charset=false)"
+.br
+.ti -1c
+.RI "\fBtag\fP ($content, $tag)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBHTML\fP Tag Generator
+.PP
+\fBHTML\fP Generator that outputs semantic \fBHTML\fP tags wrapped around the any content passed\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "anchor ( $href,  $content,  $title = \fCNULL\fP,  $aux)"
+Generates an internal or external \fBHTML\fP hypertext link
+.PP
+String \fBanchor()\fP anchor(String $href, String $content, String $title, String $aux)
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$href\fP Defines a URL to open when this element is clicked 
+.br
+\fI$content\fP Content enclosed between the tags of the generated link (i\&.e\&., content) 
+.br
+\fI$title\fP Sets the title of the generated hypertext link 
+.br
+\fI$aux\fP Sets a target (where to open linked document) or (either) an id or a class attribute for styling 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+String The generated hypertext link 
+.RE
+.PP
+
+.SS "div ( $content,  $descriptor)"
+Generate generic \fBHTML\fP divider tag; or 
+.PP
+ String div(String $content, String|Array $descriptor)
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$content\fP Content to be wrapped inside the generated \fBHTML\fP divider 
+.br
+\fI$descriptor\fP Sets a descriptor; target, id, or a class attribute utilizing the name passed 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+String Returns a generic \fBHTML\fP divider, or  tag, wrapped around the '$content' passed via this method's param 
+.RE
+.PP
+
+.SS "favicon ( $file)"
+[favicon description]
+.PP
+\fBParameters:\fP
+.RS 4
+\fI[type]\fP $file [description] 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+[type] [description] 
+.RE
+.PP
+
+.SS "link ( $href,  $rel,  $media = \fCNULL\fP,  $download = \fCfalse\fP)"
+Generates a link element that specifies the relationship(s) between the current document and an external resource
+.PP
+String link(String $href, String $rel, String $media, Boolean $download)
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$href\fP Specifies the URL of the linked resource; URL can be absolute or relative 
+.br
+\fI$rel\fP Names a relationship of the linked document to the current document 
+.br
+\fI$media\fP Defines the media-type of the linked content; this value must be a media query 
+.br
+\fI$download\fP Specifies that the target will be downloaded when a user clicks on the hyper-link 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+String A generated link tag parsed by using the passed parameters values
+.RE
+.PP
+\fBTodo\fP
+.RS 4
+add attributes: hreflang, media, crossorigin (5), sizes (5) and write error handling 
+.RE
+.PP
+
+.SS "mailto ( $mailto,  $cc,  $bcc,  $sub,  $body,  $content)"
+Generates a mailto hypertext link to mail content to a single (or several) an email address(es)
+.PP
+String \fBmailto()\fP mailto(String $email, String $content, String $title, String aux)
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$mailto\fP Recipient's e-mail address(es) 
+.br
+\fI$cc\fP Carbon copy e-mail address(es) 
+.br
+\fI$bcc\fP Blind carbon copy e-mail address(es) 
+.br
+\fI$sub\fP Subject corresponding to the e-mail(s) prepped for this link 
+.br
+\fI$body\fP Body (or content) for the e-mail(s) being prepped for this link 
+.br
+\fI$content\fP Content enclosed between the tags of this generated link 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+String Generated mailto link 
+.RE
+.PP
+
+.SS "meta ( $name,  $content)"
+Generates a Meta tag that provides metadata about the \fBHTML\fP document generated and served
+.PP
+String meta(String $name, String $content)
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$name\fP They key set here is either a 'http-equiv' header for the info/value pair or a 'name' part of the name/value pair\&. 
+.br
+\fI$content\fP The content which gives the value associated with the 'http-equiv' or 'name' attribute\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+String Generated <meta> tag\&. 
+.RE
+.PP
+
+.SS "script ( $src,  $type = \fCfalse\fP,  $defer = \fCfalse\fP,  $charset = \fCfalse\fP)"
+Generates an internal <script> tag to define client-side script; such as JavaScript
+.PP
+String script(String $src, String $type, String $type, Boolean $defer, String $charset)
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$src\fP The source of the file, module, or program to load 
+.br
+\fI$type\fP The media type for the generated script 
+.br
+\fI$defer\fP Sets whether the script is meant to be executed after the documented as been parsed 
+.br
+\fI$charset\fP Sets the character encoding of an external script; For external scripts 'only'! 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+String A generated script tag parsed by using the passed parameters values
+.RE
+.PP
+\fBTodo\fP
+.RS 4
+add attributes: Integrity, Async [HTML5], and Crossorigin 
+.RE
+.PP
+
+.SS "tag ( $content,  $tag)"
+Generic tag method that generates generic \fBHTML\fP tags passed via it's secondary parameter through using the content and tag data passed
+.PP
+String tag(String $content, String $tag)
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$content\fP The content that will be wrapped in the generated tag 
+.br
+\fI$tag\fP The tag to be used while generated the generic \fBHTML\fP content 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+String Returns a concatenated (single) string resulting in a generated meta tag with the passed content enclosed inside 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for WAFFLE from the source code\&.

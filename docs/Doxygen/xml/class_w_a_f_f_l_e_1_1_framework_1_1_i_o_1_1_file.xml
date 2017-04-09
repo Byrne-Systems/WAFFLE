@@ -1,0 +1,223 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_file" kind="class" language="PHP" prot="public">
+    <compoundname>WAFFLE::Framework::IO::File</compoundname>
+    <basecompoundref refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_validation" prot="public" virt="non-virtual">Validation</basecompoundref>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_file_1a43d3433efb06e49d2e5ac7985bcf3c39" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>find_file</definition>
+        <argsstring>($file)</argsstring>
+        <name>find_file</name>
+        <param>
+          <declname>$file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Attempts to locate the filename passed through the set_script method</para><para>String find_file(String $file)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametername>$file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The filename to be recursively searched for throughout the parent directory passed via the __construct&apos;or </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>String The directory in which the filename (being searched for) exists</para></simplesect>
+<xrefsect id="todo_1_todo000002"><xreftitle>Todo</xreftitle><xrefdescription><para>complete subroutine for set_script injection routine </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="file.class.php" line="37" column="1" bodyfile="file.class.php" bodystart="37" bodyend="63"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_file_1aafe286d7c8fb46b17af96b66734393c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>download</definition>
+        <argsstring>($file)</argsstring>
+        <name>download</name>
+        <param>
+          <declname>$file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Forces a download on the client-side using this server-side method</para><para>Mixed download(String $file)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametername>$file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Filename (and/or directory) of the file to be returned/downloaded on the client&apos;s system </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Mixed The requested file </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="file.class.php" line="77" column="1" bodyfile="file.class.php" bodystart="77" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_file_1abe1b4778c16b961777ab1aa25474995d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>read</definition>
+        <argsstring>($file, $rtn_tp, $latchkey)</argsstring>
+        <name>read</name>
+        <param>
+          <declname>$file</declname>
+        </param>
+        <param>
+          <declname>$rtn_tp</declname>
+        </param>
+        <param>
+          <declname>$latchkey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reads an assortment of flat file types to be returned to the originating method</para><para>Mixed read(String $file, Mixed $return_type, $String $key)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametername>$file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Filename (and/or directory) of the file to be returned to the originating method </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>Mixed</parametertype>
+<parametername>$rtn_tp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Return type or the variable type to return the requested file </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametername>$latchkey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Credential(s) to pass to decrypt file, if necessary </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Mixed Contents of the requested file </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="file.class.php" line="100" column="1" bodyfile="file.class.php" bodystart="100" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_file_1ad1346b1a0af3c4b9a5ced25b88e8f4ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>write</definition>
+        <argsstring>($file, $content, $type=&apos;script&apos;)</argsstring>
+        <name>write</name>
+        <param>
+          <declname>$file</declname>
+        </param>
+        <param>
+          <declname>$content</declname>
+        </param>
+        <param>
+          <declname>$type</declname>
+          <defval>&apos;script&apos;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Writes passed content into the filename passed  appended after the filename&apos;s last entry</para><para>Boolean write(String $file, String $content, String $type)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametername>$file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>description </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametername>$content</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>description </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametername>$type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>description </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Boolean description </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="file.class.php" line="117" column="1" bodyfile="file.class.php" bodystart="117" bodyend="149"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_file" kindref="compound">File</ref> IO</para><para>Class designed to handle various file read, write, and modify methods </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="19">
+        <label>Log</label>
+        <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_log"/>
+      </node>
+      <node id="18">
+        <label>Error</label>
+        <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_error"/>
+        <childnode refid="19" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>File</label>
+        <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_file"/>
+        <childnode refid="17" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>Validation</label>
+        <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_validation"/>
+        <childnode refid="18" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="23">
+        <label>Log</label>
+        <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_log"/>
+      </node>
+      <node id="22">
+        <label>Error</label>
+        <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_error"/>
+        <childnode refid="23" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>File</label>
+        <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_file"/>
+        <childnode refid="21" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>Validation</label>
+        <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_validation"/>
+        <childnode refid="22" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="file.class.php" line="24" column="1" bodyfile="file.class.php" bodystart="24" bodyend="150"/>
+    <listofallmembers>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_validation_1a4ff84cc981fb60ee42f19420441e8d7b" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::IO::File</scope><name>check_file</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_file_1aafe286d7c8fb46b17af96b66734393c0" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::IO::File</scope><name>download</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_validation_1a93629f2b411f25d13fac77a36470fbae" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::IO::File</scope><name>email_format</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_error_1af721dfe2b0cca44a3c68c6fda1439165" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::IO::File</scope><name>error</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_file_1a43d3433efb06e49d2e5ac7985bcf3c39" prot="private" virt="non-virtual"><scope>WAFFLE::Framework::IO::File</scope><name>find_file</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_log_1a3e3c415ada57f553ac4a39a40051c94f" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::IO::File</scope><name>log</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_file_1abe1b4778c16b961777ab1aa25474995d" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::IO::File</scope><name>read</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_file_1ad1346b1a0af3c4b9a5ced25b88e8f4ab" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::IO::File</scope><name>write</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

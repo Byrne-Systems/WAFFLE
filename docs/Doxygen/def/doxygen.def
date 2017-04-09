@@ -1,0 +1,13 @@
+AutoGen Definitions dummy;
+file = {
+  file-id   = 'index_8php';
+  file-name = 'index.php';
+  file-full-name  = 'C:/xampp/htdocs/apps/WAFFLE/index.php';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */

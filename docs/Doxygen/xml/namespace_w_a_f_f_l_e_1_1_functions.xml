@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespace_w_a_f_f_l_e_1_1_functions" kind="namespace" language="PHP">
+    <compoundname>WAFFLE::Functions</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_w_a_f_f_l_e_1_1_functions_1a09d3696edbb60db132cbac829c0a96dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>WAFFLE\Functions\sec_session_start</definition>
+        <argsstring>()</argsstring>
+        <name>sec_session_start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Custom secure method of initiating a PHP session; call at the top of each page that should access PHP session variable(s)</para><para><simplesect kind="return"><para>NULL Initiates a secure PHP session </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/inc/functions.php" line="23" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/inc/functions.php" bodystart="23" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_w_a_f_f_l_e_1_1_functions_1a7573c72280bfa987322364343fd97eec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>WAFFLE\Functions\login</definition>
+        <argsstring>($id, $pass, $mysqli)</argsstring>
+        <name>login</name>
+        <param>
+          <declname>$id</declname>
+        </param>
+        <param>
+          <declname>$pass</declname>
+        </param>
+        <param>
+          <declname>$mysqli</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Verifies the user&apos;s identifier and password against the database&apos;s credentials via the &apos;password_verify()&apos; method, which prevents against timing attacks</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametername>$id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[description] </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametername>$pass</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[description] </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>Object</parametertype>
+<parametername>$mysqli</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[description] </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Boolean [description] </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/inc/functions.php" line="50" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/inc/functions.php" bodystart="50" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_w_a_f_f_l_e_1_1_functions_1a0a6eed95810480a504f0334d3c23ccbc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>WAFFLE\Functions\checkbrute</definition>
+        <argsstring>($emp_id, $mysqli)</argsstring>
+        <name>checkbrute</name>
+        <param>
+          <declname>$emp_id</declname>
+        </param>
+        <param>
+          <declname>$mysqli</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sends an email to the user with a reset link if there has been more than 5 failed login attempts</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametername>$emp_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Employees identifier </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>Object</parametertype>
+<parametername>$mysqli</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MySQLi connection object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Boolean Confirms whether a brute-force attack &apos;may&apos; have been attempted </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/inc/functions.php" line="99" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/inc/functions.php" bodystart="99" bodyend="116"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/xampp/htdocs/apps/WAFFLE/inc/functions.php" line="11" column="1"/>
+  </compounddef>
+</doxygen>

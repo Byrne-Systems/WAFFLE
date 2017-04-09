@@ -1,0 +1,29 @@
+{
+  "spoken-languages": {
+    "Bulgarian": "BG",
+    "Chinese": "ZH",
+    "Croatian": "HR",
+    "Czech": "CS",
+    "Danish": "DA",
+    "Dutch": "NL",
+    "English": "EN",
+    "English-Great Britain": "EN-GB",
+    "English-United States": "EN-US",
+    "Finnish": "FI",
+    "French": "FR",
+    "French-France": "FR-FR",
+    "French-Quebec": "FR-CA",
+    "German": "DE",
+    "Greek": "EL",
+    "Italian": "IT",
+    "Japanese": "JA",
+    "Korean": "KO",
+    "Norwegian": "NO",
+    "Polish": "PL",
+    "Portuguese": "PT",
+    "Russian": "RU",
+    "Spanish": "ES",
+    "Spanish-Spain": "ES-ES",
+    "Swedish": "SV"
+  }
+}

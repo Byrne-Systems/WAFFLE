@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 14.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 43363)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="61.978px" height="72px" viewBox="0 0 61.978 72" enable-background="new 0 0 61.978 72" xml:space="preserve">
+<polygon fill="#4069B2" points="30.989,0.037 0.064,17.811 30.989,36.136 61.913,17.811 "/>
+<polygon fill="#2F507F" points="0,17.81 30.989,36.174 30.989,72 0,53.925 "/>
+<polygon fill="#396099" points="61.978,17.81 61.978,53.925 30.989,72 30.989,36.174 "/>
+<polygon fill="#46BDCF" points="30.989,17.81 15.319,26.888 30.989,36.174 46.659,26.888 "/>
+<polygon fill="#368F99" points="15.319,26.888 30.989,36.174 30.989,53.925 15.318,44.858 "/>
+<polygon fill="#3FA7B2" points="46.659,26.888 30.989,36.174 30.989,53.925 46.659,44.858 "/>
+<g>
+	<polygon fill="#CAEAEF" points="9.389,23.374 15.319,26.888 15.318,44.858 9.389,48.704 	"/>
+	<polygon fill="#D2EDF3" points="52.59,23.374 52.59,48.704 46.659,44.858 46.659,26.888 	"/>
+	<polygon fill="#EDF7F9" points="30.989,10.799 30.989,17.81 46.659,26.888 52.59,23.374 	"/>
+	<polygon fill="#EDF7F9" points="30.989,10.799 30.989,17.81 15.319,26.888 9.389,23.374 	"/>
+	<polygon fill="#99CCCC" points="15.318,44.858 30.989,53.925 30.988,61.2 9.389,48.704 	"/>
+	<polygon fill="#99CCCC" points="30.989,53.925 30.988,61.2 52.59,48.704 46.659,44.858 	"/>
+</g>
+<line opacity="0.1" fill="none" stroke="#283A8F" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round" x1="9.389" y1="48.704" x2="15.318" y2="44.858"/>
+<line opacity="0.1" fill="none" stroke="#283A8F" stroke-width="0.25" stroke-linejoin="bevel" x1="46.659" y1="26.888" x2="52.59" y2="23.374"/>
+<line opacity="0.1" fill="none" stroke="#283A8F" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round" x1="15.319" y1="26.888" x2="9.389" y2="23.374"/>
+<line opacity="0.1" fill="none" stroke="#283A8F" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" x1="52.59" y1="48.704" x2="46.659" y2="44.858"/>
+<line opacity="0.1" fill="none" stroke="#283A8F" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round" x1="30.989" y1="10.799" x2="30.989" y2="17.815"/>
+<line opacity="0.2" fill="none" stroke="#283A8F" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" x1="30.989" y1="53.925" x2="30.988" y2="61.2"/>
+</svg>

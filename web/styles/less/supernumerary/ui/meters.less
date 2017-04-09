@@ -1,0 +1,52 @@
+/*
+ *  Set:    Meters
+ *  Notes:  Module that
+ */
+
+/* Background */                                        // B
+#Background {
+    .Attachment(@arg: scroll) {
+        background-attachment: @arg;
+    }
+    .Classic(@arg) {
+        -webkit-background: @arg;
+           -moz-background: @arg;
+                background: @arg;
+    }
+    .Clip(@arg: border-box) {
+        -webkit-background-clip: @arg;
+                background-clip: @arg;
+    }
+    .Color(@arg: rgb(0, 0, 0)) {
+        background-color: @arg;
+    }
+    .Image(@arg: none) {
+        background-image: url(@arg);
+    }
+    .Origin(@arg: padding-box) {
+        background-origin: @arg;
+    }
+    .Position(@arg: 0% 0%) {
+        background-position: @arg;
+    }
+    .Repeat(@arg: repeat) {
+        background-repeat: @arg;
+    }
+    .Size(@arg: auto) {
+        background-size: @arg;
+    }
+}
+
+/* Border */
+#Border {
+    .Classic(@arg: 0.125em solid rgb(0, 0, 0)) {
+        border: @arg;
+    }
+    .Radius(@radius: 0.125em) {
+        -webkit-border-radius: @radius @radius @radius @radius;
+           -moz-border-radius: @radius @radius @radius @radius;
+                border-radius: @radius @radius @radius @radius;
+
+        .background-clip(padding-box);
+    }
+}

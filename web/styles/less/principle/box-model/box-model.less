@@ -1,0 +1,162 @@
+/*
+ *  Set:    CSS Box-Model
+ *  Notes:  Module that defines rectangular boxes, including their padding and margins, that are
+ *          generated for elements.
+ */
+
+/* Box-Decoration-Break */
+// Specifies how the background, padding, border(image),
+// box-shadow, margin and clip of an element is applied
+// in a fragmented box
+// - CSS3
+.box-decoration-break(@arg: slice) {
+    box-decoration-break: @arg;
+    // > slice' | clone | initial | inherit | unset
+}
+
+/* Box-Shadow */
+// It enables you to cast a drop shadow from the frame
+// of almost any element
+// - CSS3
+.box-shadow(@arg: none) {
+    box-shadow: @arg;
+    // > none' | <h-shadow> <v-shadow> <blur> <spread> <color> | inset | initial | inherit
+}
+
+/* Box-Sizing */
+// Used to alter the default CSS box model used to
+// calculate widths and heights of elements
+// - CSS3
+.box-sizing(@arg: border-box) {
+    box-sizing: @arg;
+    // > content-box | border-box' | initial | inherit
+}
+
+/* Height */
+// Specifies the height of the content area of an
+// element
+// - CSS1
+.height(@arg: auto) {
+    height: @arg;
+    // > auto | <length> | [length|px|pt|em|rem] | initial | inherit
+}
+
+/* Margin */
+// Sets the margin for all four sides
+// - CSS1
+.margin(@arg: auto) {
+    margin: @arg;
+    // > auto' | <length> | [length|px|pt|em|rem|%] | initial | inherit
+}
+
+/* Margin-Bottom */
+// Sets the margin space required on the bottom of an
+// element
+// - CSS1
+.margin-bottom(@arg: 0) {
+    margin-bottom: @arg;
+    // > <length>' | [length|px|pt|em|rem|%] | auto | initial | inherit
+}
+
+/* Margin-Left */
+// Sets the margin space required on the left of an
+// element
+// - CSS1
+.margin-left(@arg: 0) {
+    margin-left: @arg;
+    // > <length>' | [length|px|pt|em|rem|%] | auto | initial | inherit
+}
+
+/* Margin-Right */
+// Sets the margin space required on the right of an
+// element
+// - CSS1
+.margin-right(@arg: 0) {
+    margin-right: @arg;
+    // > <length>' | [length|px|pt|em|rem|%] | auto | initial | inherit
+}
+
+/* Margin-Top */
+// Sets the margin space required on the top of an
+// element
+// - CSS1
+.margin-top(@arg: 0) {
+    margin-top: @arg;
+    // > <length>' | [length|px|pt|em|rem|%] | auto | initial | inherit
+}
+
+/* Max-Height */
+// Used to set the maximum height of an element
+// - CSS2
+.max-height(@arg: 0) {
+    max-height: @arg;
+    // > <length>' | [length|px|pt|em|rem|%] | auto | initial | inherit
+}
+
+/* Max-Width */
+// Used to set the maximum width of an element
+// - CSS2
+.max-width(@arg: none) {
+    max-width: @arg;
+    // > none' | <length> | [length|px|pt|em|rem|%] | initial | inherit
+}
+
+/* Min-Height */
+// Used to set the minimum height of a given element
+// - CSS2
+.min-height(@arg: none) {
+    min-height: @arg;
+    // > none' | <length> | [length|px|pt|em|rem|%] | initial | inherit
+}
+
+/* Min-Width */
+// Used to set the minimum width of a given element
+// - CSS2
+.min-width(@arg: 0) {
+    min-width: @arg;
+    // > <length>' | [length|px|pt|em|rem|%] | initial | inherit
+}
+
+/* Overflow */
+// Specifies whether to clip content, render scrollbars
+// or just display content when it overflows its block
+// level container
+// - CSS2
+.overflow(@arg: visible) {
+    overflow: @arg;
+    // > visible' | hidden | scroll | auto | initial | inherit
+}
+
+/* Overflow-x */
+// Specifies how to display overflow content from the
+// left and right edges
+// - CSS3
+.overflow-x(@arg: visible) {
+    overflow-x: @arg;
+    // > visible' | hidden | scroll | auto | initial | inherit
+}
+
+/* Overflow-y */
+// Specifies how to display overflow content from the
+// top and bottom edges
+// - CSS3
+.overflow-y(@arg: visible) {
+    overflow-y: @arg;
+    // > visible' | hidden | scroll | auto | initial | inherit
+}
+
+/* Padding */
+// Sets the padding space on all sides of an element
+// - CSS1
+.padding(@arg: 0) {
+    padding: @arg;
+    // > <length> | [length|px|pt|em|rem|%] | initial | inherit
+}
+
+/* Width */
+// Specifies the width of the content area of an element
+// - CSS1
+.width(@arg: auto) {
+    width: @arg;
+    // > auto | <length> | [length|px|pt|em|rem|%] | initial | inherit
+}

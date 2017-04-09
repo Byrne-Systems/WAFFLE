@@ -1,0 +1,551 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l" kind="class" language="PHP" prot="public">
+    <compoundname>WAFFLE::Framework::Engines::HTML</compoundname>
+    <derivedcompoundref refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap" prot="public" virt="non-virtual">Bootstrap</derivedcompoundref>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1abb74e9971f5bcaaeade823e0073057e0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get_domain</definition>
+        <argsstring>()</argsstring>
+        <name>get_domain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a pre-assigned (absolute path) domain-name that is the domain URL for byrne-systems</para><para>String get_domain()</para><para><simplesect kind="return"><para>String Pre-assigned domain-name </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="html.class.php" line="35" column="1" bodyfile="html.class.php" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1ad7b4bf61b716970e07cdd1402a80129e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>meta_type</definition>
+        <argsstring>($ext)</argsstring>
+        <name>meta_type</name>
+        <param>
+          <declname>$ext</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determines whether the &apos;$rule&apos; passed is to declare a &apos;name&apos; or &apos;http-equiv&apos; attribute for a meta tag.</para><para>String meta_type(String $rule, String $name)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametername>$ext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Extension type (or keyword) to be used when parsing the meta-tag </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>String The result of the parsed meta name </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="html.class.php" line="46" column="1" bodyfile="html.class.php" bodystart="46" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1ad582eaa2faaa983c7b17fdcf81049671" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>parse_id_type</definition>
+        <argsstring>($rule)</argsstring>
+        <name>parse_id_type</name>
+        <param>
+          <declname>$rule</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Parse the correct type (or identifier) for CSS and <ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l" kindref="compound">HTML</ref> link targeting</para><para>String parse_id_type(String $rule)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametername>$rule</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rule that defines how to parse the associated <ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l" kindref="compound">HTML</ref> element </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>String The correct type or identifier determined for the parsed rule </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="html.class.php" line="62" column="1" bodyfile="html.class.php" bodystart="62" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a426da5740b47df47de16970dea2f2579" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>parse_mailto_addresses</definition>
+        <argsstring>($email)</argsstring>
+        <name>parse_mailto_addresses</name>
+        <param>
+          <declname>$email</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Parses email address to comply with proper &apos;mailto&apos; hypertext syntax standards; this method is primarily used to parse email addresses for this classes &quot;mailto&quot; method</para><para>String parse_mailto_addresses(String $email)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametertype>Array</parametertype>
+<parametername>$email</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A recipients email address (i.e., mailto, cc, or bcc) sent via the mailto method </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>String Parsed email address to be inserted into a mailto hypertext link </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="html.class.php" line="102" column="1" bodyfile="html.class.php" bodystart="102" bodyend="113"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a3c534563b3b17abd31c70ce81c518a6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>anchor</definition>
+        <argsstring>($href, $content, $title=NULL, $aux)</argsstring>
+        <name>anchor</name>
+        <param>
+          <declname>$href</declname>
+        </param>
+        <param>
+          <declname>$content</declname>
+        </param>
+        <param>
+          <declname>$title</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <declname>$aux</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Generates an internal or external <ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l" kindref="compound">HTML</ref> hypertext link</para><para>String <ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a3c534563b3b17abd31c70ce81c518a6d" kindref="member">anchor()</ref> anchor(String $href, String $content, String $title, String $aux)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametername>$href</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Defines a URL to open when this element is clicked </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametername>$content</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Content enclosed between the tags of the generated link (i.e., content) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametername>$title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sets the title of the generated hypertext link </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametername>$aux</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sets a target (where to open linked document) or (either) an id or a class attribute for styling </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>String The generated hypertext link </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="html.class.php" line="130" column="1" bodyfile="html.class.php" bodystart="130" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a12602b493053197597cfcaffa61a6e14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>div</definition>
+        <argsstring>($content, $descriptor)</argsstring>
+        <name>div</name>
+        <param>
+          <declname>$content</declname>
+        </param>
+        <param>
+          <declname>$descriptor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Generate generic <ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l" kindref="compound">HTML</ref> divider tag; or </para><para> String div(String $content, String|Array $descriptor)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametername>$content</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Content to be wrapped inside the generated <ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l" kindref="compound">HTML</ref> divider </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametertype>Array</parametertype>
+<parametername>$descriptor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sets a descriptor; target, id, or a class attribute utilizing the name passed </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>String Returns a generic <ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l" kindref="compound">HTML</ref> divider, or  tag, wrapped around the &apos;$content&apos; passed via this method&apos;s param </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="html.class.php" line="158" column="1" bodyfile="html.class.php" bodystart="158" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a3f5f65b7897f31a9a6eae79588a9e6c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>favicon</definition>
+        <argsstring>($file)</argsstring>
+        <name>favicon</name>
+        <param>
+          <declname>$file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>[favicon description]</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>[type]</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>$file [description] </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>[type] [description] </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="html.class.php" line="168" column="1" bodyfile="html.class.php" bodystart="168" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a7596de1be94a6dc237fa4d435193da8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>link</definition>
+        <argsstring>($href, $rel, $media=NULL, $download=false)</argsstring>
+        <name>link</name>
+        <param>
+          <declname>$href</declname>
+        </param>
+        <param>
+          <declname>$rel</declname>
+        </param>
+        <param>
+          <declname>$media</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <declname>$download</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Generates a link element that specifies the relationship(s) between the current document and an external resource</para><para>String link(String $href, String $rel, String $media, Boolean $download)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametername>$href</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specifies the URL of the linked resource; URL can be absolute or relative </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametername>$rel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Names a relationship of the linked document to the current document </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametername>$media</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Defines the media-type of the linked content; this value must be a media query </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>Boolean</parametertype>
+<parametername>$download</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specifies that the target will be downloaded when a user clicks on the hyper-link </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>String A generated link tag parsed by using the passed parameters values</para></simplesect>
+<xrefsect id="todo_1_todo000003"><xreftitle>Todo</xreftitle><xrefdescription><para>add attributes: hreflang, media, crossorigin (5), sizes (5) and write error handling </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="html.class.php" line="189" column="1" bodyfile="html.class.php" bodystart="189" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a77b7fda51b7845d6a6c738efc5d248ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mailto</definition>
+        <argsstring>($mailto, $cc, $bcc, $sub, $body, $content)</argsstring>
+        <name>mailto</name>
+        <param>
+          <declname>$mailto</declname>
+        </param>
+        <param>
+          <declname>$cc</declname>
+        </param>
+        <param>
+          <declname>$bcc</declname>
+        </param>
+        <param>
+          <declname>$sub</declname>
+        </param>
+        <param>
+          <declname>$body</declname>
+        </param>
+        <param>
+          <declname>$content</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Generates a mailto hypertext link to mail content to a single (or several) an email address(es)</para><para>String <ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a77b7fda51b7845d6a6c738efc5d248ff" kindref="member">mailto()</ref> mailto(String $email, String $content, String $title, String aux)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametertype>Array</parametertype>
+<parametername>$mailto</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Recipient&apos;s e-mail address(es) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametertype>Array</parametertype>
+<parametername>$cc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Carbon copy e-mail address(es) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametertype>Array</parametertype>
+<parametername>$bcc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Blind carbon copy e-mail address(es) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametername>$sub</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Subject corresponding to the e-mail(s) prepped for this link </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametername>$body</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Body (or content) for the e-mail(s) being prepped for this link </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametername>$content</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Content enclosed between the tags of this generated link </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>String Generated mailto link </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="html.class.php" line="215" column="1" bodyfile="html.class.php" bodystart="215" bodyend="257"/>
+      </memberdef>
+      <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1af2959b14380c3635ed932a5d1b877bd8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>meta</definition>
+        <argsstring>($name, $content)</argsstring>
+        <name>meta</name>
+        <param>
+          <declname>$name</declname>
+        </param>
+        <param>
+          <declname>$content</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Generates a Meta tag that provides metadata about the <ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l" kindref="compound">HTML</ref> document generated and served</para><para>String meta(String $name, String $content)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametername>$name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>They key set here is either a &apos;http-equiv&apos; header for the info/value pair or a &apos;name&apos; part of the name/value pair. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametername>$content</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The content which gives the value associated with the &apos;http-equiv&apos; or &apos;name&apos; attribute. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>String Generated &lt;meta&gt; tag. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="html.class.php" line="268" column="1" bodyfile="html.class.php" bodystart="268" bodyend="283"/>
+      </memberdef>
+      <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a9a92856db6ac937a9dace60224dfaf65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>script</definition>
+        <argsstring>($src, $type=false, $defer=false, $charset=false)</argsstring>
+        <name>script</name>
+        <param>
+          <declname>$src</declname>
+        </param>
+        <param>
+          <declname>$type</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <declname>$defer</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <declname>$charset</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Generates an internal &lt;script&gt; tag to define client-side script; such as JavaScript</para><para>String script(String $src, String $type, String $type, Boolean $defer, String $charset)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametername>$src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source of the file, module, or program to load </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametername>$type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The media type for the generated script </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>Boolean</parametertype>
+<parametername>$defer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sets whether the script is meant to be executed after the documented as been parsed </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametername>$charset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sets the character encoding of an external script; For external scripts &quot;only&quot;! </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>String A generated script tag parsed by using the passed parameters values</para></simplesect>
+<xrefsect id="todo_1_todo000004"><xreftitle>Todo</xreftitle><xrefdescription><para>add attributes: Integrity, Async [HTML5], and Crossorigin </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="html.class.php" line="298" column="1" bodyfile="html.class.php" bodystart="298" bodyend="310"/>
+      </memberdef>
+      <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a61aeb234b0eb5d6895f91ba5b533bfce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tag</definition>
+        <argsstring>($content, $tag)</argsstring>
+        <name>tag</name>
+        <param>
+          <declname>$content</declname>
+        </param>
+        <param>
+          <declname>$tag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Generic tag method that generates generic <ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l" kindref="compound">HTML</ref> tags passed via it&apos;s secondary parameter through using the content and tag data passed</para><para>String tag(String $content, String $tag)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametername>$content</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The content that will be wrapped in the generated tag </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametername>$tag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The tag to be used while generated the generic <ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l" kindref="compound">HTML</ref> content </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>String Returns a concatenated (single) string resulting in a generated meta tag with the passed content enclosed inside </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="html.class.php" line="321" column="1" bodyfile="html.class.php" bodystart="321" bodyend="323"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l" kindref="compound">HTML</ref> Tag Generator</para><para><ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l" kindref="compound">HTML</ref> Generator that outputs semantic <ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l" kindref="compound">HTML</ref> tags wrapped around the any content passed. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="26">
+        <label>Preload</label>
+        <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_preload"/>
+        <childnode refid="25" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>Bootstrap</label>
+        <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap"/>
+        <childnode refid="24" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>Template</label>
+        <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template"/>
+        <childnode refid="26" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>HTML</label>
+        <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l"/>
+      </node>
+    </inheritancegraph>
+    <location file="html.class.php" line="27" column="1" bodyfile="html.class.php" bodystart="27" bodyend="324"/>
+    <listofallmembers>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a3c534563b3b17abd31c70ce81c518a6d" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::Engines::HTML</scope><name>anchor</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a12602b493053197597cfcaffa61a6e14" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::Engines::HTML</scope><name>div</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a3f5f65b7897f31a9a6eae79588a9e6c5" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::Engines::HTML</scope><name>favicon</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1abb74e9971f5bcaaeade823e0073057e0" prot="private" virt="non-virtual"><scope>WAFFLE::Framework::Engines::HTML</scope><name>get_domain</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a7596de1be94a6dc237fa4d435193da8b" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::Engines::HTML</scope><name>link</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a77b7fda51b7845d6a6c738efc5d248ff" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::Engines::HTML</scope><name>mailto</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1af2959b14380c3635ed932a5d1b877bd8" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::Engines::HTML</scope><name>meta</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1ad7b4bf61b716970e07cdd1402a80129e" prot="private" virt="non-virtual"><scope>WAFFLE::Framework::Engines::HTML</scope><name>meta_type</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1ad582eaa2faaa983c7b17fdcf81049671" prot="private" virt="non-virtual"><scope>WAFFLE::Framework::Engines::HTML</scope><name>parse_id_type</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a426da5740b47df47de16970dea2f2579" prot="private" virt="non-virtual"><scope>WAFFLE::Framework::Engines::HTML</scope><name>parse_mailto_addresses</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a9a92856db6ac937a9dace60224dfaf65" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::Engines::HTML</scope><name>script</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a61aeb234b0eb5d6895f91ba5b533bfce" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::Engines::HTML</scope><name>tag</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespace_w_a_f_f_l_e_1_1_framework_1_1_i_o" kind="namespace" language="PHP">
+    <compoundname>WAFFLE::Framework::IO</compoundname>
+    <innerclass refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_error" prot="public">WAFFLE::Framework::IO::Error</innerclass>
+    <innerclass refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_file" prot="public">WAFFLE::Framework::IO::File</innerclass>
+    <innerclass refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_log" prot="public">WAFFLE::Framework::IO::Log</innerclass>
+    <innerclass refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_preload" prot="public">WAFFLE::Framework::IO::Preload</innerclass>
+    <innerclass refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_validation" prot="public">WAFFLE::Framework::IO::Validation</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="error.class.php" line="14" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_bfccd401955b95cf8c75461437045ac0" kind="dir">
+    <compoundname>C:/xampp/htdocs/apps/WAFFLE/inc</compoundname>
+    <innerfile refid="controller_8php">controller.php</innerfile>
+    <innerfile refid="functions_8php">functions.php</innerfile>
+    <innerfile refid="init_8php">init.php</innerfile>
+    <innerfile refid="js-array_8php">js-array.php</innerfile>
+    <innerfile refid="psl-config_8php">psl-config.php</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/xampp/htdocs/apps/WAFFLE/inc/"/>
+  </compounddef>
+</doxygen>

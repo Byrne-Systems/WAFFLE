@@ -1,0 +1,75 @@
+.TH "WAFFLE\Functions" 3 "Thu Jan 19 2017" "Version 0.2.3-prerelease+build" "WAFFLE" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+WAFFLE\Functions
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBsec_session_start\fP ()"
+.br
+.ti -1c
+.RI "\fBlogin\fP ($id, $pass, $mysqli)"
+.br
+.ti -1c
+.RI "\fBcheckbrute\fP ($emp_id, $mysqli)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "WAFFLE\\Functions\\checkbrute ( $emp_id,  $mysqli)"
+Sends an email to the user with a reset link if there has been more than 5 failed login attempts
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$emp_id\fP Employees identifier 
+.br
+\fI$mysqli\fP MySQLi connection object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Boolean Confirms whether a brute-force attack 'may' have been attempted 
+.RE
+.PP
+
+.PP
+Definition at line 99 of file functions\&.php\&.
+.SS "WAFFLE\\Functions\\login ( $id,  $pass,  $mysqli)"
+Verifies the user's identifier and password against the database's credentials via the 'password_verify()' method, which prevents against timing attacks
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$id\fP [description] 
+.br
+\fI$pass\fP [description] 
+.br
+\fI$mysqli\fP [description] 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Boolean [description] 
+.RE
+.PP
+
+.PP
+Definition at line 50 of file functions\&.php\&.
+.SS "WAFFLE\\Functions\\sec_session_start ()"
+Custom secure method of initiating a PHP session; call at the top of each page that should access PHP session variable(s)
+.PP
+\fBReturns:\fP
+.RS 4
+NULL Initiates a secure PHP session 
+.RE
+.PP
+
+.PP
+Definition at line 23 of file functions\&.php\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for WAFFLE from the source code\&.

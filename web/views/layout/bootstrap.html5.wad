@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    [!file_notes]
+
+    <title>[!title]</title>
+
+    [!meta_tags]
+
+    [!favicon]
+
+    [!styles]
+
+</head>
+<body>
+
+<div id="[!wrapper]">
+
+    <header role="header">
+        [!header]
+    </header>
+
+    <main role="main">
+        [!main]
+    </main>
+
+    <footer role="footer">
+        [!footer]
+    </footer>
+
+</div>
+
+[!script]
+
+</body>
+</html>

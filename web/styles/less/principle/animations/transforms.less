@@ -1,0 +1,62 @@
+/*
+ *  Set:    CSS Transforms
+ *  Notes:  Module that defines how elements can be transformed in two-dimensional or
+ *          three-dimensional space(s).
+ */
+
+/* Backface-Visibility */
+// Determines whether or not the back face of the
+// element is visible when facing the user.
+// - CSS3
+.backface-visibility(@arg: visible) {
+    backface-visibility: @arg;
+    // > visible' | hidden | initial | inherit
+}
+
+/* Perspective */
+// Determines the distance between the z=0 plane and the
+// user in order to give to the 3D-positioned element
+// some perspective.
+// - CSS3
+.perspective(@arg: none) {
+    perspective: @arg;
+    // > <length> | none'
+}
+
+/* Perspective-Origin */
+// Determines the position the viewer is looking at. It
+// is used as the vanishing point by the perspective
+// property.
+// - CSS3
+.perspective-origin(@arg: 50% 50%) {
+    perspective-origin: @arg;
+    // > <x-axis y-axis>' | initial | inherit
+}
+
+/* Transform */
+// Lets you modify the coordinate space of the CSS
+// visual formatting model.
+// - CSS3
+.transform(@arg: none) {
+    transform: @arg;
+    // > none' | <transform-functions> | initial | inherit
+}
+
+/* Transform-Origin */
+// Lets you modify the origin for transformations of an
+// element.
+// - CSS3
+.transform-origin(@arg: 50% 50% 0) {
+    transform-origin: @arg;
+    // > <x-axis y-axis z-axis>' | initial | inherit
+}
+
+/* Transform-Style */
+// Determines if the children of the element are
+// positioned in the 3D-space or are flattened in the
+// plane of the element.
+// - CSS3
+.transform-style(@arg: flat) {
+    transform-style: @arg;
+    // > flat' | preserve-3d | initial | inherit
+}

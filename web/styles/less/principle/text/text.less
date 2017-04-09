@@ -1,0 +1,111 @@
+/*
+ *  Set:    CSS Text
+ *  Notes:  Module that defines how to perform text manipulation, line breaking, justification,
+ *          alignment, white space handling, and text transformation.
+ */
+
+/* hyphens */
+// Tells the browser how to hyphenate words when
+// line-wrapping.
+// - CSS3
+.hyphens(@arg: none) {
+    hyphens: @arg;
+    // > none' | manual | auto
+}
+
+/* letter-spacing */
+// Specifies spacing behavior between text characters.
+// - CSS1
+.letter-spacing(@arg: none) {
+    letter-spacing: @arg;
+    // > none' | capitalize | uppercase | lowercase | initial | inherit
+}
+
+/* tab-size */
+// Used to customize the width of a tab (U+0009)
+// character.
+// - CSS3
+.tab-size(@arg: normal) {
+    tab-size: @arg;
+    // > normal' | nowrap | pre | pre-line | pre-wrap | initial | inherit
+}
+
+/* text-align */
+// Describes how inline content like text is aligned in
+// its parent block element.
+// - CSS1
+.text-align(@arg: normal) {
+    text-align: @arg;
+    // > normal' | break-all | keep-all | initial | inherit
+}
+
+/* text-align-last */
+// Describes how the last line of a block or a line,
+// right before a forced line break, is aligned.
+// - CSS3
+.text-align-last(@arg: normal) {
+    text-align-last: @arg;
+    // > normal' | length | initial | inherit
+}
+
+/* text-indent */
+// Specifies how much horizontal space should be left
+// before the beginning of the first line of the text
+// content of an element.
+// - CSS1
+.text-indent(@arg: normal) {
+    text-indent: @arg;
+    // > normal' | break-word | initial | inherit
+}
+
+/* text-size-adjust */
+// The font-size-adjust property gives you better
+// control of the font size when the first selected font
+// is not available
+// - CSS3
+.text-size-adjust(@arg: normal) {
+    text-size-adjust: @arg;
+    // > normal' | length | initial | inherit
+}
+
+/* text-transform */
+// Specifies how to capitalize an element's text.
+// - CSS1
+.text-transform(@arg: 8) {
+    text-transform: @arg;
+    // > <number>' | length | initial | inherit
+}
+
+/* white-space */
+// Used to describe how whitespace inside the element is
+// handled.
+// - CSS1
+.white-space(@arg: left) {
+    white-space: @arg;
+    // > left' | right | center | justify | initial | inherit
+}
+
+/* word-break */
+// Used to specify whether to break lines within words.
+// - CSS3
+.word-break(@arg: auto) {
+    word-break: @arg;
+    // > auto' | left | right | center | justify | start | end | initial | inherit
+}
+
+/* word-spacing */
+// Specifies spacing behavior between tags and words.
+// - CSS1
+.word-spacing(@arg: 0) {
+    word-spacing: @arg;
+    // > <length>' | initial | inherit
+}
+
+/* word-wrap */
+// Used to specify whether or not the browser may break
+// lines within words in order to prevent overflow.
+// - CSS3
+.word-wrap(@arg: none) {
+    word-wrap: @arg;
+    // > <number> | none' | initial | inherit
+}

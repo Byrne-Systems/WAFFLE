@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespace_controllers" kind="namespace" language="PHP">
+    <compoundname>Controllers</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Instantiates and sets new (secure) session(s) for transmitting data to/from the user&apos;s UI (or front-end) with an application&apos;s business logic (or back-end)</para><para>Manager </para>    </detaileddescription>
+    <location file="session-manager.class.php" line="6" column="1"/>
+  </compounddef>
+</doxygen>

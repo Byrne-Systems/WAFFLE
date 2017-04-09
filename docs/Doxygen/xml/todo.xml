@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="todo" kind="page">
+    <compoundname>todo</compoundname>
+    <title>Todo List</title>
+    <detaileddescription>
+<para><variablelist>
+<varlistentry><term><anchor id="todo_1_todo000001"/>Global <ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap_1a96d284570acb2b50b7e934af06d25c8e" kindref="member">Bootstrap::column</ref>  ($amount=12, $size=&apos;sm&apos;, $content, $alt=NULL)</term></varlistentry>
+<listitem><para>write error handling!  </para></listitem>
+<varlistentry><term><anchor id="todo_1_todo000003"/>Global <ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a7596de1be94a6dc237fa4d435193da8b" kindref="member">HTML::link</ref>  ($href, $rel, $media=NULL, $download=false)</term></varlistentry>
+<listitem><para>add attributes: hreflang, media, crossorigin (5), sizes (5) and write error handling  </para></listitem>
+<varlistentry><term><anchor id="todo_1_todo000004"/>Global <ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a9a92856db6ac937a9dace60224dfaf65" kindref="member">HTML::script</ref>  ($src, $type=false, $defer=false, $charset=false)</term></varlistentry>
+<listitem><para>add attributes: Integrity, Async [HTML5], and Crossorigin  </para></listitem>
+<varlistentry><term><anchor id="todo_1_todo000005"/>Global <ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_preload_1aa570cf9af0fc24953f4568db3a71ae7b" kindref="member">Preload::set_script</ref>  ($script)</term></varlistentry>
+<listitem><para>Develop file-version logic for method, so that developers can pass a simple filename in accompaniment with the version that they are attempting to set </para></listitem>
+</variablelist>
+</para>    </detaileddescription>
+  </compounddef>
+</doxygen>

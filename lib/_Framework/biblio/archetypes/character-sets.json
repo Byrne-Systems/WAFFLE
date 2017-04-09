@@ -1,0 +1,40 @@
+{
+  "english": [
+    "us-ascii"
+  ],
+  "western-european": [
+    "iso-8859-1",
+    "x-mac-roman",
+    "iso-8859-9",
+    "x-mac-turkish"
+  ],
+  "traditional chinese": [
+    "big5",
+    "x-euc-tw"
+  ],
+  "japanese": [
+    "Shift_JIS",
+    "x-euc-jp",
+    "iso-2022-jp"
+  ],
+  "korean": [
+    "euc-kr",
+    "so-2022-kr"
+  ],
+  "simplified-chinese": [
+    "gb2312"
+  ],
+  "eastern-european": [
+    "iso-8859-2",
+    "x-mac-ce"
+  ],
+  "cyrillic": [
+    "iso-8859-5",
+    "koi8-r",
+    "x-mac-cyrillic"
+  ],
+  "greek": [
+    "iso-8859-7",
+    "x-mac-greek"
+  ]
+}

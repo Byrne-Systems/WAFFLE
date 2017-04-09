@@ -1,0 +1,1231 @@
+{
+  "vocabulary": {
+    "html": {
+      "Cache-control": {
+        "type": "http-equiv",
+        "self-closing": false,
+        "content": {
+          "datatype": "string",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [
+            "NO-CACHE",
+            "NO-STORE",
+            "PRIVATE",
+            "PUBLIC"
+          ],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "Content-Language": {
+        "type": "http-equiv",
+        "self-closing": false,
+        "content": {
+          "datatype": "string",
+          "format": "ISO_639-1",
+          "delimiter": ",",
+          "default-values": [
+            "@ISO_639-1"
+          ],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "Content-Script-Type": {
+        "type": "http-equiv",
+        "self-closing": false,
+        "content": {
+          "datatype": "string",
+          "format": "MIME",
+          "delimiter": "none",
+          "default-values": [
+            "text/html",
+            "image/png",
+            "image/gif",
+            "video/mpeg",
+            "text/css",
+            "audio/basic",
+            "text/tcl",
+            "text/javascript",
+            "text/vbscript"
+          ],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "Content-Security-Policy": {
+        "type": "http-equiv",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [
+            "default-src",
+            "child-src",
+            "object-src"
+          ],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 300
+          }
+        }
+      },
+      "Content-Style-Type": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "Content-Type": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "MSThemeCompatible": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "Pics-label": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "Resource-Type": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "Set-Cookie": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "Window-Target": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "abstract": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "author": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "content-disposition": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "copyright": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "description": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "distribution": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "expires": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "generator": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "googlebot": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "imagetoolbar": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "keywords": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "language": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "no-email-collection": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "pragma": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "rating": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "refresh": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "reply-to": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "revisit-after": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "robots": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "web_author": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      }
+    },
+    "dublincore": {
+      "DC.Contributors": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "DC.Coverage": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "DC.Creator": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "DC.Date": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "DC.Description": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "DC.Format": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "DC.Identifier": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "DC.Language": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "DC.Publisher": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "DC.Relation": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "DC.Rights": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "DC.Source": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "DC.Subject": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "DC.Title": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "DC.Type": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "DCTERMS.abstract": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "DCTERMS.accessRights": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "DCTERMS.alternative": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "DCTERMS.audience": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "DCTERMS.available": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "DCTERMS.bibliographicCitation": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "DCTERMS.conformsTo": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "DCTERMS.created": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "DCTERMS.dateAccepted": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "DCTERMS.dateCopyrighted": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "DCTERMS.dateSubmitted": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "DCTERMS.extent": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "DCTERMS.hasFormat": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "DCTERMS.hasPart": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "DCTERMS.hasVersion": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "DCTERMS.isFormatOf": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "DCTERMS.isPartOf": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "DCTERMS.isReferenceBy": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "DCTERMS.isReplacedBy": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "DCTERMS.isRequiredBy": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "DCTERMS.isVersion": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "DCTERMS.issued": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "DCTERMS.mediator": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "DCTERMS.medium": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "DCTERMS.modified": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "DCTERMS.replaces": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "DCTERMS.spatial": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "DCTERMS.tableOfContents": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "DCTERMS.temporal": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "DCTERMS.apt": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      }
+    },
+    "geo": {
+      "ICBM": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "geo.placename": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "geo.position": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      "geo.region": {
+        "type": "name",
+        "self-closing": "boolean",
+        "content": {
+          "datatype": "datatype",
+          "format": "none",
+          "delimiter": "none",
+          "default-values": [],
+          "range": {
+            "apt": false,
+            "min": 0,
+            "max": 0
+          }
+        }
+      }
+    }
+  }
+}

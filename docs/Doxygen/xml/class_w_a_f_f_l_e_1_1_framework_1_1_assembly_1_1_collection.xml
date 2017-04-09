@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_w_a_f_f_l_e_1_1_framework_1_1_assembly_1_1_collection" kind="class" language="PHP" prot="public">
+    <compoundname>WAFFLE::Framework::Assembly::Collection</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_w_a_f_f_l_e_1_1_framework_1_1_assembly_1_1_collection_1a4dbeff9791f8a26df3bce7d305e9122b" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>Array $data</definition>
+        <argsstring></argsstring>
+        <name>$data</name>
+        <initializer>= array()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The $data array provides a location to store the objects that are members of a collection</para><para>protected </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="collection.class.php" line="30" column="1" bodyfile="collection.class.php" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_assembly_1_1_collection_1a5a9a5feec04bd1260cc7c878b365e38e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>set</definition>
+        <argsstring>($obj, $key=null)</argsstring>
+        <name>set</name>
+        <param>
+          <declname>$obj</declname>
+        </param>
+        <param>
+          <declname>$key</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets a new object in the $data collection using the $key to specify that location</para><para>set(Object $obj, String $key)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>Object</parametertype>
+<parametername>$obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An object to be included inside this collection&apos;s array </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametername>$key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key used to identify the location of an entry inside of a collection&apos;s array </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="collection.class.php" line="44" column="1" bodyfile="collection.class.php" bodystart="44" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_assembly_1_1_collection_1a4be48cfb26bfde30df2a0954ee852591" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>del</definition>
+        <argsstring>($key)</argsstring>
+        <name>del</name>
+        <param>
+          <declname>$key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Deletes an entry (or item) stored inside of this collection</para><para>del(String $key)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametername>$key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key used to identify the location of an entry inside of a collection&apos;s array </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="collection.class.php" line="67" column="1" bodyfile="collection.class.php" bodystart="67" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_assembly_1_1_collection_1a24a9bf83a1002d46ece83a93d14bd921" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get</definition>
+        <argsstring>($key)</argsstring>
+        <name>get</name>
+        <param>
+          <declname>$key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves an entry (or item) stored inside of this collection</para><para>get(String $key)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametername>$key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key used to identify the location of an entry inside of a collection&apos;s array </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="collection.class.php" line="84" column="1" bodyfile="collection.class.php" bodystart="84" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_assembly_1_1_collection_1a72540410e5d139cfba23a4f39ecc32be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get_keys</definition>
+        <argsstring>()</argsstring>
+        <name>get_keys</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a list of keys existing throughout this collection</para><para><ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_assembly_1_1_collection_1a72540410e5d139cfba23a4f39ecc32be" kindref="member">get_keys()</ref></para><para><simplesect kind="return"><para>Array List of keys that currently exist throughout this collection&apos;s array </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="collection.class.php" line="101" column="1" bodyfile="collection.class.php" bodystart="101" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_assembly_1_1_collection_1a5facb816a7ce2173a30db9b0bc8ecf75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>length</definition>
+        <argsstring>()</argsstring>
+        <name>length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the value (or amount) of entries that exist throughout this collection</para><para><ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_assembly_1_1_collection_1a5facb816a7ce2173a30db9b0bc8ecf75" kindref="member">length()</ref></para><para><simplesect kind="return"><para>Integer Value representing the amount of entries that exist this collection </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="collection.class.php" line="113" column="1" bodyfile="collection.class.php" bodystart="113" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_assembly_1_1_collection_1a9fd43b991d5a266daff254f49c24bf8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>key_exists</definition>
+        <argsstring>($key)</argsstring>
+        <name>key_exists</name>
+        <param>
+          <declname>$key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>key_exists description</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>[type]</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>$key [description] </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>[type] [description] </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="collection.class.php" line="124" column="1" bodyfile="collection.class.php" bodystart="124" bodyend="127"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_assembly_1_1_collection" kindref="compound">Collection</ref> Assembly</para><para><ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_assembly_1_1_collection" kindref="compound">Collection</ref> Assembly designed as an OOP wrapper to wrap around an Array of Arrays (AoA) while using lazy instantiation to create elements in this array </para>    </detaileddescription>
+    <location file="collection.class.php" line="23" column="1" bodyfile="collection.class.php" bodystart="23" bodyend="128"/>
+    <listofallmembers>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_assembly_1_1_collection_1a4dbeff9791f8a26df3bce7d305e9122b" prot="private" virt="non-virtual"><scope>WAFFLE::Framework::Assembly::Collection</scope><name>$data</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_assembly_1_1_collection_1a4be48cfb26bfde30df2a0954ee852591" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::Assembly::Collection</scope><name>del</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_assembly_1_1_collection_1a24a9bf83a1002d46ece83a93d14bd921" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::Assembly::Collection</scope><name>get</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_assembly_1_1_collection_1a72540410e5d139cfba23a4f39ecc32be" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::Assembly::Collection</scope><name>get_keys</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_assembly_1_1_collection_1a9fd43b991d5a266daff254f49c24bf8e" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::Assembly::Collection</scope><name>key_exists</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_assembly_1_1_collection_1a5facb816a7ce2173a30db9b0bc8ecf75" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::Assembly::Collection</scope><name>length</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_assembly_1_1_collection_1a5a9a5feec04bd1260cc7c878b365e38e" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::Assembly::Collection</scope><name>set</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

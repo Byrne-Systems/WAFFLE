@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.13">
+  <compound refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap" kind="class"><name>WAFFLE::Framework::Engines::Bootstrap</name>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap_1a9ec86a4d6d518a85ed36db4f23ea2bfa" kind="function"><name>container</name></member>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap_1a65e72e655a53b204edaaef347ad39799" kind="function"><name>row</name></member>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap_1a96d284570acb2b50b7e934af06d25c8e" kind="function"><name>column</name></member>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap_1ac9f62997b8f02752fd592c9a831c55af" kind="function"><name>panel</name></member>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap_1a760d6816b7e769fe6915845ea3d77cdd" kind="function"><name>viewport</name></member>
+  </compound>
+  <compound refid="class_w_a_f_f_l_e_1_1_framework_1_1_encryption_1_1_cipher" kind="class"><name>WAFFLE::Framework::Encryption::Cipher</name>
+  </compound>
+  <compound refid="class_w_a_f_f_l_e_1_1_framework_1_1_assembly_1_1_collection" kind="class"><name>WAFFLE::Framework::Assembly::Collection</name>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_assembly_1_1_collection_1a4dbeff9791f8a26df3bce7d305e9122b" kind="variable"><name>$data</name></member>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_assembly_1_1_collection_1a5a9a5feec04bd1260cc7c878b365e38e" kind="function"><name>set</name></member>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_assembly_1_1_collection_1a4be48cfb26bfde30df2a0954ee852591" kind="function"><name>del</name></member>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_assembly_1_1_collection_1a24a9bf83a1002d46ece83a93d14bd921" kind="function"><name>get</name></member>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_assembly_1_1_collection_1a72540410e5d139cfba23a4f39ecc32be" kind="function"><name>get_keys</name></member>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_assembly_1_1_collection_1a5facb816a7ce2173a30db9b0bc8ecf75" kind="function"><name>length</name></member>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_assembly_1_1_collection_1a9fd43b991d5a266daff254f49c24bf8e" kind="function"><name>key_exists</name></member>
+  </compound>
+  <compound refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_error" kind="class"><name>WAFFLE::Framework::IO::Error</name>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_error_1a848589b82df6900da2764018f69cd8c4" kind="function"><name>get_date</name></member>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_error_1af721dfe2b0cca44a3c68c6fda1439165" kind="function"><name>error</name></member>
+  </compound>
+  <compound refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_file" kind="class"><name>WAFFLE::Framework::IO::File</name>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_file_1a43d3433efb06e49d2e5ac7985bcf3c39" kind="function"><name>find_file</name></member>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_file_1aafe286d7c8fb46b17af96b66734393c0" kind="function"><name>download</name></member>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_file_1abe1b4778c16b961777ab1aa25474995d" kind="function"><name>read</name></member>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_file_1ad1346b1a0af3c4b9a5ced25b88e8f4ab" kind="function"><name>write</name></member>
+  </compound>
+  <compound refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l" kind="class"><name>WAFFLE::Framework::Engines::HTML</name>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1abb74e9971f5bcaaeade823e0073057e0" kind="function"><name>get_domain</name></member>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1ad7b4bf61b716970e07cdd1402a80129e" kind="function"><name>meta_type</name></member>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1ad582eaa2faaa983c7b17fdcf81049671" kind="function"><name>parse_id_type</name></member>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a426da5740b47df47de16970dea2f2579" kind="function"><name>parse_mailto_addresses</name></member>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a3c534563b3b17abd31c70ce81c518a6d" kind="function"><name>anchor</name></member>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a12602b493053197597cfcaffa61a6e14" kind="function"><name>div</name></member>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a3f5f65b7897f31a9a6eae79588a9e6c5" kind="function"><name>favicon</name></member>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a7596de1be94a6dc237fa4d435193da8b" kind="function"><name>link</name></member>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a77b7fda51b7845d6a6c738efc5d248ff" kind="function"><name>mailto</name></member>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1af2959b14380c3635ed932a5d1b877bd8" kind="function"><name>meta</name></member>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a9a92856db6ac937a9dace60224dfaf65" kind="function"><name>script</name></member>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a61aeb234b0eb5d6895f91ba5b533bfce" kind="function"><name>tag</name></member>
+  </compound>
+  <compound refid="interface_w_a_f_f_l_e_1_1_framework_1_1_interfaces_1_1i_h_t_m_l" kind="interface"><name>WAFFLE::Framework::Interfaces::iHTML</name>
+    <member refid="interface_w_a_f_f_l_e_1_1_framework_1_1_interfaces_1_1i_h_t_m_l_1aef42f93e488e349161740f935a45b12e" kind="function"><name>anchor</name></member>
+    <member refid="interface_w_a_f_f_l_e_1_1_framework_1_1_interfaces_1_1i_h_t_m_l_1a9765bd1f47414643afb176d0f249d428" kind="function"><name>favicon</name></member>
+    <member refid="interface_w_a_f_f_l_e_1_1_framework_1_1_interfaces_1_1i_h_t_m_l_1a7596de1be94a6dc237fa4d435193da8b" kind="function"><name>link</name></member>
+    <member refid="interface_w_a_f_f_l_e_1_1_framework_1_1_interfaces_1_1i_h_t_m_l_1a77b7fda51b7845d6a6c738efc5d248ff" kind="function"><name>mailto</name></member>
+    <member refid="interface_w_a_f_f_l_e_1_1_framework_1_1_interfaces_1_1i_h_t_m_l_1af2959b14380c3635ed932a5d1b877bd8" kind="function"><name>meta</name></member>
+    <member refid="interface_w_a_f_f_l_e_1_1_framework_1_1_interfaces_1_1i_h_t_m_l_1aa59c53e797a510a8bdf06677ab9795b8" kind="function"><name>script</name></member>
+    <member refid="interface_w_a_f_f_l_e_1_1_framework_1_1_interfaces_1_1i_h_t_m_l_1a61aeb234b0eb5d6895f91ba5b533bfce" kind="function"><name>tag</name></member>
+  </compound>
+  <compound refid="interface_w_a_f_f_l_e_1_1_framework_1_1_interfaces_1_1i_template" kind="interface"><name>WAFFLE::Framework::Interfaces::iTemplate</name>
+    <member refid="interface_w_a_f_f_l_e_1_1_framework_1_1_interfaces_1_1i_template_1aab787bd83f84f4215dceb35f7c305eee" kind="function"><name>set</name></member>
+    <member refid="interface_w_a_f_f_l_e_1_1_framework_1_1_interfaces_1_1i_template_1a3939045b11b9aaefdf692feb963f0dfc" kind="function"><name>output</name></member>
+    <member refid="interface_w_a_f_f_l_e_1_1_framework_1_1_interfaces_1_1i_template_1a35932dacc685dbaaf413695f6dd67f36" kind="function"><name>merge</name></member>
+  </compound>
+  <compound refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_log" kind="class"><name>WAFFLE::Framework::IO::Log</name>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_log_1a3e3c415ada57f553ac4a39a40051c94f" kind="function"><name>log</name></member>
+  </compound>
+  <compound refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_preload" kind="class"><name>WAFFLE::Framework::IO::Preload</name>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_preload_1a34cd105e27a4cb6632047ddfdfaa07e8" kind="variable"><name>$File</name></member>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_preload_1a095c5d389db211932136b53f25f39685" kind="function"><name>__construct</name></member>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_preload_1aa570cf9af0fc24953f4568db3a71ae7b" kind="function"><name>set_script</name></member>
+  </compound>
+  <compound refid="class_w_a_f_f_l_e_1_1_controllers_1_1_session_manager" kind="class"><name>WAFFLE::Controllers::SessionManager</name>
+    <member refid="class_w_a_f_f_l_e_1_1_controllers_1_1_session_manager_1a3d98fd81ca4375c8e121fa1a6dd20074" kind="function"><name>sec_session_start</name></member>
+    <member refid="class_w_a_f_f_l_e_1_1_controllers_1_1_session_manager_1a0699e69686fe46ec84a3c0b680080414" kind="function"><name>session_timeout</name></member>
+  </compound>
+  <compound refid="class_w_a_f_f_l_e_1_1_framework_1_1_adapters_1_1_s_q_l" kind="class"><name>WAFFLE::Framework::Adapters::SQL</name>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_adapters_1_1_s_q_l_1a711797613cb863ca0756df789c396bf2" kind="variable"><name>$host</name></member>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_adapters_1_1_s_q_l_1a598ca4e71b15a1313ec95f0df1027ca5" kind="variable"><name>$user</name></member>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_adapters_1_1_s_q_l_1a12ec2780b52bd1c54d38c2f981c0349f" kind="variable"><name>$pass</name></member>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_adapters_1_1_s_q_l_1a1fa3127fc82f96b1436d871ef02be319" kind="variable"><name>$db</name></member>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_adapters_1_1_s_q_l_1afe14c5bdb9487c058ec831382f1fbacd" kind="variable"><name>$cxn</name></member>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_adapters_1_1_s_q_l_1a34cd105e27a4cb6632047ddfdfaa07e8" kind="variable"><name>$File</name></member>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_adapters_1_1_s_q_l_1a653df9100d5b82d2ce7ca1cad2fbdbd7" kind="function"><name>cxn_result</name></member>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_adapters_1_1_s_q_l_1aa3a695aeb9d196ed96a09b108252b3d3" kind="function"><name>qry_result</name></member>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_adapters_1_1_s_q_l_1a848589b82df6900da2764018f69cd8c4" kind="function"><name>get_date</name></member>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_adapters_1_1_s_q_l_1a6a026eae8e84cb094d8e56954dfbcc81" kind="function"><name>verifyRequiredParams</name></member>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_adapters_1_1_s_q_l_1a095c5d389db211932136b53f25f39685" kind="function"><name>__construct</name></member>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_adapters_1_1_s_q_l_1aba0493523bdf57cda549e4573bd13b59" kind="function"><name>select</name></member>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_adapters_1_1_s_q_l_1a3d8ffa8e31467a39295e6b2bcb324145" kind="function"><name>insert</name></member>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_adapters_1_1_s_q_l_1ae4dc7407d8834dd3721b5d5bb57d8c9a" kind="function"><name>update</name></member>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_adapters_1_1_s_q_l_1a7d14a9de8bac5dd9b5cfec163e448157" kind="function"><name>delete</name></member>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_adapters_1_1_s_q_l_1a06c44c57089a129f4a10108b78e56c75" kind="function"><name>query</name></member>
+  </compound>
+  <compound refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template" kind="class"><name>WAFFLE::Framework::Engines::Template</name>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template_1a823f9d8bf697d2dd19672687804d05b4" kind="variable"><name>$file</name></member>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template_1a46220846a73e3618f122b00d8c898308" kind="variable"><name>$values</name></member>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template_1a8ef77288a5f940c68ebc57fdf0102078" kind="function"><name>__construct</name></member>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template_1aab787bd83f84f4215dceb35f7c305eee" kind="function"><name>set</name></member>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template_1a3939045b11b9aaefdf692feb963f0dfc" kind="function"><name>output</name></member>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template_1a35932dacc685dbaaf413695f6dd67f36" kind="function"><name>merge</name></member>
+  </compound>
+  <compound refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_validation" kind="class"><name>WAFFLE::Framework::IO::Validation</name>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_validation_1a4ff84cc981fb60ee42f19420441e8d7b" kind="function"><name>check_file</name></member>
+    <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_validation_1a93629f2b411f25d13fac77a36470fbae" kind="function"><name>email_format</name></member>
+  </compound>
+  <compound refid="namespace_controllers" kind="namespace"><name>Controllers</name>
+  </compound>
+  <compound refid="namespace_framework" kind="namespace"><name>Framework</name>
+  </compound>
+  <compound refid="namespace_interfaces" kind="namespace"><name>Interfaces</name>
+  </compound>
+  <compound refid="namespace_w_a_f_f_l_e" kind="namespace"><name>WAFFLE</name>
+  </compound>
+  <compound refid="namespace_w_a_f_f_l_e_1_1_controllers" kind="namespace"><name>WAFFLE::Controllers</name>
+  </compound>
+  <compound refid="namespace_w_a_f_f_l_e_1_1_controllers_1_1_session_manager" kind="namespace"><name>WAFFLE::Controllers::SessionManager</name>
+  </compound>
+  <compound refid="namespace_w_a_f_f_l_e_1_1_framework" kind="namespace"><name>WAFFLE::Framework</name>
+  </compound>
+  <compound refid="namespace_w_a_f_f_l_e_1_1_framework_1_1_adapters" kind="namespace"><name>WAFFLE::Framework::Adapters</name>
+  </compound>
+  <compound refid="namespace_w_a_f_f_l_e_1_1_framework_1_1_adapters_1_1_s_q_l" kind="namespace"><name>WAFFLE::Framework::Adapters::SQL</name>
+  </compound>
+  <compound refid="namespace_w_a_f_f_l_e_1_1_framework_1_1_assembly" kind="namespace"><name>WAFFLE::Framework::Assembly</name>
+  </compound>
+  <compound refid="namespace_w_a_f_f_l_e_1_1_framework_1_1_assembly_1_1_collection" kind="namespace"><name>WAFFLE::Framework::Assembly::Collection</name>
+  </compound>
+  <compound refid="namespace_w_a_f_f_l_e_1_1_framework_1_1_encryption" kind="namespace"><name>WAFFLE::Framework::Encryption</name>
+  </compound>
+  <compound refid="namespace_w_a_f_f_l_e_1_1_framework_1_1_encryption_1_1_cipher" kind="namespace"><name>WAFFLE::Framework::Encryption::Cipher</name>
+  </compound>
+  <compound refid="namespace_w_a_f_f_l_e_1_1_framework_1_1_engines" kind="namespace"><name>WAFFLE::Framework::Engines</name>
+  </compound>
+  <compound refid="namespace_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap" kind="namespace"><name>WAFFLE::Framework::Engines::Bootstrap</name>
+  </compound>
+  <compound refid="namespace_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l" kind="namespace"><name>WAFFLE::Framework::Engines::HTML</name>
+  </compound>
+  <compound refid="namespace_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template" kind="namespace"><name>WAFFLE::Framework::Engines::Template</name>
+  </compound>
+  <compound refid="namespace_w_a_f_f_l_e_1_1_framework_1_1_interfaces" kind="namespace"><name>WAFFLE::Framework::Interfaces</name>
+  </compound>
+  <compound refid="namespace_w_a_f_f_l_e_1_1_framework_1_1_interfaces_1_1i_h_t_m_l" kind="namespace"><name>WAFFLE::Framework::Interfaces::iHTML</name>
+  </compound>
+  <compound refid="namespace_w_a_f_f_l_e_1_1_framework_1_1_interfaces_1_1i_template" kind="namespace"><name>WAFFLE::Framework::Interfaces::iTemplate</name>
+  </compound>
+  <compound refid="namespace_w_a_f_f_l_e_1_1_framework_1_1_i_o" kind="namespace"><name>WAFFLE::Framework::IO</name>
+  </compound>
+  <compound refid="namespace_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_error" kind="namespace"><name>WAFFLE::Framework::IO::Error</name>
+  </compound>
+  <compound refid="namespace_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_file" kind="namespace"><name>WAFFLE::Framework::IO::File</name>
+  </compound>
+  <compound refid="namespace_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_log" kind="namespace"><name>WAFFLE::Framework::IO::Log</name>
+  </compound>
+  <compound refid="namespace_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_preload" kind="namespace"><name>WAFFLE::Framework::IO::Preload</name>
+  </compound>
+  <compound refid="namespace_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_validation" kind="namespace"><name>WAFFLE::Framework::IO::Validation</name>
+  </compound>
+  <compound refid="bootstrap_8class_8php" kind="file"><name>bootstrap.class.php</name>
+  </compound>
+  <compound refid="cipher_8class_8php" kind="file"><name>cipher.class.php</name>
+  </compound>
+  <compound refid="collection_8class_8php" kind="file"><name>collection.class.php</name>
+  </compound>
+  <compound refid="error_8class_8php" kind="file"><name>error.class.php</name>
+  </compound>
+  <compound refid="file_8class_8php" kind="file"><name>file.class.php</name>
+  </compound>
+  <compound refid="html_8class_8php" kind="file"><name>html.class.php</name>
+  </compound>
+  <compound refid="html_8interface_8php" kind="file"><name>html.interface.php</name>
+  </compound>
+  <compound refid="log_8class_8php" kind="file"><name>log.class.php</name>
+  </compound>
+  <compound refid="preload_8class_8php" kind="file"><name>preload.class.php</name>
+  </compound>
+  <compound refid="session-manager_8class_8php" kind="file"><name>session-manager.class.php</name>
+  </compound>
+  <compound refid="sql_8class_8php" kind="file"><name>sql.class.php</name>
+  </compound>
+  <compound refid="template_8class_8php" kind="file"><name>template.class.php</name>
+  </compound>
+  <compound refid="template_8interface_8php" kind="file"><name>template.interface.php</name>
+  </compound>
+  <compound refid="validation_8class_8php" kind="file"><name>validation.class.php</name>
+  </compound>
+  <compound refid="todo" kind="page"><name>todo</name>
+  </compound>
+</doxygenindex>

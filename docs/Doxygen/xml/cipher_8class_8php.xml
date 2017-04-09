@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="cipher_8class_8php" kind="file" language="PHP">
+    <compoundname>cipher.class.php</compoundname>
+    <innerclass refid="class_w_a_f_f_l_e_1_1_framework_1_1_encryption_1_1_cipher" prot="public">WAFFLE::Framework::Encryption::Cipher</innerclass>
+    <innernamespace refid="namespace_framework">Framework</innernamespace>
+    <innernamespace refid="namespace_w_a_f_f_l_e_1_1_framework_1_1_encryption">WAFFLE::Framework::Encryption</innernamespace>
+    <innernamespace refid="namespace_w_a_f_f_l_e_1_1_framework_1_1_encryption_1_1_cipher">WAFFLE::Framework::Encryption::Cipher</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="13"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_w_a_f_f_l_e_1_1_framework_1_1_encryption" kindref="compound">WAFFLE\Framework\Encryption</ref>;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">use<sp/><ref refid="namespace_w_a_f_f_l_e_1_1_framework_1_1_encryption_1_1_cipher" kindref="compound">WAFFLE\Framework\Encryption\Cipher</ref>;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="class_w_a_f_f_l_e_1_1_framework_1_1_encryption_1_1_cipher" refkind="compound"><highlight class="keyword">abstract</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_encryption_1_1_cipher" kindref="compound">Cipher</ref><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#<sp/>Code...</highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor">}</highlight></codeline>
+    </programlisting>
+    <location file="cipher.class.php"/>
+  </compounddef>
+</doxygen>

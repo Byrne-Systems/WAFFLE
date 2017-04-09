@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespace_interfaces" kind="namespace" language="PHP">
+    <compoundname>Interfaces</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Specifies a series of standard methods that should be implemented by default</para><para>Specifies a series of standard methods that should be implemented by default</para>    </detaileddescription>
+    <location file="html.interface.php" line="5" column="1"/>
+  </compounddef>
+</doxygen>

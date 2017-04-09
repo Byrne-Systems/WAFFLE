@@ -1,0 +1,41 @@
+# Patterns read from: $GIT_DIR/info/exclude.
+# Ignore General Operating Environment Files
+*.ini
+
+# Ignore XAMPP (Dev-Server) Files
+/_dashboard
+/_img
+/_webalizer
+/_xampp
+
+# Ignore In-Development Apps
+/apps
+
+# Ignore WAFFLE In-Development Components
+/config
+/dashboard
+/0*
+
+# Ignore Staging Dump and/or Backup Directories and File(s)
+**/_dump
+**/_backup
+**/sessions
+**/wincachegrind
+**/output.txt
+
+# Ignore LESS source map
+/data/logs/LESS_source.map
+
+# Ignore Source Model Files
+**/models
+**/WAFFLE
+**/ai
+*.ai
+*.mwb
+
+# Ignore Project'centric Ancillary Documentation
+*.todo
+*.cpy
+
+# Ignore cachegrind XDEBUG Profile
+cachegrind*

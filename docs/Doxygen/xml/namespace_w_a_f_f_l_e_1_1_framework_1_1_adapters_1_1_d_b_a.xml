@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespace_w_a_f_f_l_e_1_1_framework_1_1_adapters_1_1_d_b_a" kind="namespace" language="PHP">
+    <compoundname>WAFFLE::Framework::Adapters::DBA</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespace_w_a_f_f_l_e_1_1_framework_1_1_adapters_1_1_d_b_a_1a6768772c01f2d4f111fabd25012e8259" prot="public" static="no" mutable="no">
+        <type>const</type>
+        <definition>const HOST</definition>
+        <argsstring></argsstring>
+        <name>HOST</name>
+        <initializer>&quot;localhost&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/inc/psl-config.php" line="13" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/inc/psl-config.php" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_w_a_f_f_l_e_1_1_framework_1_1_adapters_1_1_d_b_a_1a1bbff5b87a1e3a8d402d50c9fdb4e6e9" prot="public" static="no" mutable="no">
+        <type>const</type>
+        <definition>const USER</definition>
+        <argsstring></argsstring>
+        <name>USER</name>
+        <initializer>&quot;bs_user&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/inc/psl-config.php" line="14" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/inc/psl-config.php" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_w_a_f_f_l_e_1_1_framework_1_1_adapters_1_1_d_b_a_1a627633cf1f3c4ee60fcc7d025a4039ed" prot="public" static="no" mutable="no">
+        <type>const</type>
+        <definition>const PASSWORD</definition>
+        <argsstring></argsstring>
+        <name>PASSWORD</name>
+        <initializer>&quot;d5uhup4ePUTuy5ge2ASTa6es&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/inc/psl-config.php" line="15" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/inc/psl-config.php" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_w_a_f_f_l_e_1_1_framework_1_1_adapters_1_1_d_b_a_1a671e180a0a9486e82d3f3ccb1f4761f6" prot="public" static="no" mutable="no">
+        <type>const</type>
+        <definition>const DATABASE</definition>
+        <argsstring></argsstring>
+        <name>DATABASE</name>
+        <initializer>&quot;byrne_systems&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/inc/psl-config.php" line="16" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/inc/psl-config.php" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_w_a_f_f_l_e_1_1_framework_1_1_adapters_1_1_d_b_a_1afdb2746446e63b60d3e42dc8777e6aaf" prot="public" static="no" mutable="no">
+        <type>const</type>
+        <definition>const SECURE</definition>
+        <argsstring></argsstring>
+        <name>SECURE</name>
+        <initializer>FALSE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/inc/psl-config.php" line="18" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/inc/psl-config.php" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/xampp/htdocs/apps/WAFFLE/inc/psl-config.php" line="11" column="1"/>
+  </compounddef>
+</doxygen>

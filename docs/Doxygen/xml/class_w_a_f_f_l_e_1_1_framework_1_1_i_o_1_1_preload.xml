@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_preload" kind="class" language="PHP" prot="public">
+    <compoundname>WAFFLE::Framework::IO::Preload</compoundname>
+    <basecompoundref refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap" prot="public" virt="non-virtual">Bootstrap</basecompoundref>
+    <derivedcompoundref refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template" prot="public" virt="non-virtual">Template</derivedcompoundref>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_preload_1a34cd105e27a4cb6632047ddfdfaa07e8" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>$File</definition>
+        <argsstring></argsstring>
+        <name>$File</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="preload.class.php" line="35" column="1" bodyfile="preload.class.php" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_preload_1a095c5d389db211932136b53f25f39685" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>__construct</definition>
+        <argsstring>()</argsstring>
+        <name>__construct</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Accepts a directory that holds/stores code, modules, or libraries that can be embedded in the generated WAFFLE web-application or document.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametername>$dir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Absolute path for the directory to search in for any ancillary code </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="preload.class.php" line="47" column="1" bodyfile="preload.class.php" bodystart="47" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_preload_1aa570cf9af0fc24953f4568db3a71ae7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>set_script</definition>
+        <argsstring>($script)</argsstring>
+        <name>set_script</name>
+        <param>
+          <declname>$script</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Locates the exact file passed through the first param of this method while writing it into WAFFLE&apos;s default script file [../web/views/script.wad]</para><para>void set_script(String $script)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametername>$script</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The filename of the code (or module) to set</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<xrefsect id="todo_1_todo000005"><xreftitle>Todo</xreftitle><xrefdescription><para>Develop file-version logic for method, so that developers can pass a simple filename in accompaniment with the version that they are attempting to set </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="preload.class.php" line="62" column="1" bodyfile="preload.class.php" bodystart="62" bodyend="71"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_preload" kindref="compound">Preload</ref> IO</para><para>Pre-loads unique code prior to the HTML document (or application) being fully rendered. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="38">
+        <label>Preload</label>
+        <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_preload"/>
+        <childnode refid="39" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>Bootstrap</label>
+        <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap"/>
+        <childnode refid="40" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>Template</label>
+        <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template"/>
+        <childnode refid="38" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>HTML</label>
+        <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="42">
+        <label>Preload</label>
+        <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_preload"/>
+        <childnode refid="43" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>Bootstrap</label>
+        <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap"/>
+        <childnode refid="44" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>HTML</label>
+        <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l"/>
+      </node>
+    </collaborationgraph>
+    <location file="preload.class.php" line="27" column="1" bodyfile="preload.class.php" bodystart="27" bodyend="72"/>
+    <listofallmembers>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_preload_1a34cd105e27a4cb6632047ddfdfaa07e8" prot="protected" virt="non-virtual"><scope>WAFFLE::Framework::IO::Preload</scope><name>$File</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_preload_1a095c5d389db211932136b53f25f39685" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::IO::Preload</scope><name>__construct</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a3c534563b3b17abd31c70ce81c518a6d" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::IO::Preload</scope><name>anchor</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap_1a96d284570acb2b50b7e934af06d25c8e" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::IO::Preload</scope><name>column</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap_1a9ec86a4d6d518a85ed36db4f23ea2bfa" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::IO::Preload</scope><name>container</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a12602b493053197597cfcaffa61a6e14" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::IO::Preload</scope><name>div</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a3f5f65b7897f31a9a6eae79588a9e6c5" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::IO::Preload</scope><name>favicon</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a7596de1be94a6dc237fa4d435193da8b" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::IO::Preload</scope><name>link</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a77b7fda51b7845d6a6c738efc5d248ff" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::IO::Preload</scope><name>mailto</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1af2959b14380c3635ed932a5d1b877bd8" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::IO::Preload</scope><name>meta</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap_1ac9f62997b8f02752fd592c9a831c55af" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::IO::Preload</scope><name>panel</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap_1a65e72e655a53b204edaaef347ad39799" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::IO::Preload</scope><name>row</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a9a92856db6ac937a9dace60224dfaf65" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::IO::Preload</scope><name>script</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_preload_1aa570cf9af0fc24953f4568db3a71ae7b" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::IO::Preload</scope><name>set_script</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a61aeb234b0eb5d6895f91ba5b533bfce" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::IO::Preload</scope><name>tag</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap_1a760d6816b7e769fe6915845ea3d77cdd" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::IO::Preload</scope><name>viewport</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

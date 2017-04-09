@@ -1,0 +1,209 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespace_w_a_f_f_l_e_1_1_controller" kind="namespace" language="PHP">
+    <compoundname>WAFFLE::Controller</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespace_w_a_f_f_l_e_1_1_controller_1addf129be55acc267c327e86398d34ac5" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$web[ &apos;layout&apos;]</definition>
+        <argsstring>[&apos;layout&apos;]</argsstring>
+        <name>$web</name>
+        <initializer>= rtrim(dirname(__FILE__), &apos;/inc&apos;) . &apos;/web/views/layout/&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/inc/controller.php" line="19" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/inc/controller.php" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_w_a_f_f_l_e_1_1_controller_1a1d17c9f36b6261d10ed0564bc749f629" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$web[ &apos;head&apos;]</definition>
+        <argsstring>[&apos;head&apos;]</argsstring>
+        <name>$web</name>
+        <initializer>= rtrim(dirname(__FILE__), &apos;/inc&apos;) . &apos;/web/views/head/&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/inc/controller.php" line="20" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/inc/controller.php" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_w_a_f_f_l_e_1_1_controller_1a119f09626762a89e6abf1852ee071671" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$web[ &apos;body&apos;]</definition>
+        <argsstring>[&apos;body&apos;]</argsstring>
+        <name>$web</name>
+        <initializer>= rtrim(dirname(__FILE__), &apos;/inc&apos;) . &apos;/web/views/body/&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/inc/controller.php" line="21" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/inc/controller.php" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_w_a_f_f_l_e_1_1_controller_1ade212434c225bbfae525dc5ec32399c3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$web[ &apos;app&apos;]</definition>
+        <argsstring>[&apos;app&apos;]</argsstring>
+        <name>$web</name>
+        <initializer>= rtrim(dirname(__FILE__), &apos;/inc&apos;) . &apos;/web/views/&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/inc/controller.php" line="22" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/inc/controller.php" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_w_a_f_f_l_e_1_1_controller_1aa973df704de61f7d3bb7b360b1824901" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$web[ &apos;images&apos;]</definition>
+        <argsstring>[&apos;images&apos;]</argsstring>
+        <name>$web</name>
+        <initializer>= rtrim(dirname(__FILE__), &apos;/inc&apos;) . &apos;/web/images/&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/inc/controller.php" line="23" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/inc/controller.php" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_w_a_f_f_l_e_1_1_controller_1a2bfacb2c81cae66264f765b0a20599c6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$notes</definition>
+        <argsstring></argsstring>
+        <name>$notes</name>
+        <initializer>= new <ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template" kindref="compound">Template</ref>($web[&apos;head&apos;] . &apos;notes.wad&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/inc/controller.php" line="30" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/inc/controller.php" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_w_a_f_f_l_e_1_1_controller_1a9e6fc1ae0498be7d1e682f8bcc9299df" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$meta</definition>
+        <argsstring></argsstring>
+        <name>$meta</name>
+        <initializer>= new <ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template" kindref="compound">Template</ref>($web[&apos;head&apos;] . &apos;meta.wad&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/inc/controller.php" line="31" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/inc/controller.php" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_w_a_f_f_l_e_1_1_controller_1a920c320068535c09e154c6707eb42ded" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$styles</definition>
+        <argsstring></argsstring>
+        <name>$styles</name>
+        <initializer>= new <ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template" kindref="compound">Template</ref>($web[&apos;head&apos;] . &apos;style-sheets.wad&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/inc/controller.php" line="32" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/inc/controller.php" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_w_a_f_f_l_e_1_1_controller_1af1de23de512bb5bf634c157dbb1b7758" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$script</definition>
+        <argsstring></argsstring>
+        <name>$script</name>
+        <initializer>= new <ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template" kindref="compound">Template</ref>($web[&apos;head&apos;] . &apos;script.wad&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/inc/controller.php" line="33" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/inc/controller.php" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_w_a_f_f_l_e_1_1_controller_1a2b0d08e73a90b9443ce37506b7c6a544" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$layout</definition>
+        <argsstring></argsstring>
+        <name>$layout</name>
+        <initializer>= new <ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template" kindref="compound">Template</ref>($web[&apos;layout&apos;]  . &apos;html5.wad&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/inc/controller.php" line="40" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/inc/controller.php" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_w_a_f_f_l_e_1_1_controller_1a4f44601f2b9dc8a1644bce53c94ce622" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$header</definition>
+        <argsstring></argsstring>
+        <name>$header</name>
+        <initializer>= new <ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template" kindref="compound">Template</ref>($web[&apos;body&apos;] . &apos;header.wad&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/inc/controller.php" line="43" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/inc/controller.php" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_w_a_f_f_l_e_1_1_controller_1a67a14860123d3f27f92196239b0a5b46" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$main</definition>
+        <argsstring></argsstring>
+        <name>$main</name>
+        <initializer>= new <ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template" kindref="compound">Template</ref>($web[&apos;body&apos;] . &apos;main.wad&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/inc/controller.php" line="44" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/inc/controller.php" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_w_a_f_f_l_e_1_1_controller_1abaa4216c852c51c380dd8f10d3cfe944" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$footer</definition>
+        <argsstring></argsstring>
+        <name>$footer</name>
+        <initializer>= new <ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template" kindref="compound">Template</ref>($web[&apos;body&apos;] . &apos;footer.wad&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/inc/controller.php" line="45" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/inc/controller.php" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_w_a_f_f_l_e_1_1_controller_1adfb117f244076aa9bc269269f7e57403" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$app</definition>
+        <argsstring></argsstring>
+        <name>$app</name>
+        <initializer>= new <ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template" kindref="compound">Template</ref>($web[&apos;app&apos;] . &apos;app.wad&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/inc/controller.php" line="48" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/inc/controller.php" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/xampp/htdocs/apps/WAFFLE/inc/controller.php" line="11" column="1"/>
+  </compounddef>
+</doxygen>

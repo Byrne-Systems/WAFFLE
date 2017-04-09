@@ -1,0 +1,15 @@
+{
+  "ECMA": {
+    "Bash": "text/x-shellscript",
+    "C": [
+      "text/x-c",
+      "text/x-csrc"
+    ],
+    "C++": [
+      "text/x-c++",
+      "text/x-c++src"
+    ],
+    "Java": "text/x-java-source",
+    "Python": "text/x-python"
+  }
+}

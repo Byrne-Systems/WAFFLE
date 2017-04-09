@@ -1,0 +1,271 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap" kind="class" language="PHP" prot="public">
+    <compoundname>WAFFLE::Framework::Engines::Bootstrap</compoundname>
+    <basecompoundref refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l" prot="public" virt="non-virtual">HTML</basecompoundref>
+    <derivedcompoundref refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_preload" prot="public" virt="non-virtual">Preload</derivedcompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap_1a9ec86a4d6d518a85ed36db4f23ea2bfa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>container</definition>
+        <argsstring>($content, $type=&apos;fixed&apos;)</argsstring>
+        <name>container</name>
+        <param>
+          <declname>$content</declname>
+        </param>
+        <param>
+          <declname>$type</declname>
+          <defval>&apos;fixed&apos;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Generates a <ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap" kindref="compound">Bootstrap</ref> container (fixed or fluid-width) to placed around the &apos;$content&apos; passed via this method&apos;s params</para><para>String container(String $content, String $type)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametername>$content</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Content to be wrapped by this function </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametername>$type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Defines the type of container; i.e., &apos;fluid&apos; or &apos;fixed&apos; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>String Returns a fixed (or fluid) container around the content passed </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bootstrap.class.php" line="36" column="1" bodyfile="bootstrap.class.php" bodystart="36" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap_1a65e72e655a53b204edaaef347ad39799" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>row</definition>
+        <argsstring>($content)</argsstring>
+        <name>row</name>
+        <param>
+          <declname>$content</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Generates <ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap" kindref="compound">Bootstrap</ref> rows that are subsequently wrapped around the passed &apos;$content&apos; param;</para><para>String row(String $content)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametername>$content</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Content to be wrapped by this function </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>String Returns a <ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap" kindref="compound">Bootstrap</ref> row (container) around the passed content </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bootstrap.class.php" line="60" column="1" bodyfile="bootstrap.class.php" bodystart="60" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap_1a96d284570acb2b50b7e934af06d25c8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>column</definition>
+        <argsstring>($amount=12, $size=&apos;sm&apos;, $content, $alt=NULL)</argsstring>
+        <name>column</name>
+        <param>
+          <declname>$amount</declname>
+          <defval>12</defval>
+        </param>
+        <param>
+          <declname>$size</declname>
+          <defval>&apos;sm&apos;</defval>
+        </param>
+        <param>
+          <declname>$content</declname>
+        </param>
+        <param>
+          <declname>$alt</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Generates <ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap" kindref="compound">Bootstrap</ref> column(s) while denoting its size as content is passed through</para><para>String column(Integer $amount, String $size, String $content)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>Integer</parametertype>
+<parametername>$amount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Amount of columns to attribute to the columns being set; (i.e., 1, 2, 3...12) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametername>$size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the columns being set; (i.e., xs, sm, md, or lg) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametername>$content</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Content to be wrapped by this function </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>String Returns a set of <ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap" kindref="compound">Bootstrap</ref> columns in accordance with this method&apos;s set params</para></simplesect>
+<xrefsect id="todo_1_todo000001"><xreftitle>Todo</xreftitle><xrefdescription><para>write error handling! </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bootstrap.class.php" line="74" column="1" bodyfile="bootstrap.class.php" bodystart="74" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap_1ac9f62997b8f02752fd592c9a831c55af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>panel</definition>
+        <argsstring>($type=&apos;header&apos;, $caption, $content, $alt=NULL)</argsstring>
+        <name>panel</name>
+        <param>
+          <declname>$type</declname>
+          <defval>&apos;header&apos;</defval>
+        </param>
+        <param>
+          <declname>$caption</declname>
+        </param>
+        <param>
+          <declname>$content</declname>
+        </param>
+        <param>
+          <declname>$alt</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Generates a <ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap" kindref="compound">Bootstrap</ref> panel containing the content passed via this method&apos;s params</para><para>String panel(String $type, String $caption, String $content, Array|String $alt)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametername>$type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of panel to generate; either &apos;header&apos; or &apos;footer&apos; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametername>$caption</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Caption to be placed inside of its corresponding header (or footer) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametername>$content</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Content to be stored inside of the body of this <ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap" kindref="compound">Bootstrap</ref> element </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Array/String</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>$alt Alternative (or Additional) classes to affix to this panel&apos;s body </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>String Returns a <ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap" kindref="compound">Bootstrap</ref> panel containing the content passed via this method&apos;s params </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bootstrap.class.php" line="101" column="1" bodyfile="bootstrap.class.php" bodystart="101" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap_1a760d6816b7e769fe6915845ea3d77cdd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>viewport</definition>
+        <argsstring>($options=array(&apos;width&apos;=&gt; &apos;device-width&apos;, &apos;height&apos;=&gt; NULL, &apos;initial-scale&apos;=&gt; 1, &apos;minimum-scale&apos;=&gt; NULL, &apos;maximum-scale&apos;=&gt; NULL, &apos;user-scalable&apos;=&gt; &apos;no&apos;))</argsstring>
+        <name>viewport</name>
+        <param>
+          <declname>$options</declname>
+          <defval>array(&apos;width&apos;=&gt; &apos;device-width&apos;, &apos;height&apos;=&gt; NULL, &apos;initial-scale&apos;=&gt; 1, &apos;minimum-scale&apos;=&gt; NULL, &apos;maximum-scale&apos;=&gt; NULL, &apos;user-scalable&apos;=&gt; &apos;no&apos;)</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Generates and parses a viewport meta tag for <ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap" kindref="compound">Bootstrap</ref>; or Responsive Web Design</para><para>String viewport(Array $options)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>Array</parametertype>
+<parametername>$options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array containing the various properties available throughout a viewport tag </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>String Returns a meta tag to set the viewport for a particular web-document, site, or application </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bootstrap.class.php" line="143" column="1" bodyfile="bootstrap.class.php" bodystart="143" bodyend="158"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap" kindref="compound">Bootstrap</ref> Component Markup Assembler</para><para>Parses native bootstrap component markup, containers, rows, columns, and other elements. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Preload</label>
+        <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_preload"/>
+        <childnode refid="0" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="0">
+        <label>Bootstrap</label>
+        <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Template</label>
+        <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>HTML</label>
+        <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>Bootstrap</label>
+        <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>HTML</label>
+        <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l"/>
+      </node>
+    </collaborationgraph>
+    <location file="bootstrap.class.php" line="25" column="1" bodyfile="bootstrap.class.php" bodystart="25" bodyend="159"/>
+    <listofallmembers>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a3c534563b3b17abd31c70ce81c518a6d" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::Engines::Bootstrap</scope><name>anchor</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap_1a96d284570acb2b50b7e934af06d25c8e" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::Engines::Bootstrap</scope><name>column</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap_1a9ec86a4d6d518a85ed36db4f23ea2bfa" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::Engines::Bootstrap</scope><name>container</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a12602b493053197597cfcaffa61a6e14" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::Engines::Bootstrap</scope><name>div</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a3f5f65b7897f31a9a6eae79588a9e6c5" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::Engines::Bootstrap</scope><name>favicon</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a7596de1be94a6dc237fa4d435193da8b" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::Engines::Bootstrap</scope><name>link</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a77b7fda51b7845d6a6c738efc5d248ff" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::Engines::Bootstrap</scope><name>mailto</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1af2959b14380c3635ed932a5d1b877bd8" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::Engines::Bootstrap</scope><name>meta</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap_1ac9f62997b8f02752fd592c9a831c55af" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::Engines::Bootstrap</scope><name>panel</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap_1a65e72e655a53b204edaaef347ad39799" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::Engines::Bootstrap</scope><name>row</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a9a92856db6ac937a9dace60224dfaf65" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::Engines::Bootstrap</scope><name>script</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a61aeb234b0eb5d6895f91ba5b533bfce" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::Engines::Bootstrap</scope><name>tag</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap_1a760d6816b7e769fe6915845ea3d77cdd" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::Engines::Bootstrap</scope><name>viewport</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

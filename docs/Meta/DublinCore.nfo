@@ -1,0 +1,392 @@
+Dublin Core:
+================================================================================================
+
+    Title:
+    --------------------------------------------------------------------------------------------
+        The name given to the resource. Typically, a Title will be a name by which the resource
+        is formally known.
+
+        Example(s):
+        ----------------------------------------------------------------------------------------
+            Title="A Pilot's Guide to Aircraft Insurance"
+            Title="The Sound of Music"
+            Title="Green on Greens"
+            Title="AOPA's Tips on Buying Used Aircraft"
+
+    Subject:
+    --------------------------------------------------------------------------------------------
+        The topic of the content of the resource. Typically, a Subject will be expressed as
+        keywords or key phrases or classification codes that describe the topic of the resource.
+        Recommended best practice is to select a value from a controlled vocabulary or formal
+        classification scheme.
+
+        Example(s):
+        ----------------------------------------------------------------------------------------
+            Subject="Aircraft leasing and renting"
+            Subject="Dogs"
+            Subject="Olympic skiing"
+            Subject="Street, Picabo"
+
+    Description:
+    --------------------------------------------------------------------------------------------
+        An account of the content of the resource. Description may include but is not limited
+        to: an abstract, table of contents, reference to a graphical representation of content
+        or a free-text account of the content.
+
+        Example(s):
+        ----------------------------------------------------------------------------------------
+            Description="Illustrated guide to airport markings and lighting signals, with
+            particular reference to SMGCS (Surface Movement Guidance and Control System) for
+            airports with low visibility conditions."
+
+            Description="Teachers Domain is a multimedia library for K-12 science educators,
+            developed by WGBH through funding from the National Science Foundation as part of
+            its National Science Digital Library initiative. The site offers a wealth of
+            classroom-ready instructional resources, as well as online professional development
+            materials and a set of tools which allows teachers to manage, annotate, and share
+            the materials they use in classroom teaching."
+
+    Type:
+    --------------------------------------------------------------------------------------------
+        The nature or genre of the content of the resource. Type includes terms describing
+        general categories, functions, genres, or aggregation levels for content. Recommended
+        best practice is to select a value from a controlled vocabulary (for example, the
+        DCMIType vocabulary ). To describe the physical or digital manifestation of the
+        resource, use the FORMAT element.
+
+        Example(s):
+        ----------------------------------------------------------------------------------------
+            Type="Image"
+            Type="Sound"
+            Type="Text"
+            Type="simulation"
+
+            Note: The first three values are taken from the DCMI Type Vocabulary, and follow the
+                  capitalization conventions for that vocabulary. The last value is a term from
+                  an unspecified source.
+
+            Type="Image"
+            Type="Text"
+            Type="Exhibition catalog"
+
+            Note: The first two values are taken from the DCMI Type Vocabulary, and follow the
+                  capitalization conventions for that vocabulary. The last value is a term from
+                  an unspecified source.
+
+            Type="Image"
+            Type="Text"
+            Type="Software"
+            Type="InteractiveResource"
+
+            Note: All values in this example are taken from the DCMI Type Vocabulary, and follow
+                  the capitalization conventions for that vocabulary.
+
+    Source:
+    --------------------------------------------------------------------------------------------
+        A Reference to a resource from which the present resource is derived. The present
+        resource may be derived from the Source resource in whole or part. Recommended best
+        practice is to reference the resource by means of a string or number conforming to a
+        formal identification system.
+
+        Example(s):
+        ----------------------------------------------------------------------------------------
+            Source="RC607.A26W574 1996"     [where "RC607.A26W574 1996" is the call number of
+                                             the print version of the resource, from which the
+                                             present version was scanned]
+
+            Source="Image from page 54 of the 1922 edition of Romeo and Juliet"
+
+    Relation:
+    --------------------------------------------------------------------------------------------
+        A reference to a related resource. Recommended best practice is to reference the
+        resource by means of a string or number conforming to a formal identification system.
+
+        Example(s):
+        ----------------------------------------------------------------------------------------
+            Title="Reading Turgenev"
+            Relation="Two Lives"            [Resource is a collection of two novellas, one of
+                                             which is "Reading Turgenev"]
+
+                - Relationship described is @IsPartOf
+
+                [Part/Whole relations are those in which one resource is a physical or logical
+                 part of another]
+
+            Title="Candle in the Wind"
+            Subject="Diana, Princess of Wales"
+            Date="1997"
+            Creator="John, Elton"
+            Type="sound"
+            Description="Tribute to a dead princess."
+            Relation="Elton John's 1976 song Candle in the Wind"
+
+                - Relationship described is @IsVersionOf
+
+                [Version relations are those in which one resource is an historical state or
+                 edition, of another resource by the same creator]
+
+            Title="Electronic AACR2"
+            Relation="Anglo-American Cataloging Rules, 2nd edition"
+
+                - Relationship described is @IsFormatOf
+
+            Title="Landsat TM dataset of Arnhemland, NT, Australia"
+            Relation="arnhem.gif"
+
+                - Relationship described is @HasFormat
+
+                [Format transformation relations are those in which one resource has been
+                 derived from another by a reproduction or reformatting technology which is not
+                 fundamentally an interpretation but intended to be a representation.]
+
+            Title="Morgan's Ancient Society"
+            Relation="Engels' Origin of the Family, Private Property and the State"
+
+                - Relationship described is @IsReferencedBy
+
+            Title="Nymphet Mania"
+            Relation="References Adrian Lyne's 'Lolita'"
+
+                - Relationship described is @References
+
+                [Reference relations are those in which the author of one resource cites,
+                 acknowledges, disputes or otherwise make claims about another resource.]
+
+            Title="Peter Carey's novel Oscar and Lucinda"
+            Relation="1998 movie Oscar and Lucinda"
+
+                - Relationship described is @IsBasisFor
+
+            Title="The movie My Fair Lady"
+            Relation="Shaw's play Pygmalion"
+
+                - Relationship described is @IsBasedOn
+
+                [Creative relations are those in which one resource is a performance,
+                 production, derivation, adaptation or interpretation of another resource.]
+
+            Title="Dead Ringer"
+            Relation="Gemstar e-book"
+
+                - Relationship described is @Requires
+
+                [Dependency relations are those in which one resource requires another resource
+                 for its functioning, delivery, or content and cannot be used without the
+                 related resource being present.]
+
+    Coverage:
+    --------------------------------------------------------------------------------------------
+        The extent or scope of the content of the resource. Coverage will typically include
+        spatial location (a place name or geographic co-ordinates), temporal period (a period
+        label, date, or date range) or jurisdiction (such as a named administrative entity).
+        Recommended best practice is to select a value from a controlled vocabulary (for
+        example, the Thesaurus of Geographic Names [Getty Thesaurus of Geographic Names,
+        http://www. getty.edu/research/tools/vocabulary/tgn/]). Where appropriate, named places
+        or time periods should be used in preference to numeric identifiers such as sets of
+        co-ordinates or date ranges.
+
+        Example(s):
+        ----------------------------------------------------------------------------------------
+            Coverage="1995-1996"
+            Coverage="Boston, MA"
+            Coverage="17th century"
+            Coverage="Upstate New York"
+
+    Creator:
+    --------------------------------------------------------------------------------------------
+        An entity primarily responsible for making the content of the resource. Examples of a
+        Creator include a person, an organization, or a service. Typically the name of the
+        Creator should be used to indicate the entity.
+
+        Example(s):
+        ----------------------------------------------------------------------------------------
+            Creator="Shakespeare, William"
+            Creator="Wen Lee"
+            Creator="Hubble Telescope"
+            Creator="Internal Revenue Service. Customer Complaints Unit"
+
+    Publisher:
+    --------------------------------------------------------------------------------------------
+        The entity responsible for making the resource available. Examples of a Publisher
+        include a person, an organization, or a service. Typically, the name of a Publisher
+        should be used to indicate the entity.
+
+        Example(s):
+        ----------------------------------------------------------------------------------------
+            Publisher="University of South Where"
+            Publisher="Funky Websites, Inc."
+            Publisher="Carmen Miranda"
+
+    Contributor:
+    --------------------------------------------------------------------------------------------
+        An entity responsible for making contributions to the content of the resource. Examples
+        of a Contributor include a person, an organization or a service. Typically, the name of
+        a Contributor should be used to indicate the entity.
+
+        Example(s):
+        ----------------------------------------------------------------------------------------
+            Examples
+
+    Rights:
+    --------------------------------------------------------------------------------------------
+        Information about rights held in and over the resource. Typically a Rights element will
+        contain a rights management statement for the resource, or reference a service providing
+        such information. Rights information often encompasses Intellectual Property Rights
+        (IPR), Copyright, and various Property Rights. If the rights element is absent, no
+        assumptions can be made about the status of these and other rights with respect to the
+        resource.
+
+        Example(s):
+        ----------------------------------------------------------------------------------------
+            Rights="Access limited to members"
+            Rights="http://cs-tr.cs.cornell.edu/Dienst/Repository/2.0/Terms"
+
+    Date:
+    --------------------------------------------------------------------------------------------
+        A date associated with an event in the life cycle of the resource. Typically, Date will
+        be associated with the creation or availability of the resource. Recommended best
+        practice for encoding the date value is defined in a profile of ISO 8601 [Date and Time
+        Formats, W3C Note, http://www.w3.org/TR/NOTE- datetime] and follows the YYYY-MM-DD
+        format.
+
+        Example(s):
+        ----------------------------------------------------------------------------------------
+            Date="1998-02-16"
+            Date="1998-02"
+            Date="1998"
+
+    Format:
+    --------------------------------------------------------------------------------------------
+        The physical or digital manifestation of the resource. Typically, Format may include the
+        media-type or dimensions of the resource. Examples of dimensions include size and
+        duration. Format may be used to determine the software, hardware or other equipment
+        needed to display or operate the resource.
+
+        Example(s):
+        ----------------------------------------------------------------------------------------
+            Title="Dublin Core icon"
+            Identifier="http://purl.org/metadata/dublin_core/images/dc2.gif& quot;
+            Type="Image"
+            Format="image/gif"
+            Format="4 kB"
+
+            Subject="Saturn"
+            Type="Image"
+            Format="image/gif 6"
+            Format="40 x 512 pixels"
+            Identifier="http://www.not.iac.es/newwww/photos/images/satnot.gif "
+
+            Title="The Bronco Buster"
+            Creator="Frederic Remington"
+            Type="Physical object"
+            Format="bronze"
+            Format="22 in."
+
+    Identifier:
+    --------------------------------------------------------------------------------------------
+        An unambiguous reference to the resource within a given context. Recommended best
+        practice is to identify the resource by means of a string or number conforming to a
+        formal identification system. Examples of formal identification systems include the
+        Uniform Resource Identifier (URI) (including the Uniform Resource Locator (URL), the
+        Digital Object Identifier (DOI) and the International Standard Book Number (ISBN).
+
+        Example(s):
+        ----------------------------------------------------------------------------------------
+            Identifier="http://purl.oclc.org/metadata/dublin_core/"
+            Identifier="ISBN:0385424728"
+            Identifier="H-A-X 5690B"        [publisher number]
+
+    Language:
+    --------------------------------------------------------------------------------------------
+        A language of the intellectual content of the resource. Recommended best practice for
+        the values of the Language element is defined by RFC 3066 [RFC 3066,
+        http://www.ietf.org/rfc/ rfc3066.txt] which, in conjunction with ISO 639 [ISO 639,
+        http://www.oasis- open.org/cover/iso639a.html]), defines two- and three-letter primary
+        language tags with optional subtags. Examples include "en" or "eng" for English, "akk"
+        for Akkadian, and "en-GB" for English used in the United Kingdom.
+
+        Example(s):
+        ----------------------------------------------------------------------------------------
+            Language="en"
+            Language="fr"
+            Language="Primarily English, with some abstracts also in French."
+            Language="en-US"
+
+    Audience:
+    --------------------------------------------------------------------------------------------
+        A class of entity for whom the resource is intended or useful. A class of entity may be
+        determined by the creator or the publisher or by a third party.
+
+        Example(s):
+        ----------------------------------------------------------------------------------------
+            Audience="elementary school students"
+            Audience="ESL teachers"
+            Audience="deaf adults"
+
+    Provenance:
+    --------------------------------------------------------------------------------------------
+        A statement of any changes in ownership and custody of the resource since its creation
+        that are significant for its authenticity, integrity and interpretation. The statement
+        may include a description of any changes successive custodians made to the resource.
+
+        Example(s):
+        ----------------------------------------------------------------------------------------
+            Provenance="This copy once owned by Benjamin Spock."
+            Provenance="Estate of Hunter Thompson."
+            Provenance="Stolen in 1999; recovered by the Museum in 2003."
+
+    RightsHolder:
+    --------------------------------------------------------------------------------------------
+        A person or organization owning or managing rights over the resource. Recommended best
+        practice is to use the URI or name of the Rights Holder to indicate the entity.
+
+        Example(s):
+        ----------------------------------------------------------------------------------------
+            RightsHolder="Stuart Weibel"
+            RightsHolder="University of Bath"
+
+    InstructionalMethod:
+    --------------------------------------------------------------------------------------------
+        A process, used to engender knowledge, attitudes and skills, that the resource is
+        designed to support. Instructional Method will typically include ways of presenting
+        instructional materials or conducting instructional activities, patterns of learner-to-
+        learner and learner-to-instructor interactions, and mechanisms by which group and
+        individual levels of learning are measured. Instructional methods include all aspects of
+        the instruction and learning processes from planning and implementation through
+        evaluation and feedback.
+
+        Example(s):
+        ----------------------------------------------------------------------------------------
+            InstructionalMethod="Experiential learning"
+            InstructionalMethod="Observation"
+            InstructionalMethod="Large Group instruction"
+
+    AccrualMethod:
+    --------------------------------------------------------------------------------------------
+        The method by which items are added to a collection. Recommended best practice is to use
+        a value from a controlled vocabulary.
+
+        Example(s):
+        ----------------------------------------------------------------------------------------
+            AccrualMethod="Deposit"
+            AccrualMethod="Purchase"
+
+    AccrualPeriodicity:
+    --------------------------------------------------------------------------------------------
+        The frequency with which items are added to a collection. Recommended best practice is
+        to use a value from a controlled vocabulary.
+
+        Example(s):
+        ----------------------------------------------------------------------------------------
+            AccrualPeriodicity="Annual"
+            AccrualPeriodicity="Irregular"
+
+    AccrualPolicy:
+    --------------------------------------------------------------------------------------------
+        The policy governing the addition of items to a collection. Recommended best practice is
+        to use a value from a controlled vocabulary.
+
+        Example(s):
+        ----------------------------------------------------------------------------------------
+            AccrualPolicy="Active"
+            AccrualPolicy="Closed"

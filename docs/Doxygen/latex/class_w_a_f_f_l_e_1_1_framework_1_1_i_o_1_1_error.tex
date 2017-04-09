@@ -1,0 +1,54 @@
+\hypertarget{class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_error}{}\section{Error Class Reference}
+\label{class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_error}\index{Error@{Error}}
+
+
+Inheritance diagram for Error\+:
+% FIG 0
+
+
+Collaboration diagram for Error\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_error_af721dfe2b0cca44a3c68c6fda1439165}{error} (\$msg, \$class, \$fn, \$ln, \$fl)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_error}{Error} IO
+
+\mbox{[}Description\mbox{]} 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_error_af721dfe2b0cca44a3c68c6fda1439165}\label{class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_error_af721dfe2b0cca44a3c68c6fda1439165}} 
+\index{W\+A\+F\+F\+L\+E\+::\+Framework\+::\+I\+O\+::\+Error@{W\+A\+F\+F\+L\+E\+::\+Framework\+::\+I\+O\+::\+Error}!error@{error}}
+\index{error@{error}!W\+A\+F\+F\+L\+E\+::\+Framework\+::\+I\+O\+::\+Error@{W\+A\+F\+F\+L\+E\+::\+Framework\+::\+I\+O\+::\+Error}}
+\subsubsection{\texorpdfstring{error()}{error()}}
+{\footnotesize\ttfamily error (\begin{DoxyParamCaption}\item[{}]{\$msg,  }\item[{}]{\$class,  }\item[{}]{\$fn,  }\item[{}]{\$ln,  }\item[{}]{\$fl }\end{DoxyParamCaption})}
+
+Generates a valid error message specific to the Waffle framework, then logs the message in \char`\"{}waffle.\+error.\+log\char`\"{} prior to exiting the framework while displaying the error message passed.
+
+void error(String \$time, String \$msg, String \$func, String \$class)
+
+
+\begin{DoxyParams}[1]{Parameters}
+String & {\em \$msg} & \hyperlink{class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_error}{Error} message to log and print through std-\/out \\
+\hline
+Constant & {\em \$class} & Originating class from where the error propagated \\
+\hline
+Constant & {\em \$fn} & Originating function from where the error propagated \\
+\hline
+Constant & {\em \$ln} & Originating line number from where the error propagated \\
+\hline
+Constant & {\em \$fl} & Originating file from where the error propagated\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String \$error Compiled error message with time-\/stamp and constants parsed through this method\textquotesingle{}s params 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+error.\+class.\+php\end{DoxyCompactItemize}

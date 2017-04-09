@@ -1,0 +1,78 @@
+/* Semantic Elements */
+
+// Body | <body>
+body {
+    margin: 0;
+}
+
+// Anchor | <a>
+a {
+    .text-decoration(none); .fore-color(rgb(14,14,14)); .transition(color, 1s, ease);
+    &:hover {
+        .fore-color(@primary);
+    }
+}
+
+// Bold | <b>
+b {
+    .fore-color(@primary);
+}
+
+// Horizontal Line | <hr>
+hr {
+    #LNE > .dash(lighten(@gray, 10%));
+}
+
+// Paragraph | <p>
+p {
+    margin: 0 14%;
+}
+
+// Images
+img {
+    margin: 0;
+    max-width: 100% !important;
+    height: auto;
+    display: block;
+    border: 0;
+}
+
+/**
+ *  Locale:     Dashboard
+ */
+#dashboard {
+    /* General */
+    .background(@background, repeat); .fore-color(darken(@gray, 36%));
+    line-height: normal !important; overflow-x: hidden !important;
+
+    /* Header */
+    header {
+        border-top: 0.5em solid @primary;
+        img {
+            margin: 0 auto; padding: 10px;
+        }
+    }
+
+    /* Main */
+    main {
+        #BTN > .minimal(@primary);
+
+        // Small Device - Landscape Orientation
+        @media only screen and (min-width: 480px) {
+            #BTN > .clear();
+
+            img {
+                display: inline-block;
+            }
+        }
+
+    }
+
+    /* Footer */
+    footer {
+        #ITF > .footer(darken(@gray, 36%), lighten(@gray, 29%));
+        div.external-links {
+            #GPH > .webfonts;
+        }
+    }
+} // end - #dashboard

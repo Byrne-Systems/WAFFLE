@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="index_8php" kind="file" language="PHP">
+    <compoundname>index.php</compoundname>
+    <innernamespace refid="namespace_w_a_f_f_l_e">WAFFLE</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor">#<sp/>Load<sp/>Controller</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">require_once<sp/></highlight><highlight class="stringliteral">&apos;/inc/controller.php&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>Parse<sp/>Application</highlight></codeline>
+<codeline lineno="16"><highlight class="preprocessor">echo<sp/>$app-&gt;output();</highlight></codeline>
+    </programlisting>
+    <location file="C:/xampp/htdocs/apps/WAFFLE/index.php"/>
+  </compounddef>
+</doxygen>

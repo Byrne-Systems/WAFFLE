@@ -1,0 +1,125 @@
+/*
+ *  Set:    CSS Columns
+ *  Notes:  Module of CSS that defines multi-column layouts, expressing how content should flows
+ *          between columns, including how the gaps and rules are handled.
+ */
+
+/* Column-Count */
+// Describes the number of columns of the element
+// - CSS3
+.column-count(@arg: auto) {
+    column-count: @arg;
+    // > <number> | auto' | initial | inherit
+}
+
+/* Column-Fill */
+// Controls how contents are partitioned into columns
+// - CSS3
+.column-fill(@arg: balance) {
+    column-fill: @arg;
+    // > balance' | auto | initial | inherit
+}
+
+/* Column-Gap */
+// Sets the size of the gap between columns for
+// elements which are specified to be displayed as
+// multi-column elements
+// - CSS3
+.column-gap(@arg: 1px) {
+    column-gap: @arg;
+    // > <length>' | [length|px] | normal | initial | inherit
+}
+
+/* Column-Rule */
+// Specifies a straight lin, or rule to be drawn between
+// each column
+// - CSS3
+.column-rule(@arg: medium none rgba(0,0,0,1)) {
+    column-rule: @arg;
+    // <column-rule-width> = medium' | thin | thick | length | initial | inherit
+    // <column-rule-style> = none' | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset | initial | inherit
+    // <column-rule-color> = <color>'' | initial | inherit
+    // > (<width>, <style>, <color>) | initial | inherit
+}
+
+/* Column-Rule-Color */
+// Lets you set the color of the rule or line drawn
+// between columns in multi-column layouts
+// - CSS3
+.column-rule-color(@arg: rgba(0,0,0,1)) {
+    column-rule-color: @arg;
+    // > <color>' | initial | inherit
+}
+
+/* Column-Rule-Style */
+// Set the style of the rule drawn between columns in
+// multi-column layouts
+// - CSS3
+.column-rule-style(@arg: none) {
+    column-rule-style: @arg;
+    // > where <br-style> = none' | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset | initial | inherit
+}
+
+/* Column-Rule-Width */
+// Set the width of the rule drawn between columns in
+// multi-column layouts
+// - CSS3
+.column-rule-width(@arg: medium) {
+    column-rule-width: @arg;
+    // > where <br-width> = <length> | [length|px] | medium' | thin | thick | length | initial | inherit
+}
+
+/* Column-Span */
+// Makes it possible for an element to span across all
+// columns when its value is set to all
+// - CSS3
+.column-span(@arg: 1) {
+    column-span: @arg;
+    // > <column-span> / 1' | all | initial | inherit
+}
+
+/* Column-Width */
+// Suggests an optimal colun width
+// - CSS3
+.column-width(@arg: auto) {
+    column-width: @arg;
+    // > auto' | <length> | [length|px|pt|em|rem|%] | initial | inherit
+}
+
+/* Columns */
+// Set both the column-width and the colun-count
+// properties at the same time
+// - CSS3
+.columns(@arg: auto) {
+    columns: @arg;
+    // <column-width> = auto | <length> | initial | inherit
+    // <column-count> = auto | <number> | initial | inherit
+    // > auto' | <column-width> <column-count> | initial | inherit
+}
+
+/* Page-Break-After */
+// Describes how the page, column, or region break
+// behavior 'after' the generated box
+// - CSS2
+.page-break-after(@arg: auto) {
+    break-after: @arg;
+    // > auto' | always | avoid | left | right | initial | inherit
+}
+
+/* Page-Break-Before */
+// Describes how the page,column, or region break
+// behavior 'before' the generated box
+// - CSS2
+.page-break-before(@arg: auto) {
+    page-break-before: @arg;
+    // > auto' | always | avoid | left | right | initial | inherit
+}
+
+/* Page-Break-Inside */
+// Describes how the page, column, or region break
+// inside the generated box
+// - CSS2
+.page-break-inside(@arg: auto) {
+    page-break-inside: @arg;
+    // > auto' | avoid | initial | inherit
+}

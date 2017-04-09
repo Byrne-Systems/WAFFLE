@@ -1,0 +1,226 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template" kind="class" language="PHP" prot="public">
+    <compoundname>WAFFLE::Framework::Engines::Template</compoundname>
+    <basecompoundref refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_preload" prot="public" virt="non-virtual">Preload</basecompoundref>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template_1a823f9d8bf697d2dd19672687804d05b4" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>String $file</definition>
+        <argsstring></argsstring>
+        <name>$file</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template" kindref="compound">Template</ref> filename to load, and eventually parse via this template engine</para><para>protected </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="template.class.php" line="34" column="1" bodyfile="template.class.php" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template_1a46220846a73e3618f122b00d8c898308" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>Array $values</definition>
+        <argsstring></argsstring>
+        <name>$values</name>
+        <initializer>= array()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The value of each template tag (e.g., [!tag]) authored throughout each template file (e.g., *.wad)</para><para>protected </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="template.class.php" line="42" column="1" bodyfile="template.class.php" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template_1a8ef77288a5f940c68ebc57fdf0102078" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>__construct</definition>
+        <argsstring>($file)</argsstring>
+        <name>__construct</name>
+        <param>
+          <declname>$file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor method used to instantiate a new <ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template" kindref="compound">Template</ref> object after passing its associate file.</para><para>__construct(String $file)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametername>$file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The filename of the template file to load </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="template.class.php" line="55" column="1" bodyfile="template.class.php" bodystart="55" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template_1aab787bd83f84f4215dceb35f7c305eee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>set</definition>
+        <argsstring>($key, $value)</argsstring>
+        <name>set</name>
+        <param>
+          <declname>$key</declname>
+        </param>
+        <param>
+          <declname>$value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the value to replace the specific tag passed through this function.</para><para>set(String $key, String $value)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametername>$key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key used to identify the template tag (e.g., [!temp_tag]) to be set </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametername>$value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value parsed (or supplemented); in correspondence with its key </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="template.class.php" line="68" column="1" bodyfile="template.class.php" bodystart="68" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template_1a3939045b11b9aaefdf692feb963f0dfc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>output</definition>
+        <argsstring>()</argsstring>
+        <name>output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Output a correctly formatted <ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l" kindref="compound">HTML</ref> (String), after supplementing each template tag identified through each assigned view (*.wad) file.</para><para>String <ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template_1a3939045b11b9aaefdf692feb963f0dfc" kindref="member">output()</ref></para><para><simplesect kind="return"><para>String $output Correctly formatted <ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l" kindref="compound">HTML</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="template.class.php" line="81" column="1" bodyfile="template.class.php" bodystart="81" bodyend="95"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template_1a35932dacc685dbaaf413695f6dd67f36" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static merge</definition>
+        <argsstring>($templates, $separator=&quot;\)</argsstring>
+        <name>merge</name>
+        <param>
+          <declname>$templates</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Merge multiple templates together to output each template view passed as a single string.</para><para>String merge(Array $templates, String $separator)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>Array</parametertype>
+<parametername>$templates</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of templates to be merged. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>String</parametertype>
+<parametername>$separator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Format each template merged with this separator. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>String $output Output all of the merged (or concatenated) content with the separator passed through. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="template.class.php" line="106" column="1" bodyfile="template.class.php" bodystart="106" bodyend="118"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template" kindref="compound">Template</ref> Engine</para><para>Templating engine that generates <ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l" kindref="compound">HTML</ref> files utilizing WAFFLE&apos;s view&apos;s, or &quot;.wad&quot; files </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="50">
+        <label>Preload</label>
+        <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_preload"/>
+        <childnode refid="51" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>Bootstrap</label>
+        <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap"/>
+        <childnode refid="52" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>Template</label>
+        <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template"/>
+        <childnode refid="50" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="52">
+        <label>HTML</label>
+        <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="54">
+        <label>Preload</label>
+        <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_preload"/>
+        <childnode refid="55" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="55">
+        <label>Bootstrap</label>
+        <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap"/>
+        <childnode refid="56" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="53">
+        <label>Template</label>
+        <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template"/>
+        <childnode refid="54" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="56">
+        <label>HTML</label>
+        <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l"/>
+      </node>
+    </collaborationgraph>
+    <location file="template.class.php" line="27" column="1" bodyfile="template.class.php" bodystart="27" bodyend="119"/>
+    <listofallmembers>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template_1a823f9d8bf697d2dd19672687804d05b4" prot="protected" virt="non-virtual"><scope>WAFFLE::Framework::Engines::Template</scope><name>$file</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_preload_1a34cd105e27a4cb6632047ddfdfaa07e8" prot="protected" virt="non-virtual"><scope>WAFFLE::Framework::Engines::Template</scope><name>$File</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template_1a46220846a73e3618f122b00d8c898308" prot="protected" virt="non-virtual"><scope>WAFFLE::Framework::Engines::Template</scope><name>$values</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template_1a8ef77288a5f940c68ebc57fdf0102078" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::Engines::Template</scope><name>__construct</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_preload_1a095c5d389db211932136b53f25f39685" prot="public" virt="non-virtual" ambiguityscope="WAFFLE::Framework::IO::Preload::"><scope>WAFFLE::Framework::Engines::Template</scope><name>__construct</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a3c534563b3b17abd31c70ce81c518a6d" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::Engines::Template</scope><name>anchor</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap_1a96d284570acb2b50b7e934af06d25c8e" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::Engines::Template</scope><name>column</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap_1a9ec86a4d6d518a85ed36db4f23ea2bfa" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::Engines::Template</scope><name>container</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a12602b493053197597cfcaffa61a6e14" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::Engines::Template</scope><name>div</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a3f5f65b7897f31a9a6eae79588a9e6c5" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::Engines::Template</scope><name>favicon</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a7596de1be94a6dc237fa4d435193da8b" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::Engines::Template</scope><name>link</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a77b7fda51b7845d6a6c738efc5d248ff" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::Engines::Template</scope><name>mailto</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template_1a35932dacc685dbaaf413695f6dd67f36" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::Engines::Template</scope><name>merge</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1af2959b14380c3635ed932a5d1b877bd8" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::Engines::Template</scope><name>meta</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template_1a3939045b11b9aaefdf692feb963f0dfc" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::Engines::Template</scope><name>output</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap_1ac9f62997b8f02752fd592c9a831c55af" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::Engines::Template</scope><name>panel</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap_1a65e72e655a53b204edaaef347ad39799" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::Engines::Template</scope><name>row</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a9a92856db6ac937a9dace60224dfaf65" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::Engines::Template</scope><name>script</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template_1aab787bd83f84f4215dceb35f7c305eee" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::Engines::Template</scope><name>set</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_preload_1aa570cf9af0fc24953f4568db3a71ae7b" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::Engines::Template</scope><name>set_script</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a61aeb234b0eb5d6895f91ba5b533bfce" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::Engines::Template</scope><name>tag</name></member>
+      <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap_1a760d6816b7e769fe6915845ea3d77cdd" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::Engines::Template</scope><name>viewport</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,176 @@
+{
+  "vocabulary": {
+    "apple": {
+      "apple-mobile-web-app-capable"
+      "apple-mobile-web-app-status-bar-style"
+      "apple-mobile-web-app-title"
+      "apple-touch-fullscreen"
+      "apple-touch-icon"
+      "apple-touch-startup-image"
+      "format-detection"
+      "viewport"
+    },
+    "html": {
+      "abstract" x
+      "web_author" x
+      "Cache-control" x
+      "Content-Type" x
+      "content-disposition" x
+      "Content-Security-Policy" x
+      "expires" x
+      "imagetoolbar" x
+      "MSThemeCompatible" x
+      "pragma" x
+      "author" x
+      "Pics-label" x
+      "copyright" x
+      "generator" x
+      "googlebot" x
+      "description" x
+      "distribution" x
+      "itemprop"
+      "Content-Script-Type" x
+      "Content-Style-Type" x
+      "keywords" x
+      "language" x
+      "Window-Target" x
+      "no-email-collection" x
+      "refresh" x
+      "Resource-Type" x
+      "rating" x
+      "reply-to" x
+      "revisit-after" x
+      "robots" x
+      "Set-Cookie" x
+    },
+    "blog": {
+      "catalog"
+    },
+    "claimid": {
+      "microid"
+    },
+    "dublincore": {
+      "DC.Contributors" x
+      "DC.Coverage" x
+      "DC.Creator" x
+      "DC.Date" x
+      "DC.Description" x
+      "DC.Format" x
+      "DC.Identifier" x
+      "DC.Language" x
+      "DC.Publisher" x
+      "DC.Relation" x
+      "DC.Rights" x
+      "DC.Source" x
+      "DC.Subject" x
+      "DC.Title" x
+      "DC.Type" x
+      "DCTERMS.abstract"
+      "DCTERMS.accessRights"
+      "DCTERMS.alternative"
+      "DCTERMS.audience"
+      "DCTERMS.available"
+      "DCTERMS.bibliographicCitation"
+      "DCTERMS.conformsTo"
+      "DCTERMS.created"
+      "DCTERMS.dateAccepted"
+      "DCTERMS.dateCopyrighted"
+      "DCTERMS.dateSubmitted"
+      "DCTERMS.extent"
+      "DCTERMS.modified"
+      "DCTERMS.hasFormat"
+      "DCTERMS.hasPart"
+      "DCTERMS.hasVersion"
+      "DCTERMS.isFormatOf"
+      "DCTERMS.isPartOf"
+      "DCTERMS.isReferenceBy"
+      "DCTERMS.isReplacedBy"
+      "DCTERMS.isRequiredBy"
+      "DCTERMS.issued"
+      "DCTERMS.isVersion"
+      "DCTERMS.mediator"
+      "DCTERMS.medium"
+      "DCTERMS.replaces"
+      "DCTERMS.spatial"
+      "DCTERMS.tableOfContents"
+      "DCTERMS.temporal"
+      "DCTERMS.valid"
+    },
+    "geo": {
+      "ICBM"
+      "geo.placename"
+      "geo.position"
+      "geo.region"
+    },
+    "ie": {
+      "Page-Enter"
+      "Page-Exit"
+      "X-UA-Compatible"
+      "application-name"
+      "cleartype"
+      "msapplication-navbutton-color"
+      "msapplication-starturl"
+      "msapplication-task_about"
+      "msapplication-task_jquery"
+      "msapplication-task_list"
+      "msapplication-task_start"
+      "msapplication-tooltip"
+      "msapplication-window"
+      "mssmarttagspreventparsing"
+      "msvalidate.01"
+    },
+    "mobile": {
+      "HandheldFriendly"
+      "MobileOptimized"
+      "viewport"
+    },
+    "opengraph": {
+      "fb:admins"
+      "fb:page_id"
+      "og:audio"
+      "og:audio:album"
+      "og:audio:artist"
+      "og:audio:secure_url"
+      "og:audio:title"
+      "og:audio:type"
+      "og:country-name"
+      "og:description"
+      "og:determiner"
+      "og:image"
+      "og:image:height"
+      "og:image:secure_url"
+      "og:image:type"
+      "og:image:width"
+      "og:locale"
+      "og:locale:alternate"
+      "og:points"
+      "og:postal-code"
+      "og:site_name"
+      "og:street-address"
+      "og:title"
+      "og:type"
+      "og:url"
+      "og:video"
+      "og:video:height"
+      "og:video:secure_url"
+      "og:video:type"
+      "og:video:width"
+    },
+    "rails": {
+      "csrf-param"
+      "csrf-token"
+    },
+    "twitter": {
+      "tweetme"
+    },
+    "win8": {
+      "application-name"
+      "msapplication-TileColor"
+      "msapplication-notification"
+      "msapplication-square150x150logo"
+      "msapplication-square310x310logo"
+      "msapplication-square70x70logo"
+      "msapplication-wide310x150logo"
+    }
+  }
+}

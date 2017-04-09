@@ -1,0 +1,52 @@
+.TH "SessionManager" 3 "Sun Apr 9 2017" "Version 0.35.0.0" "WAFFLE" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SessionManager
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBsec_session_start\fP ($session_name='sec_session_id')"
+.br
+.ti -1c
+.RI "\fBsession_timeout\fP ($inactivity=600)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Session Manager
+.PP
+Instantiates secure session(s) for transmitting data to/from back and front-end(s) 
+.SH "Member Function Documentation"
+.PP 
+.SS "sec_session_start ( $session_name = \fC'sec_session_id'\fP)"
+Custom secure method of initiating a PHP session; call at the top of each page that should access PHP session variable(s)
+.PP
+\fBReturns:\fP
+.RS 4
+NULL Initiates a secure PHP session 
+.RE
+.PP
+
+.SS "session_timeout ( $inactivity = \fC600\fP)"
+[session_timeout description]
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$inactivity\fP [description] 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+NULL [description] 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for WAFFLE from the source code\&.

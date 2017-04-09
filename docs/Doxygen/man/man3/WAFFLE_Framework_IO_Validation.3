@@ -1,0 +1,63 @@
+.TH "Validation" 3 "Sun Apr 9 2017" "Version 0.35.0.0" "WAFFLE" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Validation
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBError\fP\&.
+.PP
+Inherited by \fBFile\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBcheck_file\fP ($file)"
+.br
+.ti -1c
+.RI "\fBemail_format\fP ($email)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBValidation\fP IO
+.PP
+Confirms that transmitted data meets specific criterion prior to allowing a transitional method to progress\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "check_file ( $file)"
+[description]
+.PP
+\fBParameters:\fP
+.RS 4
+\fI[type]\fP $file [description] 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+[type] [description] 
+.RE
+.PP
+
+.SS "email_format ( $email)"
+Validates whether the email passed is a properly formatted email address (i\&.e\&., email@server.net)
+.PP
+Boolean email_format(String $email)
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$email\fP E-mail address to validate 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Boolean Result of validation test 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for WAFFLE from the source code\&.

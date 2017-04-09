@@ -1,0 +1,90 @@
+.TH "File" 3 "Sun Apr 9 2017" "Version 0.35.0.0" "WAFFLE" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+File
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBValidation\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBdownload\fP ($file)"
+.br
+.ti -1c
+.RI "\fBread\fP ($file, $rtn_tp, $latchkey)"
+.br
+.ti -1c
+.RI "\fBwrite\fP ($file, $content, $type='script')"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBFile\fP IO
+.PP
+Class designed to handle various file read, write, and modify methods 
+.SH "Member Function Documentation"
+.PP 
+.SS "download ( $file)"
+Forces a download on the client-side using this server-side method
+.PP
+Mixed download(String $file)
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$file\fP Filename (and/or directory) of the file to be returned/downloaded on the client's system 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Mixed The requested file 
+.RE
+.PP
+
+.SS "read ( $file,  $rtn_tp,  $latchkey)"
+Reads an assortment of flat file types to be returned to the originating method
+.PP
+Mixed read(String $file, Mixed $return_type, $String $key)
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$file\fP Filename (and/or directory) of the file to be returned to the originating method 
+.br
+\fI$rtn_tp\fP Return type or the variable type to return the requested file 
+.br
+\fI$latchkey\fP Credential(s) to pass to decrypt file, if necessary 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Mixed Contents of the requested file 
+.RE
+.PP
+
+.SS "write ( $file,  $content,  $type = \fC'script'\fP)"
+Writes passed content into the filename passed  appended after the filename's last entry
+.PP
+Boolean write(String $file, String $content, String $type)
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$file\fP description 
+.br
+\fI$content\fP description 
+.br
+\fI$type\fP description 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Boolean description 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for WAFFLE from the source code\&.

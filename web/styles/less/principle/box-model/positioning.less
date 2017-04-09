@@ -1,0 +1,79 @@
+/*
+ *  Set:    CSS Positioning
+ *  Notes:  Module that defines how to position elements on the page.
+ */
+
+/* Bottom */
+// Property specifies the position of positioned
+// elements.
+// - CSS2
+.bottom(arg: auto) {
+    bottom: @arg;
+    // > auto'  |  <length> | initial | inherit
+}
+
+/* Clear */
+// Clear CSS property and whether an element can be next
+// to floating elements preceding it or must be moved
+// down (cleared) below them.
+// - CSS1
+.clear(arg: none) {
+    clear: @arg;
+    // > none' | left | right | both | initial | inherit
+}
+
+/* Float */
+// Property specifies that an element should be taken
+// from the normal flow and placed along the left or
+// right side of its container, where text and inline
+// elements will wrap around it.
+// - CSS1
+.float(arg: none) {
+    float: @arg;
+    // > none' | left | right | initial | inherit
+}
+
+/* Left */
+// Property specifies the position of positioned
+// elements.
+// - CSS2
+.left(arg: auto) {
+    left: @arg;
+    // > auto' | <length> | initial | inherit
+}
+
+/* Position */
+// Property chooses rules for positioning elements,
+// designed to be useful for scripted animation effects
+// - CSS2
+.position(arg: static) {
+    position: @arg;
+    // > static | absolute | fixed | relative | initial | inherit
+}
+
+/* Right */
+// Property specifies the position of positioned
+// elements.
+// - CSS2
+.right(arg: auto) {
+    right: @arg;
+    // > auto | <length> | initial | inherit
+}
+
+/* Top */
+// Property specifies the position of positioned
+// elements.
+// - CSS2
+.top(arg: auto) {
+    top: @arg;
+    // > auto | <length> | initial | inherit
+}
+
+/* Z-Index */
+// Property specifies the z-order of an element and
+// its descendants.
+// - CSS2
+.z-index(arg: auto) {
+    z-index: @arg;
+    // > auto' | <number> | initial | inherit
+}

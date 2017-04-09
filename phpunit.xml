@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+    colors="true"
+    verbose="true"
+    >
+
+    <testsuites>
+        <groups>
+            <include>
+                <group>Bootstrap</group>
+                <group>Database</group>
+                <group>Encryption</group>
+                <group>Error_Handling</group>
+                <group>Generic_Code</group>
+                <group>HTML</group>
+                <group>Logging</group>
+                <group>MVC</group>
+                <group>Session_Management</group>
+                <group>Validation</group>
+            </include>
+            <exlude>
+                <group>Crude</group>
+                <group>Disconnected</group>
+                <group>Experimental</group>
+                <group>Incomplete</group>
+                <group>Limited</group>
+                <group>Partial</group>
+                <group>Rolling</group>
+                <group>Rudimentary</group>
+                <group>Test</group>
+            </exlude>
+        </groups>
+        <testsuite name="WAFFLE_index">
+            <file>index.test.php</file>
+        </testsuite>
+    </testsuites>
+
+    <listeners>
+        <listener class="JohnKary\PHPUnit\Listener\SpeedTrapListener">
+            <arguments>
+                <array>
+                    <element key="slowThreshold">
+                        <integer>500</integer>
+                    </element>
+                    <element key="reportLength">
+                        <integer>5</integer>
+                    </element>
+                </array>
+            </arguments>
+        </listener>
+    </listeners>
+
+    <logging>
+        <log type="coverage-html" target="../docs/phpUnit" lowUpperBound="25" highLowerBound="70"/>
+        <log type="json" target="../data/json/phpunit_log.json"/>
+    </logging>
+
+</phpunit>

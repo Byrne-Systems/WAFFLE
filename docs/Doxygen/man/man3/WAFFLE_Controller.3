@@ -1,0 +1,115 @@
+.TH "WAFFLE\Controller" 3 "Thu Jan 19 2017" "Version 0.2.3-prerelease+build" "WAFFLE" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+WAFFLE\Controller
+.SH SYNOPSIS
+.br
+.PP
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fB$web\fP ['layout'] = rtrim(dirname(__FILE__), '/inc') \&. '/web/views/layout/'"
+.br
+.ti -1c
+.RI "\fB$web\fP ['head'] = rtrim(dirname(__FILE__), '/inc') \&. '/web/views/head/'"
+.br
+.ti -1c
+.RI "\fB$web\fP ['body'] = rtrim(dirname(__FILE__), '/inc') \&. '/web/views/body/'"
+.br
+.ti -1c
+.RI "\fB$web\fP ['app'] = rtrim(dirname(__FILE__), '/inc') \&. '/web/views/'"
+.br
+.ti -1c
+.RI "\fB$web\fP ['images'] = rtrim(dirname(__FILE__), '/inc') \&. '/web/images/'"
+.br
+.ti -1c
+.RI "\fB$notes\fP = new \fBTemplate\fP($web['head'] \&. 'notes\&.wad')"
+.br
+.ti -1c
+.RI "\fB$meta\fP = new \fBTemplate\fP($web['head'] \&. 'meta\&.wad')"
+.br
+.ti -1c
+.RI "\fB$styles\fP = new \fBTemplate\fP($web['head'] \&. 'style\-sheets\&.wad')"
+.br
+.ti -1c
+.RI "\fB$script\fP = new \fBTemplate\fP($web['head'] \&. 'script\&.wad')"
+.br
+.ti -1c
+.RI "\fB$layout\fP = new \fBTemplate\fP($web['layout'] \&. 'html5\&.wad')"
+.br
+.ti -1c
+.RI "\fB$header\fP = new \fBTemplate\fP($web['body'] \&. 'header\&.wad')"
+.br
+.ti -1c
+.RI "\fB$main\fP = new \fBTemplate\fP($web['body'] \&. 'main\&.wad')"
+.br
+.ti -1c
+.RI "\fB$footer\fP = new \fBTemplate\fP($web['body'] \&. 'footer\&.wad')"
+.br
+.ti -1c
+.RI "\fB$app\fP = new \fBTemplate\fP($web['app'] \&. 'app\&.wad')"
+.br
+.in -1c
+.SH "Variable Documentation"
+.PP 
+.SS "$app = new \fBTemplate\fP($web['app'] \&. 'app\&.wad')"
+
+.PP
+Definition at line 48 of file controller\&.php\&.
+.SS "$footer = new \fBTemplate\fP($web['body'] \&. 'footer\&.wad')"
+
+.PP
+Definition at line 45 of file controller\&.php\&.
+.SS "$header = new \fBTemplate\fP($web['body'] \&. 'header\&.wad')"
+
+.PP
+Definition at line 43 of file controller\&.php\&.
+.SS "$layout = new \fBTemplate\fP($web['layout'] \&. 'html5\&.wad')"
+
+.PP
+Definition at line 40 of file controller\&.php\&.
+.SS "$main = new \fBTemplate\fP($web['body'] \&. 'main\&.wad')"
+
+.PP
+Definition at line 44 of file controller\&.php\&.
+.SS "$meta = new \fBTemplate\fP($web['head'] \&. 'meta\&.wad')"
+
+.PP
+Definition at line 31 of file controller\&.php\&.
+.SS "$notes = new \fBTemplate\fP($web['head'] \&. 'notes\&.wad')"
+
+.PP
+Definition at line 30 of file controller\&.php\&.
+.SS "$script = new \fBTemplate\fP($web['head'] \&. 'script\&.wad')"
+
+.PP
+Definition at line 33 of file controller\&.php\&.
+.SS "$styles = new \fBTemplate\fP($web['head'] \&. 'style\-sheets\&.wad')"
+
+.PP
+Definition at line 32 of file controller\&.php\&.
+.SS "$web[ 'layout'] = rtrim(dirname(__FILE__), '/inc') \&. '/web/views/layout/'"
+
+.PP
+Definition at line 19 of file controller\&.php\&.
+.SS "$web[ 'head'] = rtrim(dirname(__FILE__), '/inc') \&. '/web/views/head/'"
+
+.PP
+Definition at line 20 of file controller\&.php\&.
+.SS "$web[ 'body'] = rtrim(dirname(__FILE__), '/inc') \&. '/web/views/body/'"
+
+.PP
+Definition at line 21 of file controller\&.php\&.
+.SS "$web[ 'app'] = rtrim(dirname(__FILE__), '/inc') \&. '/web/views/'"
+
+.PP
+Definition at line 22 of file controller\&.php\&.
+.SS "$web[ 'images'] = rtrim(dirname(__FILE__), '/inc') \&. '/web/images/'"
+
+.PP
+Definition at line 23 of file controller\&.php\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for WAFFLE from the source code\&.

@@ -1,0 +1,93 @@
+/*
+ *  Set:    CSS Animations
+ *  Notes:  Module that defines how to animate the values of CSS properties over time, using
+ *          key-frames.
+ */
+
+/* Animation */
+//  Animation-name/duration/timing-function/delay/
+//  iteration-count/direction/fill-mode &
+//  animation-play-state.
+// - CSS3
+.animation(@arg: none 0 ease 0 1 normal none running) {
+    animation: @arg;
+    // <animation-name>            = <keyframename> | none'| initial | inherit
+    // <animation-duration>        = <time>' | initial | inherit
+    // <animation-timing-function> = linear | ease' | ease-in | ease-out | cubic-bezier(n,n,n,n) | initial | inherit
+    // <animation-delay>           = <time>' | initial | inherit
+    // <animation-iteration-count> = <number>' | infinite | initial | inherit
+    // <animation-direction>       = normal' | reverse | alternate | alternate-reverse | initial | inherit
+    // <animation-fill-mode>       = none' | forwards | backwards | both | initial | inherit
+    // <animation-play-state>      = paused | running' | initial | inherit
+    // > (<name>, <duration>, <timing-function>, <delay>, <iteration-count>, <direction>, <fill-mode>, <play-state>)
+}
+
+/* Animation-Delay */
+// Specifies when the animation should start.
+// - CSS3
+.animation-delay(@arg: 0) {
+    animation-delay: @arg;
+    // > <time>^ | initial | inherit
+}
+
+/* Animation-Direction */
+// Indicates whether the animation should play in
+// reverse on alternate cycles.
+// - CSS3
+.animation-direction(@arg: normal) {
+    animation-direction: @arg;
+    // > normal^ | reverse | alternate | alternate-reverse | initial | inherit
+}
+
+/* Animation-Duration */
+// Specifies the length of time that an animation should
+// take to complete one cycle.
+// - CSS3
+.animation-duration(@arg: 0) {
+    animation-duration: @arg;
+    // > <time>^ | initial | inherit
+}
+
+/* Animation-Fill-Mode */
+// Specifies how a CSS animation should apply styles to
+// its target before and after it is executing.
+// - CSS3
+.animation-fill-mode(@arg: none) {
+    animation-fill-mode: @arg;
+    // > none^ | forwards | backwards | both | initial | inherit
+}
+
+/* Animation-Iteration-Count */
+// Defines the number of times an animation cycle should
+// be played before stopping.
+// - CSS3
+.animation-iteration-count(@arg: 1) {
+    animation-iteration-count: @arg;
+    // > <number> | infinite | initial | inherit
+}
+
+/* Animation-Name */
+// Specifies a list of animations that should be applied
+// to the selected element.
+// - CSS3
+.animation-name(@arg: none) {
+    animation-name: @arg;
+    // > <keyframename> | none^ | initial | inherit
+}
+
+/* Animation-Play-State */
+// Determines whether an animation is running or paused.
+// - CSS3
+.animation-play-state(@arg: running) {
+    animation-play-state: @arg;
+    // > paused | running^ | initial | inherit
+}
+
+/* Animation-Timing-Function */
+// Specifies how a CSS animation should progress over
+// the duration of each cycle.
+// - CSS3
+.animation-timing-function(@arg: ease) {
+    animation-timing-function: @arg;
+    // > linear | ease^ | ease-in | ease-out | cubic-bezier(n,n,n,n) | initial | inherit
+}

@@ -1,0 +1,59 @@
+/*
+ *  Set:    CSS Tables
+ *  Notes:  Module that defines how to lay out and represent table data.
+ */
+
+/* border-collapse */
+// Determines whether a table's borders are separated or
+// collapsed.
+// - CSS2
+.border-collapse(@arg: separate) {
+    border-collapse: @arg;
+    // > separate' | collapse | initial | inherit
+}
+
+/* border-spacing */
+// Specifies the distance between the borders of
+// adjacent table cells (only for the separated borders
+// model).
+// - CSS2
+.border-spacing(@arg: 0) {
+    border-spacing: @arg;
+    // > <length>' | initial | inherit
+}
+
+/* caption-side */
+// The caption-side CSS property positions the content
+// of a table's <caption> on the specified side.
+// - CSS2
+.caption-side(@arg: top) {
+    caption-side: @arg;
+    // > top' | bottom | initial | inherit
+}
+
+/* empty-cells */
+// Specifies how user agents should render borders and
+// backgrounds around cells that have no visible content.
+// - CSS2
+.empty-cells(@arg: show) {
+    empty-cells: @arg;
+    // > show' | hide | initial | inherit
+}
+
+/* table-layout */
+// Defines the algorithm to be used to layout the table
+// cells, rows, and columns.
+// - CSS2
+.table-layout(@arg: auto) {
+    table-layout: @arg;
+    // > auto' | fixed | initial | inherit
+}
+
+/* vertical-align */
+// Specifies the vertical alignment of an inline or
+// table-cell box.
+// - CSS1
+.vertical-align(@arg: baseline) {
+    vertical-align: @arg;
+    // > baseline' | <length> | sub | super | top | text-top | middle | bottom | text-bottom | initial | inherit
+}

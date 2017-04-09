@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_97aefd0d527b934f1d99a682da8fe6a9" kind="dir">
+    <compoundname>C:/xampp/htdocs/apps/WAFFLE/lib</compoundname>
+    <innerdir refid="dir_9586ff2d21d6e5a78582f85b2813f96d">C:/xampp/htdocs/apps/WAFFLE/lib/.framework</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/xampp/htdocs/apps/WAFFLE/lib/"/>
+  </compounddef>
+</doxygen>

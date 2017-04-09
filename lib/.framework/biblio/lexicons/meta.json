@@ -1,0 +1,305 @@
+{
+  "vocabulary": {
+    "html": {
+      "Cache-control": {
+        "type": "http-equiv",
+        "content": {
+          "delimiter": "none",
+          "directives": [
+            "NO-CACHE",
+            "NO-STORE",
+            "PRIVATE",
+            "PUBLIC"
+          ]
+        }
+      },
+      "Content-Language": {
+        "type": "http-equiv",
+        "content": {
+          "delimiter": ",",
+          "directives": [
+            "@ISO_639-1"
+          ]
+        }
+      },
+      "Content-Script-Type": {
+        "type": "http-equiv",
+        "content": {
+          "delimiter": "none",
+          "directives": [
+            "@MIMETYPES"
+          ]
+        }
+      },
+      "Content-Security-Policy": {
+        "type": "http-equiv",
+        "content": {
+          "delimiter": ";",
+          "directives": [
+            "CHILD-SRC",
+            "CONNECT-SRC",
+            "DEFAULT-SRC",
+            "FONT-SRC",
+            "FRAME-SRC",
+            "IMG-SRC",
+            "MEDIA-SRC",
+            "OBJECT-SRC",
+            "OBJECT-SRC",
+            "REPORT-URI",
+            "SANDBOX",
+            "SCRIPT-SRC",
+            "STYLE-SRC"
+          ]
+        }
+      },
+      "Content-Style-Type": {
+        "type": "http-equiv",
+        "content": {
+          "delimiter": "none",
+          "directives": [
+            "@MIMETYPES"
+          ]
+        }
+      },
+      "Content-Type": {
+        "type": "http-equiv",
+        "content": {
+          "delimiter": ";",
+          "directives": [
+            "CHARSET=",
+            "text/html"
+          ]
+        }
+      },
+      "MSThemeCompatible": {
+        "type": "http-equiv",
+        "content": {
+          "delimiter": "none",
+          "directives": [
+            "YES",
+            "NO"
+          ]
+        }
+      },
+      "Pics-label": {
+        "type": "http-equiv",
+        "content": {
+          "delimiter": "none",
+          "directives": [
+            "(PICS-1.1 'entries')"
+          ]
+        }
+      },
+      "Resource-Type": {
+        "type": "http-equiv",
+        "content": {
+          "delimiter": "none",
+          "directives": [
+            "DOCUMENT"
+          ]
+        }
+      },
+      "Set-Cookie": {
+        "type": "http-equiv",
+        "content": {
+          "delimiter": ";",
+          "directives": [
+            "NAME",
+            "PATH=",
+            "EXPIRES"
+          ]
+        }
+      },
+      "Window-Target": {
+        "type": "http-equiv",
+        "content": {
+          "delimiter": "none",
+          "directives": [
+            "_TOP",
+            "_SELF",
+            "_BLANK",
+            "_PARENT"
+          ]
+        }
+      },
+      "abstract": {
+        "type": "name",
+        "content": {
+          "delimiter": "none",
+          "directives": []
+        }
+      },
+      "author": {
+        "type": "name",
+        "content": {
+          "delimiter": "none",
+          "directives": []
+        }
+      },
+      "content-disposition": {
+        "type": "http-equiv",
+        "content": {
+          "delimiter": ";",
+          "directives": [
+            "ATTACHMENT",
+            "CREATION-DATE=",
+            "FILENAME=",
+            "INLINE",
+            "MODIFICATION-DATE=",
+            "READ-DATE=",
+            "SIZE=",
+            "@MIMETYPES"
+          ]
+        }
+      },
+      "copyright": {
+        "type": "name",
+        "content": {
+          "delimiter": "none",
+          "directives": []
+        }
+      },
+      "description": {
+        "type": "name",
+        "content": {
+          "delimiter": "none",
+          "directives": []
+        }
+      },
+      "distribution": {
+        "type": "name",
+        "content": {
+          "delimiter": "none",
+          "directives": [
+            "GLOBAL",
+            "LOCAL",
+            "IU"
+          ]
+        }
+      },
+      "expires": {
+        "type": "name",
+        "content": {
+          "delimiter": "none",
+          "directives": []
+        }
+      },
+      "generator": {
+        "type": "name",
+        "content": {
+          "delimiter": "none",
+          "directives": []
+        }
+      },
+      "googlebot": {
+        "type": "name",
+        "content": {
+          "delimiter": "none",
+          "directives": [
+            "NOARCHIVE",
+            "NOFOLLOW",
+            "NOINDEX",
+            "NOODP",
+            "NOSNIPPET"
+          ]
+        }
+      },
+      "imagetoolbar": {
+        "type": "http-equiv",
+        "content": {
+          "delimiter": "none",
+          "directives": [
+            "YES",
+            "NO"
+          ]
+        }
+      },
+      "keywords": {
+        "type": "name",
+        "content": {
+          "delimiter": ",",
+          "directives": []
+        }
+      },
+      "language": {
+        "type": "name",
+        "content": {
+          "delimiter": "none",
+          "directives": [
+            "@spoken-languages"
+          ]
+        }
+      },
+      "no-email-collection": {
+        "type": "name",
+        "content": {
+          "delimiter": "none",
+          "directives": []
+        }
+      },
+      "pragma": {
+        "type": "http-equiv",
+        "content": {
+          "delimiter": "none",
+          "directives": [
+            "NO-CACHE"
+          ]
+        }
+      },
+      "rating": {
+        "type": "name",
+        "content": {
+          "delimiter": "none",
+          "directives": [
+            "14 YEARS",
+            "GENERAL",
+            "MATURE",
+            "RESTRICTED",
+            "SAFE FOR KIDS"
+          ]
+        }
+      },
+      "refresh": {
+        "type": "name",
+        "content": {
+          "delimiter": "none",
+          "directives": []
+        }
+      },
+      "reply-to": {
+        "type": "name",
+        "content": {
+          "delimiter": "none",
+          "directives": []
+        }
+      },
+      "revisit-after": {
+        "type": "name",
+        "content": {
+          "delimiter": "none",
+          "directives": []
+        }
+      },
+      "robots": {
+        "type": "name",
+        "content": {
+          "delimiter": ",",
+          "directives": [
+            "INDEX",
+            "FOLLOW",
+            "ALL",
+            "NOINDEX",
+            "NOFOLLOW"
+          ]
+        }
+      },
+      "web_author": {
+        "type": "name",
+        "content": {
+          "delimiter": "none",
+          "directives": []
+        }
+      }
+    }
+  }
+}

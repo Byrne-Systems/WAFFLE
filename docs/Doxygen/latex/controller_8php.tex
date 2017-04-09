@@ -1,0 +1,40 @@
+\hypertarget{controller_8php}{}\subsection{C\+:/xampp/htdocs/apps/\+W\+A\+F\+F\+L\+E/inc/controller.php File Reference}
+\label{controller_8php}\index{C\+:/xampp/htdocs/apps/\+W\+A\+F\+F\+L\+E/inc/controller.\+php@{C\+:/xampp/htdocs/apps/\+W\+A\+F\+F\+L\+E/inc/controller.\+php}}
+\subsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespace_controllers}{Controllers}
+\begin{DoxyCompactList}\small\item\em Instantiates and sets new (secure) session(s) for transmitting data to/from the user\textquotesingle{}s UI (or front-\/end) with an application\textquotesingle{}s business logic (or back-\/end) \end{DoxyCompactList}\item 
+ \hyperlink{namespace_w_a_f_f_l_e_1_1_controller}{W\+A\+F\+F\+L\+E\textbackslash{}\+Controller}
+\end{DoxyCompactItemize}
+\subsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespace_w_a_f_f_l_e_1_1_controller_addf129be55acc267c327e86398d34ac5}{\$web} \mbox{[}\textquotesingle{}layout\textquotesingle{}\mbox{]} = rtrim(dirname(\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+), \textquotesingle{}/inc\textquotesingle{}) . \textquotesingle{}/web/views/layout/\textquotesingle{}
+\item 
+\hyperlink{namespace_w_a_f_f_l_e_1_1_controller_a1d17c9f36b6261d10ed0564bc749f629}{\$web} \mbox{[}\textquotesingle{}head\textquotesingle{}\mbox{]} = rtrim(dirname(\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+), \textquotesingle{}/inc\textquotesingle{}) . \textquotesingle{}/web/views/head/\textquotesingle{}
+\item 
+\hyperlink{namespace_w_a_f_f_l_e_1_1_controller_a119f09626762a89e6abf1852ee071671}{\$web} \mbox{[}\textquotesingle{}body\textquotesingle{}\mbox{]} = rtrim(dirname(\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+), \textquotesingle{}/inc\textquotesingle{}) . \textquotesingle{}/web/views/body/\textquotesingle{}
+\item 
+\hyperlink{namespace_w_a_f_f_l_e_1_1_controller_ade212434c225bbfae525dc5ec32399c3}{\$web} \mbox{[}\textquotesingle{}app\textquotesingle{}\mbox{]} = rtrim(dirname(\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+), \textquotesingle{}/inc\textquotesingle{}) . \textquotesingle{}/web/views/\textquotesingle{}
+\item 
+\hyperlink{namespace_w_a_f_f_l_e_1_1_controller_aa973df704de61f7d3bb7b360b1824901}{\$web} \mbox{[}\textquotesingle{}images\textquotesingle{}\mbox{]} = rtrim(dirname(\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+), \textquotesingle{}/inc\textquotesingle{}) . \textquotesingle{}/web/images/\textquotesingle{}
+\item 
+\hyperlink{namespace_w_a_f_f_l_e_1_1_controller_a2bfacb2c81cae66264f765b0a20599c6}{\$notes} = new Template(\$web\mbox{[}\textquotesingle{}head\textquotesingle{}\mbox{]} . \textquotesingle{}notes.\+wad\textquotesingle{})
+\item 
+\hyperlink{namespace_w_a_f_f_l_e_1_1_controller_a9e6fc1ae0498be7d1e682f8bcc9299df}{\$meta} = new Template(\$web\mbox{[}\textquotesingle{}head\textquotesingle{}\mbox{]} . \textquotesingle{}meta.\+wad\textquotesingle{})
+\item 
+\hyperlink{namespace_w_a_f_f_l_e_1_1_controller_a920c320068535c09e154c6707eb42ded}{\$styles} = new Template(\$web\mbox{[}\textquotesingle{}head\textquotesingle{}\mbox{]} . \textquotesingle{}style-\/sheets.\+wad\textquotesingle{})
+\item 
+\hyperlink{namespace_w_a_f_f_l_e_1_1_controller_af1de23de512bb5bf634c157dbb1b7758}{\$script} = new Template(\$web\mbox{[}\textquotesingle{}head\textquotesingle{}\mbox{]} . \textquotesingle{}script.\+wad\textquotesingle{})
+\item 
+\hyperlink{namespace_w_a_f_f_l_e_1_1_controller_a2b0d08e73a90b9443ce37506b7c6a544}{\$layout} = new Template(\$web\mbox{[}\textquotesingle{}layout\textquotesingle{}\mbox{]} . \textquotesingle{}html5.\+wad\textquotesingle{})
+\item 
+\hyperlink{namespace_w_a_f_f_l_e_1_1_controller_a4f44601f2b9dc8a1644bce53c94ce622}{\$header} = new Template(\$web\mbox{[}\textquotesingle{}body\textquotesingle{}\mbox{]} . \textquotesingle{}header.\+wad\textquotesingle{})
+\item 
+\hyperlink{namespace_w_a_f_f_l_e_1_1_controller_a67a14860123d3f27f92196239b0a5b46}{\$main} = new Template(\$web\mbox{[}\textquotesingle{}body\textquotesingle{}\mbox{]} . \textquotesingle{}main.\+wad\textquotesingle{})
+\item 
+\hyperlink{namespace_w_a_f_f_l_e_1_1_controller_abaa4216c852c51c380dd8f10d3cfe944}{\$footer} = new Template(\$web\mbox{[}\textquotesingle{}body\textquotesingle{}\mbox{]} . \textquotesingle{}footer.\+wad\textquotesingle{})
+\item 
+\hyperlink{namespace_w_a_f_f_l_e_1_1_controller_adfb117f244076aa9bc269269f7e57403}{\$app} = new Template(\$web\mbox{[}\textquotesingle{}app\textquotesingle{}\mbox{]} . \textquotesingle{}app.\+wad\textquotesingle{})
+\end{DoxyCompactItemize}

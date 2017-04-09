@@ -1,0 +1,112 @@
+/*
+ *  Set:    CSS Fonts
+ *  Notes:  Module that defines font-related properties and how font resources are loaded. Allows to
+ *          define the style of a font, family, size, weight, and/or the variant of the glyph
+ */
+
+/* Font-Face */
+// Allows authors to specify online fonts to display
+// text on their web pages.
+// - CSS3
+.font-face(@fontname, @fontfile, @weight: normal, @style: normal) {
+    @font-face {
+        font-family: @fontname;
+        src: url("@{fontfile}.eot");
+        src: url("@{fontfile}.eot?#iefix") format('embedded-opentype'),
+             url("@{fontfile}.woff") format('woff'),
+             url("@{fontfile}.ttf") format('truetype'),
+             url("@{fontfile}.svg#icon") format('svg');
+
+        font-weight: @weight;
+        font-style:  @style;
+    }
+}
+
+/* Font */
+// Shorthand property for setting font-style/variant/
+// weight/size, line-height and font-family.
+// - CSS1
+.font(@arg: normal 16px Arial) {
+    font: @arg;
+    // <font-style>            = normal' | italic | oblique | initial | inherit
+    // <font-variant>          = normal | small-caps | initial | inherit
+    // <font-weight>           = normal | bold | bolder | lighter | number | initial | inherit
+    // <font-size/line-height> = <number>' | [number|px|pt|em|rem] | medium | xx-small | x-small | small | large | x-large | xx-large | smaller | larger | length | initial | inherit
+    // <font-family>           = <font>' | initial | inherit
+    // > (<font-style>, <font-variant>, <font-weight>, <font-size/line-height>, <font-family>) | caption | icon | menu | message-box | small-caption | status-bar | initial | inherit
+}
+
+/* Font-Family */
+// Lets you specify a prioritized list of font family
+// names and/or generic family names for the selected
+// element.
+// - CSS1
+.font-family(@arg: Arial) {
+    font-family: @arg;
+    // > <font>' | initial | inherit
+}
+
+/* Font-Size */
+// Specifies the size of the font.
+// - CSS1
+.font-size(@arg: inherit) {
+    font-size: @arg;
+    // > medium | xx-small | x-small | small | large | x-large | xx-large | smaller | larger | length | initial | inherit'
+}
+
+/* Font-Size-Adjust */
+// Specifies that font size should be chosen based on
+// the height of lowercase letters rather than the
+// height of capital letters.
+// - CSS3
+.font-size-adjust(@arg: none) {
+    font-size-adjust: @arg;
+    // > <number> | none' | initial | inherit
+}
+
+/* Font-Stretch */
+// Selects a normal, condensed, or expanded face from a
+// font.
+// - CSS3
+.font-stretch(@arg: normal) {
+    font-stretch: @arg;
+    // > ultra-condensed | extra-condensed | condensed | semi-condensed | normal' | semi-expanded | expanded | extra-expanded | ultra-expanded | initial | inherit
+}
+
+/* Font-Style */
+// Lets you select italic or oblique faces within a
+// font-family.
+// - CSS1
+.font-style(@arg: normal) {
+    font-style: @arg;
+    // > normal' | italic | oblique | initial | inherit
+}
+
+/* Font-Variant */
+// Acts as a shorthand for the longhand properties:
+// font-variant-caps/numeric/alternates/ligatures/
+// east-asian.
+// - CSS1
+.font-variant(@arg: normal) {
+    font-variant: @arg;
+    // > normal' | small-caps | initial | inherit
+}
+
+/* Font-Weight */
+// Specifies the weight or boldness of the font. Some
+// fonts are only available in normal and bold.
+// - CSS1
+.font-weight(@arg: normal) {
+    font-weight: @arg;
+    // > normal' | bold | bolder | lighter | number | initial | inherit
+}
+
+/* Line-Height */
+// On block level elements, the line-height property
+// specifies the minimum height of line boxes within the
+// element.
+// - CSS1
+.line-height(@arg: normal) {
+    line-height: @arg;
+    // > normal' | number | length | initial | inherit
+}
