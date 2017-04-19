@@ -180,4 +180,8 @@
   </compound>
   <compound refid="todo" kind="page"><name>todo</name>
   </compound>
+  <compound refid="dir_f09aa78e6e0b7c9ef3d36e8f0dd79b0c" kind="dir"><name>C:/xampp/htdocs/apps/WAFFLE/lib/_Framework</name>
+  </compound>
+  <compound refid="dir_97aefd0d527b934f1d99a682da8fe6a9" kind="dir"><name>C:/xampp/htdocs/apps/WAFFLE/lib</name>
+  </compound>
 </doxygenindex>

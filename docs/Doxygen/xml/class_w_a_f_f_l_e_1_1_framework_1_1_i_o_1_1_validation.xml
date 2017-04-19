@@ -28,7 +28,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="validation.class.php" line="33" column="1" bodyfile="validation.class.php" bodystart="33" bodyend="42"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/validation.class.php" line="33" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/validation.class.php" bodystart="33" bodyend="42"/>
       </memberdef>
       <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_validation_1a93629f2b411f25d13fac77a36470fbae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -54,7 +54,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="validation.class.php" line="53" column="1" bodyfile="validation.class.php" bodystart="53" bodyend="65"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/validation.class.php" line="53" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/validation.class.php" bodystart="53" bodyend="65"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -103,7 +103,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="validation.class.php" line="26" column="1" bodyfile="validation.class.php" bodystart="26" bodyend="66"/>
+    <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/validation.class.php" line="26" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/validation.class.php" bodystart="26" bodyend="66"/>
     <listofallmembers>
       <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_validation_1a4ff84cc981fb60ee42f19420441e8d7b" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::IO::Validation</scope><name>check_file</name></member>
       <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_validation_1a93629f2b411f25d13fac77a36470fbae" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::IO::Validation</scope><name>email_format</name></member>

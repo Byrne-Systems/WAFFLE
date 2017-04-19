@@ -43,6 +43,6 @@
 <codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="68"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="error.class.php"/>
+    <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/error.class.php"/>
   </compounddef>
 </doxygen>

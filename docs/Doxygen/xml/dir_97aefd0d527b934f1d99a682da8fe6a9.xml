@@ -2,7 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
   <compounddef id="dir_97aefd0d527b934f1d99a682da8fe6a9" kind="dir">
     <compoundname>C:/xampp/htdocs/apps/WAFFLE/lib</compoundname>
-    <innerdir refid="dir_9586ff2d21d6e5a78582f85b2813f96d">C:/xampp/htdocs/apps/WAFFLE/lib/.framework</innerdir>
+    <innerdir refid="dir_f09aa78e6e0b7c9ef3d36e8f0dd79b0c">C:/xampp/htdocs/apps/WAFFLE/lib/_Framework</innerdir>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

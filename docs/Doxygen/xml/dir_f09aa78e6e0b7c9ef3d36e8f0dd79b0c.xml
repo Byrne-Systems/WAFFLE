@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_f09aa78e6e0b7c9ef3d36e8f0dd79b0c" kind="dir">
+    <compoundname>C:/xampp/htdocs/apps/WAFFLE/lib/_Framework</compoundname>
+    <innerfile refid="bootstrap_8class_8php">bootstrap.class.php</innerfile>
+    <innerfile refid="cipher_8class_8php">cipher.class.php</innerfile>
+    <innerfile refid="collection_8class_8php">collection.class.php</innerfile>
+    <innerfile refid="error_8class_8php">error.class.php</innerfile>
+    <innerfile refid="file_8class_8php">file.class.php</innerfile>
+    <innerfile refid="html_8class_8php">html.class.php</innerfile>
+    <innerfile refid="html_8interface_8php">html.interface.php</innerfile>
+    <innerfile refid="log_8class_8php">log.class.php</innerfile>
+    <innerfile refid="preload_8class_8php">preload.class.php</innerfile>
+    <innerfile refid="session-manager_8class_8php">session-manager.class.php</innerfile>
+    <innerfile refid="sql_8class_8php">sql.class.php</innerfile>
+    <innerfile refid="template_8class_8php">template.class.php</innerfile>
+    <innerfile refid="template_8interface_8php">template.interface.php</innerfile>
+    <innerfile refid="validation_8class_8php">validation.class.php</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/"/>
+  </compounddef>
+</doxygen>

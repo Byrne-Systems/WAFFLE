@@ -6,6 +6,6 @@
     </briefdescription>
     <detaileddescription>
 <para>Bootstrap Component Markup Assembler that parses native bootstrap component markup, containers, rows, columns, and elements.</para><para>Secure cryptographic encryption and decryption solutions for securing sensitive data through flat files, database cells, or other framework modules</para><para>Collection Assembly designed as an OOP wrapper to wrap around an Array of Arrays (AoA) while using lazy instantiation to create elements in this array</para><para>Error IO</para><para>[Description]</para><para>Parses files contents prior to writing, modifying, or returning contents once read from source.</para><para>Generates various HTML specific semantic tags that can be implemented throughout any WAFFLE web-document or application.</para><para>[Description]</para><para>Pre-loads special code, jobs, libraries, or style-sheets prior to an Bootstrap document (or application) rendering its body (or content).</para><para>Includes various methods to establish a connection and communicate (or query) an SQL database.</para><para>Templating engine developed to substitute special WAFFLE tags while publishing a clean HTML document</para><para>Endorses that specific content, input, or data is appropriately organized and/or formatted prior to advancing intermediate subroutines.</para>    </detaileddescription>
-    <location file="bootstrap.class.php" line="6" column="1"/>
+    <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/bootstrap.class.php" line="6" column="1"/>
   </compounddef>
 </doxygen>

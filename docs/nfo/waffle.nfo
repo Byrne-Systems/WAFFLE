@@ -1,0 +1,1613 @@
+WAFFLE : Web-Application Fundamental Framework Layered Environment
+
+Mission
+====================================================================================================
+  ❑ Streamline Web-Application Development
+  ❑ Negate uneccessary redundancies propogated from back-end business rules and dynamic operations
+  ❑ Environment
+    ❑ Standard
+        Renders and returns a think client without prunning any redudant and/or unnesseccarily heavy
+        operations or tasks, prior to the user-end client being parsed and then rendered.
+    ❑ Strict
+        Renders and returns a thin layer response (i.e., doc, application, etc..) as a results from
+        pre-parsing all comphrensive (or load/overhead intensive) operations prior to writing the
+        thin client
+
+Framework architecture(s)
+====================================================================================================
+    Software Services:
+    ------------------------------------------------------------------------------------------------
+      Server-Side:
+        ➟ Services
+          ❑ PHP                     @version 5.6.15
+          ❑ Apache                  @version 2.4
+          ❑ MySQL                   @version 5.6.25 (Community Server)
+          ❑ Less.php                @version 1.7.0.9
+
+        ▼ Packages
+          ❑ PEAR                    @version: 1.10.1
+          ❑ Composer                @version: 1.0-dev
+
+          ➟ API Documentation
+            ❑ phpDocumentor2        @version: 2.8.1
+            ❑ Graphviz              @version: 2.38
+
+          ➟ Debug
+            ❑ Xdebug                @version: 2.2.5
+            ❑ WinCacheGrind         @version: 1.0.0.14
+
+          ➟ Unit Testing
+            ❑ PHPUnit               @version: 5.0.10
+              ❑ Environment         @version: 1.3.7
+              ❑ Code-Coverage       @version: 3.3.3
+              ❑ PHP-Timer           @version: 1.0.8
+            ❑ PHPUnit Speedstrap    @version: 1.0.1
+
+      Client-Side:
+        ❑ jQuery                    @version 1.11.3
+        ❑ Modernizr                 @version 2.8.3
+        ❑ -Prefix-Free              @version 1.0.7
+
+    Module Conventions
+    ------------------------------------------------------------------------------------------------
+
+      Service Classes:
+      ----------------------------------------------------------------------------------------------
+        ❑ @Adapter(s)`  A connector for joining other components.
+        ❑ @Agent(s)`    Direct assignments; channel, power, factor.
+        ❑ @Engine(s)`   Critical and repetitive functions.
+        ❑ @Handler(s)`  Special assignments; operator, manager, controller.
+
+      Directory Hierarchy:
+      ----------------------------------------------------------------------------------------------
+            ● apps                                                                    [Applications]
+            ● dashboard                                                                  [Dashboard]
+                ☐ images
+                  ☐ avatars
+                  ☐ buttons
+                  ☐ icons
+            ● data                                                                            [Data]
+                ☐ logs                      WAFFLE Data & Error Logs
+                ☐ sql                       SQL DB Spool
+            ● docs                                                                   [Documentation]
+                ☐ IDE
+                ☐ Meta
+                ☐ MIME
+                ☐ models                    System Models
+                  ❑ archetype(s)
+                  ❑ elements
+                  ❑ img
+                  ❑ legacy
+                  ❑ pencil
+                ☐ phpDoc                    API Documentation   @version: 2.8.1
+                ☐ phpUnit                   Unit Testing        @version: 5.1.3
+            ● lib                                                                  [Library Modules]
+                ☐ jquery                    jQuery              @version 1.11.3
+                ☐ less.php                  Less.php            @version 1.7.0.9
+                ☐ modernizr                 Modernizr           @version 2.8.3
+                ☐ -prefix-free              -Prefix-Free        @version 1.0.7
+                ☐ _Framework             WAFFLE Framework    @version TBD
+                ❑ vendor
+            ● web                                                                     [Web Elements]
+                ☐ fonts
+                  ☐ akashi                                      @defualt_package
+                  ☐ arial                                       @defualt_package
+                  ☐ open-sans                                   @defualt_package
+                  ☐ republic                                    @defualt_package
+                  ☐ webfont-icons                               @defualt_package
+                ☐ images
+                  ☐ svg
+                ☐ js                        Developer JS Modules & Functions...
+                ☐ styles                    Presentation Layer Files
+                  ☐ css                     CSS Root Directory
+                  ☐ less                    LESS Root Directory
+                    ☐ _backup               LESS Backup
+                    ☐ principle
+                    ☐ animations
+                      ☐ box-model
+                      ☐ tables-n-columns
+                      ☐ text
+                        ☐ user
+                      ☐ supernumerary
+                        ☐ colors
+                        ☐ layout
+                        ☐ nav
+                        ☐ style-reset
+                        ☐ ui
+            ● views                                                                 [Template Views]
+
+        LESS Structure & L3 Order (Less Lazy Load):
+        --------------------------------------------------------------------------------------------
+            ❑ Scaffold
+                scaffold.less                   Scaffold: place unique user properties, variables & mixins here
+
+            ❑ Box-Model
+                box-model.less                  Defines rectangular boxes, including their padding and margins, that are generated for elements.
+                flexible-box-layout.less        Defining flexible multi-column layout, expressing how content flows between columns and how gaps and rules are handled.
+                positioning.less                Defines how to position elements on the page.
+                backgrounds-n-borders.less      Defines how background and borders of elements are described.
+                logical-properties.less         Defines how page switch, orphans, and widows are handled.
+                miscellaneous.less              Properties that are highly experimental or don't fit in other categories.
+
+            ❑ Tables & Columns
+                tables.less                     Defines how to lay out and represent table data.
+                columns.less                    Defines multi-column layouts, expressing how content should flows between columns, including how the gaps and rules are handled.
+
+            ❑ Text
+                fonts.less                      Defines font-related properties and how font resources are loaded. Allows to define the style of a font, family, size, weight, and/or the variant of the glyph.
+                text.less                       Defines how to perform text manipulation, line breaking, justification, alignment, white space handling, and text transformation.
+                text-decoration.less            Defines features relating to text decoration, underlines, text shadows, and emphasis marks.
+
+            ❑ Animations
+                animations.less                 Defines how to animate the values of CSS properties over time, using key-frames.
+                transforms.less                 Defines how elements can be transformed in two-dimensional or three-dimensional space(s).
+
+            ❑ Style-Reset
+                normalize.less                  Normalize: or clear browser (or agent) specific settings.
+
+            ❑ Colors
+                color-schemes.less
+                color-functions.less
+
+            ❑ Navigation
+                buttons.less
+                glyphs.less
+
+            ❑ U.I. Elements
+                io-boxes.less
+                meters.less
+
+            ❑ RWD Grid System
+                rwd-grid-system.less
+
+            ❑ Main Style-Sheet
+
+            ❑ Main index.html style-sheet
+                main.less
+
+        Lexicons:
+        --------------------------------------------------------------------------------------------
+
+          Meta Tag:
+          ------------------------------------------------------------------------------------------
+
+            Standard Meta Names:
+            ----------------------------------------------------------------------------------------
+              Keywords
+              application-name
+              author
+              description
+              generator
+              keywords
+
+                Pragma Directives:
+                ------------------------------------------------------------------------------------
+                    State                       Keyword                         Notes
+                     Content Language            content-language                Non-conforming
+                     Encoding declaration        content-type
+                     Default style               default-style
+                     Refresh                     refresh
+                     Cookie setter               set-cookie                      Non-conforming
+                     X-UA-Compatible             x-ua-compatible
+                     Content security policy     Content-Security-Policy
+
+                Tag Groups:
+                ------------------------------------------------------------------------------------
+                    Apple
+                    HTML
+                    Blog
+                    Claimid
+                    DublinCore
+                    Geo
+                    IE
+                    Mobile
+                    OpenGraph
+                    Rails
+                    Twitter
+                    Win8
+
+                Legend:
+                ------------------------------------------------------------------------------------
+                    ❑ @tag_name{}          | Name of the tag being documented within the lexicon
+                        ❑ @type            | Defines the attribute type used for this tag
+                        ❑ content{}        | Contains content data
+                            ❑ @datatype    | Defines the datatype used for this tag
+                            ❑ @pattern     | Defines the type of formatting used for this tag
+                            ❑ range{}      | Contains the amount of characters urged for this tag
+                                ❑ @optimal | Optimal character amount recommended for this tag
+                                ❑ @max     | Maximum character amount recommended for this tag
+                    Key                     Value
+                    --------------------------------------------------------------------------------
+                    Type                    @attribute_name
+                    self-closing            @boolean
+
+                    <meta name="foo" content="bar"/>
+                          key = foo   value = bar
+                          - name        content
+                          - http-equiv  content
+                          - charset     content
+                          - improtu     content
+
+                Meta Scheme Layout:
+                --------------------------------------------------------------------------------
+                  ▼ object {1}                          ▼ object {1}
+                    ▼ vocabulary {1}                      ▼ vocabulary {1}
+                      ▼ vocabulary_name {1}                 ▼ HTML {1}
+                        ▼ @extension {3}                      ▼ keywords {3}
+                            type : @attribute_name              type : name
+                            self-closing : @boolean             self-closing : false
+                          ▼ content {5}                       ▼ content {5}
+                              datatype : @datatype              datatype : string
+                              format : @pattern                 format : delimiter
+                              delimiter: @token                 delimiter: ","
+                            ▼ default-values [1]              ▼ default-values [1]
+                              0 : @value(s)                     0 : "x"
+                            ▼ range {3}                       ▼ range {3}
+                              min : @integer                    min : 0
+                              max : @integer                    max : 0
+                              optimal : @integer                optimal : 0
+
+                Standards:
+                ------------------------------------------------------------------------------------
+
+                  ISO 639-1 Language Codes:
+                  ----------------------------------------------------------------------------------
+                     Abkhazian      : ab
+                     Afar           : aa
+                     Afrikaans      : af
+                     Albanian       : sq
+                     Amharic        : am
+                     Arabic         : ar
+                     Aragonese      : an
+                     Armenian       : hy
+                     Assamese       : as
+                     Aymara         : ay
+                     Azerbaijani    : az
+                     Bashkir        : ba
+                     Basque         : eu
+                     Bengali        : bn
+                     Bhutani        : dz
+                     Bihari         : bh
+                     Bislama        : bi
+                     Breton         : br
+                     Bulgarian      : bg
+                     Burmese        : my
+                     Byelorussian   : be
+                     Cambodian      : km
+                     Catalan        : ca
+                     Chinese        : zh
+                     Chinese        : zh-Hans
+                     Chinese        : zh-Hant
+                     Corsican       : co
+                     Croatian       : hr
+                     Czech          : cs
+                     Danish         : da
+                     Dutch          : nl
+                     English        : en
+                     Esperanto      : eo
+                     Estonian       : et
+                     Faeroese       : fo
+                     Farsi          : fa
+                     Fiji           : fj
+                     Finnish        : fi
+                     French         : fr
+                     Frisian        : fy
+                     Galician       : gl
+                     Gaelic         : gd
+                     Gaelic         : gv
+                     Georgian       : ka
+                     German         : de
+                     Greek          : el
+                     Greenlandic    : kl
+                     Guarani        : gn
+                     Gujarati       : gu
+                     Haitian Creole : ht
+                     Hausa          : ha
+                     Hebrew         : he, iw
+                     Hindi          : hi
+                     Hungarian      : hu
+                     Icelandic      : is
+                     Ido            : io
+                     Indonesian     : id, in
+                     Interlingua    : ia
+                     Interlingue    : ie
+                     Inuktitut      : iu
+                     Inupiak        : ik
+                     Irish          : ga
+                     Italian        : it
+                     Japanese       : ja
+                     Javanese       : jv
+                     Kannada        : kn
+                     Kashmiri       : ks
+                     Kazakh         : kk
+                     Kinyarwanda    : rw
+                     Kirghiz        : ky
+                     Kirundi        : rn
+                     Korean         : ko
+                     Kurdish        : ku
+                     Laothian       : lo
+                     Latin          : la
+                     Latvian        : lv
+                     Limburgish     : li
+                     Lingala        : ln
+                     Lithuanian     : lt
+                     Macedonian     : mk
+                     Malagasy       : mg
+                     Malay          : ms
+                     Malayalam      : ml
+                     Maltese        : mt
+                     Maori          : mi
+                     Marathi        : mr
+                     Moldavian      : mo
+                     Mongolian      : mn
+                     Nauru          : na
+                     Nepali         : ne
+                     Norwegian      : no
+                     Occitan        : oc
+                     Oriya          : or
+                     Oromo          : om
+                     Pashto         : ps
+                     Polish         : pl
+                     Portuguese     : pt
+                     Punjabi        : pa
+                     Quechua        : qu
+                     Rhaeto-Romance : rm
+                     Romanian       : ro
+                     Russian        : ru
+                     Samoan         : sm
+                     Sangro         : sg
+                     Sanskrit       : sa
+                     Serbian        : sr
+                     Serbo-Croatian : sh
+                     Sesotho        : st
+                     Setswana       : tn
+                     Shona          : sn
+                     Sichuan Yi     : ii
+                     Sindhi         : sd
+                     Sinhalese      : si
+                     Siswati        : ss
+                     Slovak         : sk
+                     Slovenian      : sl
+                     Somali         : so
+                     Spanish        : es
+                     Sundanese      : su
+                     Swahili        : sw
+                     Swedish        : sv
+                     Tagalog        : tl
+                     Tajik          : tg
+                     Tamil          : ta
+                     Tatar          : tt
+                     Telugu         : te
+                     Thai           : th
+                     Tibetan        : bo
+                     Tigrinya       : ti
+                     Tonga          : to
+                     Tsonga         : ts
+                     Turkish        : tr
+                     Turkmen        : tk
+                     Twi            : tw
+                     Uighur         : ug
+                     Ukrainian      : uk
+                     Urdu           : ur
+                     Uzbek          : uz
+                     Vietnamese     : vi
+                     Volapük        : vo
+                     Wallon         : wa
+                     Welsh          : cy
+                     Wolof          : wo
+                     Xhosa          : xh
+                     Yiddish        : yi, ji
+                     Yoruba         : yo
+                     Zulu           : zu
+
+Development Workflow
+====================================================================================================
+    Deployments:
+    ------------------------------------------------------------------------------------------------
+        Deployments should be treated as part of a Development Workflow, not as an afterthought.
+        While developing a web site or an application the Workflow will generally include (at least)
+        these three environments;
+
+            ❑ Development
+            ❑ Staging
+            ❑ Production
+
+        - In which case the Workflow should adopt this structure as developers work on bugs and
+        - features in separate branches.
+
+            ❑ Really minor updates can be committed directly to the @stable_development_branch
+
+            ❑ Once features are implemented, they are merged into the @staging_branch
+                -then deployed to the "Staging environment" for quality assurance and testing
+
+            ❑ After testing, "feature branches" are merged into the @development_branch
+
+            ❑ On release, the @development_branch, is merged into @production_branch, then deployed
+            - to the "Production environment"
+
+Unit Testing
+====================================================================================================
+    PHPUnit:
+    ------------------------------------------------------------------------------------------------
+        Installation:
+        --------------------------------------------------------------------------------------------
+            ❑ 1. Install Composer
+            ❑ 2. Place a "composer.json" file inside of this Frameworks "lib" directory:
+                {
+                    "require": {
+                    },
+                    "require-dev": {
+                        "phpunit/phpunit": "*"
+                    }
+                }
+
+            ❑ 3. Run:
+                $ composer update
+
+            ❑ 4. After PHPUnit is installed, create a "phpunit.xml" file inside of the "lib" directory
+                <?xml version="1.0" encoding="UTF-8"?>
+                <phpunit colors="true">
+                    <testsuites>
+                        <testsuite name="Application Test Suite">
+                            <directory suffix=".test.php">./_Framework</directory>
+                        </testsuite>
+                    </testsuites>
+                </phpunit>
+
+            ❑ 5. Check if PHPUnit is callable
+                $ phpunit --version
+
+            ❑ If PHPUnit checks out, all files under "/_Framework" with a "*.text.php" extension will be tested
+
+        Execution:
+        --------------------------------------------------------------------------------------------
+            ❑ Run PHPUnit Tests coinciding with the contents of the local "phpunit.xml" config file
+                $ phpunit
+
+            ❑ Compile PHPUnit code coverage in HTML format
+                $ phpunit --coverage-html <dir>
+
+            ❑ Export PHPUnit code coverage object to file
+                $ phpunit --coverage-php <file>
+
+            ❑ Compile PHPUnit code coverage in text format
+                $ phpunit --coverage-text=<file>
+
+    Conventions:
+    ------------------------------------------------------------------------------------------------
+        TODO:
+        --------------------------------------------------------------------------------------------
+            ❑ Check those constraints
+            $this->anything()
+            $this->contains($value)
+            $this->arrayHasKey($key)
+            $this->equalTo($value, $delta, $maxDepth)
+            $this->classHasAttribute($attribute)
+            $this->greaterThan($value)
+            $this->isInstanceOf($className)
+            $this->isType($type)
+            $this->matchesRegularExpression($pattern)
+            $this->stringContains($string, $case)
+
+        Assertions:
+        --------------------------------------------------------------------------------------------
+            ❑ Basics
+            assertEmpty
+            assertEquals
+            assertFalse
+            assertGreaterThan
+            assertGreaterThanOrEqual
+            assertInternalType
+            assertLessThan
+            assertLessThanOrEqual
+            assertNotEmpty
+            assertNotEquals
+            assertNotInternalType
+            assertNotNull
+            assertNotSame
+            assertNull
+            assertSame
+            assertTrue
+
+            ❑ Objects
+            assertInstanceOf
+            assertObjectHasAttribute
+            assertObjectNotHasAttribute
+            assertNotInstanceOf
+
+            ❑ Classes
+            assertClassHasAttribute
+            assertClassHasStaticAttribute
+            assertClassNotHasAttribute
+            assertClassNotHasStaticAttribute
+
+            ❑ Classes and Objects
+            assertAttributeContains
+            assertAttributeContainsOnly
+            assertAttributeEmpty
+            assertAttributeEquals
+            assertAttributeGreaterThan
+            assertAttributeGreaterThanOrEqual
+            assertAttributeInstanceOf
+            assertAttributeInternalType
+            assertAttributeLessThan
+            assertAttributeLessThanOrEqual
+            assertAttributeNotContains
+            assertAttributeNotContainsOnly
+            assertAttributeNotEmpty
+            assertAttributeNotEquals
+            assertAttributeNotInstanceOf
+            assertAttributeNotInternalType
+            assertAttributeNotSame
+            assertAttributeSame
+
+            ❑ Arrays and Traversable Objects
+            assertArrayHasKey
+            assertArrayNotHasKey
+            assertContains
+            assertContainsOnly
+            assertCount
+            assertNotContains
+            assertNotContainsOnly
+            assertNotCount
+
+            ❑ Strings
+            assertNotRegExp
+            assertRegExp
+            assertSelectEquals
+            assertSelectCount
+            assertSelectRegExp
+            assertStringEndsNotWith
+            assertStringEndsWith
+            assertStringEqualsFile
+            assertStringMatchesFormat
+            assertStringMatchesFormatFile
+            assertStringNotEqualsFile
+            assertStringNotMatchesFormat
+            assertStringNotMatchesFormatFile
+            assertStringStartsNotWith
+            assertStringStartsWith
+
+            ❑ XML and HTML
+            assertEqualXMLStructure
+            assertNotTag
+            assertTag
+            assertXmlFileEqualsXmlFile
+            assertXmlFileNotEqualsXmlFile
+            assertXmlStringEqualsXmlFile
+            assertXmlStringEqualsXmlString
+            assertXmlStringNotEqualsXmlFile
+            assertXmlStringNotEqualsXmlString
+
+            ❑ Files
+            assertFileEquals
+            assertFileExists
+            assertFileNotEquals
+            assertFileNotExists
+
+            ❑ Others
+            assertThat
+
+            ❑ MATCHERS for EXPECTS method
+            any
+            at
+            atLeastOnce
+            exactly
+            never
+            once
+
+    Annotations:
+    ------------------------------------------------------------------------------------------------
+        /**
+         * @expectedException <exceptionName>
+         * @dataProvider <methodName>
+         * @depends <methodName>
+         */
+
+        <exceptionName> can be:
+        PHPUnit_Framework_Error
+        PHPUnit_Framework_Warning
+
+        CONSTRAINTS for WITH method:
+        --------------------------------------------------------------------------------------------
+            ❑ Commutation
+                logicalAnd
+                logicalNot
+                logicalOr
+                logicalXor
+
+            ❑ Basics
+                anything
+                arrayHasKey
+                contains
+                equalTo
+                greaterThan
+                greaterThanOrEqual
+                identicalTo
+                isFalse
+                isNull
+                isTrue
+                lessThan
+                lessThanOrEqual
+
+            ❑ Classes & Objects
+                attribute
+                attributeEqualTo
+                classHasAttribute
+                classHasStaticAttribute
+                hasAttribute
+                isInstanceOf
+                isType
+
+            ❑ String
+                matchesRegularExpression
+                stringContains
+                stringEndsWith
+                stringStartsWith
+
+            ❑ Others
+                fileExists
+
+            ❑ RETURNS for WILL method
+                onConsecutiveCalls
+                returnArgument
+                returnCallback
+                returnValue
+                throwException
+
+        Constraints:
+        --------------------------------------------------------------------------------------------
+            $mock->with($this->constraint())
+            ❑ equalTo()
+            ❑ logicalAnd()
+            ❑ logicalNot()
+            ❑ logicalOr()
+            ❑ logicalXor()
+
+        Mocking:
+        --------------------------------------------------------------------------------------------
+            ❑ getMock()
+                $this->getMock(
+                    $originalClassName,
+                    $methods = array(),
+                    array $arguments = array(),
+                    $mockClassName = '',
+                    $callOriginalConstructor = TRUE,
+                    $callOriginalClone = TRUE,
+                    $callAutoload = TRUE
+                );
+
+            ❑ getMockForAbstractClass()
+                $this->getMockForAbstractClass(
+                    $originalClassName,
+                    array $arguments = array(),
+                    $mockClassName = '',
+                    $callOriginalConstructor = TRUE,
+                    $callOriginalClone = TRUE,
+                    $callAutoload = TRUE,
+                    array $mockedMethods
+                );
+
+            ❑ getMockFromWsdl()
+                $this->getMockFromWsdl(
+                    $wsdlFile,
+                    $originalClassName = '',
+                    $mockClassName = '',
+                    array $methods = array(),
+                    $callOriginalConstructor = TRUE
+                );
+
+            ❑ getMockBuilder()
+                $mock = $this->getMockBuilder($className)
+                    ... $this->setMockClassName($name)
+                    ... $this->setConstructorArgs(array())
+                    ... $this->disableOriginalConstructor()
+                    ... $this->disableOriginalClone()
+                    ... $this->disableAutoload()
+                    ... $this->setMethods(array()|NULL)
+                    ... $this->getMock();
+
+                $mock = $this->getMockBuilder($className)
+                    ... $this->setMockClassName($name)
+                    ... $this->setConstructorArgs(array())
+                    ... $this->disableOriginalConstructor()
+                    ... $this->disableOriginalClone()
+                    ... $this->disableAutoload()
+                    ... $this->setMethods(array()|NULL)
+                    ... $this->getMockForAbstractClass();
+
+        Matchers:
+        --------------------------------------------------------------------------------------------
+        $mock->expects($this->matcher())
+            ❑ any() : Returns a matcher that matches when the method it is evaluated for is executed zero or more times.
+                    @return: PHPUnit_Framework_MockObject_Matcher_AnyInvokedCount
+                    -PHPUnit_Framework_MockObject_Matcher_AnyInvokedCount any()
+
+            ❑ at() : Returns a matcher that matches when the method it is evaluated for is invoked at the given $index.
+                    @param: int
+                    @return: PHPUnit_Framework_MockObject_Matcher_InvokedAtIndex
+                    -PHPUnit_Framework_MockObject_Matcher_InvokedAtIndex at(int $index)
+
+            ❑ atLeastOnce() : Returns a matcher that matches when the method it is evaluated for is executed at least once.
+                    @return: PHPUnit_Framework_MockObject_Matcher_InvokedAtLeastOnce
+                    -PHPUnit_Framework_MockObject_Matcher_InvokedAtLeastOnce atLeastOnce()
+
+            ❑ exactly() : Returns a matcher that matches when the method it is evaluated for is executed exactly once.
+                    @param: int
+                    @return: PHPUnit_Framework_MockObject_Matcher_InvokedCount
+                    -PHPUnit_Framework_MockObject_Matcher_InvokedCount exactly(int $count)
+
+            ❑ never() : Returns a matcher that matches when the method it is evaluated for is never executed.
+                    @return: PHPUnit_Framework_MockObject_Matcher_InvokedCount
+                    -PHPUnit_Framework_MockObject_Matcher_InvokedCount never()
+
+            ❑ once() : Returns a matcher that matches when the method it is evaluated for is executed exactly once.
+                    @return: PHPUnit_Framework_MockObject_Matcher_InvokedCount
+                    -PHPUnit_Framework_MockObject_Matcher_InvokedCount once()
+
+        Returns:
+        --------------------------------------------------------------------------------------------
+        $mock->will($this->return())
+            ❑ returnValue()
+            -PHPUnit_Framework_MockObject_Stub_Return returnValue(mixed $value)
+            ❑ returnValueMap()
+            -PHPUnit_Framework_MockObject_Stub_ReturnValue MapreturnValueMap(array $valueMap)
+            ❑ returnArgument()
+            -PHPUnit_Framework_MockObject_Stub_ReturnArgument returnArgument(int $argumentIndex)
+            ❑ returnCallback()
+            -PHPUnit_Framework_MockObject_Stub_ReturnCallback returnCallback(mixed $callback)
+            ❑ returnSelf() : @Returns the current object.
+            -PHPUnit_Framework_MockObject_Stub_ReturnSelf returnSelf()
+            ❑ throwException()
+            -PHPUnit_Framework_MockObject_Stub_Exception throwException(Exception $exception)
+            ❑ onConsecutiveCalls()
+            -PHPUnit_Framework_MockObject_Stub_ConsecutiveCalls onConsecutiveCalls(mixed ... [, mixed ...])
+
+        Template Methods:
+        --------------------------------------------------------------------------------------------
+            pub static fn setUpBeforeClass()
+            pro fn setUp()
+            pro fn assertPreConditions()
+            pro fn assertPostConditions()
+            pro fn tearDown()
+            pub static fn tearDownAfterClass()
+            pro fn onNotSuccessfulTest()
+
+        Utilities:
+        --------------------------------------------------------------------------------------------
+            $this->fail()
+            $this->markTestIncomplete()
+            $this->markTestSkipped()
+            $this->expectOutputString()
+            $this->setExpectedException()
+
+        Example with a Mock object:
+        --------------------------------------------------------------------------------------------
+            <?php
+            require_once 'SomeClass.php';
+
+            class StubTest extends PHPUnit_Framework_TestCase
+            {
+                public function testStub()
+                {
+                    // Create a stub for the SomeClass class
+                    $stub = $this->getMock('SomeClass', array(‘doSomething’) );
+
+                    // Configure the stub
+                    $stub->expects( $this->once() )
+                         ->method( 'doSomething' )
+                         ->with( $this->equalTo('bar') )
+                         ->will( $this->returnValue('foo') );
+
+                    // Calling $stub->doSomething() will now return 'foo'
+                    $this->assertEquals('foo', $stub->doSomething('bar'));
+                }
+            }
+
+        Testing Exceptions:
+        --------------------------------------------------------------------------------------------
+            /**
+             * @expectedException MyException
+             */
+            public function testThrowsAnException() {
+                $stub = $this->getMock(‘stdClass’);
+                $stub->expects( $this->any() )
+                     ->method(‘push’)
+                     ->will( $this->throwException( new MyException ) );
+                $stub->push(42);
+            }
+
+Error Handling
+====================================================================================================
+    Standards:
+    ------------------------------------------------------------------------------------------------
+        Meaning and Usage of Errors and Exceptions:
+        ❑ Errors
+           unrecoverable instances that should be recorded.
+        ❑ Exceptions
+           To denote "exceptional" circumstances, circumstances that might be expected.
+
+    Structure:
+    ------------------------------------------------------------------------------------------------
+
+        Exception Handling Structure:
+        --------------------------------------------------------------------------------------------
+            Exception {
+                Properties:
+                    ❑ protected {string} $message;
+                                                    The exception message
+                    ❑ protected {int}    $code;
+                                                    The exception code
+                    ❑ protected {string} $file;
+                                                    The filename where the exception was created
+                    ❑ protected {int}    $line;
+                                                    The line where the exception was created
+
+                Methods:
+                    ❑ public __construct (
+                        [ string $message = ""
+                            [, int $code = 0
+                                [, Throwable $previous = NULL ]
+                            ]
+                        ]
+                       )
+
+                    ❑ final public  {string}        getMessage(void)
+                    ❑ final public  {Exception}     getPrevious(void)
+                    ❑ final public  {mixed}         getCode(void)
+                    ❑ final public  {string}        getFile(void)
+                    ❑ final public  {int}           getLine(void)
+                    ❑ final public  {array}         getTrace(void)
+                    ❑ final public  {string}        getTraceAsString(void)
+                    ❑ public        {string}        __toString(void)
+                    ❑ final private {void}          __clone(void)
+            }
+
+        Standard Error Handling Model(s):
+        --------------------------------------------------------------------------------------------
+             PHP's Standard Model for Error Handling
+            ----------------------------------------------------------------------------------------
+            | CONSTANT          | DESCRIPTION                                                       |
+            ----------------------------------------------------------------------------------------
+            | E_ERROR           | Fatal run-time errors. Indicates errors that can not be recovered |
+            |                   | from, such as a memory allocation problem, while execution of the |
+            |                   | script halted.                                                    |
+            ----------------------------------------------------------------------------------------
+            | E_WARNING         | Run-time warnings (non-fatal errors). Execution of the script is  |
+            |                   | not halted.                                                       |
+            ----------------------------------------------------------------------------------------
+            | E_NOTICE          | Run-time notices. Indicate that the script encountered something  |
+            |                   | that could indicate an error, but could also happen in the normal |
+            |                   | course of running a script.                                       |
+            ----------------------------------------------------------------------------------------
+            | E_DEPRECATED      | Run-time notices that warn about code that will not work in       |
+            |                   | future versions of PHP.                                           |
+            ----------------------------------------------------------------------------------------
+            | E_STRICT          | Run-time notices that suggest changes to your code which will     |
+            |                   | ensure the best interoperability and forward compatibility with   |
+            |                   | future versions of PHP.                                           |
+            ----------------------------------------------------------------------------------------
+            | E_USER_ERROR      | User-generated error message. This is like an E_ERROR, except it  |
+            |                   | is generated in PHP code by using the PHP function trigger_error()|
+            ----------------------------------------------------------------------------------------
+            | E_USER_WARNING    | User-generated warning message. This is like an E_WARNING, except |
+            |                   | it is generated in PHP code by using the PHP function             |
+            |                   | trigger_error().                                                  |
+            ----------------------------------------------------------------------------------------
+            | E_USER_NOTICE     | User-generated notice message. This is like an E_DEPRECATED,      |
+            |                   | except it is generated in PHP code by using the PHP function      |
+            |                   | trigger_error().                                                  |
+            ----------------------------------------------------------------------------------------
+            | E_USER_DEPRECATED | User-generated notice message. This is like an E_DEPRECATED,      |
+            |                   | except it is generated in PHP code by using the PHP function      |
+            |                   | trigger_error().                                                  |
+            ----------------------------------------------------------------------------------------
+            | E_ALL             | Enables all PHP errors and warnings (except E_STRICT in versions  |
+            |                   | < 5.4                                                             |
+            ----------------------------------------------------------------------------------------
+
+    4-H's of Handling of Error Handling:
+    ------------------------------------------------------------------------------------------------
+        ❑ [Human]
+        --------------------------------------------------------------------------------------------
+            The number one rule is to make sure your error message(s) sound like they've been
+            written for humans
+            - Ensure it's:
+                ❑ Polite
+                ❑ Understandable
+                ❑ Friendly
+                ❑ Jargon Free
+
+        ❑ [Helpful]
+        --------------------------------------------------------------------------------------------
+            ❑ Is it Visible?
+                Think about visibility, message size, color, and location. Make them prominent.
+            ❑ Does it clearly explain what went wrong?
+                Your error message needs to explain the problem as clearly as possible, and it needs
+                be specific.
+            ❑ Does it help the user recover?
+                What does the user need to do next? How can they get back to what they were doing,
+                as fast as possible?
+
+        ❑ [Humorous]
+        --------------------------------------------------------------------------------------------
+            A short sprinkling of humor is often a great way to diffuse the frustration of an error.
+            Keeping your tone light-hearted can help to keep the user on-side; especially if this
+            suites the tone of your brand.
+
+            ❑ Tailor error messages in accordance with it's context.
+               User's can take a joke if it's a simple validation problem, or a Page Not Found
+               error. However, if the error is more serious, like when a user loses a significant
+               amount of work, saying "Oops!" is entirely inappropriate.
+
+        ❑ [Humble]
+        --------------------------------------------------------------------------------------------
+            Perhaps your user's are at fault, or maybe your instructions weren't clear enough,
+            however, you know what, it doesn't matter. What does matter is how you deal with the
+            situation. It's always better to assume that your site or app is at fault, not your
+            user. You must never imply that the user made a mistake. Always be humble.
+
+            - And for those times when the fault is clearly on your side, apologize.
+
+WAFFLE Documentation Standards
+====================================================================================================
+    Conventions:
+    ------------------------------------------------------------------------------------------------
+        ❑ ATTRIBUTE
+        ❑ BASE
+        ❑ BUCKET
+        ❑ BUILDER
+        ❑ COLLECTION
+        ❑ CONTAINER
+        ❑ CONTEXT
+        ❑ CONTROLLER
+        ❑ CONVERTER
+        ❑ COORDINATOR
+        ❑ DESIGNER
+        ❑ EDITOR
+        ❑ ELEMENT
+        ❑ ENTITY
+        ❑ EXCEPTION
+        ❑ FACTORY
+        ❑ HANDLER
+        ❑ HELPER
+        ❑ INFO
+        ❑ ITEM
+        ❑ MANAGER
+        ❑ NODE
+        ❑ OPTION
+        ❑ PROTOCOL
+        ❑ PROVIDER
+        ❑ READER
+        ❑ SERVICE
+        ❑ TARGET
+        ❑ TYPE
+        ❑ VIEW
+        ❑ WRITER
+
+    Universal Locator's:
+    ------------------------------------------------------------------------------------------------
+        ❑ URI
+           locater, name, or both
+        ❑ URL
+           references a subset of URIs; identifies resource and means of located aforementioned
+           resource by describing its primary access mechanism
+        ❑ URN
+           required to remain globally unique and persistent even when the resource ceases to exist
+           or becomes unavailable, and to any other URI with the properties of the name
+
+    Semantic Versioning:
+    ------------------------------------------------------------------------------------------------
+        ❑ MAJOR.MINOR.PATCH
+        MAJOR = "incompatible" API changes
+        MINOR = add functionality. (backwards-compatible)
+        PATCH = bug fixes. (backwards-compatible)
+
+        ❑ x.y.z
+
+        ❑ Ranges
+            ~1.2.3 : is >=1.2.3 <1.3.0
+
+            ^1.2.3 : is >=1.2.3 <2.0.0
+            ^0.2.3 : is >=0.2.3 <0.3.0 - (0.x.x is special)
+            ^0.0.1 : is  =0.0.1        - (0.0.x is special)
+
+            ^1.2 : is >=1.2.0 <2.0.0 - (like ^1.2.0)
+            ~1.2 : is >=1.2.0 <1.3.0 - (like ~1.2.0)
+
+              ^1 : is >=1.0.0 <2.0.0
+              ~1 : same
+             1.x : same
+             1.* : same
+               1 : same
+
+               * : any version
+
+        ❑ Pre-Releases
+            1.2.3-prerelease+build
+
+        ❑ Explanation
+            ^ means “compatible with”
+            ~ means “reasonably close to”
+            0.x.x is for “initial development”
+            1.x.x means public API is defined
+
+        ❑ Example
+            ❑ @version: 1.3.37
+                 1 = first major release
+                 3 = minor versions bringing new features
+                37 = 37th patch in this minor version
+
+        ❑ Genesis
+            Alpha: Begins at 0.1.0
+
+            > If the software/project in question is already being utilized in production or has users
+              depending on it, then it should be considered a full version (1.0.0).
+
+            > Versions below 1.0.0 are (essentially) in the development phase, where focus is placed on
+              completing the project. Prior to 1.0.0, the developer should be afraid of breaking things
+              sometimes efforts are done to will do whatever needs to be done so that 1.0.0 is reached,
+              it's stable
+
+        ❑ Pre-release(s)
+            > Pre-releases can be defined by appending a hyphen and an identifier to a version. For
+              example, a pre-release for version 1.0.0 could be 1.0.0-alpha.1. Then if another build is
+              needed, it would become 1.1.0-alpha-2, and so on.
+
+        ❑ Guidelines & Conditions
+            > Software utilizing SemVer MUST declare a public API. This API could be declared in the
+              code itself or exist strictly in documentation. However it is done, it should be precise &
+              comprehensive.
+
+            > A normal version number MUST take the form X.Y.Z where X, Y, and Z are non-negative
+              integers, and MUST NOT contain leading zeroes. X is the major version, Y is the minor
+              version, and Z is the patch version. Each element MUST increase numerically. For
+              instance: 1.9.0 -> 1.10.0 -> 1.11.0.
+
+            ❑ References
+                ❑ http://ricostacruz.com/cheatsheets/semver.html
+                ❑ http://semver.org/
+                ❑ https://www.npmjs.org/doc/misc/semver.html
+                ❑ http://www.sitepoint.com/semantic-versioning-why-you-should-using/
+
+Documentation
+====================================================================================================
+    Structural Convention(s):
+    ------------------------------------------------------------------------------------------------
+        /**
+         * » Description of the class, including it's function(s), purpose(s), and any other
+         *   additional information that might be handy to the users/developers of this package
+         *
+         * @subpackage  » Class Name (i.e., Template, HTML, Email, etc...)
+         * @category    » Module Type (i.e., Engine, Agent, Handler, etc...)
+         * @author      » Author's Name <email@address.com>
+         */
+
+         » namespace Package_Name\Base_Hierarchial_Level\Module_Type;
+                                                         ▲ Module types should be plural
+                                                           (i.e., Engines)
+
+         » use Package_Name\Base_Hierarchial_Level\Module_Type;
+         » use Package_Name\Base_Hierarchial_Level\Module_Type\Class_Name;
+
+         » require 'class.file.nm';
+
+        /**
+         * » Title of Class (i.e., HTML Tag Generator)
+         *
+         * » Sub-description of class; should mirror, or not deviate much, from the previous
+         *   (in-depth) description above
+         */
+        class » ClassName {
+            /**
+             * » Description of the variable below, including its intended use and/or function.
+             *
+             * @access          » protected
+             *                    ▲ variable scope (i.e., private, protected, public, etc...)
+             *                           ▼ Variable Name
+             * @var             » String $file
+             */                   ▲ variable type (i.e., Array, String, Number, etc...)
+            protected $file;
+
+            /**
+             * » Description of the method below, including its intended use and/or function
+             *
+             * » @method __construct(String $file)
+             *   ▲ A simple construct of the proceeding method
+             *                          ▼ Parameter value name  ▼ Short description of parameter value
+             * @param           String $file                    The filename of the template file to load
+             */                 ▲ Parameter type (i.e., Array, String, Number)
+            public function __construct($file) {
+                $this->file = $file;
+            }
+
+    phpDocumentor:
+    ------------------------------------------------------------------------------------------------
+
+        Instantiation:
+        --------------------------------------------------------------------------------------------
+            ❑ 1: Install PHP
+
+            ❑ 2: Open a terminal (or CLI) with admin privileges, and type
+                » # php go-pear.phar
+
+                ❑ 2.1: Install
+                        » local
+
+                ❑ 2.2: Type
+                        » Yes
+
+            ❑ 3: Run PEAR_ENV.reg to install PEAR's environmental variables
+
+            ❑ 4: Insure that php.ini has the following "include_path" for PEAR
+                » include_path=".;C:\xampp\php\PEAR"  ||  include_path=".;C:\path\to\PEAR"
+
+            ❑ 5: Run the following command (as admin) in the root directory for phpDocumentor
+                » # pear channel-discover pear.phpdoc.org
+                » # pear install --nocompress phpdoc/phpDocumentor
+               - » # pear install --nocompress phpdoc/phpDocumentor-2.8.5
+               -    (Earlier Versions than 2.8.5 throw issues)
+
+        Execution:
+        --------------------------------------------------------------------------------------------
+            ❑ Root Directory
+               /c/xampp/vendor/phpdocumentor/phpdocumentor/bin
+               /c/xampp/php/pear/phpdocumentor/phpdocumentor/bin
+
+            ❑ Renders everything in "../_Framework/*.*" and generates an API document at "c:/xampp/htdocs/docs/phpDoc/"
+               $ phpdoc -d c:/xampp/htdocs/lib/_Framework -t c:/xampp/htdocs/docs/phpDoc
+
+            ❑ Changes the template to "checkstyle"
+               $ phpdoc -d c:/xampp/htdocs/lib/_Framework -t c:/xampp/htdocs/docs/phpDoc --template="checkstyle"
+
+            ❑ Using multiple Templates at once
+               $ phpdoc -d c:/xampp/htdocs/lib/_Framework -t c:/xampp/htdocs/docs/phpDoc --template="checkstyle,clean"
+
+            ❑ Cleanest Template to Use
+               $ phpdoc -d c:/xampp/htdocs/lib/_Framework -t c:/xampp/htdocs/docs/phpDoc --template="responsive-twig"
+
+        Standard Logical Annotation Order:
+        --------------------------------------------------------------------------------------------
+            ❑ Summary
+                [optional blank line]
+            ❑ Description
+                [optional blank line]
+            ❑ Annotations that document behavior and usage of code, examples, files, links, etc...
+                [optional blank line]
+                ❑ @see
+            ❑ Annotations regarding ongoing development
+                [optional blank line]
+                ❑ @todo
+            ❑ Annotations indicating visibility and expected structural usage.
+                [optional blank line]
+                ❑ @api
+                ❑ @internal
+            ❑ Annotations indicating internal dependencies or methods/properties
+                ❑ @uses
+            ❑ Annotations regarding availability (deprecation, preferably mentioning alternatives)
+                ❑ @property
+                ❑ @depreciated
+                   [optional blank line]
+            ❑ Annotations regarding the function/method's signature.
+                ❑ @param  <type> $name [= default value]
+                ❑ @return <return type, if any>
+            ❑ Annotations covering unexpected behaviour.
+                ❑ @throws <ExceptionType>
+                  [optionally explain when & why]
+
+        Additional Notes:
+        --------------------------------------------------------------------------------------------
+            Some might say that the @throws annotation should 'precede' the @returns, seeing as the
+            last thing a function should do is return something. It is common, though, to put the
+            @throws in last. That, to me, makes more sense: the documentation covers the flow of the
+            method you're commenting. If something (an exceptional case) disrupts the flow, an
+            exception is thrown, hence the @throws annotation shouldn't be part of the "normal"
+            description of the method.
+
+            Either way, the simple rule of thumb here is
+            ❑ IDE tool-tip info comes first; summary, description; @see
+            ❑ Additional documentation
+            ❑ Development info; @todo, @example, possibly @version
+            ❑ Structural elements (the ones that apply)
+            ❑ The expected parameters info comes next; @param
+            ❑ The result; @return
+            ❑ In case of errors; @throws
+
+        Note:
+        --------------------------------------------------------------------------------------------
+            that the annotations listed here as Structural elements require you to document the
+            classes and properties, too: /** @var <type> */ and, perhaps include @version and
+            @license tags, too
+
+        Sublime Text 2/3 (IDE):
+        --------------------------------------------------------------------------------------------
+            Packages
+            ☐ AAAPackageDev
+            ☐ Alignment
+            ☐ Ansible
+            ☐ AutoHotkey
+            ☐ BracketHighlighter
+            ☐ Color Highlighter
+            ☐ ColorPicker
+            ☐ CSScomb
+            ☐ DocBlockr
+            ☐ Fold Comments
+            ☐ Gist
+            ☐ Git
+            ☐ GitGutter
+            ☐ Glue
+            ☐ JavaScriptNext - ES6 Syntax
+            ☐ Markdown Extended
+            ☐ Package Control
+            ☐ PackageResourceViewer
+            ☐ PlainTasks
+            ☐ REG
+            ☐ ScopeHunter
+            ☐ SideBarEnhancements
+            ☐ Theme - Afterglow
+            Color Scheme
+            ☐ indigoKid
+
+            Tags
+            ☐ @author
+            ☐ @abstract
+            ☐ @access
+            ☐ @augments
+            ☐ @borrows
+            ☐ @category
+            ☐ @class
+            ☐ @const
+            ☐ @constant
+            ☐ @constructor
+            ☐ @constructs
+            ☐ @copyright
+            ☐ @default
+            ☐ @define
+            ☐ @deprecated
+            ☐ @description
+            ☐ @enum
+            ☐ @event
+            ☐ @example
+            ☐ @extends
+            ☐ @field
+            ☐ @fileOverview
+            ☐ @filesource
+            ☐ @final
+            ☐ @function
+            ☐ @global
+            ☐ @ignore
+            ☐ @implements
+            ☐ @inheritDoc
+            ☐ @inner
+            ☐ @interface
+            ☐ @internal
+            ☐ @lends
+            ☐ @license
+            ☐ @link
+            ☐ @memberOf
+            ☐ @method
+            ☐ @name
+            ☐ @namespace
+            ☐ @nosideeffects
+            ☐ @override
+            ☐ @package
+            ☐ @param
+            ☐ @preserve
+            ☐ @private
+            ☐ @property
+            ☐ @protected
+            ☐ @public
+            ☐ @requires
+            ☐ @return
+            ☐ @returns
+            ☐ @see
+            ☐ @since
+            ☐ @static
+            ☐ @staticvar
+            ☐ @subpackage
+            ☐ @this
+            ☐ @throws
+            ☐ @todo
+            ☐ @tutorial
+            ☐ @type
+            ☐ @typedef
+            ☐ @uses
+            ☐ @var
+            ☐ @version
+
+Responsive Web-Design Structural Annotation(s)
+====================================================================================================
+    Standard Grid:
+    ------------------------------------------------------------------------------------------------
+        ❑ 240px  -  320px     (min)
+        ❑ 320px  -  640px     (sml)
+        ❑ 640px  -  960px     (mid)
+        ❑ 960px  -  1280px    (reg)
+        ❑ 1280px -  1600px    (lrg)
+
+    Devices Accompanied:
+    ------------------------------------------------------------------------------------------------
+        ❑ Amazon Kindle Fire HDX  1600x2560 ~ 2560x1600 (2)
+        ❑ Apple iPad              768 x1024 ~ 1024x 768 (2)   760
+
+        ❑ Apple iPhone 4          320 x 480 ~ 480 x 320 (2)
+        ❑ Apple iPhone 5          320 x 568 ~ 568 x 320 (2)
+        ❑ Apple iPhone 6          375 x 627 ~ 627 x 375 (2)
+        ❑ Apple iPhone 6 Plus     414 x 736 ~ 736 x 414 (3)
+
+        ❑ BlackBerry PlayBook     600 x1024 ~ 1024x 600 (1)
+        ❑ BlackBerry Z30          360 x 640 ~ 640 x 360 (2)
+
+        ❑ Google Nexus 10         800 x1280 ~ 1280x 800 (2)
+        ❑ Google Nexus 4          384 x 567 ~ 567 x 384 (2)
+        ❑ Google Nexus 5          360 x 567 ~ 567 x 360 (3)
+        ❑ Google Nexus 6          412 x 659 ~ 659 x 412 (3.5)
+        ❑ Google Nexus 7          600 x 960 ~ 960 x 600 (2)
+
+        ❑ LG Optimus L70          384 x 640 ~ 640 x 384 (1.25)
+
+        ❑ Laptop w/HiDPI screen   1440x 900 ~ 900 x1440 (2)
+        ❑ Laptop w/MDPI screen    1280x 800 ~ 1280x 800 (1)
+        ❑ Laptop w/Touch          1280x 950 ~ 950 x1280 (1)
+
+        ❑ Nokia Lumia 520         320 x 533 ~ 533 x 320 (1.4)
+        ❑ Nokia N9                360 x 640 ~ 640 x 360 (1)
+
+        ❑ Samsung Galaxy Note 3   360 x 640 ~ 640 x 360 (3)
+        ❑ Samsung Galaxy Note II  360 x 640 ~ 640 x 360 (2)
+        ❑ Samsung Galaxy SIII     360 x 640 ~ 640 x 360 (2)
+        ❑ Samsung Galaxy S4       360 x 640 ~ 640 x 360 (3)
+
+    Device Pixel Density (1px):
+    ------------------------------------------------------------------------------------------------
+        All non-Retina Macs
+        Apple iPhone (1st generation)
+        Apple iPhone 3G
+        Apple iPhone 3GS
+        Apple iPad (1st generation)
+        Apple iPad 2
+        Apple iPad mini (1st generation)
+        Acer Iconia A500
+        Samsung Galaxy Tab 10.1
+        Samsung Galaxy S
+
+        --------------------------------------------------------------------------------------------
+        ❑ min-resolution: 96dpi;
+        ❑ min-resolution: 1.0dppx;
+          -webkit-min-device-pixel-ratio: 1.0;
+               -o-min-device-pixel-ratio: ~ (N.A.)
+        --------------------------------------------------------------------------------------------
+
+    Device Pixel Density (1.3px):
+    ------------------------------------------------------------------------------------------------
+        Asus MemoPad HD 7
+        Google Nexus 7 (2012 model)
+        --------------------------------------------------------------------------------------------
+        ❑ min-resolution: 124.8dpi;
+        ❑ min-resolution: 1.3dppx;
+          -webkit-min-device-pixel-ratio: 1.3;
+               -o-min-device-pixel-ratio: ~ (N.A.)
+        --------------------------------------------------------------------------------------------
+
+    Device Pixel Density (1.4px):
+    ------------------------------------------------------------------------------------------------
+        Nokia Lumia 520
+        --------------------------------------------------------------------------------------------
+        ❑ min-resolution: 134.4dpi;
+        ❑ min-resolution: 1.4dppx;
+          -webkit-min-device-pixel-ratio: 1.4;
+               -o-min-device-pixel-ratio: ~ (N.A.)
+        --------------------------------------------------------------------------------------------
+
+    Device Pixel Density (1.5px):
+    ------------------------------------------------------------------------------------------------
+        Google Nexus S
+        HTC Desire
+        HTC Desire HD
+        HTC Incredible S
+        HTC Velocity
+        HTC Sensation
+        Kindle Fire HD
+        Samsung Galaxy S II
+        Sony Xperia Tablet Z
+        Sony Xperia U
+
+        --------------------------------------------------------------------------------------------
+        ❑ min-resolution: 144dpi;
+        ❑ min-resolution: 1.5dppx;
+          -webkit-min-device-pixel-ratio: 1.5;
+               -o-min-device-pixel-ratio: ~ (N.A.)
+        --------------------------------------------------------------------------------------------
+
+    Device Pixel Density (2px):
+    -------------------------------------------------------------------------------------------------
+        All Macs with Retina displays
+        Apple iPhone 4
+        Apple iPhone 4S
+        Apple iPhone 5
+        Apple iPhone 5c
+        Apple iPhone 5s
+        Apple iPhone 6
+        Apple iPad (3rd generation)
+        Apple iPad 4
+        Apple iPad Air
+        Apple iPad mini (2rd generation)
+        HTC One X
+        Google Galaxy Nexus
+        Google Nexus 4
+        Google Nexus 7 (2013 model)
+        Google Nexus 10
+        Motorola Moto X
+        Samsung Galaxy S III
+        Samsung Galaxy Note II
+        Sony Xperia S
+        Sony Xperia T
+
+        --------------------------------------------------------------------------------------------
+        ❑ min-resolution: 192dpi;
+        ❑ min-resolution: 2dppx;
+          -webkit-min-device-pixel-ratio: 2;
+               -o-min-device-pixel-ratio: ~ (N.A.)
+        --------------------------------------------------------------------------------------------
+
+    Device Pixel Density (2.6px):
+    ------------------------------------------------------------------------------------------------
+        Nokia Lumia 930
+
+        --------------------------------------------------------------------------------------------
+        ❑ min-resolution: 249dpi;
+        ❑ min-resolution: 2.6dppx;
+          -webkit-min-device-pixel-ratio: 2.6;
+               -o-min-device-pixel-ratio: ~ (N.A.)
+        --------------------------------------------------------------------------------------------
+
+    Device Pixel Density (3px):
+    ------------------------------------------------------------------------------------------------
+        HTC One (M7)
+        HTC Butterfly
+        Huawei Honor 6
+        Apple iPhone 6 Plus
+        LG G2
+        Nexus 5
+        OnePlus One
+        Oppo Find 7 (X9076)
+        Samsung Galaxy S4
+        Samsung Galaxy Note 3
+        Samsung Galaxy Note 4
+        Sony Xperia Z
+        Xiaomi Mi 3
+
+        --------------------------------------------------------------------------------------------
+        ❑ min-resolution: 288dpi;
+        ❑ min-resolution: 3dppx;
+          -webkit-min-device-pixel-ratio: 3;
+               -o-min-device-pixel-ratio: ~ (N.A.)
+        --------------------------------------------------------------------------------------------
+
+JSON Data
+====================================================================================================
+
+    XML vs. JSON Benchmarking Results:
+    ------------------------------------------------------------------------------------------------
+                        Text        Gzip        Zip duration
+        XML             91.78M      18.74M      3.38s
+        JSON            49.78M      17.09M      2.78s
+        XML overhead    84.38%      9.62%       21.3%
+
+        - Note: 20% more additional CPU cycles consumed to GZIP XML document than JSON document
+
+    Important Info:
+    ================================================================================================
+        - Note: ensure that all JSON documents are encoded in @UTF-8, moreover, as a rule of thumb,
+        -       everything except pure arrays (in PHP this means arrays with an ordered, numerical
+        -       index) is converted into an object with keys and values.
+
+        Encoding:
+        --------------------------------------------------------------------------------------------
+
+            Arrays:
+            ❑ json_encode(mixed $value, int $options = 0);
+                <?php
+                    ❑ json_encode(array("Apple", "Banana", "Pear"));
+                        // Returns: ["Apple","Banana","Pear"]
+
+                    ❑ json_encode(array(4 => "four", 8 => "eight"));
+                        // Returns: {"4":"four","8":"eight"}
+
+                    ❑ json_encode(array("apples" => true, "bananas" => null));
+                        // Returns: {"apples":true,"bananas":null}
+                ?>
+
+            Objects:
+            <?php
+                class User {
+                    public $firstname = "";
+                    public $lastname  = "";
+                    public $birthdate = "";
+                }
+
+                $user = new User();
+                $user->firstname = "foo";
+                $user->lastname  = "bar";
+
+                ❑ json_encode($user);   @Returns: { "firstname":"foo", "lastname":"bar" }
+
+                $user->birthdate = new DateTime();
+
+                Returns:
+                    {
+                        "firstname":"foo",
+                        "lastname":"bar",
+                        "birthdate": {
+                            "date":"2012-06-06 08:46:58",
+                            "timezone_type":3,
+                            "timezone":"Europe\/Berlin"
+                        }
+                    }
+
+                ❑ json_encode($user);
+            ?>
+
+            ----------------------------------------------------------------------------------------
+            <?php
+                class User {
+                    public $pub = "Mister X.";
+                    protected $pro = "hidden";
+                    private $priv = "hidden too";
+
+                    public $func;
+                    public $notUsed;
+
+                    public function __construct() {
+                        $this->func = function() {
+                            return "Foo";
+                        };
+                    }
+                }
+
+                $user = new User();
+
+                echo json_encode($user);
+                - @Returns: { "pub":"Mister X.", "func":{}, "notUsed":null }
+            ?>
+
+            The $option bitmasks:
+            ========================================================================================
+                <?php
+                    json_encode(
+                        array(
+                            "Starsky & Hutch",
+                            "123456"
+                        ),
+                        JSON_NUMERIC_CHECK | JSON_FORCE_OBJECT
+                    );
+                    - @Returns: {"0":"Starsky & Hutch","1":123456}
+                ?>
+
+                ❑ JSON_NUMERIC_CHECK: forces the array to be translated into an object
+
+                ❑ JSON_FORCE_OBJECT: converts string-formatted numbers to actual numbers
+
+        Decoding:
+        --------------------------------------------------------------------------------------------
+            <?php
+                $string = '{"foo": "bar", "cool": "attr"}';
+                $result = json_decode($string);
+
+                var_dump($result);
+              - @Result: object(stdClass)#1 (2) { ["foo"]=> string(3) "bar" ["cool"]=> string(4) "attr" }
+
+                echo $result->foo;
+              - @Prints "bar"
+
+                echo $result->cool;
+              - @Prints "attr"
+            ?>
+
+    Archive:
+    ------------------------------------------------------------------------------------------------
+        x.y.z.x
+        - x = MAOJOR REVISION (implementation of new features likely to break the existing API) @project(Semantic Versioning)
+        - y = MINOR REVISION (implementation of new features in a backward-compatible manner)
+        - z = PATCH (bug fixes)
+        - x : same @project(Semantic Versioning)

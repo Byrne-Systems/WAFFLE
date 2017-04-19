@@ -26,7 +26,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="log.class.php" line="27" column="1" bodyfile="log.class.php" bodystart="27" bodyend="34"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/log.class.php" line="27" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/log.class.php" bodystart="27" bodyend="34"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -57,7 +57,7 @@
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="log.class.php" line="21" column="1" bodyfile="log.class.php" bodystart="21" bodyend="35"/>
+    <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/log.class.php" line="21" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/log.class.php" bodystart="21" bodyend="35"/>
     <listofallmembers>
       <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_log_1a3e3c415ada57f553ac4a39a40051c94f" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::IO::Log</scope><name>log</name></member>
     </listofallmembers>

@@ -19,7 +19,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="session-manager.class.php" line="29" column="1" bodyfile="session-manager.class.php" bodystart="29" bodyend="46"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/session-manager.class.php" line="29" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/session-manager.class.php" bodystart="29" bodyend="46"/>
       </memberdef>
       <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_controllers_1_1_session_manager_1a0699e69686fe46ec84a3c0b680080414" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -46,14 +46,14 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="session-manager.class.php" line="54" column="1" bodyfile="session-manager.class.php" bodystart="54" bodyend="66"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/session-manager.class.php" line="54" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/session-manager.class.php" bodystart="54" bodyend="66"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
 <para>Session Manager</para><para>Instantiates secure session(s) for transmitting data to/from back and front-end(s) </para>    </detaileddescription>
-    <location file="session-manager.class.php" line="22" column="1" bodyfile="session-manager.class.php" bodystart="22" bodyend="67"/>
+    <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/session-manager.class.php" line="22" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/session-manager.class.php" bodystart="22" bodyend="67"/>
     <listofallmembers>
       <member refid="class_w_a_f_f_l_e_1_1_controllers_1_1_session_manager_1a3d98fd81ca4375c8e121fa1a6dd20074" prot="public" virt="non-virtual"><scope>WAFFLE::Controllers::SessionManager</scope><name>sec_session_start</name></member>
       <member refid="class_w_a_f_f_l_e_1_1_controllers_1_1_session_manager_1a0699e69686fe46ec84a3c0b680080414" prot="public" virt="non-virtual"><scope>WAFFLE::Controllers::SessionManager</scope><name>session_timeout</name></member>

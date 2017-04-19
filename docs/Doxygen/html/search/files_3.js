@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['file_2eclass_2ephp',['file.class.php',['../file_8class_8php.html',1,'']]],
-  ['functions_2ephp',['functions.php',['../functions_8php.html',1,'']]]
+  ['file_2eclass_2ephp',['file.class.php',['../file_8class_8php.html',1,'']]]
 ];

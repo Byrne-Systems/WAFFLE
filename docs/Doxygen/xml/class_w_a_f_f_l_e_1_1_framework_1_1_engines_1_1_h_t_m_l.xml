@@ -16,7 +16,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="html.class.php" line="35" column="1" bodyfile="html.class.php" bodystart="35" bodyend="35"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/html.class.php" line="35" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/html.class.php" bodystart="35" bodyend="35"/>
       </memberdef>
       <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1ad7b4bf61b716970e07cdd1402a80129e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -42,7 +42,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="html.class.php" line="46" column="1" bodyfile="html.class.php" bodystart="46" bodyend="52"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/html.class.php" line="46" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/html.class.php" bodystart="46" bodyend="52"/>
       </memberdef>
       <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1ad582eaa2faaa983c7b17fdcf81049671" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -68,7 +68,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="html.class.php" line="62" column="1" bodyfile="html.class.php" bodystart="62" bodyend="91"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/html.class.php" line="62" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/html.class.php" bodystart="62" bodyend="91"/>
       </memberdef>
       <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a426da5740b47df47de16970dea2f2579" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -95,7 +95,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="html.class.php" line="102" column="1" bodyfile="html.class.php" bodystart="102" bodyend="113"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/html.class.php" line="102" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/html.class.php" bodystart="102" bodyend="113"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -157,7 +157,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="html.class.php" line="130" column="1" bodyfile="html.class.php" bodystart="130" bodyend="147"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/html.class.php" line="130" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/html.class.php" bodystart="130" bodyend="147"/>
       </memberdef>
       <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a12602b493053197597cfcaffa61a6e14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -195,7 +195,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="html.class.php" line="158" column="1" bodyfile="html.class.php" bodystart="158" bodyend="160"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/html.class.php" line="158" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/html.class.php" bodystart="158" bodyend="160"/>
       </memberdef>
       <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a3f5f65b7897f31a9a6eae79588a9e6c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -220,7 +220,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="html.class.php" line="168" column="1" bodyfile="html.class.php" bodystart="168" bodyend="173"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/html.class.php" line="168" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/html.class.php" bodystart="168" bodyend="173"/>
       </memberdef>
       <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a7596de1be94a6dc237fa4d435193da8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -281,7 +281,7 @@
 <xrefsect id="todo_1_todo000003"><xreftitle>Todo</xreftitle><xrefdescription><para>add attributes: hreflang, media, crossorigin (5), sizes (5) and write error handling </para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="html.class.php" line="189" column="1" bodyfile="html.class.php" bodystart="189" bodyend="199"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/html.class.php" line="189" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/html.class.php" bodystart="189" bodyend="199"/>
       </memberdef>
       <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a77b7fda51b7845d6a6c738efc5d248ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -365,7 +365,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="html.class.php" line="215" column="1" bodyfile="html.class.php" bodystart="215" bodyend="257"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/html.class.php" line="215" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/html.class.php" bodystart="215" bodyend="257"/>
       </memberdef>
       <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1af2959b14380c3635ed932a5d1b877bd8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -402,7 +402,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="html.class.php" line="268" column="1" bodyfile="html.class.php" bodystart="268" bodyend="283"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/html.class.php" line="268" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/html.class.php" bodystart="268" bodyend="283"/>
       </memberdef>
       <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a9a92856db6ac937a9dace60224dfaf65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -464,7 +464,7 @@
 <xrefsect id="todo_1_todo000004"><xreftitle>Todo</xreftitle><xrefdescription><para>add attributes: Integrity, Async [HTML5], and Crossorigin </para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="html.class.php" line="298" column="1" bodyfile="html.class.php" bodystart="298" bodyend="310"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/html.class.php" line="298" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/html.class.php" bodystart="298" bodyend="310"/>
       </memberdef>
       <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a61aeb234b0eb5d6895f91ba5b533bfce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -501,7 +501,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="html.class.php" line="321" column="1" bodyfile="html.class.php" bodystart="321" bodyend="323"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/html.class.php" line="321" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/html.class.php" bodystart="321" bodyend="323"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -532,7 +532,7 @@
         <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l"/>
       </node>
     </inheritancegraph>
-    <location file="html.class.php" line="27" column="1" bodyfile="html.class.php" bodystart="27" bodyend="324"/>
+    <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/html.class.php" line="27" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/html.class.php" bodystart="27" bodyend="324"/>
     <listofallmembers>
       <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a3c534563b3b17abd31c70ce81c518a6d" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::Engines::HTML</scope><name>anchor</name></member>
       <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a12602b493053197597cfcaffa61a6e14" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::Engines::HTML</scope><name>div</name></member>

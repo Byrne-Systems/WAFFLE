@@ -1,0 +1,68 @@
+WAFFLE Tasks
+====================================================================================================
+  Version:
+    ✔ Template Engine               {Class} @ver: 0.3.2.0,  {Build} @ver: 0.3.2.0 @done (02-27-2016)
+    ✔ HTML Engine                   {Class} @ver: 0.9.0.0,  {Build} @ver: 0.11.2.0 @done (02-27-2016)
+    ✔ DBA Adapter                   {Class} @ver: 0.9.2.0,  {Build} @ver: @done (02-27-2016)
+    ❑ Preload Agent                 {Class} @ver: 0.6.2.0,  {Build} @ver: 0.14.6.0
+    ❑ File Handler                  {Class} @ver: 0.2.0.0,  {Build} @ver: 0.18.6.0
+    ❑ Log Agent                     {Class} @ver: 0.2.0.0,  {Build} @ver: 0.20.6.0
+    ✔ Validation Handler            {Class} @ver: 0.1.0.0,  {Build} @ver: 0.22.6.0 @done (02-27-2016)
+    ❑ Collection Agent              {Class} @ver: 0.6.1.0,  {Build} @ver: 0.28.7.0
+    ❑ Cipher Engine                 {Class} @ver: 0.0.0.0,  {Build} @ver:
+====================================================================================================
+ADD:
+----------------------------------------------------------------------------------------------------
+    ❑ @start (01-07-2016), User Agent Detection Class
+    ✔ @start (01-07-2016), Validation Class @done (01-31-2016)
+    ❑ @start (01-07-2016), Search Class
+    ❑ @start (01-07-2016), Caching Agent
+    ❑ @start (01-07-2016), Animation (or Timing) Class
+    ✔ @start (01-07-2016), Error Handler @done (01-31-2016)
+    ❑ @start (01-07-2016), XML Parser
+    ✔ @start (01-07-2016), Cipher Class @done (02-26-2016)
+    ❑ @start (01-07-2016), References Class
+    ❑ @start (02-06-2016), RDF Class
+
+    ❑ @started (02-01-2016), Check for constants and then set (or define) them accordingly
+
+CHANGE:
+----------------------------------------------------------------------------------------------------
+    ❑ @start (01-07-2016), Start including different post calls from DBA
+    ❑ @start (01-07-2016), Decode connection data prior to establishing a DB connection
+    ❑ @start (01-07-2016), Encode XML file containing DBA connection data
+    ❑ @start (01-07-2016), Return T/F on most methods
+    ❑ @start (01-07-2016), Encrypt and Decode rendered document prior to and after loading
+
+REMOVE:
+----------------------------------------------------------------------------------------------------
+
+VERIFY:
+----------------------------------------------------------------------------------------------------
+    ❑ Ensure that each module is 'properly' documented for phpDocumentor and the resulting API Docs
+        Adapters:
+            ❑ DBA
+
+        Agents:
+            ❑ Collection
+            ❑ Log
+            ❑ Preloading
+
+        Engines:
+            ✔ HTML @done (01-31-2016)
+            ❑ Template
+
+        Handlers:
+            ❑ Error
+            ✔ File @done (02-10-2016)
+            ✔ Validation @done (02-12-2016)
+
+        Interfaces:
+            ✔ iTemplate @done (02-01-2016)
+            ✔ iHTML @done (02-01-2016)
+
+        UnitTests:
+            ❑ test_HTML_Engine
+            ❑ test_Template_Engine
+
+    ❑ RDF (Resource Description Framework) for all resource types

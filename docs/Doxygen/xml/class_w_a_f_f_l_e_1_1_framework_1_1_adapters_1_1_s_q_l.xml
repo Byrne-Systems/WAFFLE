@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="sql.class.php" line="30" column="1" bodyfile="sql.class.php" bodystart="30" bodyend="-1"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/sql.class.php" line="30" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/sql.class.php" bodystart="30" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_w_a_f_f_l_e_1_1_framework_1_1_adapters_1_1_s_q_l_1a598ca4e71b15a1313ec95f0df1027ca5" prot="protected" static="no" mutable="no">
         <type></type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="sql.class.php" line="31" column="1" bodyfile="sql.class.php" bodystart="31" bodyend="-1"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/sql.class.php" line="31" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/sql.class.php" bodystart="31" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_w_a_f_f_l_e_1_1_framework_1_1_adapters_1_1_s_q_l_1a12ec2780b52bd1c54d38c2f981c0349f" prot="protected" static="no" mutable="no">
         <type></type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="sql.class.php" line="32" column="1" bodyfile="sql.class.php" bodystart="32" bodyend="-1"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/sql.class.php" line="32" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/sql.class.php" bodystart="32" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_w_a_f_f_l_e_1_1_framework_1_1_adapters_1_1_s_q_l_1a1fa3127fc82f96b1436d871ef02be319" prot="protected" static="no" mutable="no">
         <type></type>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="sql.class.php" line="33" column="1" bodyfile="sql.class.php" bodystart="33" bodyend="-1"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/sql.class.php" line="33" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/sql.class.php" bodystart="33" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_w_a_f_f_l_e_1_1_framework_1_1_adapters_1_1_s_q_l_1afe14c5bdb9487c058ec831382f1fbacd" prot="protected" static="no" mutable="no">
         <type></type>
@@ -70,7 +70,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="sql.class.php" line="35" column="1" bodyfile="sql.class.php" bodystart="35" bodyend="-1"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/sql.class.php" line="35" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/sql.class.php" bodystart="35" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_w_a_f_f_l_e_1_1_framework_1_1_adapters_1_1_s_q_l_1a34cd105e27a4cb6632047ddfdfaa07e8" prot="protected" static="no" mutable="no">
         <type></type>
@@ -83,7 +83,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="sql.class.php" line="36" column="1" bodyfile="sql.class.php" bodystart="36" bodyend="-1"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/sql.class.php" line="36" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/sql.class.php" bodystart="36" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -121,7 +121,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="sql.class.php" line="46" column="1" bodyfile="sql.class.php" bodystart="46" bodyend="60"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/sql.class.php" line="46" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/sql.class.php" bodystart="46" bodyend="60"/>
       </memberdef>
       <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_adapters_1_1_s_q_l_1aa3a695aeb9d196ed96a09b108252b3d3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -157,7 +157,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="sql.class.php" line="70" column="1" bodyfile="sql.class.php" bodystart="70" bodyend="82"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/sql.class.php" line="70" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/sql.class.php" bodystart="70" bodyend="82"/>
       </memberdef>
       <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_adapters_1_1_s_q_l_1a848589b82df6900da2764018f69cd8c4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -171,7 +171,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="sql.class.php" line="91" column="1" bodyfile="sql.class.php" bodystart="91" bodyend="94"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/sql.class.php" line="91" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/sql.class.php" bodystart="91" bodyend="94"/>
       </memberdef>
       <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_adapters_1_1_s_q_l_1a6a026eae8e84cb094d8e56954dfbcc81" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -208,7 +208,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="sql.class.php" line="302" column="1" bodyfile="sql.class.php" bodystart="302" bodyend="320"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/sql.class.php" line="302" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/sql.class.php" bodystart="302" bodyend="320"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -223,7 +223,7 @@
 <para>Instantiate the $File (Object) and $cxn (Array) </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="sql.class.php" line="103" column="1" bodyfile="sql.class.php" bodystart="103" bodyend="107"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/sql.class.php" line="103" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/sql.class.php" bodystart="103" bodyend="107"/>
       </memberdef>
       <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_adapters_1_1_s_q_l_1aba0493523bdf57cda549e4573bd13b59" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -260,7 +260,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="sql.class.php" line="119" column="1" bodyfile="sql.class.php" bodystart="119" bodyend="155"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/sql.class.php" line="119" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/sql.class.php" bodystart="119" bodyend="155"/>
       </memberdef>
       <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_adapters_1_1_s_q_l_1a3d8ffa8e31467a39295e6b2bcb324145" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -308,7 +308,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="sql.class.php" line="167" column="1" bodyfile="sql.class.php" bodystart="167" bodyend="196"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/sql.class.php" line="167" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/sql.class.php" bodystart="167" bodyend="196"/>
       </memberdef>
       <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_adapters_1_1_s_q_l_1ae4dc7407d8834dd3721b5d5bb57d8c9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -367,7 +367,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="sql.class.php" line="209" column="1" bodyfile="sql.class.php" bodystart="209" bodyend="247"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/sql.class.php" line="209" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/sql.class.php" bodystart="209" bodyend="247"/>
       </memberdef>
       <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_adapters_1_1_s_q_l_1a7d14a9de8bac5dd9b5cfec163e448157" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -404,7 +404,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="sql.class.php" line="258" column="1" bodyfile="sql.class.php" bodystart="258" bodyend="291"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/sql.class.php" line="258" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/sql.class.php" bodystart="258" bodyend="291"/>
       </memberdef>
       <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_adapters_1_1_s_q_l_1a06c44c57089a129f4a10108b78e56c75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -429,14 +429,14 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="sql.class.php" line="329" column="1" bodyfile="sql.class.php" bodystart="329" bodyend="331"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/sql.class.php" line="329" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/sql.class.php" bodystart="329" bodyend="331"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
 <para><ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_adapters_1_1_s_q_l" kindref="compound">SQL</ref> Adapter</para><para>Database class utilized for data access and manipulation </para>    </detaileddescription>
-    <location file="sql.class.php" line="22" column="1" bodyfile="sql.class.php" bodystart="22" bodyend="332"/>
+    <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/sql.class.php" line="22" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/sql.class.php" bodystart="22" bodyend="332"/>
     <listofallmembers>
       <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_adapters_1_1_s_q_l_1afe14c5bdb9487c058ec831382f1fbacd" prot="protected" virt="non-virtual"><scope>WAFFLE::Framework::Adapters::SQL</scope><name>$cxn</name></member>
       <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_adapters_1_1_s_q_l_1a1fa3127fc82f96b1436d871ef02be319" prot="protected" virt="non-virtual"><scope>WAFFLE::Framework::Adapters::SQL</scope><name>$db</name></member>

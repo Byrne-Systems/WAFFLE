@@ -1,0 +1,348 @@
+Library Directory
+====================================================================================================
+
+  Structure
+  --------------------------------------------------------------------------------------------------
+    +---[-prefix-free]
+    +---[bootstrap]
+    |   +---dist
+    |   |   +---css
+    |   |   +---fonts
+    |   |   +---js
+    |   +---docs
+    |   |   +---assets
+    |   |   |   +---brand
+    |   |   |   +---css
+    |   |   |   |   +---src
+    |   |   |   +---flash
+    |   |   |   +---img
+    |   |   |   +---js
+    |   |   |       +---src
+    |   |   |       +---vendor
+    |   |   +---dist
+    |   |   |   +---css
+    |   |   |   +---fonts
+    |   |   |   +---js
+    |   |   +---examples
+    |   |   |   +---blog
+    |   |   |   +---carousel
+    |   |   |   +---cover
+    |   |   |   +---dashboard
+    |   |   |   +---grid
+    |   |   |   +---jumbotron
+    |   |   |   +---jumbotron-narrow
+    |   |   |   +---justified-nav
+    |   |   |   +---navbar
+    |   |   |   +---navbar-fixed-top
+    |   |   |   +---navbar-static-top
+    |   |   |   +---non-responsive
+    |   |   |   +---offcanvas
+    |   |   |   +---screenshots
+    |   |   |   +---signin
+    |   |   |   +---starter-template
+    |   |   |   +---sticky-footer
+    |   |   |   +---sticky-footer-navbar
+    |   |   |   +---theme
+    |   |   |   +---tooltip-viewport
+    |   |   +---_data
+    |   |   +---_includes
+    |   |   |   +---components
+    |   |   |   +---css
+    |   |   |   +---getting-started
+    |   |   |   +---js
+    |   |   |   +---nav
+    |   |   +---_jade
+    |   |   +---_layouts
+    |   |   +---_plugins
+    |   +---fonts
+    |   +---grunt
+    |   +---js
+    |   |   +---tests
+    |   |       +---unit
+    |   |       +---vendor
+    |   |       +---visual
+    |   +---less
+    |   |   +---mixins
+    |   +---nuget
+    |   +---test-infra
+    +---[data]
+    |   +---json
+    +---[jquery]
+    +---[less.php]
+    |   +---bin
+    |   +---lib
+    |       +---Less
+    |           +---.easymin
+    |           +---Exception
+    |           +---Output
+    |           +---SourceMap
+    |           +---Tree
+    |           |   +---Mixin
+    |           +---Visitor
+    +---[modernizr]
+    +---[vendor]
+    |   +---bin
+    |   +---composer
+    |   +---doctrine
+    |   |   +---instantiator
+    |   |       +---src
+    |   |       |   +---Doctrine
+    |   |       |       +---Instantiator
+    |   |       |           +---Exception
+    |   |       +---tests
+    |   |           +---DoctrineTest
+    |   |               +---InstantiatorPerformance
+    |   |               +---InstantiatorTest
+    |   |               |   +---Exception
+    |   |               +---InstantiatorTestAsset
+    |   +---johnkary
+    |   |   +---phpunit-speedtrap
+    |   |       +---src
+    |   |           +---JohnKary
+    |   |               +---PHPUnit
+    |   |                   +---Listener
+    |   +---myclabs
+    |   |   +---deep-copy
+    |   |       +---doc
+    |   |       +---src
+    |   |           +---DeepCopy
+    |   |               +---Exception
+    |   |               +---Filter
+    |   |               |   +---Doctrine
+    |   |               +---Matcher
+    |   |               +---Reflection
+    |   |               +---TypeFilter
+    |   |               +---TypeMatcher
+    |   +---phpdocumentor
+    |   |   +---reflection-docblock
+    |   |       +---src
+    |   |       |   +---phpDocumentor
+    |   |       |       +---Reflection
+    |   |       |           +---DocBlock
+    |   |       |               +---Tag
+    |   |       |               +---Type
+    |   |       +---tests
+    |   |           +---phpDocumentor
+    |   |               +---Reflection
+    |   |                   +---DocBlock
+    |   |                       +---Tag
+    |   |                       +---Type
+    |   +---phpspec
+    |   |   +---prophecy
+    |   |       +---spec
+    |   |       |   +---Prophecy
+    |   |       |       +---Argument
+    |   |       |       |   +---Token
+    |   |       |       +---Call
+    |   |       |       +---Comparator
+    |   |       |       +---Doubler
+    |   |       |       |   +---ClassPatch
+    |   |       |       |   +---Generator
+    |   |       |       |       +---Node
+    |   |       |       +---Exception
+    |   |       |       |   +---Call
+    |   |       |       |   +---Doubler
+    |   |       |       |   +---Prediction
+    |   |       |       |   +---Prophecy
+    |   |       |       +---Prediction
+    |   |       |       +---Promise
+    |   |       |       +---Prophecy
+    |   |       |       +---Util
+    |   |       +---src
+    |   |           +---Prophecy
+    |   |               +---Argument
+    |   |               |   +---Token
+    |   |               +---Call
+    |   |               +---Comparator
+    |   |               +---Doubler
+    |   |               |   +---ClassPatch
+    |   |               |   +---Generator
+    |   |               |       +---Node
+    |   |               +---Exception
+    |   |               |   +---Call
+    |   |               |   +---Doubler
+    |   |               |   +---Prediction
+    |   |               |   +---Prophecy
+    |   |               +---Prediction
+    |   |               +---Promise
+    |   |               +---Prophecy
+    |   |               +---Util
+    |   +---phpunit
+    |   |   +---php-code-coverage
+    |   |   |   +---build
+    |   |   |   +---src
+    |   |   |   |   +---CodeCoverage
+    |   |   |   |       +---Driver
+    |   |   |   |       +---Exception
+    |   |   |   |       +---Report
+    |   |   |   |           +---HTML
+    |   |   |   |           |   +---Renderer
+    |   |   |   |           |       +---Template
+    |   |   |   |           |           +---css
+    |   |   |   |           |           +---fonts
+    |   |   |   |           |           +---js
+    |   |   |   |           +---Node
+    |   |   |   |           +---XML
+    |   |   |   |               +---File
+    |   |   |   +---tests
+    |   |   |       +---PHP
+    |   |   |       |   +---CodeCoverage
+    |   |   |       |       +---Report
+    |   |   |       +---_files
+    |   |   |           +---Report
+    |   |   |               +---HTML
+    |   |   |               |   +---CoverageForBankAccount
+    |   |   |               |   +---CoverageForClassWithAnonymousFunction
+    |   |   |               |   +---CoverageForFileWithIgnoredLines
+    |   |   |               +---XML
+    |   |   |                   +---CoverageForBankAccount
+    |   |   |                   +---CoverageForClassWithAnonymousFunction
+    |   |   |                   +---CoverageForFileWithIgnoredLines
+    |   |   +---php-file-iterator
+    |   |   |   +---src
+    |   |   +---php-text-template
+    |   |   |   +---src
+    |   |   +---php-timer
+    |   |   |   +---src
+    |   |   |   +---tests
+    |   |   +---php-token-stream
+    |   |   |   +---build
+    |   |   |   +---src
+    |   |   |   |   +---Token
+    |   |   |   |       +---Stream
+    |   |   |   +---tests
+    |   |   |       +---Token
+    |   |   |       +---_fixture
+    |   |   +---phpunit
+    |   |   |   +---build
+    |   |   |   |   +---bin
+    |   |   |   +---src
+    |   |   |   |   +---Extensions
+    |   |   |   |   +---Framework
+    |   |   |   |   |   +---Assert
+    |   |   |   |   |   +---Constraint
+    |   |   |   |   |   |   +---JsonMatches
+    |   |   |   |   |   +---Error
+    |   |   |   |   |   +---TestSuite
+    |   |   |   |   +---Runner
+    |   |   |   |   |   +---Filter
+    |   |   |   |   |       +---Group
+    |   |   |   |   +---TextUI
+    |   |   |   |   +---Util
+    |   |   |   |       +---Log
+    |   |   |   |       +---PHP
+    |   |   |   |       |   +---Template
+    |   |   |   |       +---TestDox
+    |   |   |   |           +---ResultPrinter
+    |   |   |   +---tests
+    |   |   |       +---Extensions
+    |   |   |       +---Fail
+    |   |   |       +---Framework
+    |   |   |       |   +---Constraint
+    |   |   |       |       +---JsonMatches
+    |   |   |       +---Regression
+    |   |   |       |   +---1021
+    |   |   |       |   +---523
+    |   |   |       |   +---578
+    |   |   |       |   +---684
+    |   |   |       |   +---783
+    |   |   |       |   +---GitHub
+    |   |   |       |       +---1149
+    |   |   |       |       +---1216
+    |   |   |       |       +---1265
+    |   |   |       |       +---1330
+    |   |   |       |       +---1335
+    |   |   |       |       +---1337
+    |   |   |       |       +---1348
+    |   |   |       |       +---1351
+    |   |   |       |       +---1374
+    |   |   |       |       +---1437
+    |   |   |       |       +---1468
+    |   |   |       |       +---1471
+    |   |   |       |       +---1472
+    |   |   |       |       +---1570
+    |   |   |       |       +---244
+    |   |   |       |       +---322
+    |   |   |       |       +---433
+    |   |   |       |       +---445
+    |   |   |       |       +---498
+    |   |   |       |       +---503
+    |   |   |       |       +---581
+    |   |   |       |       +---74
+    |   |   |       |       +---765
+    |   |   |       |       +---797
+    |   |   |       |       +---873
+    |   |   |       +---Runner
+    |   |   |       +---TextUI
+    |   |   |       +---Util
+    |   |   |       |   +---TestDox
+    |   |   |       +---_files
+    |   |   |           +---Inheritance
+    |   |   |           +---JsonData
+    |   |   +---phpunit-mock-objects
+    |   |       +---build
+    |   |       +---src
+    |   |       |   +---Framework
+    |   |       |       +---MockObject
+    |   |       |           +---Builder
+    |   |       |           +---Exception
+    |   |       |           +---Generator
+    |   |       |           +---Invocation
+    |   |       |           +---Matcher
+    |   |       |           +---Stub
+    |   |       +---tests
+    |   |           +---MockObject
+    |   |           |   +---Builder
+    |   |           |   +---Invocation
+    |   |           |   +---Matcher
+    |   |           +---_fixture
+    |   +---sebastian
+    |   |   +---code-unit-reverse-lookup
+    |   |   |   +---src
+    |   |   |   +---tests
+    |   |   +---comparator
+    |   |   |   +---build
+    |   |   |   +---src
+    |   |   |   +---tests
+    |   |   |       +---_files
+    |   |   +---diff
+    |   |   |   +---src
+    |   |   |   |   +---LCS
+    |   |   |   +---tests
+    |   |   |       +---fixtures
+    |   |   |       +---LCS
+    |   |   +---environment
+    |   |   |   +---src
+    |   |   |   +---tests
+    |   |   +---exporter
+    |   |   |   +---src
+    |   |   |   +---tests
+    |   |   +---global-state
+    |   |   |   +---src
+    |   |   |   +---tests
+    |   |   |       +---_fixture
+    |   |   +---recursion-context
+    |   |   |   +---src
+    |   |   |   +---tests
+    |   |   +---resource-operations
+    |   |   |   +---build
+    |   |   |   +---src
+    |   |   +---version
+    |   |       +---src
+    |   +---symfony
+    |       +---yaml
+    |           +---Exception
+    |           +---Tests
+    |               +---Fixtures
+    +---[_Framework]
+        +---biblio
+        |   +---archetypes
+        |   +---codesets
+        |   |   +---language
+        |   |   +---Markup
+        |   |   +---MIME
+        |   |       +---types
+        |   +---lexicons
+        +---tests
+        |   +---assets
+        +---trunk

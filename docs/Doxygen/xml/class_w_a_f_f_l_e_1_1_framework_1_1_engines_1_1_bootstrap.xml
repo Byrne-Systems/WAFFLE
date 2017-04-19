@@ -41,7 +41,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="bootstrap.class.php" line="36" column="1" bodyfile="bootstrap.class.php" bodystart="36" bodyend="50"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/bootstrap.class.php" line="36" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/bootstrap.class.php" bodystart="36" bodyend="50"/>
       </memberdef>
       <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap_1a65e72e655a53b204edaaef347ad39799" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -67,7 +67,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="bootstrap.class.php" line="60" column="1" bodyfile="bootstrap.class.php" bodystart="60" bodyend="60"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/bootstrap.class.php" line="60" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/bootstrap.class.php" bodystart="60" bodyend="60"/>
       </memberdef>
       <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap_1a96d284570acb2b50b7e934af06d25c8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -121,7 +121,7 @@
 <xrefsect id="todo_1_todo000001"><xreftitle>Todo</xreftitle><xrefdescription><para>write error handling! </para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="bootstrap.class.php" line="74" column="1" bodyfile="bootstrap.class.php" bodystart="74" bodyend="88"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/bootstrap.class.php" line="74" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/bootstrap.class.php" bodystart="74" bodyend="88"/>
       </memberdef>
       <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap_1ac9f62997b8f02752fd592c9a831c55af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -181,7 +181,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="bootstrap.class.php" line="101" column="1" bodyfile="bootstrap.class.php" bodystart="101" bodyend="133"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/bootstrap.class.php" line="101" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/bootstrap.class.php" bodystart="101" bodyend="133"/>
       </memberdef>
       <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap_1a760d6816b7e769fe6915845ea3d77cdd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -208,7 +208,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="bootstrap.class.php" line="143" column="1" bodyfile="bootstrap.class.php" bodystart="143" bodyend="158"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/bootstrap.class.php" line="143" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/bootstrap.class.php" bodystart="143" bodyend="158"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -251,7 +251,7 @@
         <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l"/>
       </node>
     </collaborationgraph>
-    <location file="bootstrap.class.php" line="25" column="1" bodyfile="bootstrap.class.php" bodystart="25" bodyend="159"/>
+    <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/bootstrap.class.php" line="25" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/bootstrap.class.php" bodystart="25" bodyend="159"/>
     <listofallmembers>
       <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l_1a3c534563b3b17abd31c70ce81c518a6d" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::Engines::Bootstrap</scope><name>anchor</name></member>
       <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_bootstrap_1a96d284570acb2b50b7e934af06d25c8e" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::Engines::Bootstrap</scope><name>column</name></member>

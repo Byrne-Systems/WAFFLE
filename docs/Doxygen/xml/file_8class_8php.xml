@@ -109,6 +109,6 @@
 <codeline lineno="149"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="150"><highlight class="stringliteral">}</highlight></codeline>
     </programlisting>
-    <location file="file.class.php"/>
+    <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/file.class.php"/>
   </compounddef>
 </doxygen>

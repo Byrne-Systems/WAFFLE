@@ -15,7 +15,7 @@
 <para>The $data array provides a location to store the objects that are members of a collection</para><para>protected </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="collection.class.php" line="30" column="1" bodyfile="collection.class.php" bodystart="30" bodyend="-1"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/collection.class.php" line="30" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/collection.class.php" bodystart="30" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -54,7 +54,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="collection.class.php" line="44" column="1" bodyfile="collection.class.php" bodystart="44" bodyend="58"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/collection.class.php" line="44" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/collection.class.php" bodystart="44" bodyend="58"/>
       </memberdef>
       <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_assembly_1_1_collection_1a4be48cfb26bfde30df2a0954ee852591" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -79,7 +79,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="collection.class.php" line="67" column="1" bodyfile="collection.class.php" bodystart="67" bodyend="75"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/collection.class.php" line="67" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/collection.class.php" bodystart="67" bodyend="75"/>
       </memberdef>
       <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_assembly_1_1_collection_1a24a9bf83a1002d46ece83a93d14bd921" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -104,7 +104,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="collection.class.php" line="84" column="1" bodyfile="collection.class.php" bodystart="84" bodyend="92"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/collection.class.php" line="84" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/collection.class.php" bodystart="84" bodyend="92"/>
       </memberdef>
       <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_assembly_1_1_collection_1a72540410e5d139cfba23a4f39ecc32be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -118,7 +118,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="collection.class.php" line="101" column="1" bodyfile="collection.class.php" bodystart="101" bodyend="104"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/collection.class.php" line="101" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/collection.class.php" bodystart="101" bodyend="104"/>
       </memberdef>
       <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_assembly_1_1_collection_1a5facb816a7ce2173a30db9b0bc8ecf75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -132,7 +132,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="collection.class.php" line="113" column="1" bodyfile="collection.class.php" bodystart="113" bodyend="116"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/collection.class.php" line="113" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/collection.class.php" bodystart="113" bodyend="116"/>
       </memberdef>
       <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_assembly_1_1_collection_1a9fd43b991d5a266daff254f49c24bf8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -157,14 +157,14 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="collection.class.php" line="124" column="1" bodyfile="collection.class.php" bodystart="124" bodyend="127"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/collection.class.php" line="124" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/collection.class.php" bodystart="124" bodyend="127"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
 <para><ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_assembly_1_1_collection" kindref="compound">Collection</ref> Assembly</para><para><ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_assembly_1_1_collection" kindref="compound">Collection</ref> Assembly designed as an OOP wrapper to wrap around an Array of Arrays (AoA) while using lazy instantiation to create elements in this array </para>    </detaileddescription>
-    <location file="collection.class.php" line="23" column="1" bodyfile="collection.class.php" bodystart="23" bodyend="128"/>
+    <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/collection.class.php" line="23" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/collection.class.php" bodystart="23" bodyend="128"/>
     <listofallmembers>
       <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_assembly_1_1_collection_1a4dbeff9791f8a26df3bce7d305e9122b" prot="private" virt="non-virtual"><scope>WAFFLE::Framework::Assembly::Collection</scope><name>$data</name></member>
       <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_assembly_1_1_collection_1a4be48cfb26bfde30df2a0954ee852591" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::Assembly::Collection</scope><name>del</name></member>

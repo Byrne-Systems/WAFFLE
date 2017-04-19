@@ -15,7 +15,7 @@
 <para><ref refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template" kindref="compound">Template</ref> filename to load, and eventually parse via this template engine</para><para>protected </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="template.class.php" line="34" column="1" bodyfile="template.class.php" bodystart="34" bodyend="-1"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/template.class.php" line="34" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/template.class.php" bodystart="34" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template_1a46220846a73e3618f122b00d8c898308" prot="protected" static="no" mutable="no">
         <type></type>
@@ -29,7 +29,7 @@
 <para>The value of each template tag (e.g., [!tag]) authored throughout each template file (e.g., *.wad)</para><para>protected </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="template.class.php" line="42" column="1" bodyfile="template.class.php" bodystart="42" bodyend="-1"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/template.class.php" line="42" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/template.class.php" bodystart="42" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -56,7 +56,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="template.class.php" line="55" column="1" bodyfile="template.class.php" bodystart="55" bodyend="58"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/template.class.php" line="55" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/template.class.php" bodystart="55" bodyend="58"/>
       </memberdef>
       <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template_1aab787bd83f84f4215dceb35f7c305eee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -92,7 +92,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="template.class.php" line="68" column="1" bodyfile="template.class.php" bodystart="68" bodyend="71"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/template.class.php" line="68" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/template.class.php" bodystart="68" bodyend="71"/>
       </memberdef>
       <memberdef kind="function" id="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template_1a3939045b11b9aaefdf692feb963f0dfc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -106,7 +106,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="template.class.php" line="81" column="1" bodyfile="template.class.php" bodystart="81" bodyend="95"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/template.class.php" line="81" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/template.class.php" bodystart="81" bodyend="95"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -142,7 +142,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="template.class.php" line="106" column="1" bodyfile="template.class.php" bodystart="106" bodyend="118"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/template.class.php" line="106" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/template.class.php" bodystart="106" bodyend="118"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -197,7 +197,7 @@
         <link refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_h_t_m_l"/>
       </node>
     </collaborationgraph>
-    <location file="template.class.php" line="27" column="1" bodyfile="template.class.php" bodystart="27" bodyend="119"/>
+    <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/template.class.php" line="27" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/template.class.php" bodystart="27" bodyend="119"/>
     <listofallmembers>
       <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_engines_1_1_template_1a823f9d8bf697d2dd19672687804d05b4" prot="protected" virt="non-virtual"><scope>WAFFLE::Framework::Engines::Template</scope><name>$file</name></member>
       <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_preload_1a34cd105e27a4cb6632047ddfdfaa07e8" prot="protected" virt="non-virtual"><scope>WAFFLE::Framework::Engines::Template</scope><name>$File</name></member>

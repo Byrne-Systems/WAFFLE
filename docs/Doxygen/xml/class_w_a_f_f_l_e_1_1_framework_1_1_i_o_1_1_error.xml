@@ -17,7 +17,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="error.class.php" line="34" column="1" bodyfile="error.class.php" bodystart="34" bodyend="37"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/error.class.php" line="34" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/error.class.php" bodystart="34" bodyend="37"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -89,7 +89,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="error.class.php" line="57" column="1" bodyfile="error.class.php" bodystart="57" bodyend="67"/>
+        <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/error.class.php" line="57" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/error.class.php" bodystart="57" bodyend="67"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -132,7 +132,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="error.class.php" line="26" column="1" bodyfile="error.class.php" bodystart="26" bodyend="68"/>
+    <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/error.class.php" line="26" column="1" bodyfile="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/error.class.php" bodystart="26" bodyend="68"/>
     <listofallmembers>
       <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_error_1af721dfe2b0cca44a3c68c6fda1439165" prot="public" virt="non-virtual"><scope>WAFFLE::Framework::IO::Error</scope><name>error</name></member>
       <member refid="class_w_a_f_f_l_e_1_1_framework_1_1_i_o_1_1_error_1a848589b82df6900da2764018f69cd8c4" prot="private" virt="non-virtual"><scope>WAFFLE::Framework::IO::Error</scope><name>get_date</name></member>

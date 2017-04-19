@@ -6,6 +6,6 @@
     </briefdescription>
     <detaileddescription>
 <para>Instantiates and sets new (secure) session(s) for transmitting data to/from the user&apos;s UI (or front-end) with an application&apos;s business logic (or back-end)</para><para>Manager </para>    </detaileddescription>
-    <location file="session-manager.class.php" line="6" column="1"/>
+    <location file="C:/xampp/htdocs/apps/WAFFLE/lib/_Framework/session-manager.class.php" line="6" column="1"/>
   </compounddef>
 </doxygen>
